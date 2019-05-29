@@ -1,0 +1,12 @@
+.b-social {
+	padding: 0 $gridGutter * 2;
+	&__title {
+		margin-bottom: 10px;
+		margin-top: 0;
+		color: $colorSecondary;
+	}
+	&__desc {
+		font-size: 18px;
+		line-height: (25/18);
+	}
+}

@@ -1,0 +1,20 @@
+<div class="c-socials u-mb-lg">
+	<div class="c-socials__list grid grid--x-lg grid--center">
+		{% for item in socials.items %}
+			<div class="c-socials__item grid__cell size--4-12">
+				<div class="b-social">
+					<div class="b-social__icon">
+						{{ iconSVG( item.icon ) }}
+					</div>
+					<h3 class="b-social__title h2">
+						{{ item.title }}
+					</h3>
+					<p class="b-social__desc">
+						{{ item.perex }}
+					</p>
+					<a href="#" class="link-mask"></a>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</div>
