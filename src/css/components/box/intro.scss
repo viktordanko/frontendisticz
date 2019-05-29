@@ -20,6 +20,7 @@
 	}
 	&__inner {
 		flex: 1 1 100%;
+		padding-top: $gridGutter * 2;
 	}
 	&__title {
 		font-weight: normal;

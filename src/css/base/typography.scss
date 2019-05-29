@@ -32,14 +32,10 @@ h2,
 .h2 {
 	font-size: 30px;
 	line-height: (47/30);
-<<<<<<< HEAD
-	margin-bottom: 1.5em;
-=======
 	margin-bottom: (35/30) + em;
 	.inverse & {
 		color: #fff;
 	}
->>>>>>> Gulp 4 config, Typography, Variables
 }
 h3,
 .h3 {
