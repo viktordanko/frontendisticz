@@ -1,20 +1,19 @@
-var config = require('./helpers/getConfig.js');
-var gulp = require('gulp');
-var path = require('path');
-var fs = require('fs');
-var through2 = require('through2');
+const config = require('./helpers/getConfig.js');
+const {src, dest} = require('gulp');
+const path = require('path');
+const fs = require('fs');
+const through2 = require('through2');
 
-var consolidate = require('consolidate');
-var gutil = require('gulp-util');
-var svgstore = require('gulp-svgstore');
-var svgmin = require('gulp-svgmin');
-var cheerio = require('gulp-cheerio');
-var rename = require('gulp-rename');
-var fileExists = require('file-exists');
+const consolidate = require('consolidate');
+const gutil = require('gulp-util');
+const svgstore = require('gulp-svgstore');
+const svgmin = require('gulp-svgmin');
+const cheerio = require('gulp-cheerio');
+const rename = require('gulp-rename');
+const fileExists = require('file-exists');
 
-
-gulp.task('icon-svg', (callback) => {
-	const stream = gulp.src([
+module.exports = function iconSvg(callback) {
+	const stream = src([
 		'*.svg',
 		'!_no-delete.svg',
 	], {
@@ -56,7 +55,7 @@ gulp.task('icon-svg', (callback) => {
 				}
 			});
 		}))
-		.pipe(gulp.dest(`${config.dest.images}bg/`))
+		.pipe(dest(`${config.dest.images}bg/`))
 		.pipe(through2.obj(function(file, encoding, callback) {
 			const _this = this;
 			const $ = file.cheerio;
@@ -85,7 +84,7 @@ gulp.task('icon-svg', (callback) => {
 				callback();
 			});
 		}))
-		.pipe(gulp.dest(`${config.src.styles}core/generated/`));
+		.pipe(dest(`${config.src.styles}core/generated/`));
 
 	const interval = setInterval(function () {
 		if (fileExists.sync(`${config.src.styles}core/generated/icons-svg.scss`)) {
@@ -93,4 +92,4 @@ gulp.task('icon-svg', (callback) => {
 			callback();
 		}
 	}, 10);
-});
+};

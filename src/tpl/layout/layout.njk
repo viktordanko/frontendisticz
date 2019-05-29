@@ -8,18 +8,19 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
 
 		<meta name="twitter:card" content="summary">
-		<meta name="twitter:title" content="{{ pageTitle }} | Project">
+		<meta name="twitter:title" content="{{ pageTitle }} | Frontendisti.cz">
 		<meta name="twitter:description" content="">
 		<meta name="twitter:image" content="http://www.example.com/image.jpg">
 
-		<meta property="og:title" content="{{ pageTitle }} | Project">
+		<meta property="og:title" content="{{ pageTitle }} | Frontendisti.cz">
 		<meta property="og:description" content="">
 		<meta property="og:image" content="http://www.example.com/image.jpg">
-		<meta property="og:site_name" content="Project">
+		<meta property="og:site_name" content="Frontendisti.cz">
 		<meta property="og:url" content="http://www.example.com/">
 
-		<title>{{ pageTitle }} | Project</title>
+		<title>{{ pageTitle }} | Frontendisti.cz</title>
 
+		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
 		<link rel="stylesheet" href="{{ assets.styles }}style.css" media="screen,handheld">
 		<link rel="stylesheet" href="{{ assets.styles }}print.css" media="print">
 
@@ -52,12 +53,12 @@
 			<div class="row-main">
 				{% if isHomepage %}
 					<h1 class="header__logo">
-						<img src="{{ assets.images }}logo-superkoderi.svg" alt="SUPERKODERS" width="300" height="19">
+						<img src="{{ assets.images }}logo.svg" alt="Frontendisti.cz" width="264" height="34">
 					</h1>
 				{% else %}
 					<p class="header__logo">
 						<a href="./">
-							<img src="{{ assets.images }}logo-superkoderi.svg" alt="SUPERKODERS" width="300" height="19">
+							<img src="{{ assets.images }}logo.svg" alt="Frontendisti.cz" width="264" height="34">
 						</a>
 					</p>
 				{% endif %}
@@ -71,28 +72,12 @@
 						</li>
 						<li class="m-main__item">
 							<a href="#" class="m-main__link">
-								Kábrman roku
-							</a>
-						</li>
-						<li class="m-main__item">
-							<a href="#" class="m-main__link">
-								Poradna
-							</a>
-						</li>
-						<li class="m-main__item">
-							<a href="#" class="m-main__link">
-								Pro kutily
-							</a>
-						</li>
-						<li class="m-main__item">
-							<a href="#" class="m-main__link">
-								Kontakt
+								Archiv akcí
 							</a>
 						</li>
 					</ul>
 				</nav>
 
-				<form action="?" role="search" class="f-search"></form>
 			</div>
 		</header>
 

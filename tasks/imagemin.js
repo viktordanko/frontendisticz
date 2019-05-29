@@ -1,25 +1,21 @@
-var config = require('./helpers/getConfig.js');
+const config = require('./helpers/getConfig.js');
+const {src, dest} = require('gulp');
+const gulpImagemin = require('gulp-imagemin');
 
-var gulp = require('gulp');
-var imagemin = require('gulp-imagemin');
 
+module.exports = function imagemin() {
 
-gulp.task('imagemin', function() {
-	var stream = gulp.src([
+	return src([
 		'**/*.{png,jpg,gif,svg}',
 		'!bg/icons-svg.svg',
 	], {
 		cwd: config.dest.images,
-	});
-
-	stream
-		.pipe(imagemin([
+	})
+		.pipe(gulpImagemin([
 			imagemin.jpegtran({progressive: true }),
 			imagemin.optipng(),
 			imagemin.gifsicle(),
 			imagemin.svgo(),
 		]))
-		.pipe(gulp.dest(config.dest.images));
-
-	return stream;
-});
+		.pipe(dest(config.dest.images));
+};

@@ -25,15 +25,18 @@ h6,
 }
 h1,
 .h1 {
-	font-size: 36px;
+	font-size: 45px;
+	line-height: (55/45);
 }
 h2,
 .h2 {
 	font-size: 30px;
+	line-height: (47/30);
+	margin-bottom: 1.5em;
 }
 h3,
 .h3 {
-	font-size: 24px;
+	font-size: 23px;
 }
 h4,
 .h4 {
@@ -75,9 +78,17 @@ a {
 	text-decoration: underline;
 	transition: color $t;
 	-webkit-tap-highlight-color: transparent;
+	font-weight: bold;
 	.no-touchevents &:hover {
 		color: $colorHover;
 	}
+}
+a[href^="mailto"] {
+	text-decoration: dotted;
+}
+
+strong {
+	color: $colorSecondary;
 }
 
 // Lists
@@ -95,7 +106,7 @@ li {
 ul {
 	li {
 		background-image: url($svgBullet);
-		background-position: 5px .5em;
+		background-position: 5px 0.75em;
 		background-repeat: no-repeat;
 		background-size: 4px 4px;
 	}

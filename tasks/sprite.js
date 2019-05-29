@@ -1,11 +1,10 @@
-var config = require('./helpers/getConfig.js');
+const config = require('./helpers/getConfig.js');
+const {src, dest} = require('gulp');
+const spritesmith = require('gulp.spritesmith');
 
-var gulp = require('gulp');
-var spritesmith = require('gulp.spritesmith');
 
-
-gulp.task('spritepacker', function() {
-	var sprites = gulp.src([
+module.exports = function sprite() {
+	var sprites = src([
 		'*.png',
 		'!_no-delete.png',
 	], {
@@ -22,8 +21,8 @@ gulp.task('spritepacker', function() {
 		cssTemplate: config.src.styles + 'tpl/sprites.css.tpl',
 	}));
 
-	sprites.img.pipe(gulp.dest(config.dest.images + 'bg/'));
-	sprites.css.pipe(gulp.dest(config.src.styles + 'core/generated/'));
+	sprites.img.pipe(dest(config.dest.images + 'bg/'));
+	sprites.css.pipe(dest(config.src.styles + 'core/generated/'));
 
 	return sprites;
-});
+};

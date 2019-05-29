@@ -1,8 +1,8 @@
 var config = require('./helpers/getConfig.js');
 var isProduction = require('./helpers/isProduction.js');
 
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+var {src, dest} = require('gulp');
+var gulpSass = require('gulp-sass');
 var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
 var notify = require('gulp-notify');
@@ -12,7 +12,7 @@ var gutil = require('gulp-util');
 var sassVars = require('gulp-sass-vars');
 var globImporter = require('node-sass-glob-importer');
 
-gulp.task('sass', function() {
+module.exports = function sass() {
 	const {breakpoints = {}, rules = {}, breakpointsVars = {}} = config.mediaQueries;
 
 	var onError = function(error) {
@@ -34,20 +34,19 @@ gulp.task('sass', function() {
 		],
 	};
 
-	var stream = gulp.src([
+	return src([
 		'*.scss',
 	], {
 		cwd: config.src.styles,
-	});
-
-	return stream
+		sourcemaps: true,
+	})
 		.pipe(plumber({
 			errorHandler: onError,
 		}))
-		.pipe(isProduction()
-			? gutil.noop()
-			: sourcemaps.init(),
-		)
+		// .pipe(isProduction()
+		// 	? gutil.noop()
+		// 	: sourcemaps.init(),
+		// )
 		.pipe(sassVars({
 			...breakpointsVars,
 			...rules,
@@ -55,13 +54,15 @@ gulp.task('sass', function() {
 			breakpointsVars,
 			paths: config.assets,
 		}, { verbose: false }))
-		.pipe(sass(settings))
+		.pipe(gulpSass(settings))
 		.pipe(postcss([
 			autoprefixer(),
 		]))
-		.pipe(isProduction()
-			? gutil.noop()
-			: sourcemaps.write('./'),
-		)
-		.pipe(gulp.dest(config.dest.styles));
-});
+		// .pipe(isProduction()
+		// 	? gutil.noop()
+		// 	: sourcemaps.write('./'),
+		// )
+		.pipe(dest(config.dest.styles, {
+			sourcemaps: './',
+		}));
+};

@@ -1,82 +1,80 @@
 # SUPERKODERS DevStack
 
-The best DevStack for frontend developers.
+> The best DevStack for frontend developers.
+
+## About
+
+Static site generator with headless CMS
 
 ## Getting Started
 
-We're very happy with you – our client and also becouse you're using our DevStack. There is short description of SUPERKODERS DevStack.
+On your marks, get set, GO!
 
 ### Prerequisites
 
-The things you need to install
+The things you need to install to run SUPERKODERS DevStack
 
 ```
-Node	8.12.0
-npm		6.5.0
-gulp 	3.9.1
+Node	10.15.1
+npm		6.4.1
+gulp 	4.0.2
 ```
 
 ### Installing
 
-It's easy – you need just one command :)
+Open your favorite Terminal and run this command.
 
 ```
 $ npm install
 ```
 
-## How To Use
+## Development
 
-Command `$ gulp` starts a virtual server at url [http://localhost:3000/](http://localhost:3000/) with browserSync and file watcher. All templates will be automatically compiled (via. file watcher task) and refreshed in browser (via browserSync task) on every change in folder `/src/`.
+Command `$ gulp` starts virtual server at [http://localhost:3000/](http://localhost:3000/) and all file watchers.
+Templates will be automatically compiled (via. file watcher task) on every change in the folder `/src/`.
 
 ### Other Gulp Commands
 
-Explain how to run the automated tests for this system
-
 ```
-# command for build compressed templates
+# command to build compressed templates
 $ gulp min
 
-# command for build compressed templates with file watcher and local server
+# command to build compressed templates with file watcher and local server
 $ gulp minwatch
 
-# command for build compressed templetes with compress to zip file
+# command to build and compress templetes to zip file
 $ gulp export
 
-# command for W3C validate templates
+# command to validate HTML by W3C standars
 $ gulp validate
 ```
 
 ### Directory Structure
-
-1. **src** - Source files folder
-	1. **css** – [stylus](http://stylus-lang.com/)/[scss](https://sass-lang.com/)
-	1. **img** – Images
-	1. **js** – JavaScript
-	1. **tpl** – [Nunjucks](https://mozilla.github.io/nunjucks/templating.html)
-	1. **fonts** – Webfonts *not required*
-1. **tasks** - gulp tasks
-1. **.editorconfig** - EditorConfig file
-1. **.eslintignore** - ESLint config
-1. **.eslintrc** - ESLint config
-1. **.gitignore** - GIT ignore file
-1. **.npmrc** - NPM config
-1. **.stylintrc** - Stylint config
-1. **config.js** – DevStack config
-1. **gulpfile.js** – Gulp config file
-1. **package.json** - NPM dependencies
-
-#### Generated Folders
-
-1. **node_modules** - NPM packages
-1. **web** - Folder with templates
-
-## Deployment
-
-TODO
+```
+.
+├── node_modules                # NPM packages
+├── src                         # Source files
+│   ├── css                     # Styles (using SASS - CSS extension language)
+│   ├── img                     # Images
+│   ├── js                      # Javascript
+│   └── tpl                     # Templates (using Nunjucks - templating language)
+├── fonts                       # Webfonts *not required*
+├── tasks                       # Set of asynchronous JavaScript functions
+├── web                         # Generated files (html, css, js, images, fonts...)
+├── .editorconfig               # Set of rules to maintain consistent coding convention between different editors and IDEs.
+├── .eslintignore               # Set of ignored rules for coding convention
+├── .eslintrc                   # Set of rules to highlight inappropriate coding convention in Javascript
+├── .gitignore                  # List of excluded folders/files from git repository
+├── .npmrc                      # The NPM config files
+├── .stylintrc                  # Set of rules to hightlight inappropriate coding convention in styles
+├── config.js                   # General devstack conig
+├── gulpfile.js                 # Gulp config
+└── package.json                # List of NPM dependencies
+```
 
 ## Author
 
-* **SUPERKODERS** - [www.superkoders.com](https://superkoders.com/) – [support@superkoders.com](support@superkoders.com)
+[![N|Superkoders](http://logo.superkoderi.cz/superkoders.svg)](https://www.superkoders.com)
 
 ## License
 

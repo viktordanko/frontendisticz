@@ -1,14 +1,14 @@
-var config = require('./helpers/getConfig.js');
+const config = require('./helpers/getConfig.js');
 
-var gulp = require('gulp');
-var nunjucksRender = require('gulp-nunjucks-render');
-var notify = require('gulp-notify');
-var plumber = require('gulp-plumber');
-var cachebust = require('gulp-cache-bust');
+const {src, dest} = require('gulp');
+const nunjucksRender = require('gulp-nunjucks-render');
+const notify = require('gulp-notify');
+const plumber = require('gulp-plumber');
+const cachebust = require('gulp-cache-bust');
 
 
-gulp.task('nunjucks', function() {
-	var onError = function(error) {
+module.exports = function nunjucks() {
+	const onError = function(error) {
 		notify.onError({
 			title: 'Nunjucks error!',
 			message: '<%= error.message %>',
@@ -18,13 +18,11 @@ gulp.task('nunjucks', function() {
 		return this.emit('end');
 	};
 
-	var stream = gulp.src([
+	return src([
 		'*.njk',
 	], {
 		cwd: config.src.templates,
-	});
-
-	stream
+	})
 		.pipe(plumber({
 			errorHandler: onError,
 		}))
@@ -39,7 +37,5 @@ gulp.task('nunjucks', function() {
 		.pipe(cachebust({
 			type: 'timestamp',
 		}))
-		.pipe(gulp.dest(config.dest.templates));
-
-	return stream;
-});
+		.pipe(dest(config.dest.templates));
+};

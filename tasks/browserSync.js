@@ -1,9 +1,8 @@
-var config = require('./helpers/getConfig.js');
+// var config = require('./helpers/getConfig.js');
 
-var gulp = require('gulp');
-var browserSync = require('browser-sync');
+// var gulp = require('gulp');
 
 
-gulp.task('browserSync', function() {
-	return browserSync(config.browserSync);
-});
+// gulp.task('browserSync', function() {
+
+// });

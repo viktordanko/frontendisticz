@@ -1,4 +1,13 @@
-### 3.3.0 / 15.9.2017
+## [3.3.1](https://bitbucket.org/superkoders/start_project/compare/v3.3.0...v3.3.1) (2019-05-27)
+
+
+### Bug Fixes
+
+* **gulp:** update to version 4 ([20d2ee2](https://bitbucket.org/superkoders/start_project/commits/20d2ee2))
+
+
+
+## 3.3.0 / 15.9.2017
 - Add gulpfile ES6 support
 - Add Webpack support for multiple bundles
 - Add icon-svg task
@@ -17,31 +26,31 @@
 - Refactor MQ tool in JS
 - Update Webpack to version 3
 
-### 3.2.8 / 16.2.2017
+## 3.2.8 / 16.2.2017
 - Install exact version of Browsersync (CSS injecting doesn’t work in new version)
 
-### 3.2.7 / 15.2.2017
+## 3.2.7 / 15.2.2017
 - Fix path for fonts in CSS
 
-### 3.2.6 / 15.2.2017
+## 3.2.6 / 15.2.2017
 - Fix icon font empty stream
 
-### 3.2.5 / 15.2.2017
+## 3.2.5 / 15.2.2017
 - Migrate webpack from v1 to v2
 
-### 3.2.4 / 24.1.2017
+## 3.2.4 / 24.1.2017
 - Fix right values for background-position and reset text-align on cells in grid extend
 
-### 3.2.3 / 14.12.2016
+## 3.2.3 / 14.12.2016
 - Přidání node-notifier závislosti
 
-### 3.2.2 / 08.12.2016
+## 3.2.2 / 08.12.2016
 - Oprava synchronního zápisu iconfontu
 
-### 3.2.1 / 21.11.2016
+## 3.2.1 / 21.11.2016
 - Přidání lokálního configu
 
-### 3.2.0 / 21.11.2016
+## 3.2.0 / 21.11.2016
 - Odstranění PHP
 - Přidání Nunjucks
 - Přidání assets proměnné do config.js
@@ -56,23 +65,23 @@
 - Změna globálního box-sizingu na border-box
 - Update browser-sync balíčku na verzi 2.17.5
 
-### 3.1.3-beta / 17.10.2016
+## 3.1.3-beta / 17.10.2016
 - Přidání Coffeescript závislostí pro Webpack
 
-### 3.1.2-beta / 11.10.2016
+## 3.1.2-beta / 11.10.2016
 - Odstranění mixiny pro placeholder (řešeno autoprefixerem)
 
-### 3.1.1-beta / 6.10.2016
+## 3.1.1-beta / 6.10.2016
 - Opravena chyba s injectováním CSS
 
-### 3.1.0-beta / 6.10.2016
+## 3.1.0-beta / 6.10.2016
 - Odstranění config.json
 - Přidání config.js (úprava cest u tasků)
 
-### 3.0.1-beta / 30.9.2016
+## 3.0.1-beta / 30.9.2016
 - Přidání error notifikací pro Webpack
 
-### 3.0.0-beta / 29.9.2016
+## 3.0.0-beta / 29.9.2016
 - Odstranění nibu
 - Odstranění jQuery z bundlu
 - Odstranění Coffeescriptu

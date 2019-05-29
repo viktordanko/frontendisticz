@@ -1,21 +1,18 @@
-var config = require('./helpers/getConfig.js');
-var isProduction = require('./helpers/isProduction.js');
-
-var gulp = require('gulp');
-var path = require('path');
-var gutil = require('gulp-util');
-var notify = require('gulp-notify');
-
-var webpack = require('webpack');
+const config = require('./helpers/getConfig.js');
+const isProduction = require('./helpers/isProduction.js');
+const path = require('path');
+const gutil = require('gulp-util');
+const notify = require('gulp-notify');
+const bundler = require('webpack');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
-var isMinwatch = function() {
+const isMinwatch = function() {
 	return gutil.env._[0] === 'minwatch';
 };
 
 
-gulp.task('webpack', function(callback) {
-	const {breakpoints = {}, rules = {}, breakpointsVars = {}} = config.mediaQueries;
+module.exports = function webpack(callback) {
+	const {rules = {}, breakpointsVars = {}} = config.mediaQueries;
 
 	var isReady = false;
 	var settings = {
@@ -46,7 +43,7 @@ gulp.task('webpack', function(callback) {
 			],
 		},
 		plugins: [
-			new webpack.DefinePlugin({
+			new bundler.DefinePlugin({
 				'PROJECT_CONFIG': JSON.stringify({
 					breakpointsVars,
 					rules,
@@ -87,7 +84,7 @@ gulp.task('webpack', function(callback) {
 		};
 	});
 
-	var bundle = webpack(settings, function(error, stats) {
+	var bundle = bundler(settings, function(error, stats) {
 		var jsonStats = stats.toJson();
 		var errors = jsonStats.errors;
 		var warnings = jsonStats.warnings;
@@ -110,4 +107,4 @@ gulp.task('webpack', function(callback) {
 	});
 
 	return bundle;
-});
+};

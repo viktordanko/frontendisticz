@@ -1,5 +1,4 @@
-var gutil = require('gulp-util');
-
 module.exports = function() {
-	return gutil.env.env === 'production';
+	// console.log(process.env.NODE_ENV);
+	return process.env.NODE_ENV === 'production';
 };

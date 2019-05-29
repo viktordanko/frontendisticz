@@ -1,9 +1,7 @@
-var config = require('./helpers/getConfig.js');
-
-var gulp = require('gulp');
-var del = require('del');
+const config = require('./helpers/getConfig.js');
+const del = require('del');
 
 
-gulp.task('clean', function(callback) {
-	return del(config.basePath.dest, callback);
-});
+module.exports = function clean() {
+	return del(config.basePath.dest);
+};

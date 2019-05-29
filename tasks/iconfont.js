@@ -1,22 +1,20 @@
-var config = require('./helpers/getConfig.js');
+const config = require('./helpers/getConfig.js');
 
-var gulp = require('gulp');
-var iconfont = require('gulp-iconfont');
-var consolidate = require('gulp-consolidate');
-var rename = require('gulp-rename');
+const {src, dest} = require('gulp');
+const iconfont = require('gulp-iconfont');
+const consolidate = require('gulp-consolidate');
+const rename = require('gulp-rename');
 
 
-gulp.task('iconfont', function(callback) {
-	var stream = gulp.src([
+module.exports = function iconFont(callback) {
+	var isEmpty = true;
+
+	src([
 		'*.svg',
 		'!_no-delete.svg',
 	], {
 		cwd: config.src.icons,
-	});
-
-	var isEmpty = true;
-
-	stream
+	})
 		.pipe(iconfont({
 			fontName: 'icons',
 			formats: ['ttf', 'eot', 'woff'],
@@ -24,7 +22,7 @@ gulp.task('iconfont', function(callback) {
 		.on('glyphs', function(glyphs, options) {
 			isEmpty = false;
 
-			gulp.src(config.src.styles + 'tpl/icons.css.tpl')
+			src(config.src.styles + 'tpl/icons.css.tpl')
 				.pipe(consolidate('lodash', {
 					glyphs: glyphs.map(function(glyph) {
 						return {
@@ -37,7 +35,7 @@ gulp.task('iconfont', function(callback) {
 					className: 'icon',
 				}))
 				.pipe(rename('icons.scss'))
-				.pipe(gulp.dest(config.src.styles + 'core/generated/'))
+				.pipe(dest(config.src.styles + 'core/generated/'))
 				.on('end', callback);
 		})
 		.on('end', function() {
@@ -45,5 +43,5 @@ gulp.task('iconfont', function(callback) {
 				callback();
 			}
 		})
-		.pipe(gulp.dest(config.dest.fonts));
-});
+		.pipe(dest(config.dest.fonts));
+};
