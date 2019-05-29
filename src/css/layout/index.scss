@@ -1,0 +1,19 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+body {
+	position: relative;
+	min-width: 320px;
+}
+:first-child {
+	margin-top: 0;
+}
+
+@import 'header';
+@import 'footer';
+@import 'main';

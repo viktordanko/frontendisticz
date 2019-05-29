@@ -1,0 +1,17 @@
+.inp-text {
+	@extend %inp;
+	@at-root textarea#{&} {
+		height: auto;
+	}
+	&::placeholder {
+		opacity: 1;
+		color: rgba($colorText, .5);
+	}
+
+	// STATEs
+	&:focus {
+		&::placeholder {
+			color: rgba($colorBlack, .25);
+		}
+	}
+}

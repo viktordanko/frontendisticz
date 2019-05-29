@@ -1,0 +1,59 @@
+{
+  "name": "frontendisti2019",
+  "version": "0.1.0",
+  "sideEffects": [
+    "**/svg4everybody.js"
+  ],
+  "browserslist": [
+    "Explorer >= 11",
+    "iOs >= 9",
+    "last 3 versions"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^9.4.7",
+    "babel-core": "^6.24.0",
+    "babel-loader": "^7.1.4",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-env": "^1.3.2",
+    "browser-sync": "2.24.4",
+    "dateformat": "^3.0.0",
+    "deepmerge": "^2.1.1",
+    "del": "^3.0.0",
+    "eslint": "^4.19.1",
+    "file-exists": "^5.0.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^7.0.1",
+    "gulp-cache-bust": "^1.1.0",
+    "gulp-cheerio": "^0.6.2",
+    "gulp-consolidate": "^0.2.0",
+    "gulp-iconfont": "^9.2.0",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^3.0.0",
+    "gulp-nunjucks-render": "^2.0.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-vars": "^1.3.0",
+    "gulp-sourcemaps": "^2.5.1",
+    "gulp-svgmin": "^1.2.3",
+    "gulp-svgstore": "^6.1.0",
+    "gulp-util": "^3.0.7",
+    "gulp-w3cjs": "^1.2.0",
+    "gulp-zip": "^4.0.0",
+    "gulp.spritesmith": "^6.4.0",
+    "node-notifier": "^5.1.2",
+    "node-sass-glob-importer": "^5.3.0",
+    "require-dir": "^1.0.0",
+    "run-sequence": "^2.2.1",
+    "through2": "^2.0.1",
+    "uglifyjs-webpack-plugin": "^1.2.5",
+    "webpack": "4.28.4"
+  },
+  "dependencies": {
+    "fontfaceobserver": "^2.0.9",
+    "svg4everybody": "^2.1.8"
+  },
+  "description": ""
+}

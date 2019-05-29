@@ -1,0 +1,92 @@
+.row-main {
+	@include clearfix();
+	position: relative;
+	margin: 0 auto;
+	padding: 0 $rowMainGutter;
+	max-width: $rowMainWidth;
+}
+.grid {
+	@extend %reset-ol;
+	@extend %grid;
+	margin-left: -($gridGutter);
+	margin-bottom: -($gridGutter);
+	&__cell {
+		@extend %reset-ol-li;
+		@extend %grid__cell;
+		position: relative;
+		border: $gridGutter solid transparent;
+		 // hide the border in MS high contrast mode
+		border-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'%3E%3C/svg%3E");
+		border-width: 0 0 $gridGutter $gridGutter;
+		&--top {
+			align-self: flex-start;
+		}
+		&--middle {
+			align-self: center;
+		}
+		&--bottom {
+			align-self: flex-end;
+		}
+		&--eq {
+			display: flex;
+			> * {
+				flex: 1 1 auto;
+			}
+		}
+	}
+
+	// VARIANTs
+	&--scroll {
+		@extend %grid--scroll;
+	}
+	&--nowrap {
+		flex-wrap: nowrap;
+	}
+	&--middle {
+		align-items: center;
+		@include no-flex() {
+			.grid__cell {
+				vertical-align: middle;
+			}
+		}
+	}
+	&--bottom {
+		align-items: flex-end;
+		@include no-flex() {
+			.grid__cell {
+				vertical-align: bottom;
+			}
+		}
+	}
+	&--center {
+		justify-content: center;
+		@include no-flex() {
+			.grid__cell {
+				text-align: center;
+			}
+		}
+	}
+	&--right {
+		justify-content: flex-end;
+		@include no-flex() {
+			.grid__cell {
+				text-align: right;
+			}
+		}
+	}
+	&--space-between {
+		justify-content: space-between;
+	}
+}
+.size {
+	@include generateGridSize();
+}
+// .push {
+// 	@include generateGridPush();
+// }
+// .pull {
+// 	@include generateGridPull();
+// }
+// .order {
+// 	@include generateGridOrder();
+// }

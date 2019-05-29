@@ -1,0 +1,8 @@
+.m-main {
+	&__list {
+		@extend %reset-ul;
+	}
+	&__item {
+		@extend %reset-ul-li;
+	}
+}

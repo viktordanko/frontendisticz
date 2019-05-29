@@ -1,0 +1,118 @@
+{% from "../macros/helpers.njk" import iconSVG %}
+<!DOCTYPE html>
+<html lang="cs" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:title" content="{{ pageTitle }} | Project">
+		<meta name="twitter:description" content="">
+		<meta name="twitter:image" content="http://www.example.com/image.jpg">
+
+		<meta property="og:title" content="{{ pageTitle }} | Project">
+		<meta property="og:description" content="">
+		<meta property="og:image" content="http://www.example.com/image.jpg">
+		<meta property="og:site_name" content="Project">
+		<meta property="og:url" content="http://www.example.com/">
+
+		<title>{{ pageTitle }} | Project</title>
+
+		<link rel="stylesheet" href="{{ assets.styles }}style.css" media="screen,handheld">
+		<link rel="stylesheet" href="{{ assets.styles }}print.css" media="print">
+
+		<link rel="shortcut icon" href="{{ assets.images }}favicon.ico">
+
+		<script src="{{ assets.scripts }}modernizr.min.js"></script>
+		<script>
+			(function () {
+				var className = document.documentElement.className;
+				className = className.replace('no-js', 'js');
+
+				if (window.name.indexOf('fontsLoaded=true') > -1) {
+					className += ' fonts-loaded';
+				}
+
+				document.documentElement.className = className;
+			}());
+		</script>
+	</head>
+	<body>
+		<p class="m-accessibility">
+			<a title="Přejít k obsahu (Klávesová zkratka: Alt + 2)" accesskey="2" href="#main">Přejít k obsahu</a>
+			<span class="hide">|</span>
+			<a href="#menu-main">Přejít k hlavnímu menu</a>
+			<span class="hide">|</span>
+			<a href="#form-search">Přejít k vyhledávání</a>
+		</p>
+
+		<header role="banner" class="header">
+			<div class="row-main">
+				{% if isHomepage %}
+					<h1 class="header__logo">
+						<img src="{{ assets.images }}logo-superkoderi.svg" alt="SUPERKODERS" width="300" height="19">
+					</h1>
+				{% else %}
+					<p class="header__logo">
+						<a href="./">
+							<img src="{{ assets.images }}logo-superkoderi.svg" alt="SUPERKODERS" width="300" height="19">
+						</a>
+					</p>
+				{% endif %}
+
+				<nav role="navigation" id="menu-main" class="m-main">
+					<ul class="m-main__list">
+						<li class="m-main__item">
+							<a href="#" class="m-main__link">
+								Úvod
+							</a>
+						</li>
+						<li class="m-main__item">
+							<a href="#" class="m-main__link">
+								Kábrman roku
+							</a>
+						</li>
+						<li class="m-main__item">
+							<a href="#" class="m-main__link">
+								Poradna
+							</a>
+						</li>
+						<li class="m-main__item">
+							<a href="#" class="m-main__link">
+								Pro kutily
+							</a>
+						</li>
+						<li class="m-main__item">
+							<a href="#" class="m-main__link">
+								Kontakt
+							</a>
+						</li>
+					</ul>
+				</nav>
+
+				<form action="?" role="search" class="f-search"></form>
+			</div>
+		</header>
+
+		{% block content %}{% endblock %}
+
+		<footer role="contentinfo" class="footer">
+			<div class="row-main">
+				<p class="center">
+					&copy; 2016 SUPERKODERS
+				</p>
+			</div>
+		</footer>
+
+		<!--[if (gte IE 9) | (!IE)]><!-->
+			<script src="{{ assets.scripts }}jquery-2.2.4.min.js"></script>
+			<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find"></script>
+			<script src="{{ assets.scripts }}app.js"></script>
+			<script>
+				App.run({})
+			</script>
+		<!--<![endif]-->
+	</body>
+</html>

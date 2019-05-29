@@ -1,0 +1,56 @@
+// Colors
+$colorPrimary: #3cdbc0;
+$colorSecondary: #9b26b6;
+
+$colorBlack: #000;
+$colorWhite: #fff;
+$colorRed: #f00;
+$colorGreen: #080;
+$colorOrange: #fa0;
+
+$colorText: $colorBlack;
+$colorBd: #ddd;
+$colorBg: #eee;
+$colorLink: $colorPrimary;
+$colorHover: $colorSecondary;
+
+$colorFacebook: #3b5998;
+$colorTwitter: #1da1f2;
+$colorGoogle: #dd4b39;
+$colorYoutube: #ff0000;
+$colorLinkedIn: #0077b5;
+$colorInstagram: #c13584;
+$colorPinterest: #bd081c;
+
+
+// Font
+$fontSystem: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+$fontPrimary: $fontSystem;
+$fontSecondary: $fontPrimary;
+$fontSize: 14px;
+$lineHeight: (20 / 14);
+
+
+// Typography
+$typoSpaceVertical: 1.25em;
+
+
+// Grid
+$gridColumns: 12;
+$gridGutter: 20px;
+$rowMainWidth: 1280px;
+$rowMainGutter: $gridGutter;
+
+
+// Paths
+$imgPath: map-get($paths, 'images');
+$fontsPath: map-get($paths, 'fonts');
+
+
+// Transitions
+$t: .3s;
+
+
+// SVGs
+$svgBullet: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath d='M0 0h4v4H0z'/%3E%3C/svg%3E%0A";
+$svgSelect: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath d='M10 0L5 5 0 0'/%3E%3C/svg%3E%0A";

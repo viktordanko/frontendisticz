@@ -1,0 +1,175 @@
+html {
+	font-family: $fontPrimary;
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	color: $colorText;
+}
+
+// Headings
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: $fontSecondary;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1.5em 0 .5em;
+}
+h1,
+.h1 {
+	font-size: 36px;
+}
+h2,
+.h2 {
+	font-size: 30px;
+}
+h3,
+.h3 {
+	font-size: 24px;
+}
+h4,
+.h4 {
+	font-size: 18px;
+}
+h5,
+.h5 {
+	font-size: 14px;
+}
+h6,
+.h6 {
+	font-size: 12px;
+}
+
+// Paragraph
+p {
+	margin: 0 0 $typoSpaceVertical;
+}
+hr {
+	border: solid $colorBd;
+	border-width: 1px 0 0;
+	margin: $typoSpaceVertical 0;
+	height: 1px;
+	overflow: hidden;
+}
+
+// Blockquote
+blockquote {
+	margin: 0 0 $typoSpaceVertical;
+	padding: 0;
+	p {
+		margin-bottom: 0;
+	}
+}
+
+// Links
+a {
+	color: $colorLink;
+	text-decoration: underline;
+	transition: color $t;
+	-webkit-tap-highlight-color: transparent;
+	.no-touchevents &:hover {
+		color: $colorHover;
+	}
+}
+
+// Lists
+ul,
+ol,
+dl {
+	margin: 0 0 $typoSpaceVertical;
+	list-style: none;
+	padding: 0;
+}
+li {
+	padding: 0 0 0 20px;
+	margin: 0 0 ($typoSpaceVertical / 4);
+}
+ul {
+	li {
+		background-image: url($svgBullet);
+		background-position: 5px .5em;
+		background-repeat: no-repeat;
+		background-size: 4px 4px;
+	}
+}
+ol {
+	counter-reset: item;
+	li {
+		position: relative;
+		&::before {
+			content: counter(item)'.';
+			counter-increment: item;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+	}
+	ol {
+		li {
+			&::before {
+				content: counter(item, lower-alpha)'.';
+			}
+		}
+	}
+}
+dt {
+	font-weight: bold;
+	margin: 0;
+}
+dd {
+	margin: 0 0 ($typoSpaceVertical / 2);
+	padding: 0;
+}
+
+// Tables
+table {
+	width: 100%;
+	clear: both;
+	margin: 0 0 $typoSpaceVertical;
+	empty-cells: show;
+	border-collapse: collapse;
+	border-spacing: 0;
+	border: 1px solid $colorBd;
+}
+caption {
+	font-weight: bold;
+	text-align: left;
+	padding: 0 0 10px;
+	caption-side: top;
+}
+td,
+th {
+	vertical-align: top;
+	padding: 15px 20px;
+	border: 1px solid $colorBd;
+}
+th {
+	font-weight: bold;
+	text-align: left;
+}
+thead th {
+	background: $colorBg;
+}
+
+// Image
+figure {
+	margin-bottom: $typoSpaceVertical;
+}
+figcaption {
+	margin-top: .5em;
+}
+
+img {
+	@media ($xlDown) {
+		max-width: 100%;
+		height: auto;
+	}
+}

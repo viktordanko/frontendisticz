@@ -1,0 +1,50 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	line-height: 1.2;
+}
+h1 {
+	font-size: 22pt;
+	margin: 0 0 .5cm;
+}
+h2 {
+	font-size: 18pt;
+	margin: .75cm 0 .2cm;
+}
+h3 {
+	font-size: 14pt;
+	margin: .5cm 0 .15cm;
+}
+h4,
+h5,
+h6 {
+	font-size: 12pt;
+	margin: 1cm 0 .5cm;
+}
+blockquote {
+	padding-left: 0;
+	padding-right: 0;
+	margin: .5cm 0;
+}
+table {
+	margin: 15px 1pt 35px;
+	text-align: left;
+	border-collapse: collapse;
+	width: 98% !important;
+	font-size: 8pt;
+}
+tr {
+	page-break-inside: avoid;
+}
+th,
+td {
+	border: 1pt solid $colorBlack;
+	padding: 4px 10px;
+}
+th {
+	font-weight: bold;
+}

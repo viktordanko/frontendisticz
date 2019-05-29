@@ -1,0 +1,10 @@
+.header {
+	&__logo {
+		display: block;
+		font-size: 100%;
+		line-height: 1;
+		font-family: $fontPrimary;
+		margin: 0;
+		padding: 0;
+	}
+}

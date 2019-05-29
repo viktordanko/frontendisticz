@@ -1,0 +1,37 @@
+.btn {
+	display: inline-block;
+	vertical-align: middle;
+	padding: 0;
+	border: 0;
+	background: none;
+	text-decoration: none;
+	cursor: pointer;
+	&__text {
+		position: relative;
+		display: block;
+		border: 1px solid transparent;
+		padding: 8px 20px;
+		font-size: 1rem;
+		line-height: 20px;
+		background-color: $colorLink;
+		color: $colorWhite;
+		text-decoration: none;
+		text-align: center;
+		transition: background-color $t, border-color $t, color $t;
+	}
+
+	// VARIANTs
+
+	// STATEs
+	&:disabled,
+	&.is-disabled {
+		opacity: .5;
+		pointer-events: none;
+	}
+
+	// HOVERs
+	.no-touchevents &:hover &__text {
+		background-color: $colorHover;
+		color: $colorWhite;
+	}
+}
