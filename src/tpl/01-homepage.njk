@@ -3,11 +3,37 @@
 {% set isHomepage = true %}
 
 {% block content %}
-
 	<main role="main" id="main" class="main">
-		<div class="row-main">
-
+		<div class="b-intro">
+			<div class="b-intro__inner">
+				<div class="row-main">
+					<h2 class="b-intro__title h1">
+						Organizujeme vzdělávací akce
+						<span class="b-intro__title-sub">
+							pro <strong>frontendové vývojáře</strong>.
+						</span>
+					</h2>
+				</div>
+			</div>
 		</div>
-	</main>
 
+		<div class="u-pt-md">
+			<div class="row-main">
+				<div class="u-max-width--lg">
+					<p class="b-meetup u-mb-md">
+						<span class="b-meetup__icon">
+							{{ iconSVG('meetup') }}
+						</span>
+						Sleduj nás na meetupu a žádná akce ti neunikne.
+						Jsme v
+						<a href="https://www.meetup.com/frontendisti/">Praze</a>,
+						<a href="https://www.meetup.com/frontendisti-brno/">Brně</a>,
+						<a href="https://www.meetup.com/frontendisti-plzen/">Plzni</a>,
+						<a href="https://www.meetup.com/Frontendisti-cz-Ostrava/">Ostravě</a>.
+					</p>
+				</div>
+			</div>
+		</div>
+
+	</main>
 {% endblock %}

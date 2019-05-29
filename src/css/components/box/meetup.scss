@@ -1,0 +1,12 @@
+.b-meetup {
+	position: relative;
+	padding-left: 210px;
+	font-size: 30px;
+	line-height: (50/30);
+	&__icon {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-45%);
+	}
+}
