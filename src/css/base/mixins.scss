@@ -119,6 +119,23 @@
 	}
 }
 
+// Make utility classes
+@mixin make-utils($attribute, $map, $separator: '-') {
+
+	@each $modifier,
+	$value in $map {
+		@if (type-of($value)=='map') {
+			@include make-utils($modifier, $value, $separator);
+		}
+
+		@else {
+			&#{$separator}#{$modifier} {
+				#{$attribute}: $value;
+			}
+		}
+	}
+}
+
 // Suffix
 @mixin suffix($suffix, $delimiter: '\\@') {
 	&#{$delimiter}#{$suffix} {

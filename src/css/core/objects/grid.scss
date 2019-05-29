@@ -77,6 +77,15 @@
 	&--space-between {
 		justify-content: space-between;
 	}
+
+	// GRID SPACINGs
+	&--x-lg {
+		margin-left: -($gridGutter * 4);
+	}
+
+	&--x-lg > &__cell {
+		border-left-width: ($gridGutter * 4);
+	}
 }
 .size {
 	@include generateGridSize();
