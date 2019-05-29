@@ -80,5 +80,36 @@
 			</div>
 		</div>
 
+		<div class="u-pt-lg">
+			<div class="row-main">
+				<section role="region" class="s-partners">
+					{% set partners = {
+						items: [
+							{
+								name: 'ataccama',
+								width: '223',
+								height: '62'
+							},
+							{
+								name: 'lmc',
+								width: '112',
+								height: '85'
+							},
+							{
+								name: 'superkoders',
+								width: '291',
+								height: '18'
+							},
+							{
+								name: 'microsoft',
+								width: '232',
+								height: '68'
+							}
+						]
+					} %}
+					{% include './inc/box/partners.njk' %}
+				</section>
+			</div>
+		</div>
 	</main>
 {% endblock %}

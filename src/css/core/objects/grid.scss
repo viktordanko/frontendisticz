@@ -79,6 +79,13 @@
 	}
 
 	// GRID SPACINGs
+	&--x-md {
+		margin-left: -($gridGutter * 3);
+	}
+
+	&--x-md > &__cell {
+		border-left-width: ($gridGutter * 3);
+	}
 	&--x-lg {
 		margin-left: -($gridGutter * 4);
 	}

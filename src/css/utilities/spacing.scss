@@ -1,10 +1,16 @@
+.u-mb-md {
+	margin-bottom: $gridGutter * 3;
+}
 .u-mb-lg {
 	margin-bottom: $gridGutter * 4;
 }
 .u-mb-0 {
 	margin-bottom: 0;
 }
-
+.u-mx-auto {
+	margin-right: auto;
+	margin-left: auto;
+}
 .u-pt-lg {
 	padding-top: $gridGutter * 4;
 }
