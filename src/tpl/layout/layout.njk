@@ -50,6 +50,7 @@
 
 		<header role="banner" class="header{% if not isHomepage %} header--inverse{% endif %}">
 			<div class="row-main">
+<<<<<<< HEAD
 				<div class="header__wrap">
 					{% if isHomepage %}
 						<h1 class="header__logo">
@@ -89,6 +90,34 @@
 						</nav>
 					</div>
 				</div>
+=======
+				{% if isHomepage %}
+					<h1 class="header__logo">
+						<img src="{{ assets.images }}logo.svg" alt="Frontendisti.cz" width="264" height="34">
+					</h1>
+				{% else %}
+					<p class="header__logo">
+						<a href="./">
+							<img src="{{ assets.images }}logo.svg" alt="Frontendisti.cz" width="264" height="34">
+						</a>
+					</p>
+				{% endif %}
+
+				<nav role="navigation" id="menu-main" class="m-main">
+					<ul class="m-main__list">
+						<li class="m-main__item">
+							<a href="#" class="m-main__link">
+								Úvod
+							</a>
+						</li>
+						<li class="m-main__item">
+							<a href="#" class="m-main__link">
+								Archiv akcí
+							</a>
+						</li>
+					</ul>
+				</nav>
+>>>>>>> Gulp 4 config, Typography, Variables
 
 			</div>
 		</header>

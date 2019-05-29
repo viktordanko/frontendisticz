@@ -19,7 +19,7 @@ h5,
 h6,
 .h6 {
 	font-family: $fontSecondary;
-	font-weight: bold;
+	font-weight: normal;
 	line-height: 1.2;
 	margin: 1.5em 0 .5em;
 }
@@ -32,7 +32,14 @@ h2,
 .h2 {
 	font-size: 30px;
 	line-height: (47/30);
+<<<<<<< HEAD
 	margin-bottom: 1.5em;
+=======
+	margin-bottom: (35/30) + em;
+	.inverse & {
+		color: #fff;
+	}
+>>>>>>> Gulp 4 config, Typography, Variables
 }
 h3,
 .h3 {
@@ -54,6 +61,9 @@ h6,
 // Paragraph
 p {
 	margin: 0 0 $typoSpaceVertical;
+	.inverse & {
+		color: #fff;
+	}
 }
 hr {
 	border: solid $colorBd;
@@ -82,6 +92,27 @@ a {
 	.no-touchevents &:hover {
 		color: $colorHover;
 	}
+	.inverse & {
+		color: #fff;
+	}
+}
+a[href^="mailto"] {
+	position: relative;
+	color: $colorPrimary;
+	font-weight: normal;
+	text-decoration: none;
+	background-image: linear-gradient(to right, $colorPrimary 50%, transparent 50%);
+	background-position: 0 100%;
+	background-repeat: repeat-x;
+	background-size: 4px 1px;
+	transition: color $t;
+	.no-touchevents &:hover  {
+		color: $colorSecondary;
+	}
+}
+
+strong {
+	color: $colorSecondary;
 }
 a[href^="mailto"] {
 	position: relative;
