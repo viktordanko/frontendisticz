@@ -1,8 +1,36 @@
 .m-main {
+	font-size: 18px;
+	font-weight: bold;
 	&__list {
 		@extend %reset-ul;
+		display: flex;
+		align-items: center;
 	}
 	&__item {
 		@extend %reset-ul-li;
+		&:last-child {
+			margin-left: 15px;
+		}
+	}
+	&__link {
+		padding: 4px 15px 6px 15px;
+		color: #fff;
+		text-decoration: none;
+		border-radius: 4px;
+		display: block;
+	}
+
+	// STATEs
+	.no-touchevents &__link:hover {
+		color: $colorSecondary;
+	}
+	.no-touchevents &__link--cta:hover {
+		color: #fff;
+	}
+
+	// MODIFICATIONs
+	&__link--cta {
+		background-color: $colorSecondary;
+		color: $colorPrimary;
 	}
 }

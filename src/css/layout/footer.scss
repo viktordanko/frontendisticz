@@ -1,1 +1,24 @@
-.footer {}
+.footer {
+	background-color: $colorPrimary;
+	text-align: center;
+	color: #fff;
+	font-size: 16px;
+	&__copyright {
+		margin-bottom: 40px;
+	}
+	&__provider {
+		position: relative;
+		padding-top: 40px;
+		color: #999999;
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 58px;
+			height: 1px;
+			background: #999999;
+		}
+	}
+}

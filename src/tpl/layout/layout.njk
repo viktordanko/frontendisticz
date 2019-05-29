@@ -46,48 +46,79 @@
 			<span class="hide">|</span>
 			<a href="#menu-main">Přejít k hlavnímu menu</a>
 			<span class="hide">|</span>
-			<a href="#form-search">Přejít k vyhledávání</a>
 		</p>
 
-		<header role="banner" class="header">
+		<header role="banner" class="header{% if not isHomepage %} header--inverse{% endif %}">
 			<div class="row-main">
-				{% if isHomepage %}
-					<h1 class="header__logo">
-						<img src="{{ assets.images }}logo.svg" alt="Frontendisti.cz" width="264" height="34">
-					</h1>
-				{% else %}
-					<p class="header__logo">
-						<a href="./">
-							<img src="{{ assets.images }}logo.svg" alt="Frontendisti.cz" width="264" height="34">
-						</a>
-					</p>
-				{% endif %}
-
-				<nav role="navigation" id="menu-main" class="m-main">
-					<ul class="m-main__list">
-						<li class="m-main__item">
-							<a href="#" class="m-main__link">
-								Úvod
+				<div class="header__wrap">
+					{% if isHomepage %}
+						<h1 class="header__logo">
+							<img src="{{ assets.images }}logo-frontendisti.svg" alt="Frontendisti.cz" width="264" height="34">
+						</h1>
+					{% else %}
+						<p class="header__logo">
+							<a href="./">
+								<img src="{{ assets.images }}logo-frontendisti.svg" alt="Frontendisti.cz" width="264" height="34">
 							</a>
-						</li>
-						<li class="m-main__item">
-							<a href="#" class="m-main__link">
-								Archiv akcí
-							</a>
-						</li>
-					</ul>
-				</nav>
+						</p>
+					{% endif %}
+					<div class="header__menu">
+						<nav role="navigation" id="menu-main" class="m-main">
+							<ul class="m-main__list">
+								<li class="m-main__item">
+									<a href="#" class="m-main__link">
+										Partneři
+									</a>
+								</li>
+								<li class="m-main__item">
+									<a href="#" class="m-main__link">
+										Tým
+									</a>
+								</li>
+								<li class="m-main__item">
+									<a href="#" class="m-main__link">
+										Kontakt
+									</a>
+								</li>
+								<li class="m-main__item">
+									<a href="#" class="m-main__link m-main__link--cta">
+										Přidej se
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+				</div>
 
 			</div>
 		</header>
 
-		{% block content %}{% endblock %}
+		{% block content %}
+			{% set components = {
+				items: [
+					{
+						intro: {
+							title: 'Organizujeme vzdělávací akce',
+							subtitle: 'pro <strong>frontendové vývojáře</strong>.'
+						}
+					}
+				]
+			}
+			%}
+			{% include '../01-homepage.njk' %}
+		{% endblock %}
 
-		<footer role="contentinfo" class="footer">
+		<footer role="contentinfo" class="footer u-pt-lg">
 			<div class="row-main">
-				<p class="center">
-					&copy; 2016 SUPERKODERS
-				</p>
+				<div class="u-mb-lg">
+					<p class="footer__copyright">
+						&copy; 2014&ndash;2019 Spolek Frontendisti.cz
+					</p>
+					<p class="footer__provider">
+						Provozuje Spolek Frontendisti.cz zapsaný u Městského soudu v Praze<br>
+						Antala Staška 1565/30, Praha 4, 140 00 | IČ: 03591263
+					</p>
+				</div>
 			</div>
 		</footer>
 
