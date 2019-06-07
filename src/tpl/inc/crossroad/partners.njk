@@ -1,0 +1,22 @@
+<section role="region" class="c-partners u-mb-xl">
+	<div class="u-max-width--8-12 u-mx-auto u-mb-lg">
+		<h2>
+			Partneři
+		</h2>
+		<p>
+			Několik slov k&nbsp;možnostem partnerství, odkaz na&nbsp;PDF, případně co si Martin napíše. Jsme úplně boží, takže se moc moc chcete stát partnerem &#8209; fakt!
+		</p>
+	</div>
+	<ul class="c-partners__list grid grid--x-lg grid--middle">
+		{% for item in partners.items %}
+			<li class="c-partners__item grid__cell size--auto">
+				<a href="{{ item.href }}" class="b-partner" target="_blank" rel="noreferrer noopener">
+					<img src="{{ assets.images }}logos/{{ item.name }}.svg" alt="{{ item.name }}" width="{{ item.width }}" height="{{ item.height }}">
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
+	<p class="u-mt-lg">
+		Pokud vás zajímá možnost sponzorství Frontendisti.cz, pište Martinu Michálkovi na <a href="mailto:martin@vzhurudolu.cz">martin@vzhurudolu.cz</a>.
+	</p>
+</section>
