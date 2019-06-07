@@ -45,25 +45,19 @@
 			<a title="Přejít k obsahu (Klávesová zkratka: Alt + 2)" accesskey="2" href="#main">Přejít k obsahu</a>
 			<span class="hide">|</span>
 			<a href="#menu-main">Přejít k hlavnímu menu</a>
-			<span class="hide">|</span>
 		</p>
 
 		<header role="banner" class="header{% if not isHomepage %} header--inverse{% endif %}">
 			<div class="row-main">
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Add header, footer
 				<div class="header__wrap">
 					{% if isHomepage %}
 						<h1 class="header__logo">
-							<img src="{{ assets.images }}logo-frontendisti.svg" alt="Frontendisti.cz" width="264" height="34">
+							<img src="{{ assets.images }}logo-frontendisti.svg" alt="Frontendisti.cz">
 						</h1>
 					{% else %}
 						<p class="header__logo">
 							<a href="./">
-								<img src="{{ assets.images }}logo-frontendisti.svg" alt="Frontendisti.cz" width="264" height="34">
-<<<<<<< HEAD
+								<img src="{{ assets.images }}logo-frontendisti-inverse.svg" alt="Frontendisti.cz">
 							</a>
 						</p>
 					{% endif %}
@@ -94,7 +88,6 @@
 						</nav>
 					</div>
 				</div>
-=======
 				{% if isHomepage %}
 					<h1 class="header__logo">
 						<img src="{{ assets.images }}logo.svg" alt="Frontendisti.cz" width="264" height="34">
@@ -106,26 +99,6 @@
 						</a>
 					</p>
 				{% endif %}
-
-				<nav role="navigation" id="menu-main" class="m-main">
-					<ul class="m-main__list">
-						<li class="m-main__item">
-							<a href="#" class="m-main__link">
-								Úvod
-							</a>
-						</li>
-						<li class="m-main__item">
-							<a href="#" class="m-main__link">
-								Archiv akcí
-							</a>
-						</li>
-					</ul>
-				</nav>
->>>>>>> Gulp 4 config, Typography, Variables
-=======
-							</a>
-						</p>
-					{% endif %}
 					<div class="header__menu">
 						<nav role="navigation" id="menu-main" class="m-main">
 							<ul class="m-main__list">
@@ -153,29 +126,15 @@
 						</nav>
 					</div>
 				</div>
->>>>>>> Add header, footer
-
 			</div>
 		</header>
 
 		{% block content %}
-			{% set components = {
-				items: [
-					{
-						intro: {
-							title: 'Organizujeme vzdělávací akce',
-							subtitle: 'pro <strong>frontendové vývojáře</strong>.'
-						}
-					}
-				]
-			}
-			%}
-			{% include '../01-homepage.njk' %}
 		{% endblock %}
 
-		<footer role="contentinfo" class="footer u-pt-lg">
+		<footer role="contentinfo" class="footer u-pt-xl">
 			<div class="row-main">
-				<div class="u-mb-lg">
+				<div class="u-mb-xl">
 					<p class="footer__copyright">
 						&copy; 2014&ndash;2019 Spolek Frontendisti.cz
 					</p>
