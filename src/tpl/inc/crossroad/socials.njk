@@ -1,20 +1,22 @@
-<div class="c-socials u-mb-lg">
-	<div class="c-socials__list grid grid--x-lg grid--center">
+<h2 class="u-vhide">
+	Zastřešujeme
+</h2>
+<section role="region" class="c-socials u-mb-xl">
+	<div class="c-socials__list grid grid--y-lg grid--center">
 		{% for item in socials.items %}
 			<div class="c-socials__item grid__cell size--4-12">
-				<div class="b-social">
-					<div class="b-social__icon">
-						{{ iconSVG( item.icon ) }}
-					</div>
+				<article role="article" class="b-social">
+					{{ iconSVG(item.icon, 'b-social__icon') }}
 					<h3 class="b-social__title h2">
-						{{ item.title }}
+						<a href="{{ item.href }}" class="b-social__link link-mask u-text-nodecor">
+							{{ item.title | safe }}
+						</a>
 					</h3>
-					<p class="b-social__desc">
-						{{ item.perex }}
+					<p>
+						{{ item.perex | safe | nl2br }}
 					</p>
-					<a href="#" class="link-mask"></a>
-				</div>
+				</article>
 			</div>
 		{% endfor %}
 	</div>
-</div>
+</sec>

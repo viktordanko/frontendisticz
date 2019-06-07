@@ -1,12 +1,27 @@
 .b-social {
-	padding: 0 $gridGutter * 2;
+	position: relative;
+	&__icon {
+		height: 90px;
+		margin-bottom: 20px;
+		color: $colorSecondary;
+		transition: color $t;
+	}
 	&__title {
 		margin-bottom: 10px;
 		margin-top: 0;
 		color: $colorSecondary;
+		transition: color $t;
 	}
-	&__desc {
-		font-size: 18px;
-		line-height: (25/18);
+	> :last-child {
+		margin-bottom: 0;
+	}
+
+	// HOVERs
+	.no-touchevents &:hover &__title,
+	.no-touchevents &:hover &__link {
+		color: #fff;
+	}
+	.no-touchevents &:hover .icon-svg {
+		color: darken($colorSecondary, 10%);
 	}
 }
