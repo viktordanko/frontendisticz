@@ -1,0 +1,96 @@
+.b-card {
+	&__main {
+		margin-bottom: 35px;
+	}
+	&__title {
+		margin-bottom: 25px;
+	}
+	&__list {
+		@extend %reset-ul;
+	}
+	&__item {
+		@extend %reset-ul-li;
+	}
+	&__img {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		margin-bottom: 25px;
+		> * {
+			border-radius: 50%;
+		}
+	}
+	&__badge {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 40px;
+		width: 40px;
+		background: $colorPrimary;
+	}
+	&__name {
+		display: block;
+		text-decoration: none;
+		font-size: 23px;
+		line-height: (30/23);
+		margin: 0;
+	}
+	&__info {
+		font-size: 17px;
+	}
+	&__icon {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 25px;
+	}
+
+	// MODIFICATIONs
+	&--horizontal {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 90px;
+		margin-bottom: 0;
+		text-align: left;
+	}
+	&--horizontal &__img {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		margin-bottom: 0;
+	}
+
+	&__item--main {
+		margin-bottom: $gridGutter;
+	}
+	&__item--indent {
+		margin-top: 0.6em;
+	}
+	&__link--icon {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		padding-left: 35px;
+		font-size: 17px;
+		text-decoration: none;
+	}
+	.inverse & {
+		&__title {
+			color: $colorSecondary;
+		}
+	}
+
+	// HOVERs
+	.no-touchevents .inverse &__name:hover {
+		color: $colorSecondary;
+	}
+	.no-touchevents .inverse &__link--icon:hover {
+		color: $colorSecondary;
+	}
+}
