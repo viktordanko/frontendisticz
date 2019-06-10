@@ -7,9 +7,9 @@
 			Několik slov k&nbsp;možnostem partnerství, odkaz na&nbsp;PDF, případně co si Martin napíše. Jsme úplně boží, takže se moc moc chcete stát partnerem &#8209; fakt!
 		</p>
 	</div>
-	<ul class="c-partners__list grid grid--x-lg grid--middle">
+	<ul class="c-partners__list grid grid--md grid--middle">
 		{% for item in partners.items %}
-			<li class="c-partners__item grid__cell size--auto">
+			<li class="c-partners__item grid__cell size--6-12@sm size--auto@xl">
 				<a href="{{ item.href }}" class="b-partner" target="_blank" rel="noreferrer noopener">
 					<img src="{{ assets.images }}logos/{{ item.name }}.svg" alt="{{ item.name }}" width="{{ item.width }}" height="{{ item.height }}">
 				</a>
