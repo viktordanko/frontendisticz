@@ -2,8 +2,9 @@
 	&__main {
 		margin-bottom: 35px;
 	}
-	&__title {
-		margin-bottom: 25px;
+	&__title,
+	&__img {
+		margin-bottom: 15px;
 	}
 	&__list {
 		@extend %reset-ul;
@@ -11,11 +12,13 @@
 	&__item {
 		@extend %reset-ul-li;
 	}
+	&__item + &__item {
+		margin-top: 0.6em;
+	}
 	&__img {
 		position: relative;
 		display: inline-block;
 		vertical-align: top;
-		margin-bottom: 25px;
 		> * {
 			border-radius: 50%;
 		}
@@ -69,9 +72,6 @@
 	&__item--main {
 		margin-bottom: $gridGutter;
 	}
-	&__item--indent {
-		margin-top: 0.6em;
-	}
 	&__link--icon {
 		position: relative;
 		display: inline-block;
@@ -92,5 +92,13 @@
 	}
 	.no-touchevents .inverse &__link--icon:hover {
 		color: $colorSecondary;
+	}
+
+	// MEDIA QUERIEs
+	@media ($mdUp) {
+		&__title,
+		&__img {
+			margin-bottom: 25px;
+		}
 	}
 }

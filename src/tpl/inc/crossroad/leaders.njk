@@ -7,9 +7,9 @@
 			Hlavní a jediný je <a href="mailto:martin@vzhurudolu.cz">martin@vzhurudolu.cz</a> &ndash; ostatní mu jen koukají pod ruce a snaží se přiučit, ale i v Ostravě se snažíme být světoví!
 		</p>
 	</div>
-	<div class="c-leaders__list grid">
+	<div class="c-leaders__list grid grid--md">
 		{% for item in leaders.items %}
-			<div class="c-leaders__item grid__cell grid__cell--eq size--3-12">
+			<div class="c-leaders__item grid__cell grid__cell--eq size--6-12@sm size--3-12@lg">
 				<article role="article" class="b-card">
 					<h3 class="b-card__title h2">
 						{{ item.city | safe }}
@@ -48,7 +48,7 @@
 			</h3>
 		</div>
 		<ul class="c-others__list grid grid--middle grid--center">
-			<li class="c-others__item grid__cell size--4-12">
+			<li class="c-others__item grid__cell size--4-12@md">
 				<span class="b-card b-card--horizontal">
 					<span class="b-card__img">
 						<img src="{{ assets.images }}illust/forejt.jpg" alt="" width="65" height="65">
@@ -61,7 +61,7 @@
 					</span>
 				</span>
 			</li>
-			<li class="c-others__item grid__cell size--4-12">
+			<li class="c-others__item grid__cell size--4-12@md">
 				<span class="b-card b-card--horizontal">
 					<span class="b-card__img">
 						<img src="{{ assets.images }}illust/pokorny.jpg" alt="" width="65" height="65">
