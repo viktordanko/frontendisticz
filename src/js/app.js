@@ -5,6 +5,7 @@ import $ from 'jquery';
 // Components
 // import * as fontFaceObserver from './components/fontFaceObserver';
 import * as toggleMobileMenu from './components/toggleMobileMenu';
+import * as smoothScroll from './components/smoothScroll';
 
 
 // content load components
@@ -14,6 +15,8 @@ const componentsload = [
 // once delegated components
 const components = [
 	toggleMobileMenu,
+	smoothScroll,
+
 	// fontFaceObserver,
 ].concat( componentsload );
 
