@@ -1,23 +1,20 @@
-import $ from 'jquery';
-
 export const init = () => {
 
-	var $btn = $('.js-toggleMobileMenu');
-	var $menu = $('.m-main');
-	var $header = $('.header');
+	const btn = document.querySelector('.js-toggleMobileMenu');
+	const menu = document.querySelector('.m-main');
+	const header = document.querySelector('.header');
 
-	$(document)
-		.on('click', '.js-toggleMobileMenu', function() {
-			$menu.toggleClass('is-opened');
-			$btn.toggleClass('is-opened');
-			$header.toggleClass('is-opened');
-		})
-		// outclick
-		.on('click', event => {
-			if (!$(event.target).closest($menu).length && !$(event.target).closest($btn).length) {
-				$menu.removeClass('is-opened');
-				$btn.removeClass('is-opened');
-				$header.removeClass('is-opened');
-			}
-		});
+	btn.addEventListener('click', function() {
+		menu.classList.toggle('is-opened');
+		btn.classList.toggle('is-opened');
+		header.classList.toggle('is-opened');
+	});
+
+	document.addEventListener('click', event => {
+		if (!event.target.closest('.m-main') && !event.target.closest('.js-toggleMobileMenu')) {
+			menu.classList.remove('is-opened');
+			btn.classList.remove('is-opened');
+			header.classList.remove('is-opened');
+		}
+	});
 };
