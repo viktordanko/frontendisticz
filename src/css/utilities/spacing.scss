@@ -1,11 +1,8 @@
-.u-mb-md {
+.u-mb-lg {
 	margin-bottom: $gridGutter;
 }
-.u-mb-lg {
-	margin-bottom: $gridGutter * 3;
-}
 .u-mb-xl {
-	margin-bottom: $gridGutter * 4;
+	margin-bottom: $gridGutter * 2;
 }
 .u-mb-0 {
 	margin-bottom: 0;
@@ -28,5 +25,18 @@
 	margin-left: auto;
 }
 .u-pt-xl {
-	padding-top: $gridGutter * 4;
+	padding-top: $gridGutter * 2;
+}
+
+// MEDIA QUERIEs
+@media ($mdUp) {
+	.u-mb-lg {
+		margin-bottom: $gridGutter * 3;
+	}
+	.u-mb-xl {
+		margin-bottom: $gridGutter * 4;
+	}
+	.u-pt-xl {
+		padding-top: $gridGutter * 4;
+	}
 }
