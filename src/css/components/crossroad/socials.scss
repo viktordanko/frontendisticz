@@ -1,6 +1,11 @@
 .c-socials {
 	color: #fff;
 	text-align: center;
-	font-size: 18px;
+	font-size: 14px;
 	line-height: (25/18);
+
+	// MEDIA QUERIEs
+	@media ($mdUp) {
+		font-size: 18px;
+	}
 }

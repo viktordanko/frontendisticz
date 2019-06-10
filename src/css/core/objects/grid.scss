@@ -79,11 +79,11 @@
 	}
 
 	// GRID SPACINGs
-	&--lg {
+	&--md {
 		margin-left: -($gridGutter * 3);
 		margin-bottom: -($gridGutter * 3);
 	}
-	&--lg > &__cell {
+	&--md > &__cell {
 		border-left-width: ($gridGutter * 3);
 		border-bottom-width: ($gridGutter * 3);
 	}
@@ -104,10 +104,20 @@
 	}
 
 	&--y-lg {
-		margin-bottom: -($gridGutter * 4);
+		margin-bottom: -($gridGutter * 2);
 	}
 	&--y-lg > &__cell {
-		border-bottom-width: ($gridGutter * 4);
+		border-bottom-width: ($gridGutter * 2);
+	}
+
+	// MEDIA QUERIEs
+	@media ($mdUp) {
+		&--y-lg {
+			margin-bottom: -($gridGutter * 4);
+		}
+		&--y-lg > &__cell {
+			border-bottom-width: ($gridGutter * 4);
+		}
 	}
 }
 .size {
