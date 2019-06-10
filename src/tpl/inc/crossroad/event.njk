@@ -1,0 +1,58 @@
+{% set c = cycler('inverse', '') %}
+{% for item in sections %}
+	<section class="u-pt-xl u-text-center {{ c.next() }}">
+		<div class="row-main">
+			<div class="u-max-width--8-12 u-mx-auto u-mb-lg">
+				<h2>
+					{{ item.title }}
+				</h2>
+				<p>
+					{{ item.place }}
+				</p>
+			</div>
+			<section class="c-cards u-mb-lg">
+				<div class="c-cards__list grid grid--md">
+					{% for person in item.persons %}
+						<div class="c-cards__item grid__cell grid__cell--eq size--6-12@sm size--4-12@md">
+							<article class="b-card">
+								<h3 class="b-card__title">
+									{{ person.topic }}
+								</h3>
+								<div class="b-card__img">
+									<img src="{{ assets.images }}/illust/{{ person.img }}.jpg" alt="" width="150" height="150">
+								</div>
+								<a href="{{ person.twitter }}" class="b-card__name">
+									{{ person.name }}
+								</a>
+								<p class="b-card__info">
+									{{ person.job }}
+								</p>
+								<ul class="b-card__list">
+									<li class="b-card__item">
+										<a href="{{ person.youtube }}" class="b-card__link b-card__link--icon">
+											{{ iconSVG('youtube', 'b-card__icon') }}
+											Video z prednášky
+										</a>
+									</li>
+									<li class="b-card__item">
+										<a href="{{ person.slideshare }}" class="b-card__link b-card__link--icon">
+											{{ iconSVG('slideshare', 'b-card__icon') }}
+											Prezentace
+										</a>
+									</li>
+								</ul>
+							</article>
+						</div>
+					{% endfor %}
+				</div>
+				<p class="u-mx-auto u-mt-md">
+					<a href="#" class="btn">
+						<span class="btn__text">
+							Všechno v playlistu
+						</span>
+					</a>
+				</p>
+			</section>
+		</div>
+	</section>
+{% endfor %}

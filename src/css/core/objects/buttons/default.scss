@@ -10,6 +10,7 @@
 		position: relative;
 		display: block;
 		border: 1px solid transparent;
+		border-radius: 4px;
 		padding: 8px 20px;
 		font-size: 1rem;
 		line-height: 20px;
@@ -31,7 +32,6 @@
 
 	// HOVERs
 	.no-touchevents &:hover &__text {
-		background-color: $colorHover;
-		color: $colorWhite;
+		color: $colorPrimary;
 	}
 }
