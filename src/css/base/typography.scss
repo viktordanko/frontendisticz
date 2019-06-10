@@ -1,8 +1,11 @@
 html {
 	font-family: $fontPrimary;
-	font-size: $fontSize;
+	font-size: 16px;
 	line-height: $lineHeight;
 	color: $colorText;
+	@media ($mdUp) {
+		font-size: $fontSize;
+	}
 }
 
 // Headings
@@ -25,16 +28,22 @@ h6,
 }
 h1,
 .h1 {
-	font-size: 45px;
-	line-height: (55/45);
+	font-size: 30px;
+	line-height: (37/30);
+	@media ($mdUp) {
+		font-size: 45px;
+	}
 }
 h2,
 .h2 {
-	font-size: 30px;
-	line-height: (47/30);
+	font-size: 22px;
+	line-height: (31/22);
 	margin-bottom: (35/30) + em;
 	.inverse & {
 		color: #fff;
+	}
+	@media ($mdUp) {
+		font-size: 30px;
 	}
 }
 h3,
