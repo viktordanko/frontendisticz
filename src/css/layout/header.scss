@@ -3,21 +3,59 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	padding: 50px 0;
-	z-index: 10;
+	padding: 25px 0;
+	z-index: 100;
 	&__wrap {
+		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
-		align-content: center;
+		align-items: center;
 	}
 	&__logo {
-		flex: 0 0 auto;
+		position: relative;
+		flex: 0 1 263px;
 		font-size: 100%;
 		line-height: 1;
 		margin: 0;
+		overflow: hidden;
+		&::before {
+			content: '';
+			display: block;
+			padding-top: percentage(34/263);
+		}
+		img {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			height: 100%;
+			width: auto;
+			max-width: none;
+		}
 	}
 	&__menu {
 		flex: 0 1 auto;
 	}
+
+	// MODIFICATIONs
+	&--inverse {
+		position: static;
+		color: $colorPrimary;
+	}
+
+	// MEDIA QUERIEs
+	@media ($mdDown) {
+		&__logo {
+			flex-basis: 40px;
+			&::before {
+				padding-top: percentage(60/75);
+			}
+		}
+		&.is-opened {
+			outline: 5000px solid rgba(#000, 0.6);
+			background-color: $colorPrimary;
+		}
+	}
+
 }

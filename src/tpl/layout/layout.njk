@@ -42,9 +42,13 @@
 	</head>
 	<body>
 		<p class="m-accessibility">
-			<a title="Přejít k obsahu (Klávesová zkratka: Alt + 2)" accesskey="2" href="#main">Přejít k obsahu</a>
+			<a title="Přejít k obsahu (Klávesová zkratka: Alt + 2)" accesskey="2" href="#main">
+				Přejít k obsahu
+			</a>
 			<span class="hide">|</span>
-			<a href="#menu-main">Přejít k hlavnímu menu</a>
+			<a href="#menu-main">
+				Přejít k hlavnímu menu
+			</a>
 		</p>
 
 		<header role="banner" class="header{% if not isHomepage %} header--inverse{% endif %}">
@@ -86,6 +90,10 @@
 								</li>
 							</ul>
 						</nav>
+						<button class="m-mobile-menu js-toggleMobileMenu">
+							<span class="m-mobile-menu__icon"></span>
+							<span class="u-vhide">Mobilní menu</span>
+						</button>
 					</div>
 				</div>
 				{% if isHomepage %}
@@ -145,7 +153,6 @@
 				</div>
 			</div>
 		</footer>
-
 		<!--[if (gte IE 9) | (!IE)]><!-->
 			<script src="{{ assets.scripts }}jquery-2.2.4.min.js"></script>
 			<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find"></script>

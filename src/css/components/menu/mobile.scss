@@ -1,0 +1,75 @@
+.m-mobile-menu {
+	appearance: none;
+	outline: none;
+	border: 0;
+	background: none;
+	@media ($mdDown) {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 30px;
+		height: 30px;
+		&__icon {
+			position: relative;
+			display: block;
+			background-color: #fff;
+			transition: transform 0s $t;
+		}
+		&__icon,
+		&__icon::before,
+		&__icon::after {
+			width: 30px;
+			height: 3px;
+			background-color: #fff;
+			transition: background-color $t;
+		}
+		&__icon::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 10px;
+			transition: bottom $t $t cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+		&__icon::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			top: 10px;
+			background-color: #fff;
+			transition: top 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+		}
+
+		// STATES
+		.is-opened & {
+			&__icon {
+				background: transparent;
+			}
+			&__icon::before {
+				bottom: 0;
+				transform: rotate(-45deg);
+				transition: bottom 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+			}
+			&__icon::after {
+				top: 0;
+				transform: rotate(45deg);
+				transition: top 300ms cubic-bezier(0.23, 1, 0.32, 1), transform 300ms 300ms cubic-bezier(0.23, 1, 0.32, 1);
+			}
+		}
+		.header--inverse & {
+			&__icon,
+			&__icon::before,
+			&__icon::after {
+				background-color: $colorPrimary;
+			}
+		}
+		.header--inverse.is-opened & {
+			&__icon::before,
+			&__icon::after {
+				background-color: #fff;
+			}
+		}
+	}
+	@media ($mdUp) {
+		display: none;
+	}
+}

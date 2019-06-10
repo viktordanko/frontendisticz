@@ -3,14 +3,10 @@
 	font-weight: bold;
 	&__list {
 		@extend %reset-ul;
-		display: flex;
-		align-items: center;
+		transition: opacity $t, visibility 0s $t;
 	}
 	&__item {
 		@extend %reset-ul-li;
-		&:last-child {
-			margin-left: 15px;
-		}
 	}
 	&__link {
 		padding: 4px 15px 6px 15px;
@@ -37,6 +33,45 @@
 		&__logo,
 		&__link {
 			color: $colorPrimary;
+		}
+	}
+
+	// MEDIA QUERIEs
+	@media ($mdDown) {
+		&__list {
+			position: absolute;
+			top: 100%;
+			left: -$gridGutter;
+			right: -$gridGutter;
+			text-align: center;
+			opacity: 0;
+			visibility: hidden;
+		}
+		.is-opened & {
+			&__list {
+				position: absolute;
+				background: $colorPrimary;
+				opacity: 1;
+				visibility: visible;
+				z-index: 10;
+				transition-delay: 0s;
+			}
+		}
+		.header--inverse & {
+			&__logo,
+			&__link {
+				color: #fff;
+			}
+		}
+	}
+	@media ($mdUp) {
+		&__list {
+			display: flex;
+			align-items: center;
+			transform: none;
+		}
+		&__item:last-child  {
+			margin-left: 15px;
 		}
 	}
 }
