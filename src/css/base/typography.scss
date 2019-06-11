@@ -125,18 +125,9 @@ a[href^="mailto"] {
 	font-weight: normal;
 	text-decoration: none;
 	background-image: linear-gradient(to right, $colorPrimary 50%, transparent 50%);
-	background-position: 0 1.3em;
+	background-position: 0 100%;
 	background-repeat: repeat-x;
-	background-size: 3px 3px;
-	// &::before {
-	// 	content: '';
-	// 	position: absolute;
-	// 	top: calc(100% + 2px);
-	// 	left: 0;
-	// 	right: 0;
-	// 	height: 1px;
-	// 	background: $colorPrimary;
-	// }
+	background-size: 4px 1px;
 }
 
 strong {
