@@ -155,13 +155,6 @@
 	}
 }
 
-// Flexbox not supported
-@mixin no-flex() {
-	.no-flexwrap & {
-		@content;
-	}
-}
-
 // Text Alignment and Transformation classes
 @mixin text-truncate() {
 	overflow: hidden;

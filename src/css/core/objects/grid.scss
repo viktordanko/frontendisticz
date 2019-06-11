@@ -44,46 +44,26 @@
 	}
 	&--middle {
 		align-items: center;
-		@include no-flex() {
-			.grid__cell {
-				vertical-align: middle;
-			}
-		}
 	}
 	&--bottom {
 		align-items: flex-end;
-		@include no-flex() {
-			.grid__cell {
-				vertical-align: bottom;
-			}
-		}
 	}
 	&--center {
 		justify-content: center;
-		@include no-flex() {
-			.grid__cell {
-				text-align: center;
-			}
-		}
 	}
 	&--right {
 		justify-content: flex-end;
-		@include no-flex() {
-			.grid__cell {
-				text-align: right;
-			}
-		}
 	}
 	&--space-between {
 		justify-content: space-between;
 	}
 
 	// GRID SPACINGs
-	&--md {
+	&--lg {
 		margin-left: -($gridGutter * 3);
 		margin-bottom: -($gridGutter * 3);
 	}
-	&--md > &__cell {
+	&--lg > &__cell {
 		border-left-width: ($gridGutter * 3);
 		border-bottom-width: ($gridGutter * 3);
 	}
