@@ -8,13 +8,16 @@ export const init = () => {
 		menu.classList.toggle('is-opened');
 		btn.classList.toggle('is-opened');
 		header.classList.toggle('is-opened');
+
+		// Close the mobile menu when click outside
+		document.addEventListener('click', event => {
+			if (!event.target.closest('.m-main') && !event.target.closest('.js-toggleMobileMenu')) {
+				menu.classList.remove('is-opened');
+				btn.classList.remove('is-opened');
+				header.classList.remove('is-opened');
+			}
+		});
 	});
 
-	document.addEventListener('click', event => {
-		if (!event.target.closest('.m-main') && !event.target.closest('.js-toggleMobileMenu')) {
-			menu.classList.remove('is-opened');
-			btn.classList.remove('is-opened');
-			header.classList.remove('is-opened');
-		}
-	});
+
 };
