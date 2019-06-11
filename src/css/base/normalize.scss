@@ -185,7 +185,7 @@ template {
 ========================================================================== */
 
 a:focus {
-	outline: 0;
+	outline: 2px solid #f90;
 }
 
 pre {
@@ -211,6 +211,13 @@ fieldset {
 
 figure {
 	margin: 0;
+}
+
+button {
+	appearance: none;
+	outline: none;
+	border: 0;
+	background: none;
 }
 
 [disabled] {
