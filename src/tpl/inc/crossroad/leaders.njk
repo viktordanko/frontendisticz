@@ -9,7 +9,7 @@
 			</p>
 		</div>
 		<div class="c-leaders__wrap u-mb-md">
-			<div class="c-leaders__list grid grid--x-md grid--y-lg">
+			<div class="c-leaders__list grid grid--x-md grid--y-xl">
 				{% for item in leaders.items %}
 					<div class="c-leaders__item grid__cell grid__cell--eq size--6-12@sm size--3-12@lg">
 						<article role="article" class="b-card">
@@ -19,7 +19,7 @@
 							<ul class="b-card__list">
 								<li class="b-card__item b-card__item--main">
 									<span class="b-card__img">
-										<img src="{{ assets.images }}illust/{{ item.img }}.jpg" alt="" width="150" height="150">
+										<img src="{{ assets.images }}illust/{{ item.img }}.jpg" alt="Profilová fotografie - {{ item.name }}" width="150" height="150">
 										{% if loop.first %}
 											<span class="b-card__badge">
 												{{ iconSVG('crown') }}
@@ -51,10 +51,10 @@
 				</h3>
 			</div>
 			<ul class="c-others__list grid grid--center">
-				<li class="c-others__item grid__cell size--6-12@md size--4-12@lg">
+				<li class="c-others__item grid__cell size--auto size--4-12@md">
 					<span class="b-card b-card--horizontal">
 						<span class="b-card__img">
-							<img src="{{ assets.images }}illust/forejt.jpg" alt="" width="65" height="65">
+							<img src="{{ assets.images }}illust/forejt.jpg" alt="Profilová fotografie - Jan Forejt" width="65" height="65">
 						</span>
 						<span class="b-card__name">
 							Jan Forejt
@@ -64,10 +64,10 @@
 						</span>
 					</span>
 				</li>
-				<li class="c-others__item grid__cell size--6-12@md size--4-12@lg">
+				<li class="c-others__item grid__cell size--auto size--4-12@md">
 					<span class="b-card b-card--horizontal">
 						<span class="b-card__img">
-							<img src="{{ assets.images }}illust/pokorny.jpg" alt="" width="65" height="65">
+							<img src="{{ assets.images }}illust/pokorny.jpg" alt="Profilová fotografie - Robin Pokorný" width="65" height="65">
 						</span>
 						<span class="b-card__name">
 							Robin Pokorný
