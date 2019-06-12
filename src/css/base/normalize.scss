@@ -185,8 +185,7 @@ template {
 ========================================================================== */
 
 a:focus {
-	outline: 2px solid #f90;
-	outline-offset: 0.2em;
+	outline: none;
 }
 
 pre {
@@ -201,6 +200,7 @@ iframe,
 object,
 embed,
 svg {
+	display: inline-block;
 	vertical-align: middle;
 }
 
@@ -212,13 +212,6 @@ fieldset {
 
 figure {
 	margin: 0;
-}
-
-button {
-	appearance: none;
-	outline: none;
-	border: 0;
-	background: none;
 }
 
 [disabled] {
