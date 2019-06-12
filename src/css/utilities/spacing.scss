@@ -1,8 +1,11 @@
-.u-mb-lg {
+.u-mb-md {
 	margin-bottom: $gridGutter;
 }
-.u-mb-xl {
+.u-mb-lg {
 	margin-bottom: $gridGutter * 2;
+}
+.u-mb-xl {
+	margin-bottom: $gridGutter * 3;
 }
 .u-mb-0 {
 	margin-bottom: 0;
@@ -27,9 +30,15 @@
 .u-pt-xl {
 	padding-top: $gridGutter * 2;
 }
+.u-pb-xl {
+	padding-bottom: $gridGutter * 2;
+}
 
 // MEDIA QUERIEs
 @media ($mdUp) {
+	.u-mb-md {
+		margin-bottom: $gridGutter * 2;
+	}
 	.u-mb-lg {
 		margin-bottom: $gridGutter * 3;
 	}
@@ -38,5 +47,8 @@
 	}
 	.u-pt-xl {
 		padding-top: $gridGutter * 4;
+	}
+	.u-pb-xl {
+		padding-bottom: $gridGutter * 4;
 	}
 }
