@@ -1,8 +1,8 @@
-{% set c = cycler('inverse', '') %}
+{% set c = cycler('', 'u-bg-inverse') %}
 {% for item in sections %}
-	<section class="u-pt-xl u-text-center {{ c.next() }}">
+	<section role="region" class="c-cards u-pt-xl {{ c.next() }}">
 		<div class="row-main">
-			<div class="u-max-width--8-12 u-mx-auto u-mb-lg">
+			<div class="u-max-width--8-12 u-mx-auto u-mb-md">
 				<h2>
 					{{ item.title }}
 				</h2>
@@ -10,22 +10,24 @@
 					{{ item.place }}
 				</p>
 			</div>
-			<section class="c-cards u-mb-lg">
-				<div class="c-cards__list grid grid--md">
+			<div class="c-cards__wrap u-mb-xl">
+				<div class="c-cards__list grid grid--lg ">
 					{% for person in item.persons %}
 						<div class="c-cards__item grid__cell grid__cell--eq size--6-12@sm size--4-12@md">
-							<article class="b-card">
-								<h3 class="b-card__title">
+							<article role="article" class="b-card">
+								<h3 class="b-card__title u-color-secondary">
 									{{ person.topic }}
 								</h3>
 								<div class="b-card__img">
 									<img src="{{ assets.images }}/illust/{{ person.img }}.jpg" alt="" width="150" height="150">
 								</div>
-								<a href="{{ person.twitter }}" class="b-card__name">
-									{{ person.name }}
-								</a>
 								<p class="b-card__info">
-									{{ person.job }}
+									<a href="{{ person.twitter }}" class="b-card__name" target="_blank" rel="noopener noreferrer">
+										{{ person.name }}
+									</a>
+									<span>
+										{{ person.job }}
+									</span>
 								</p>
 								<ul class="b-card__list">
 									<li class="b-card__item">
@@ -52,7 +54,7 @@
 						</span>
 					</a>
 				</p>
-			</section>
+			</div>
 		</div>
 	</section>
 {% endfor %}
