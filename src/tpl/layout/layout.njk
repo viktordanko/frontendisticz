@@ -42,31 +42,35 @@
 	</head>
 	<body>
 		<p class="m-accessibility">
-			<a title="Přejít k obsahu (Klávesová zkratka: Alt + 2)" accesskey="2" href="#main">
+			<a title="Přejít k obsahu (Klávesová zkratka: Alt + 2)" accesskey="2" href="#main" class="js-smooth-scroll">
 				Přejít k obsahu
 			</a>
 			<span class="hide">|</span>
-			<a href="#menu-main">
+			<a href="#menu-main" class="js-smooth-scroll">
 				Přejít k hlavnímu menu
 			</a>
 		</p>
 
-		<header role="banner" class="header{% if not isHomepage %} header--inverse{% endif %}">
+		<header role="banner" class="header">
 			<div class="row-main">
 				<div class="header__wrap">
 					{% if isHomepage %}
 						<h1 class="header__logo">
-							<img src="{{ assets.images }}logo-frontendisti.svg" alt="Frontendisti.cz" class="logo">
+							<img src="{{ assets.images }}logo-frontendisti.svg" alt="Frontendisti.cz">
 						</h1>
 					{% else %}
 						<p class="header__logo">
 							<a href="./">
-								<img src="{{ assets.images }}logo-frontendisti-inverse.svg" alt="Frontendisti.cz" class="header__logo--inverse">
+								<img src="{{ assets.images }}logo-frontendisti.svg" alt="Frontendisti.cz">
 							</a>
 						</p>
 					{% endif %}
 					<div class="header__menu">
-						<nav role="navigation" id="menu-main" class="m-main">
+						<nav id="menu-main" class="m-main" aria-label="Main Menu" >
+							<button class="m-mobile-menu btn js-toggleMobileMenu" data-text="Menu" data-text-close="Zavřít">
+								<span class="m-mobile-menu__icon"></span>
+								<span class="u-vhide">Mobilní menu</span>
+							</button>
 							<ul class="m-main__list">
 								<li class="m-main__item">
 									<a href="#partners" class="m-main__link js-smooth-scroll">
@@ -90,10 +94,6 @@
 								</li>
 							</ul>
 						</nav>
-						<button class="m-mobile-menu js-toggleMobileMenu">
-							<span class="m-mobile-menu__icon"></span>
-							<span class="u-vhide">Mobilní menu</span>
-						</button>
 					</div>
 				</div>
 			</div>
@@ -116,7 +116,7 @@
 			</div>
 		</footer>
 		<!--[if (gte IE 9) | (!IE)]><!-->
-			<script src="{{ assets.scripts }}jquery-2.2.4.min.js"></script>
+			{# <script src="{{ assets.scripts }}jquery-2.2.4.min.js"></script> #}
 			<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find"></script>
 			<script src="{{ assets.scripts }}app.js"></script>
 			<script>

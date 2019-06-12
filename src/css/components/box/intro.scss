@@ -30,4 +30,17 @@
 		display: block;
 		font-size: (40/45)+em;
 	}
+
+	// MODIFICATIONs
+	&--secondary {
+		background-image: none;
+		height: 330px;
+		&::after {
+			content: '{F}';
+			position: absolute;
+			font-size: 120px;
+			opacity: 0.1;
+			padding-bottom: $gridGutter;
+		}
+	}
 }

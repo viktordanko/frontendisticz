@@ -2,99 +2,103 @@
 {% set pageTitle = 'Archiv akcí' %}
 
 {% block content %}
-	<main class="u-pt-xl">
-		<div class="row-main">
-			<h1 class="u-text-center u-mb-lg">
-				Archiv akcí
-			</h1>
+	<main role="main" id="main">
+		<div class="b-intro b-intro--secondary">
+			<div class="row-main">
+				<h1 class="b-intro__title">
+					<strong>
+						Archiv
+					</strong>
+					akcí
+				</h1>
+			</div>
 		</div>
-			{% set sections = [
-				{
-					title: 'Chrome DevTools, metriky rychlosti načítání a JAMstack',
-					place: 'Středa 14. 3. 2018, Ataccama office Praha',
-					persons: [
-						{
-							img: 'michalek',
-							twitter: 'https://twitter.com/machal',
-							name: 'Martin Michálek',
-							job: 'Freelancer',
-							topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
-							youtubeHref: 'https://youtu.be/fR9n_yi050g',
-							slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
-						},
-						{
-							img: 'michalek',
-							twitter: 'https://twitter.com/machal',
-							name: 'Martin Michálek',
-							job: 'Freelancer',
-							topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
-							youtubeHref: 'https://youtu.be/fR9n_yi050g',
-							slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
-						},
-						{
-							img: 'michalek',
-							twitter: 'https://twitter.com/machal',
-							name: 'Martin Michálek',
-							job: 'Freelancer',
-							topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
-							youtubeHref: 'https://youtu.be/fR9n_yi050g',
-							slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
-						},
-						{
-							img: 'michalek',
-							twitter: 'https://twitter.com/machal',
-							name: 'Martin Michálek',
-							job: 'Freelancer',
-							topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
-							youtubeHref: 'https://youtu.be/fR9n_yi050g',
-							slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
-						}
-					]
-				},
-				{
-					title: 'Chrome DevTools, metriky rychlosti načítání a JAMstack',
-					place: 'Středa 14. 3. 2018, Ataccama office Praha',
-					persons: [
-						{
-							img: 'michalek',
-							twitter: 'https://twitter.com/machal',
-							name: 'Martin Michálek',
-							job: 'Freelancer',
-							topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
-							youtubeHref: 'https://youtu.be/fR9n_yi050g',
-							slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
-						},
-						{
-							img: 'michalek',
-							twitter: 'https://twitter.com/machal',
-							name: 'Martin Michálek',
-							job: 'Freelancer',
-							topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
-							youtubeHref: 'https://youtu.be/fR9n_yi050g',
-							slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
-						},
-						{
-							img: 'michalek',
-							twitter: 'https://twitter.com/machal',
-							name: 'Martin Michálek',
-							job: 'Freelancer',
-							topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
-							youtubeHref: 'https://youtu.be/fR9n_yi050g',
-							slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
-						},
-						{
-							img: 'michalek',
-							twitter: 'https://twitter.com/machal',
-							name: 'Martin Michálek',
-							job: 'Freelancer',
-							topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
-							youtubeHref: 'https://youtu.be/fR9n_yi050g',
-							slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
-						}
-					]
-				}
-			]%}
-			{% include './inc/crossroad/event.njk' %}
-		</div>
+		{% set sections = [
+			{
+				title: 'Chrome DevTools, metriky rychlosti načítání a JAMstack',
+				place: 'Středa 14. 3. 2018, Ataccama office Praha',
+				persons: [
+					{
+						img: 'michalek',
+						twitter: 'https://twitter.com/machal',
+						name: 'Martin Michálek',
+						job: 'Freelancer',
+						topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
+						youtubeHref: 'https://youtu.be/fR9n_yi050g',
+						slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
+					},
+					{
+						img: 'michalek',
+						twitter: 'https://twitter.com/machal',
+						name: 'Martin Michálek',
+						job: 'Freelancer',
+						topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
+						youtubeHref: 'https://youtu.be/fR9n_yi050g',
+						slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
+					},
+					{
+						img: 'michalek',
+						twitter: 'https://twitter.com/machal',
+						name: 'Martin Michálek',
+						job: 'Freelancer',
+						topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
+						youtubeHref: 'https://youtu.be/fR9n_yi050g',
+						slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
+					},
+					{
+						img: 'michalek',
+						twitter: 'https://twitter.com/machal',
+						name: 'Martin Michálek',
+						job: 'Freelancer',
+						topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
+						youtubeHref: 'https://youtu.be/fR9n_yi050g',
+						slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
+					}
+				]
+			},
+			{
+				title: 'Chrome DevTools, metriky rychlosti načítání a JAMstack',
+				place: 'Středa 14. 3. 2018, Ataccama office Praha',
+				persons: [
+					{
+						img: 'michalek',
+						twitter: 'https://twitter.com/machal',
+						name: 'Martin Michálek',
+						job: 'Freelancer',
+						topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
+						youtubeHref: 'https://youtu.be/fR9n_yi050g',
+						slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
+					},
+					{
+						img: 'michalek',
+						twitter: 'https://twitter.com/machal',
+						name: 'Martin Michálek',
+						job: 'Freelancer',
+						topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
+						youtubeHref: 'https://youtu.be/fR9n_yi050g',
+						slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
+					},
+					{
+						img: 'michalek',
+						twitter: 'https://twitter.com/machal',
+						name: 'Martin Michálek',
+						job: 'Freelancer',
+						topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
+						youtubeHref: 'https://youtu.be/fR9n_yi050g',
+						slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
+					},
+					{
+						img: 'michalek',
+						twitter: 'https://twitter.com/machal',
+						name: 'Martin Michálek',
+						job: 'Freelancer',
+						topic: 'Metriky rychlosti načítání a tipy pro WebpageTest.org',
+						youtubeHref: 'https://youtu.be/fR9n_yi050g',
+						slideshareHref: 'https://www.slideshare.net/machal/metriky-rychlosti-natn'
+					}
+				]
+			}
+		]%}
+		{% include './inc/crossroad/event.njk' %}
 	</main>
 {% endblock %}
