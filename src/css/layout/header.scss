@@ -5,6 +5,7 @@
 	right: 0;
 	padding: 25px 0;
 	z-index: 100;
+	transition: background-color $t;
 	&__wrap {
 		position: relative;
 		display: flex;
@@ -39,7 +40,7 @@
 	}
 
 	// MODIFICATIONs
-	&--inverse {
+	&--u-bg-inverse {
 		position: relative;
 		color: $colorPrimary;
 	}
@@ -49,14 +50,15 @@
 		&__logo {
 			flex-basis: 40px;
 			&::before {
-				padding-top: percentage(60/75);
+				padding-top: percentage(60/80);
 			}
 		}
 		&.is-opened {
 			outline: 5000px solid rgba(#000, 0.6);
 			background-color: $colorPrimary;
+			transition-delay: 0s;
 		}
-		&--inverse.is-opened &__logo--inverse {
+		&--u-bg-inverse.is-opened &__logo--u-bg-inverse {
 			filter: invert(1) brightness(200);
 		}
 	}

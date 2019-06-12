@@ -2,7 +2,9 @@
 	&__main {
 		margin-bottom: 35px;
 	}
-	&__title,
+	&__title {
+		margin-bottom: 20px;
+	}
 	&__img {
 		margin-bottom: 15px;
 	}
@@ -36,10 +38,11 @@
 	}
 	&__name {
 		display: block;
-		text-decoration: none;
+		margin: 0;
 		font-size: 23px;
 		line-height: (30/23);
-		margin: 0;
+		text-decoration: none;
+		color: $colorPrimary;
 	}
 	&__info {
 		font-size: 17px;
@@ -55,8 +58,8 @@
 	// MODIFICATIONs
 	&--horizontal {
 		position: relative;
-		display: inline-block;
-		vertical-align: top;
+		display: block;
+		width: 100%;
 		padding-left: 90px;
 		margin-bottom: 0;
 		text-align: left;
@@ -79,26 +82,21 @@
 		padding-left: 35px;
 		font-size: 17px;
 		text-decoration: none;
-	}
-	.inverse & {
-		&__title {
-			color: $colorSecondary;
-		}
+		color: $colorPrimary;
 	}
 
 	// HOVERs
-	.no-touchevents .inverse &__name:hover {
+	.no-touchevents &__name:hover {
 		color: $colorSecondary;
 	}
-	.no-touchevents .inverse &__link--icon:hover {
+	.no-touchevents &__link--icon:hover {
 		color: $colorSecondary;
 	}
 
 	// MEDIA QUERIEs
 	@media ($mdUp) {
-		&__title,
-		&__img {
-			margin-bottom: 25px;
+		&__title {
+			margin-bottom: 30px;
 		}
 	}
 }

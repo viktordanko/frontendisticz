@@ -9,6 +9,10 @@ html {
 body {
 	position: relative;
 	min-width: 320px;
+	scroll-behavior: smooth;
+}
+section {
+	text-align: center;
 }
 :first-child {
 	margin-top: 0;

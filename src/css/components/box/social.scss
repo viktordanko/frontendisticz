@@ -13,6 +13,9 @@
 		color: $colorSecondary;
 		transition: color $t;
 	}
+	&__link {
+		text-decoration: none;
+	}
 	> :last-child {
 		margin-bottom: 0;
 	}

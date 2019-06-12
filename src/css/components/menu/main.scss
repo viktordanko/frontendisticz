@@ -3,17 +3,16 @@
 	font-weight: bold;
 	&__list {
 		@extend %reset-ul;
-		transition: opacity $t, visibility 0s $t;
 	}
 	&__item {
 		@extend %reset-ul-li;
 	}
 	&__link {
-		padding: 4px 15px 6px 15px;
+		display: block;
+		padding: 4px 15px 5px;
 		color: #fff;
 		text-decoration: none;
 		border-radius: 4px;
-		display: block;
 	}
 
 	// STATEs
@@ -22,14 +21,16 @@
 	}
 	.no-touchevents &__link--cta:hover {
 		color: #fff;
+		background-color: darken($colorLink, 5%);
 	}
 
 	// MODIFICATIONs
 	&__link--cta {
 		background-color: $colorSecondary;
 		color: $colorPrimary;
+		transition: background-color $t, color $t;
 	}
-	.header--inverse & {
+	.header--u-bg-inverse & {
 		&__logo,
 		&__link {
 			color: $colorPrimary;
@@ -40,12 +41,13 @@
 	@media ($mdDown) {
 		&__list {
 			position: absolute;
-			top: 100%;
+			top: calc(100% + 25px);
 			left: -$gridGutter;
 			right: -$gridGutter;
 			text-align: center;
 			opacity: 0;
 			visibility: hidden;
+			transition: visibility 0s $t, opacity $t;
 		}
 		.is-opened & {
 			&__list {
@@ -57,7 +59,7 @@
 				transition-delay: 0s;
 			}
 		}
-		.header--inverse & {
+		.header--u-bg-inverse & {
 			&__logo,
 			&__link {
 				color: #fff;

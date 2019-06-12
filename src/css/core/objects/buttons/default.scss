@@ -3,6 +3,7 @@
 	vertical-align: middle;
 	padding: 0;
 	border: 0;
+	outline: none;
 	background: none;
 	text-decoration: none;
 	cursor: pointer;
@@ -11,19 +12,22 @@
 		display: block;
 		border: 1px solid transparent;
 		border-radius: 4px;
-		padding: 8px 20px;
+		padding: 9px 20px 11px;
 		font-size: 1rem;
 		line-height: 20px;
 		background-color: $colorLink;
-		color: $colorWhite;
+		color: $colorPrimary;
 		text-decoration: none;
 		text-align: center;
 		transition: background-color $t, border-color $t, color $t;
 	}
 
-	// VARIANTs
-
 	// STATEs
+	.u-bg-inverse & {
+		&__text {
+			color: #fff;
+		}
+	}
 	&:disabled,
 	&.is-disabled {
 		opacity: .5;
@@ -32,6 +36,10 @@
 
 	// HOVERs
 	.no-touchevents &:hover &__text {
+		background-color: darken($colorLink, 5%);
+		color: #fff;
+	}
+	.no-touchevents .u-bg-inverse &:hover &__text {
 		color: $colorPrimary;
 	}
 }

@@ -3,13 +3,20 @@
 		display: block;
 	}
 	@media ($mdDown) {
-		text-align: center;
+		&__item {
+			text-align: center;
+		}
+		.icon-svg {
+			width: 130px;
+		}
 	}
 	@media ($mdUp) {
-		position: relative;
-		padding-left: 210px;
-		font-size: 30px;
-		line-height: (50/30);
+		&__item {
+			position: relative;
+			padding-left: 210px;
+			font-size: 30px;
+			line-height: (50/30);
+		}
 		&__icon {
 			position: absolute;
 			left: 0;
