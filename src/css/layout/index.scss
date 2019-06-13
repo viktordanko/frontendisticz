@@ -1,5 +1,6 @@
 html {
 	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 *,
 *::before,
@@ -9,7 +10,6 @@ html {
 body {
 	position: relative;
 	min-width: 320px;
-	scroll-behavior: smooth;
 }
 section {
 	text-align: center;
