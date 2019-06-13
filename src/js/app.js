@@ -1,5 +1,4 @@
-import $ from 'jquery';
-// import './tools/svg4everybody';
+import './tools/svg4everybody';
 // import { media } from './tools/MQ';
 
 // Components
@@ -22,18 +21,14 @@ const components = [
 
 window.App = {
 	run() {
-		// console.log(media('lgDown'));
-		// console.log(media('webkit'));
 
+		let target = document;
+		components.forEach((component) => component.init( target ));
 
-		var $target = $(document);
-		components.forEach((component) => component.init( $target ));
-
-		$(document)
-			.on('contentload', function(event) {
-				var $target = $(event.target);
-				componentsload.forEach((component) => component.init( $target ));
-			});
+		document.addEventListener('contentload', function(event) {
+			let target = event.target;
+			componentsload.forEach((component) => component.init( target ));
+		});
 	},
 
 	initComponent(component) {
