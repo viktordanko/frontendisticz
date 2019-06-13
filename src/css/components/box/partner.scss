@@ -1,4 +1,11 @@
 .b-partner {
 	display: inline-block;
 	vertical-align: top;
+
+	// MEDIA QUERIEs
+	@media ($mdDown) {
+		img {
+			max-height: 50px;
+		}
+	}
 }
