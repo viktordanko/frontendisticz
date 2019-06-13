@@ -4,20 +4,29 @@ export const init = () => {
 	const menu = document.querySelector('.m-main');
 	const header = document.querySelector('.header');
 
-	btn.addEventListener('click', function() {
-		menu.classList.toggle('is-opened');
-		btn.classList.toggle('is-opened');
-		header.classList.toggle('is-opened');
+	const toggleMenu = (open) => {
+		btn.setAttribute('aria-expanded', open);
+		if (open) {
+			menu.classList.add('is-opened');
+			header.classList.add('is-opened');
+			document.addEventListener('click', handleClickOutside);
+		} else  {
+			menu.classList.remove('is-opened');
+			header.classList.remove('is-opened');
+			document.removeEventListener('click', handleClickOutside);
+		}
+	};
 
-		// Close the mobile menu when click outside
-		document.addEventListener('click', event => {
-			if (!event.target.closest('.m-main') && !event.target.closest('.js-toggleMobileMenu')) {
-				menu.classList.remove('is-opened');
-				btn.classList.remove('is-opened');
-				header.classList.remove('is-opened');
-			}
-		});
+	btn.addEventListener('click', () => {
+		let isOpen = btn.getAttribute('aria-expanded') === 'true';
+		toggleMenu(!isOpen);
 	});
 
+	// Close the mobile menu when click outside
+	const handleClickOutside = () => {
+		if (!event.target.closest('.m-main') && !event.target.closest('.js-toggleMobileMenu')) {
+			toggleMenu(false);
+		}
+	};
 
 };

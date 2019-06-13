@@ -67,18 +67,17 @@
 					{% endif %}
 					<div class="header__menu">
 						<nav id="menu-main" class="m-main" aria-label="Main Menu" >
-							<button class="m-mobile-menu btn js-toggleMobileMenu" data-text="Menu" data-text-close="Zavřít">
+							<button class="m-mobile-menu btn js-toggleMobileMenu" data-text="Menu" data-text-close="Zavřít" aria-expanded="false">
 								<span class="m-mobile-menu__icon"></span>
-								<span class="u-vhide">Mobilní menu</span>
 							</button>
 							<ul class="m-main__list">
 								<li class="m-main__item">
-									<a href="#partners" class="m-main__link js-smooth-scroll">
+									<a href="./01-homepage.html#partners" class="m-main__link js-smooth-scroll">
 										Partneři
 									</a>
 								</li>
 								<li class="m-main__item">
-									<a href="#team" class="m-main__link js-smooth-scroll">
+									<a href="./01-homepage.html#team" class="m-main__link js-smooth-scroll">
 										Tým
 									</a>
 								</li>
@@ -117,7 +116,7 @@
 		</footer>
 		<!--[if (gte IE 9) | (!IE)]><!-->
 			{# <script src="{{ assets.scripts }}jquery-2.2.4.min.js"></script> #}
-			<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find"></script>
+			<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find,Element.prototype.closest"></script>
 			<script src="{{ assets.scripts }}app.js"></script>
 			<script>
 				App.run({})
