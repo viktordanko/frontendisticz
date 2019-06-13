@@ -58,8 +58,8 @@
 			background-color: $colorPrimary;
 			transition-delay: 0s;
 		}
-		&--u-bg-inverse.is-opened &__logo--u-bg-inverse {
-			filter: invert(1) brightness(200);
-		}
+	}
+	@media ($mdUp) {
+		padding: 50px 0;
 	}
 }

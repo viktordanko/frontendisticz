@@ -4,14 +4,14 @@
 	padding-right: 30px;
 	color: #fff;
 	font-size: 16px;
-	box-sizing: content-box;
 	font-weight: bold;
+	box-sizing: content-box;
 	&::before {
 		content: attr(data-text);
 	}
 	@media ($mdDown) {
 		position: absolute;
-		top: 0;
+		top: 3px;
 		right: 0;
 		&__icon {
 			position: absolute;
@@ -45,10 +45,7 @@
 		}
 
 		// STATES
-		.is-opened & {
-			&::before {
-				content: attr(data-text-close);
-			}
+		button[aria-expanded="true"] & {
 			&__icon {
 				background: transparent;
 			}
