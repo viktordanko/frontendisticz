@@ -1,4 +1,5 @@
 import './tools/svg4everybody';
+import './tools/whatInput';
 // import { media } from './tools/MQ';
 
 // Components

@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "fontfaceobserver": "^2.0.9",
-    "svg4everybody": "^2.1.8"
+    "svg4everybody": "^2.1.8",
+    "what-input": "5.2.3"
   }
 }
