@@ -66,33 +66,10 @@
 	&--lg > &__cell {
 		border-left-width: $gridGutter * 2;
 		border-bottom-width: $gridGutter * 2;
-<<<<<<< HEAD
 	}
 
 	&--x-md {
 		margin-left: -$gridGutter;
-	}
-
-	&--x-md > &__cell {
-		border-left-width: $gridGutter;
-	}
-
-	&--x-lg {
-		margin-left: -($gridGutter * 3);
-	}
-
-	&--x-lg > &__cell {
-		border-left-width: ($gridGutter * 3);
-	}
-
-	&--x-xl {
-		margin-left: -($gridGutter * 4);
-=======
-	}
-
-	&--x-md {
-		margin-left: -$gridGutter;
->>>>>>> Grid gutters and spacings are unified
 	}
 
 	&--x-md > &__cell {
@@ -125,11 +102,7 @@
 			border-left-width: ($gridGutter * 2);
 		}
 
-<<<<<<< HEAD
-		&--y-lg {
-=======
 		&--y-xl {
->>>>>>> Grid gutters and spacings are unified
 			margin-bottom: -($gridGutter * 4);
 		}
 		&--y-xl > &__cell {
