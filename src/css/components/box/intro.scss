@@ -43,4 +43,7 @@
 			padding-bottom: $gridGutter;
 		}
 	}
+	&--secondary &__inner {
+		padding-top: 0;
+	}
 }
