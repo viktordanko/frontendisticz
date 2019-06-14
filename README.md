@@ -30,7 +30,7 @@ $ npm install
 
 ## Development
 
-Command `$ gulp` starts virtual server at [http://localhost:3000/](http://localhost:3000/) and all file watchers.
+Command `$ gulp` starts virtual server at [http://localhost:3000/tpl](http://localhost:3000/tpl) and all file watchers.
 Templates will be automatically compiled (via. file watcher task) on every change in the folder `/src/`.
 
 ### Other Gulp Commands
