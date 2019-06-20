@@ -1,6 +1,9 @@
 {
   "name": "Frontendisticz",
   "version": "1.0.0",
+  "scripts": {
+    "start": "gulp min"
+  },
   "sideEffects": [
     "**/svg4everybody.js"
   ],

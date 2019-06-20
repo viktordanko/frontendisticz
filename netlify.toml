@@ -1,6 +1,6 @@
 [build]
-  command = "gulp min"
+  command = "npm start"
   publish = "web"
 
 [context.deploy-preview]
-  command = "gulp min"
+  command = "npm start"
