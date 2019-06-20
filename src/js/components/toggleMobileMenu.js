@@ -22,6 +22,13 @@ export const init = () => {
 		toggleMenu(!isOpen);
 	});
 
+	// Close the mobile menu when click on link anchor
+	document.querySelectorAll('.m-main__link').forEach(link => {
+		link.addEventListener('click', function() {
+			toggleMenu(false);
+		});
+	});
+
 	// Close the mobile menu when click outside
 	const handleClickOutside = () => {
 		if (!event.target.closest('.m-main') && !event.target.closest('.js-toggleMobileMenu')) {
