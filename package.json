@@ -5,9 +5,16 @@
     "**/svg4everybody.js"
   ],
   "browserslist": [
+<<<<<<< HEAD
     "Explorer >= 11",
     "iOs >= 9",
     "last 3 versions"
+=======
+    "last 3 versions",
+    "not < 0.01%",
+    "not ie <= 10",
+    "last 0.5 years"
+>>>>>>> 7d9961a... fixup! Add netlify reference
   ],
   "devDependencies": {
     "autoprefixer": "^9.4.7",
