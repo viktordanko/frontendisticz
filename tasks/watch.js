@@ -1,8 +1,8 @@
-var config = require('./helpers/getConfig.js');
-
-var gulp = require('gulp');
-var notifier = require('node-notifier');
-var browserSync = require('browser-sync');
+const config = require('./helpers/getConfig.js');
+const isProduction = require('./helpers/isProduction');
+const gulp = require('gulp');
+const notifier = require('node-notifier');
+const browserSync = require('browser-sync');
 const {series, watch: watchGulp} = gulp;
 
 module.exports = function watch(done) {
@@ -20,6 +20,13 @@ module.exports = function watch(done) {
 			watchGulp(config.src.icons + '*.svg', require('./iconFont'));
 			watchGulp(config.src.iconsSVG + '*.svg', require('./iconSvg'));
 			watchGulp(config.src.scripts + 'static/*.js', require('./copyJs'));
+			if (isProduction()) {
+				watchGulp([
+					config.src.scripts + '**/*',
+					'!' + config.src.scripts + 'static/*.js',
+				], require('./webpack'));
+			}
+
 			watchGulp([
 				config.src.images + '**/*',
 				'!' + config.src.images + '**/sprites*',

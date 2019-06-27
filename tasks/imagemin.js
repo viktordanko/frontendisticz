@@ -12,10 +12,10 @@ module.exports = function imagemin() {
 		cwd: config.dest.images,
 	})
 		.pipe(gulpImagemin([
-			imagemin.jpegtran({progressive: true }),
-			imagemin.optipng(),
-			imagemin.gifsicle(),
-			imagemin.svgo(),
+			gulpImagemin.jpegtran({progressive: true }),
+			gulpImagemin.optipng(),
+			gulpImagemin.gifsicle(),
+			gulpImagemin.svgo(),
 		]))
 		.pipe(dest(config.dest.images));
 };

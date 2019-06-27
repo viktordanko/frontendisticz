@@ -1,15 +1,9 @@
-const config = require('./helpers/getConfig.js');
-const isProduction = require('./helpers/isProduction.js');
+const config = require('./helpers/getConfig');
+const {log} = require('./helpers/logger');
+const isProduction = require('./helpers/isProduction');
 const path = require('path');
-const gutil = require('gulp-util');
 const notify = require('gulp-notify');
 const bundler = require('webpack');
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-
-const isMinwatch = function() {
-	return gutil.env._[0] === 'minwatch';
-};
-
 
 module.exports = function webpack(callback) {
 	const {rules = {}, breakpointsVars = {}} = config.mediaQueries;
@@ -30,7 +24,7 @@ module.exports = function webpack(callback) {
 		output: {
 			path: path.join(__dirname, '../' + config.dest.scripts),
 			filename: '[name].js',
-			publicPath: '../js/',
+			publicPath: config.assets.scripts,
 			chunkFilename: '[name].chunk.js',
 		},
 		module: {
@@ -51,7 +45,7 @@ module.exports = function webpack(callback) {
 			}),
 		],
 		profile: true,
-		watch: !isProduction() || isMinwatch(),
+		watch: !isProduction(),
 		watchOptions: {
 			ignored: /node_modules|bower_components/,
 		},
@@ -63,17 +57,6 @@ module.exports = function webpack(callback) {
 
 	if (isProduction()) {
 		settings.mode = 'production';
-		settings.plugins.push(new UglifyJsPlugin({
-			uglifyOptions: {
-				compress: {
-					// hoist_vars: true,
-					// hoist_funs: true,
-					toplevel: true,
-					drop_console: true,
-					passes: 3,
-				},
-			},
-		}));
 	}
 
 	var onError = notify.onError(function(error) {
@@ -96,7 +79,7 @@ module.exports = function webpack(callback) {
 		} else if (warnings.length > 0) {
 			onError(warnings.toString());
 		} else {
-			gutil.log('[webpack]', stats.toString(config.webpack.stats));
+			log('[webpack] ' + stats.toString(config.webpack.stats));
 		}
 
 		if (!isReady) {

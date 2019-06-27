@@ -51,7 +51,7 @@ const min = function min(done) {
 	process.env.NODE_ENV = 'production';
 	return series(
 		build,
-		// imagemin,
+		imagemin,
 	)(done);
 };
 

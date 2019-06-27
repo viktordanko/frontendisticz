@@ -7,12 +7,10 @@ var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
 var notify = require('gulp-notify');
 var plumber = require('gulp-plumber');
-var sourcemaps = require('gulp-sourcemaps');
-var gutil = require('gulp-util');
 var sassVars = require('gulp-sass-vars');
 var globImporter = require('node-sass-glob-importer');
 
-module.exports = function sass() {
+module.exports = function sass(done) {
 	const {breakpoints = {}, rules = {}, breakpointsVars = {}} = config.mediaQueries;
 
 	var onError = function(error) {
@@ -22,7 +20,7 @@ module.exports = function sass() {
 			sound: 'Beep',
 		})(error);
 
-		return this.emit('end');
+		done();
 	};
 
 	var settings = {
@@ -38,15 +36,11 @@ module.exports = function sass() {
 		'*.scss',
 	], {
 		cwd: config.src.styles,
-		sourcemaps: true,
+		sourcemaps: !isProduction(),
 	})
 		.pipe(plumber({
 			errorHandler: onError,
 		}))
-		// .pipe(isProduction()
-		// 	? gutil.noop()
-		// 	: sourcemaps.init(),
-		// )
 		.pipe(sassVars({
 			...breakpointsVars,
 			...rules,
@@ -58,10 +52,6 @@ module.exports = function sass() {
 		.pipe(postcss([
 			autoprefixer(),
 		]))
-		// .pipe(isProduction()
-		// 	? gutil.noop()
-		// 	: sourcemaps.write('./'),
-		// )
 		.pipe(dest(config.dest.styles, {
 			sourcemaps: './',
 		}));

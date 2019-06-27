@@ -1,14 +1,13 @@
-var config = require('../../config.js');
-
-var merge = require('deepmerge');
-var gutil = require('gulp-util');
+let config = require('../../config');
+const {log, colors} = require('./logger');
+const merge = require('deepmerge');
 
 try {
-	var localConfig = require('../../config.local.js');
+	var localConfig = require('../../config.local');
 	config = merge(config, localConfig);
-	gutil.log(gutil.colors.magenta('Using local configuration.'));
+	log(colors.magenta('Using local configuration.'));
 } catch (exception) {
-	gutil.log(gutil.colors.magenta('Using global configuration only. For local configuration create config.local.js (duplicate and rename config.local.example.js).'));
+	log(colors.magenta('Using global configuration only. For local configuration create config.local.js (duplicate and rename config.local.example.js).'));
 }
 
 const {mediaQueries} = config;

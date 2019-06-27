@@ -5,7 +5,7 @@ const fs = require('fs');
 const through2 = require('through2');
 
 const consolidate = require('consolidate');
-const gutil = require('gulp-util');
+const Vinyl = require('vinyl');
 const svgstore = require('gulp-svgstore');
 const svgmin = require('gulp-svgmin');
 const cheerio = require('gulp-cheerio');
@@ -40,6 +40,8 @@ module.exports = function iconSvg(callback) {
 						prefix: `${prefix}-`,
 						minify: true,
 					},
+				}, {
+					removeViewBox: false,
 				}],
 			};
 		}))
@@ -75,9 +77,9 @@ module.exports = function iconSvg(callback) {
 			consolidate.lodash(`${config.src.styles}tpl/icons-svg.css.tpl`, {
 				glyphs: data,
 			}, (err, html) => {
-				const newFile = new gutil.File({
+				const newFile = new Vinyl({
 					path: 'icons-svg.scss',
-					contents: new Buffer(html),
+					contents: Buffer.from(html),
 				});
 
 				_this.push(newFile);
