@@ -1,6 +1,6 @@
 [build]
-  command = "npm start"
-  publish = "web"
+  command = "npm run build"
+  publish = "web/"
 
 [context.deploy-preview]
-  command = "npm start"
+  command = "npm run build"
