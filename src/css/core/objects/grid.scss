@@ -4,6 +4,10 @@
 	margin: 0 auto;
 	padding: 0 $rowMainGutter;
 	max-width: $rowMainWidth;
+	&--sm {
+		max-width: 1140px;
+		padding: 0 70px;
+	}
 }
 .grid {
 	@extend %reset-ol;
