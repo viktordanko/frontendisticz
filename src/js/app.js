@@ -16,17 +16,17 @@ const components = [
 	toggleMobileMenu,
 
 	// fontFaceObserver,
-].concat( componentsload );
+].concat(componentsload);
 
 window.App = {
 	run() {
 
 		let target = document;
-		components.forEach((component) => component.init( target ));
+		components.forEach((component) => component.init(target));
 
 		document.addEventListener('contentload', function(event) {
 			let target = event.target;
-			componentsload.forEach((component) => component.init( target ));
+			componentsload.forEach((component) => component.init(target));
 		});
 	},
 
