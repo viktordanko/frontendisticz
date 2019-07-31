@@ -17,23 +17,9 @@
 			</div>
 		</section>
 
-		<section role="region" id="join" class="b-meetup u-pt-xl">
-			<div class="u-max-width--10-12 u-mx-auto">
-				<div class="row-main">
-					<p class="b-meetup__item u-mb-xl">
-						<span class="b-meetup__icon">
-							{{ iconSVG('meetup') }}
-						</span>
-						Sleduj nás na meetupu a žádná akce ti neunikne.<br>
-						Jsme v
-						<a href="https://www.meetup.com/frontendisti/" target="_blank" rel="noopener noreferrer">Praze</a>,
-						<a href="https://www.meetup.com/frontendisti-brno/" target="_blank" rel="noopener noreferrer">Brně</a>,
-						<a href="https://www.meetup.com/frontendisti-plzen/" target="_blank" rel="noopener noreferrer">Plzni</a>,
-						<a href="https://www.meetup.com/Frontendisti-cz-Ostrava/" target="_blank" rel="noopener noreferrer">Ostravě</a>.
-					</p>
-				</div>
-			</div>
-		</section>
+		<div class="u-pt-xl">
+			{% include './inc/box/meetup.njk' %}
+		</div>
 
 		{% set socials = {
 			items: [
