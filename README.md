@@ -5,6 +5,7 @@
 ## About
 
 Static site generator with headless CMS
+[![Netlify Status](https://api.netlify.com/api/v1/badges/3c193b76-087a-4f6f-86d8-ceff636ff8e8/deploy-status)](https://app.netlify.com/sites/gracious-spence-d7722f/deploys)
 
 ## Getting Started
 
@@ -15,7 +16,7 @@ On your marks, get set, GO!
 The things you need to install to run SUPERKODERS DevStack
 
 ```
-Node	10.15.1
+Node	>= 10.15.x
 npm		6.4.1
 gulp 	4.0.2
 ```
