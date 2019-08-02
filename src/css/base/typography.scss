@@ -93,7 +93,7 @@ blockquote {
 // Links
 a {
 	color: $colorLink;
-	text-decoration: underline;
+	text-decoration: none;
 	transition: color $t;
 	-webkit-tap-highlight-color: transparent;
 	font-weight: bold;
