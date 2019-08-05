@@ -1,0 +1,17 @@
+.item-icon {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	.icon-svg {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		transform: translateY(-50%);
+		width: 30px;
+	}
+
+	// MODIFICATIONs
+	&--before {
+		padding-left: 45px;
+	}
+}

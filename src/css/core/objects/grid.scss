@@ -6,7 +6,11 @@
 	max-width: $rowMainWidth;
 	&--sm {
 		max-width: 1140px;
-		padding: 0 70px;
+		padding: 0 20px;
+
+		@media ($mdUp) {
+			padding: 0 70px;
+		}
 	}
 }
 .grid {

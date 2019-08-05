@@ -1,60 +1,95 @@
-{% set c = cycler('', 'u-bg-inverse') %}
-{% for item in sections %}
-	<section role="region" class="c-cards u-pt-xl {{ c.next() }}">
-		<div class="row-main">
-			<div class="u-max-width--8-12 u-mx-auto u-mb-md">
-				<h2>
-					{{ item.title }}
-				</h2>
-				<p>
-					{{ item.place }}
-				</p>
-			</div>
-			<div class="c-cards__wrap u-mb-xl">
-				<div class="c-cards__list grid grid--y-xl ">
-					{% for person in item.persons %}
-						<div class="c-cards__item grid__cell grid__cell--eq size--6-12@sm size--4-12@md">
-							<article role="article" class="b-card">
-								<h3 class="b-card__title u-color-secondary">
-									{{ person.topic }}
-								</h3>
-								<div class="b-card__img">
-									<img src="{{ assets.images }}illust/{{ person.img }}.jpg" alt="" width="150" height="150">
-								</div>
-								<p class="b-card__info">
-									<a href="{{ person.twitter }}" class="b-card__name" target="_blank" rel="noopener noreferrer">
-										{{ person.name }}
-									</a>
-									<span>
-										{{ person.job }}
-									</span>
-								</p>
-								<ul class="b-card__list">
-									<li class="b-card__item">
-										<a href="{{ person.youtubeHref }}" class="b-card__link b-card__link--icon" target="_blank" rel="noopener noreferrer">
-											{{ iconSVG('youtube', 'b-card__icon') }}
-											Video z prednášky
+{% for event in events %}
+	{% if event %}
+		<section role="region" class="c-events">
+			<div class="row-main row-main--sm">
+				<div class="u-max-width--8-12 u-mx-auto u-mb-md">
+					<h3 class="u-font-bold">
+						{{ event.title }}
+					</h3>
+					<div class="c-events__info">
+						<p>
+							{{ event.place }}
+						</p>
+						{% if event.partners %}
+							<ul class="c-events__partners">
+								{% for partner in event.partners %}
+									<li class="c-events__partner">
+										<a class="c-events__link" href="{{ partner.url }}" target="_blank" rel="noreferrer noopener">
+											<img src="{{ assets.images }}logos/{{ partner.img }}" width="{{ partner.imgWidth }}" height="{{ partner.imgHeight }}"alt="Logo společnosti {{ partner.name }}">
 										</a>
 									</li>
-									<li class="b-card__item">
-										<a href="{{ person.slideshareHref }}" class="b-card__link b-card__link--icon" target="_blank" rel="noopener noreferrer">
-											{{ iconSVG('slideshare', 'b-card__icon') }}
-											Prezentace
-										</a>
-									</li>
-								</ul>
-							</article>
-						</div>
-					{% endfor %}
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</div>
 				</div>
-				<p class="u-mx-auto u-mt-lg">
-					<a href="#" class="btn">
-						<span class="btn__text">
-							Všechno v playlistu
-						</span>
-					</a>
-				</p>
+				<div class="c-events__wrap u-mb-xl">
+					{% if event.partners %}
+					<div class="c-events__list">
+						{% for person in event.persons %}
+							<div class="c-events__item">
+								<article role="article" class="b-event">
+									<div class="b-event__img">
+										{% if person.img %}
+											<img src="{{ assets.images }}illust/{{ person.img }}.jpg" alt="" width="50" height="50">
+										{% else %}
+											<span class="b-event__placeholder"></span>
+										{% endif %}
+									</div>
+									<p class="b-event__info">
+										<a href="{{ person.twitter }}" class="b-event__name" target="_blank" rel="noopener noreferrer">
+											{{ person.name }}
+										</a>
+										<span class="b-event__job">
+											{{ person.job }}
+										</span>
+										<span class="b-event__title">
+											{{ person.topic }}
+										</span>
+									</p>
+									<ul class="b-event__list">
+										{% if person.youtubeHref %}
+											<li class="b-event__item">
+												<a href="{{ person.youtubeHref }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
+													{{ iconSVG('youtube', 'b-event__icon') }}
+													Video
+												</a>
+											</li>
+											{% else %}
+											<li class="b-event__item b-event__item--disabled">
+												{{ iconSVG('youtube', 'b-event__icon') }}
+												Video
+											</li>
+										{% endif %}
+										{% if person.slideshareHref %}
+											<li class="b-event__item">
+												<a href="{{ person.slideshareHref }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
+													{{ iconSVG('slideshare', 'b-event__icon') }}
+													Prezentace
+												</a>
+											</li>
+										{% else %}
+											<li class="b-event__item b-event__item--disabled">
+												{{ iconSVG('slideshare', 'b-event__icon b-event__icon--disabled') }}
+												Prezentace
+											</li>
+										{% endif %}
+									</ul>
+								</article>
+							</div>
+						{% endfor %}
+					</div>
+					{% endif %}
+					{% if event.showAllBtn %}
+						<p class="u-mx-auto u-mt-lg">
+							<a href="{{ event.showAllBtn.allVideosHref }}" class="item-icon item-icon--before">
+								{{ iconSVG('youtube') }}
+								{{ event.showAllBtn.allVideosText }}
+							</a>
+						</p>
+					{% endif %}
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	{% endif %}
 {% endfor %}

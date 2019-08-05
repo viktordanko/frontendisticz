@@ -1,0 +1,65 @@
+.c-events {
+	position: relative;
+	& + & {
+		padding-top: $gridGutter * 2;
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translateX(-50%);
+			width: 100vw;
+			height: 1px;
+			background-color: $colorBd;
+		}
+	}
+	&__info {
+		font-size: 17px;
+		> *  {
+			margin-bottom: 0;
+		}
+	}
+	&__partners {
+		@extend %reset-ul;
+		display: flex;
+		align-items: center;
+	}
+	&__partner {
+		@extend %reset-ul-li;
+		flex: 0 0 auto;
+		max-width: none;
+	}
+	&__partner + &__partner {
+		margin-left: 30px;
+	}
+	&__link {
+		display: block;
+	}
+	&__list > * + * {
+		margin-top: 50px;
+	}
+
+	// MEDIA QUERIEs
+	@media ($mdDown) {
+		&__partners {
+			justify-content: center;
+			margin-top: 15px;
+		}
+	}
+	@media ($mdUp) {
+		& + & {
+			padding-top: $gridGutter * 4;
+		}
+		&__partners {
+			margin-left: 65px;
+		}
+		&__info {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__list > * + * {
+			margin-top: 30px;
+		}
+	}
+}
