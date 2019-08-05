@@ -14,15 +14,6 @@
 		text-decoration: none;
 	}
 
-	// STATEs
-	.no-touchevents &__link:hover {
-		color: $colorSecondary;
-	}
-	.no-touchevents &__link--cta:hover {
-		color: #fff;
-		background-color: darken($colorLink, 5%);
-	}
-
 	// MODIFICATIONs
 	&__link--cta {
 		background-color: $colorSecondary;
@@ -35,6 +26,17 @@
 			color: $colorPrimary;
 		}
 	}
+
+	// STATEs
+	&__link.is-active,
+	.no-touchevents &__link:hover {
+		color: $colorSecondary;
+	}
+	.no-touchevents &__link--cta:hover {
+		color: #fff;
+		background-color: darken($colorLink, 5%);
+	}
+
 
 	// MEDIA QUERIEs
 	@media ($mdDown) {
