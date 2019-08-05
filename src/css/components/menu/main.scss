@@ -9,7 +9,7 @@
 	}
 	&__link {
 		display: block;
-		padding: 4px 15px 5px;
+		padding: 4px 10px 5px;
 		color: #fff;
 		text-decoration: none;
 	}
@@ -78,6 +78,12 @@
 		}
 		&__link {
 			border-radius: 4px;
+		}
+	}
+	@media ($lgUp) {
+		&__link {
+			padding-left: 15px;
+			padding-right: 15px;
 		}
 	}
 }
