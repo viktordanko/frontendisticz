@@ -1,0 +1,51 @@
+{
+  "title": "Responzivní média v Ostravě",
+  "date": "2014-09-26",
+  "venue": "Viva, Ostrava",
+  "sponsors": [
+    {
+      "title": "Heureka",
+      "url": "http://heureka.cz",
+      "avatar": "/img/illust/heureka.png",
+      "avatarSize": {
+        "width": 110,
+        "height": 48
+      }
+    }
+  ],
+  "talks": [
+    {
+      "title": "Robin Pokorný ",
+      "youtube": "https://youtu.be/3yzl4XG1524",
+      "presentation": "http://www.slideshare.net/robinpokorny/picture-element-v-ostrav",
+      "speaker": {
+        "name": "Robin Pokorný",
+        "bio": "LMC, s.r.o.",
+        "url": "https://twitter.com/robinpokorny",
+        "avatar": "/img/illust/pokorny-old.jpeg"
+      }
+    },
+    {
+      "title": "Responzivní obrázky v praxi",
+      "youtube": "https://youtu.be/zsE6caTsi1M",
+      "presentation": "http://www.slideshare.net/machal/frontendisti-rwd-obrazkypublic/",
+      "speaker": {
+        "name": "Martin Michálek ",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/machal",
+        "avatar": "/img/illust/michalek.jpg"
+      }
+    },
+    {
+      "title": "Video",
+      "youtube": "https://youtu.be/LLmbOVOLGQA",
+      "speaker": {
+        "name": "Jakub Mikuláš",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/jedenbod",
+        "avatar": "/img/illust/mikulas.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "http://www.youtube.com/playlist?list=PLnXfazh66kVd_AuG1fVQYWoya4b1NyNeR"
+}
