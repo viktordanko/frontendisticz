@@ -1,0 +1,51 @@
+{
+  "title": "React.js",
+  "date": "2015-11-19",
+  "venue": "Node 5, Praha",
+  "sponsors": [
+    {
+      "title": "Český hosting",
+      "url": "https://www.cesky-hosting.cz/",
+      "avatar": "/img/illust/cesky-hosting.png",
+      "avatarSize": {
+        "width": 60,
+        "height": 45
+      }
+    }
+  ],
+  "talks": [
+    {
+      "title": "React očima Davida Grudla",
+      "youtube": "https://youtu.be/rXjHCFz0UTIPrezentace",
+      "speaker": {
+        "name": "David Grudl",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/DavidGrudl",
+        "avatar": "/img/illust/grudl.jpeg"
+      }
+    },
+    {
+      "title": "React z pohledu UI vývojáře",
+      "youtube": "https://youtu.be/Dc9ZC9ObSMk",
+      "presentation": "http://www.slideshare.net/MartinPeout/react-z-pohledu-ui-vvoje",
+      "speaker": {
+        "name": "Martin Pešout ",
+        "bio": "ContentKing",
+        "url": "https://twitter.com/martinpesout",
+        "avatar": "/img/illust/pesout.png"
+      }
+    },
+    {
+      "title": "React – když odezní zamilovanost",
+      "youtube": "https://youtu.be/G8fft3H6bG4",
+      "presentation": "http://www.slideshare.net/robinpokorny/react-kdyz-odezni-zamilovanost",
+      "speaker": {
+        "name": "Robin Pokorný",
+        "bio": "Wimdu",
+        "url": "https://twitter.com/robinpokorny",
+        "avatar": "/img/illust/pokorny-old.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVc5-SdhfuC9f8ZsNVyzzcTP"
+}
