@@ -29,7 +29,7 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Avatar, name: avatar, widget: image, required: false}
           - label: "Avatar size"
             name: "avatarSize"
-            widget: "list"
+            widget: "object"
             fields:
               - {label: Width, name: width, widget: number}
               - {label: Height, name: height, widget: number}
