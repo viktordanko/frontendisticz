@@ -2,6 +2,16 @@
   "title": "Prázdninová grilovačka",
   "date": "2019-08-07",
   "venue": "SUPERKODERS",
+  "sponsors": [
+    {
+      "title": "Ataccama",
+      "avatar": "/img/illust/ataccama.svg"
+    },
+    {
+      "title": "LMC",
+      "avatar": "/img/illust/lmc.svg"
+    }
+  ],
   "talks": [
     {
       "title": "Talk1",
