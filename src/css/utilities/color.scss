@@ -1,8 +1,0 @@
-$color: (
-	color: (
-		secondary: $colorSecondary,
-	),
-);
-.u-color {
-	@include make-utils(false, $color);
-}

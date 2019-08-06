@@ -1,8 +1,0 @@
-$background: (
-	background-color: (
-		primary: $colorPrimary,
-	),
-);
-.u-bg {
-	@include make-utils(false, $background);
-}
