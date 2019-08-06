@@ -69,7 +69,7 @@
 	}
 
 	// STATEs
-	.no-touchevents &__name:hover {
+	.no-touchevents &__name[href^="https"]:hover {
 		color: $colorSecondary;
 	}
 	.no-touchevents &__link--icon:hover {

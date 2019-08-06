@@ -37,6 +37,7 @@
 										{% endif %}
 									</div>
 									<p class="b-event__info">
+<<<<<<< HEAD
 										{% if talk.speaker.name %}
 											{% if talk.speaker.url %}
 												<a href="{{ talk.speaker.url }}" class="b-event__name" target="_blank" rel="noopener noreferrer">
@@ -47,6 +48,16 @@
 													{{ talk.speaker.name }}
 												</span>
 											{% endif %}
+=======
+										{% if talk.speaker.name and talk.speaker.url %}
+											<a href="{{ talk.speaker.url }}" class="b-event__name" target="_blank" rel="noopener noreferrer">
+												{{ talk.speaker.name }}
+											</a>
+										{% else %}
+											<span class="b-event__name" target="_blank" rel="noopener noreferrer">
+												{{ talk.speaker.name }}
+											</span>
+>>>>>>> Make speaker's name a span when it doesn't have url
 										{% endif %}
 										{% if talk.speaker.bio %}
 											<span class="b-event__job">
