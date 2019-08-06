@@ -57,6 +57,9 @@
 			content: '{F}';
 		}
 	}
+	&__btn {
+		margin-top: 50px;
+	}
 
 	// MODIFICATIONs
 	&__item--disabled {
@@ -71,6 +74,12 @@
 
 	// MEDIA QUEREIEs
 	@media ($mdDown) {
+		&__job {
+			display: block;
+			&::before {
+				content: normal;
+			}
+		}
 		&__img,
 		&__info {
 			margin-bottom: 1em;

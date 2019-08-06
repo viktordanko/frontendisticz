@@ -1,5 +1,5 @@
 .b-meetup {
-	padding-top: 50px;
+	padding-top: 30px;
 	font-size: 18px;
 	a {
 		text-decoration: underline;
@@ -14,6 +14,7 @@
 		}
 	}
 	@media ($mdUp) {
+		padding-top: 50px;
 		font-size: 30px;
 		line-height: (50/30);
 		&__item {
