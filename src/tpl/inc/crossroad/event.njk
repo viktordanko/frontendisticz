@@ -15,7 +15,7 @@
 								{% for sponsor in meetup.sponsors %}
 									<li class="c-events__partner">
 										<a class="c-events__link" href="{{ sponsor.url }}" target="_blank" rel="noreferrer noopener">
-											<img src="{{ sponsor.avatar }}" width="{{ partner.imgWidth }}" height="{{ partner.imgHeight }}"alt="Logo společnosti {{ sponsor.title }}">
+											<img src="{{ sponsor.avatar }}" width="{{ sponsor.width }}" height="{{ sponsor.height }}"alt="Logo společnosti {{ sponsor.title }}">
 										</a>
 									</li>
 								{% endfor %}
@@ -56,7 +56,7 @@
 									<ul class="b-event__list">
 										{% if talk.youtube %}
 											<li class="b-event__item">
-												<a href="{{ talk.speaker.youtube }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
+												<a href="{{ talk.youtube }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
 													{{ iconSVG('youtube', 'b-event__icon') }}
 													Video
 												</a>
