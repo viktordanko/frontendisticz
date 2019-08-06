@@ -1,0 +1,39 @@
+{
+  "title": "Organizace kódu",
+  "date": "2014-04-25",
+  "venue": "Restaurace V. R. Levský, Ostrava",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "OOCSS – SMACSS – BEM",
+      "youtube": "https://youtu.be/obx1PawM2WE",
+      "presentation": "https://speakerdeck.com/illycz/oocss-smacss-bem-1",
+      "speaker": {
+        "name": "Patrik Illy ",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/illycz"
+      }
+    },
+    {
+      "title": "BEM & Preprocesory (SASS)",
+      "youtube": "https://youtu.be/xzB-tMR1IcY",
+      "presentation": "https://speakerdeck.com/kozleek/bem-and-preprocesory-sass",
+      "speaker": {
+        "name": "Tomáš Musiol",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/kozleek"
+      }
+    },
+    {
+      "title": "Organizace kódu v týmu",
+      "youtube": "https://youtu.be/Eda7dYUJXd0",
+      "presentation": "http://www.slideshare.net/robinpokorny/robinova-organizace-kodu",
+      "speaker": {
+        "name": "Robin Pokorný",
+        "bio": "LMC, s. r. o.",
+        "url": "https://twitter.com/robinpokorny"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVejEaZgbjV0nkmJ_gS3V7A1"
+}
