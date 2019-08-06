@@ -31,8 +31,8 @@ collections: # A list of collections the CMS should be able to edit
             name: "avatarSize"
             widget: object
             fields:
-              - {label: Width, name: width, widget: number}
-              - {label: Height, name: height, widget: number}
+              - {label: Width, name: width, widget: number, default: 110}
+              - {label: Height, name: height, widget: number, defautl: 40}
       - label: "Talks"
         name: "talks"
         widget: "list"
