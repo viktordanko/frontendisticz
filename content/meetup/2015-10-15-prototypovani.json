@@ -1,0 +1,38 @@
+{
+  "title": "Prototypování",
+  "date": "2015-10-15",
+  "venue": "Viva, Ostrava",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Dobro jméno Axure RP",
+      "speaker": {
+        "name": "Jiři Komár",
+        "bio": "AdVisio",
+        "url": "https://twitter.com/jirikomar",
+        "avatar": "/img/illust/komar.jpeg"
+      }
+    },
+    {
+      "title": "HTML prototypování",
+      "youtube": "https://youtu.be/https://www.youtube.com/watch?v=A71kFP8I_qY",
+      "speaker": {
+        "name": "Adam Kudrna",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/AdamKudrna",
+        "avatar": "/img/illust/kudrna.jpg"
+      }
+    },
+    {
+      "title": "Kdo chvíli stál, stojí opodál. A kdo chce flow, jde do Webflow.",
+      "youtube": "https://youtu.be/CFCqP0JkJJ0",
+      "speaker": {
+        "name": "Petr Šťastný",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/raist",
+        "avatar": "/img/illust/stastny.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVeB2wEFmY_WVcnS59_PUzpd"
+}
