@@ -6,6 +6,14 @@ const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const cheerio = require('cheerio');
 const through2 = require('through2');
+const merge = require('deepmerge');
+
+const fs = require('fs');
+const dateFilter = require('nunjucks-date-filter');
+
+var manageEnvironment = (environment) => {
+	environment.addFilter('date', dateFilter);
+};
 
 
 module.exports = function nunjucks(done) {
@@ -21,6 +29,10 @@ module.exports = function nunjucks(done) {
 
 	const time = new Date().getTime();
 
+	const customdata = {
+		meetups: JSON.parse(fs.readFileSync("./src/content/meetups.json"))
+	}
+
 	return src([
 		'*.njk',
 	], {
@@ -31,7 +43,8 @@ module.exports = function nunjucks(done) {
 		}))
 		.pipe(nunjucksRender({
 			path: config.src.templates,
-			data: config,
+			data: merge(config, customdata),
+			manageEnv: manageEnvironment,
 			envOptions: {
 				trimBlocks: true,
 				lstripBlocks: true,

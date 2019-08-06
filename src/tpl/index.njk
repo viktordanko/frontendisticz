@@ -19,6 +19,21 @@
 		<div class="u-pt-xl">
 			<div class="row-main">
 				<div class="u-mb-xl">
+					{% for meetup in meetups | reverse %}
+
+
+						<br>
+						{{meetup.title}}<br>
+						{{meetup.date | date("D.  M. YYYY")}}
+						<br>
+						{% for talk in meetup.talks %}
+							{{talk.title}} - {{talk.speaker.name}}<br>
+						{%endfor%}
+						<hr>
+
+					{%endfor%}
+
+
 					<ul>
 						<li>
 							<a href="./00-style-guide.html">

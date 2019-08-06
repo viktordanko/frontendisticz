@@ -41,6 +41,7 @@
     "gulp-consolidate": "^0.2.0",
     "gulp-iconfont": "10.0.3",
     "gulp-imagemin": "^5.0.3",
+    "gulp-json-concat": "0.1.1",
     "gulp-notify": "^3.2.0",
     "gulp-nunjucks-render": "^2.2.3",
     "gulp-plumber": "^1.2.1",
@@ -55,6 +56,7 @@
     "gulp.spritesmith": "6.10.1",
     "node-notifier": "^5.4.0",
     "node-sass-glob-importer": "^5.3.1",
+    "nunjucks-date-filter": "0.1.1",
     "through2": "^3.0.1",
     "vinyl": "2.2.0",
     "webpack": "^4.32.2"

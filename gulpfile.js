@@ -13,6 +13,7 @@ const iconFont = require('./tasks/iconFont');
 const spriteRetina = require('./tasks/spriteRetina');
 const sprite = require('./tasks/sprite');
 
+const processData = require('./tasks/processData');
 const nunjucks = require('./tasks/nunjucks');
 const sass = require('./tasks/sass');
 const webpack = require('./tasks/webpack');
@@ -32,6 +33,7 @@ const build = function build(done) {
 		parallel(
 			sass,
 			webpack,
+			processData,
 			nunjucks,
 			copyImages,
 			copyJs,
@@ -78,6 +80,7 @@ module.exports = {
 	iconSvg,
 	iconFont,
 	imagemin,
+	processData,
 	nunjucks,
 	sass,
 	spriteRetina,
