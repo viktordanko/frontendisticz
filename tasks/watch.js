@@ -14,6 +14,7 @@ module.exports = function watch(done) {
 		function watching() {
 
 			watchGulp(config.src.styles + '**/*.scss', require('./sass'));
+			watchGulp('content/**/*.json', require('./processData'));
 			watchGulp([config.src.templates + '**/*.njk', config.basePath.src + 'content/*.json'], require('./nunjucks'));
 			watchGulp(config.src.images + 'bg/sprites/*.png', require('./sprite'));
 			watchGulp(config.src.images + 'bg/sprites-retina/*.png', require('./spriteRetina'));
