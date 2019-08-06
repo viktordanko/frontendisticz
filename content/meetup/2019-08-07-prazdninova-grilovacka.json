@@ -6,12 +6,24 @@
     {
       "title": "Ataccama",
       "url": "https://ataccama.com",
-      "avatar": "/img/illust/ataccama.svg"
+      "avatar": "/img/illust/ataccama.svg",
+      "avatarSize": [
+        {
+          "width": 110,
+          "height": 31
+        }
+      ]
     },
     {
       "title": "LMC",
       "url": "https://lmc.eu",
-      "avatar": "/img/illust/lmc.svg"
+      "avatar": "/img/illust/lmc.svg",
+      "avatarSize": [
+        {
+          "width": 53,
+          "height": 39
+        }
+      ]
     }
   ],
   "talks": [
