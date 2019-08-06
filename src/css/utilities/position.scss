@@ -1,5 +1,11 @@
 .u-pull-up {
 	margin-top: -145px;
+	padding-top: 30px;
 	border-top: 2px solid $colorSecondary;
 	background: #fff;
+
+	// MEDIA QUERIEs
+	@media ($mdUp) {
+		padding-top: 50px;
+	}
 }

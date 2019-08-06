@@ -40,6 +40,11 @@
 	}
 
 	// MEDIA QUERIEs
+	@media ($lgDown) {
+		.row-main--sm {
+			padding: 0;
+		}
+	}
 	@media ($mdDown) {
 		&__partners {
 			justify-content: center;
