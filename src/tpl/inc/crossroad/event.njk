@@ -8,8 +8,7 @@
 					</h3>
 					<div class="c-events__info">
 						<p>
-							{{ meetup.date | date('D. M. YYYY') }},
-							&nbsp;{{ meetup.venue }}
+							{{ meetup.date | date('D. M. YYYY') }}, {{ meetup.venue }}
 						</p>
 						{% if meetup.sponsors %}
 							<ul class="c-events__partners">
@@ -39,9 +38,15 @@
 									</div>
 									<p class="b-event__info">
 										{% if talk.speaker.name %}
-											<a href="{{ talk.speaker.url }}" class="b-event__name" target="_blank" rel="noopener noreferrer">
-												{{ talk.speaker.name }}
-											</a>
+											{% if talk.speaker.url %}
+												<a href="{{ talk.speaker.url }}" class="b-event__name" target="_blank" rel="noopener noreferrer">
+													{{ talk.speaker.name }}
+												</a>
+											{% else %}
+												<span class="b-event__name">
+													{{ talk.speaker.name }}
+												</span>
+											{% endif %}
 										{% endif %}
 										{% if talk.speaker.bio %}
 											<span class="b-event__job">
