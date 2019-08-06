@@ -31,12 +31,11 @@ module.exports = function nunjucks(done) {
 	const time = new Date().getTime();
 
 	const customdata = {
-		meetups: JSON.parse(fs.readFileSync("./src/content/meetups.json"))
-	}
+		meetups: JSON.parse(fs.readFileSync('./src/content/meetups.json')),
+	};
 
 	return src([
 		'*.njk',
-		'archiv/*.njk',
 	], {
 		cwd: config.src.templates,
 	})

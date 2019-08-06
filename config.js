@@ -1,7 +1,7 @@
 var basePath = {
 	src: 'src/',
 	dest: 'web/',
-	assets: '../',
+	assets: '/',
 };
 
 var src = {
@@ -19,7 +19,7 @@ var dest = {
 	images: basePath.dest + 'img/',
 	scripts: basePath.dest + 'js/',
 	styles: basePath.dest + 'css/',
-	templates: basePath.dest + 'tpl/',
+	templates: basePath.dest + '',
 };
 
 var assets = {
