@@ -71,6 +71,10 @@
 	.no-touchevents &__name:hover {
 		color: $colorSecondary;
 	}
+	.no-touchevents &__link--icon:hover {
+		color: $colorPrimary;
+	}
+
 
 	// MEDIA QUEREIEs
 	@media ($mdDown) {
