@@ -14,10 +14,13 @@
   ],
   "talks": [
     {
-      "title": "Talk1",
+      "title": "CSS pro design systémy",
+      "youtube": "https://www.youtube.com/watch?v=ow3H4Fe8dqM",
       "speaker": {
-        "name": "TH",
-        "avatar": "/img/illust/hejc.jpg"
+        "name": "Adam Kudrna",
+        "bio": "visionapps",
+        "url": "https://www.adamkudrna.cz",
+        "avatar": "/img/illust/kudrna.jpg"
       }
     },
     {
