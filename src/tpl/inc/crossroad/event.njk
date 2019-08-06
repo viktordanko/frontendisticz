@@ -30,8 +30,8 @@
 							<div class="c-events__item">
 								<article role="article" class="b-event">
 									<div class="b-event__img">
-										{% if talk.speaker.img %}
-											<img src="{{ talk.speaker.avatar }}" alt="talk.speaker.name" width="50" height="50">
+										{% if talk.speaker.avatar %}
+											<img src="{{ talk.speaker.avatar }}" alt="{{ talk.speaker.name }}" width="50" height="50">
 										{% else %}
 											<span class="b-event__placeholder"></span>
 										{% endif %}
@@ -54,7 +54,7 @@
 										{% endif %}
 									</p>
 									<ul class="b-event__list">
-										{% if talk.speaker.youtube %}
+										{% if talk.youtube %}
 											<li class="b-event__item">
 												<a href="{{ talk.speaker.youtube }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
 													{{ iconSVG('youtube', 'b-event__icon') }}
@@ -67,9 +67,9 @@
 												Video
 											</li>
 										{% endif %}
-										{% if talk.speaker.presentation %}
+										{% if talk.presentation %}
 											<li class="b-event__item">
-												<a href="{{ talk.speaker.presentation }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
+												<a href="{{ talk.presentation }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
 													{{ iconSVG('slideshare', 'b-event__icon') }}
 													Prezentace
 												</a>
