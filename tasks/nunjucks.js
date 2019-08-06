@@ -10,6 +10,7 @@ const merge = require('deepmerge');
 
 const fs = require('fs');
 const dateFilter = require('nunjucks-date-filter');
+const rename = require('gulp-rename');
 
 var manageEnvironment = (environment) => {
 	environment.addFilter('date', dateFilter);
@@ -35,6 +36,7 @@ module.exports = function nunjucks(done) {
 
 	return src([
 		'*.njk',
+		'archiv/*.njk',
 	], {
 		cwd: config.src.templates,
 	})
@@ -81,6 +83,12 @@ module.exports = function nunjucks(done) {
 			file.contents = Buffer.from(data);
 			this.push(file);
 			cb();
+		}))
+		.pipe(rename(function (path) {
+			if (path.basename != 'index') {
+				path.dirname = path.basename;
+				path.basename = 'index';
+			}
 		}))
 		.pipe(dest(config.dest.templates));
 };
