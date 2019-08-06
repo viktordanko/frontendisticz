@@ -1,0 +1,42 @@
+{
+  "title": "SVG v Brně",
+  "date": "2014-12-04",
+  "venue": "Webnode, Brno",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Úvod do SVG",
+      "youtube": "https://youtu.be/gGO0hjSlHis",
+      "presentation": "https://speakerdeck.com/jackub/uvod-do-svg",
+      "speaker": {
+        "name": "Jakub Mikuláš ",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/jedenbod",
+        "avatar": "/img/illust/mikulas.jpeg"
+      }
+    },
+    {
+      "title": "Animace v SVG",
+      "youtube": "https://youtu.be/D8dNpPP1vZg",
+      "presentation": "https://docs.google.com/presentation/d/1-vgYbqPIX-R0CG1FPGLC1K-4NZkVV_jiSlonC_IR8lo",
+      "speaker": {
+        "name": "Milan Kačurák",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/milankacurak",
+        "avatar": "/img/illust/kacurak.jpeg"
+      }
+    },
+    {
+      "title": "SVG – case study  (řešení problémů v reálném projektu)",
+      "youtube": "https://youtu.be/pl3qMBqZSgc",
+      "presentation": "http://svg.superkoderi.cz/svg.pdf",
+      "speaker": {
+        "name": "Michal Matuška",
+        "bio": "SuperKoderi.cz",
+        "url": "https://twitter.com/fireball_",
+        "avatar": "/img/illust/matuska.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVcLpo9sIRiPfBzf1VPIaFo8"
+}
