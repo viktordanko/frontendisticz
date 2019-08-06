@@ -25,8 +25,8 @@ collections: # A list of collections the CMS should be able to edit
         widget: "list"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Avatar, name: avatar, widget: image}
-      - {label: "Youtube playlist", name: "youtube", widget: "string", required: false}
+          - {label: Url, name: url, widget: string, required: false}
+          - {label: Avatar, name: avatar, widget: image, required: false}
       - label: "Talks"
         name: "talks"
         widget: "list"
@@ -42,3 +42,4 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Bio, name: bio, widget: string, required: false}
               - {label: Url, name: url, widget: string, required: false}
               - {label: Avatar, name: avatar, widget: image}
+      - {label: "Youtube playlist", name: "youtubePlaylist", widget: "string", required: false}

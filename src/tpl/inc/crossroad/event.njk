@@ -1,21 +1,21 @@
-{% for event in events %}
-	{% if event %}
+{% for meetup in meetups | reverse %}
+	{% if meetup %}
 		<section role="region" class="c-events">
 			<div class="row-main row-main--sm">
 				<div class="u-max-width--8-12 u-mx-auto u-mb-md">
 					<h3 class="u-font-bold">
-						{{ event.title }}
+						{{ meetup.title }}
 					</h3>
 					<div class="c-events__info">
 						<p>
-							{{ event.place }}
+							{{ meetup.venue }}
 						</p>
-						{% if event.partners %}
+						{% if meetup.sponsors %}
 							<ul class="c-events__partners">
-								{% for partner in event.partners %}
+								{% for sponsor in meetup.sponsors %}
 									<li class="c-events__partner">
-										<a class="c-events__link" href="{{ partner.url }}" target="_blank" rel="noreferrer noopener">
-											<img src="{{ assets.images }}logos/{{ partner.img }}" width="{{ partner.imgWidth }}" height="{{ partner.imgHeight }}"alt="Logo společnosti {{ partner.name }}">
+										<a class="c-events__link" href="{{ sponsor.url }}" target="_blank" rel="noreferrer noopener">
+											<img src="{{ sponsor.avatar }}" width="{{ partner.imgWidth }}" height="{{ partner.imgHeight }}"alt="Logo společnosti {{ sponsor.title }}">
 										</a>
 									</li>
 								{% endfor %}
@@ -24,33 +24,39 @@
 					</div>
 				</div>
 				<div class="c-events__wrap u-mb-xl">
-					{% if event.partners %}
+					{% if meetup.talks %}
 					<div class="c-events__list">
-						{% for person in event.persons %}
+						{% for talk in meetup.talks %}
 							<div class="c-events__item">
 								<article role="article" class="b-event">
 									<div class="b-event__img">
-										{% if person.img %}
-											<img src="{{ assets.images }}illust/{{ person.img }}.jpg" alt="" width="50" height="50">
+										{% if talk.speaker.img %}
+											<img src="{{ talk.speaker.avatar }}" alt="talk.speaker.name" width="50" height="50">
 										{% else %}
 											<span class="b-event__placeholder"></span>
 										{% endif %}
 									</div>
 									<p class="b-event__info">
-										<a href="{{ person.twitter }}" class="b-event__name" target="_blank" rel="noopener noreferrer">
-											{{ person.name }}
-										</a>
-										<span class="b-event__job">
-											{{ person.job }}
-										</span>
-										<span class="b-event__title">
-											{{ person.topic }}
-										</span>
+										{% if talk.speaker.name %}
+											<a href="{{ talk.speaker.url }}" class="b-event__name" target="_blank" rel="noopener noreferrer">
+												{{ talk.speaker.name }}
+											</a>
+										{% endif %}
+										{% if talk.speaker.bio %}
+											<span class="b-event__job">
+												{{ talk.speaker.bio }}
+											</span>
+										{% endif %}
+										{% if talk.title %}
+											<span class="b-event__title">
+												{{ talk.title }}
+											</span>
+										{% endif %}
 									</p>
 									<ul class="b-event__list">
-										{% if person.youtubeHref %}
+										{% if talk.speaker.youtube %}
 											<li class="b-event__item">
-												<a href="{{ person.youtubeHref }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
+												<a href="{{ talk.speaker.youtube }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
 													{{ iconSVG('youtube', 'b-event__icon') }}
 													Video
 												</a>
@@ -61,9 +67,9 @@
 												Video
 											</li>
 										{% endif %}
-										{% if person.slideshareHref %}
+										{% if talk.speaker.presentation %}
 											<li class="b-event__item">
-												<a href="{{ person.slideshareHref }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
+												<a href="{{ talk.speaker.presentation }}" class="b-event__link b-event__link--icon" target="_blank" rel="noopener noreferrer">
 													{{ iconSVG('slideshare', 'b-event__icon') }}
 													Prezentace
 												</a>
@@ -80,11 +86,11 @@
 						{% endfor %}
 					</div>
 					{% endif %}
-					{% if event.showAllBtn %}
-						<p class="u-mx-auto u-mt-lg">
-							<a href="{{ event.showAllBtn.allVideosHref }}" class="item-icon item-icon--before">
+					{% if meetup.youtubePlaylist %}
+						<p class="b-event__btn">
+							<a href="{{ meetup.youtubePlaylist }}" class="item-icon item-icon--before">
 								{{ iconSVG('youtube') }}
-								{{ event.showAllBtn.allVideosText }}
+								Všechny přednášky v playlistu
 							</a>
 						</p>
 					{% endif %}
