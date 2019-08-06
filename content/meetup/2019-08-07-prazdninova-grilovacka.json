@@ -7,12 +7,11 @@
       "title": "SUPERKODERS",
       "url": "http://superkoders.com",
       "avatar": "/img/illust/superkoders.svg",
-      "avatarSize": [
+      "avatarSize":
         {
-          "width": 53,
-          "height": 40
+          "width": 110,
+          "height": 30
         }
-      ]
     }
   ],
   "talks": [
