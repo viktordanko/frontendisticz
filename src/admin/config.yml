@@ -27,6 +27,12 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Title, name: title, widget: string}
           - {label: Url, name: url, widget: string, required: false}
           - {label: Avatar, name: avatar, widget: image, required: false}
+          - label: "Avatar size"
+            name: "avatarSize"
+            widget: "list"
+            fields:
+              - {label: Width, name: width, widget: number}
+              - {label: Height, name: height, widget: number}
       - label: "Talks"
         name: "talks"
         widget: "list"
@@ -42,10 +48,4 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Bio, name: bio, widget: string, required: false}
               - {label: Url, name: url, widget: string, required: false}
               - {label: Avatar, name: avatar, widget: image, required: false}
-              - label: "Avatar size"
-                name: "avatarSize"
-                widget: "list"
-                fields:
-                  - {label: Width, name: width, widget: number}
-                  - {label: Height, name: height, widget: number}
       - {label: "Youtube playlist", name: "youtubePlaylist", widget: "string", required: false}
