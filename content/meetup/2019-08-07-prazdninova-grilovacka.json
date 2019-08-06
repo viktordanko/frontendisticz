@@ -5,10 +5,12 @@
   "sponsors": [
     {
       "title": "Ataccama",
+      "url": "https://ataccama.com",
       "avatar": "/img/illust/ataccama.svg"
     },
     {
       "title": "LMC",
+      "url": "https://lmc.eu",
       "avatar": "/img/illust/lmc.svg"
     }
   ],
