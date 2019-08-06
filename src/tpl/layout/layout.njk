@@ -26,9 +26,20 @@
 			<title>{{ pageTitle }} | Frontendisti.cz</title>
 		{% endif %}
 
-		<link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=latin-ext" rel="stylesheet">
+		<link rel="preload" href="{{ assets.fonts }}playfairdisplay-regular-webfont.woff2" as="font">
+		<link rel="preload" href="{{ assets.fonts }}playfairdisplay-bold-webfont.woff2" as="font">
+
 		<link rel="stylesheet" href="{{ assets.styles }}style.css" media="screen,handheld">
 		<link rel="stylesheet" href="{{ assets.styles }}print.css" media="print">
+
+		{% set scripts = [
+			'https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find',
+			assets.scripts + 'app.js'
+		] %}
+
+		{% for script in scripts %}
+			<link rel="preload" as="script" href="{{ script }}">
+		{% endfor %}
 
 		<link rel="apple-touch-icon" sizes="180x180" href="{{ assets.images }}apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="{{ assets.images }}favicon-32x32.png">
@@ -131,13 +142,11 @@
 				</div>
 			</div>
 		</footer>
-		<!--[if (gte IE 9) | (!IE)]><!-->
-			{# <script src="{{ assets.scripts }}jquery-2.2.4.min.js"></script> #}
-			<script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find,Element.prototype.closest"></script>
-			<script src="{{ assets.scripts }}app.js"></script>
+			{% for script in scripts %}
+				<script src="{{ script }}"></script>
+			{% endfor %}
 			<script>
 				App.run({})
 			</script>
-		<!--<![endif]-->
 	</body>
 </html>
