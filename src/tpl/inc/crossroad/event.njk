@@ -8,7 +8,8 @@
 					</h3>
 					<div class="c-events__info">
 						<p>
-							{{ meetup.venue }}
+							{{ meetup.date | date('D. M. YYYY') }},
+							&nbsp;{{ meetup.venue }}
 						</p>
 						{% if meetup.sponsors %}
 							<ul class="c-events__partners">
