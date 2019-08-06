@@ -1,0 +1,42 @@
+{
+  "title": "PSD či nePSD? v Praze",
+  "date": "2014-10-31",
+  "venue": " Node 5, Praha",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Jak v GoodData tvoříme UI",
+      "youtube": "https://youtu.be/aOZbBkQOOd8",
+      "presentation": "http://www.slideshare.net/manakmichal/jak-v-gooddata-tvome-ui",
+      "speaker": {
+        "name": "Michal Maňák ",
+        "bio": "GoodData",
+        "url": "https://twitter.com/manakmichal",
+        "avatar": "/img/illust/manak.jpeg"
+      }
+    },
+    {
+      "title": "RIP Adobe Fireworks, long live Photoshop",
+      "youtube": "https://youtu.be/Oo6pZe14Fs0",
+      "presentation": "https://speakerdeck.com/mangoweb/rip-fireworks-long-live-photoshop",
+      "speaker": {
+        "name": "Václav Rouček",
+        "bio": "manGoweb",
+        "url": "http://twitter.com/vaclavroucek",
+        "avatar": "/img/illust/roucek.jpeg"
+      }
+    },
+    {
+      "title": "Photoshop v dnešním workflow frontendisty",
+      "youtube": "https://youtu.be/6y_GWWHRJN8",
+      "presentation": "http://www.slideshare.net/AdamKudrna/photoshop-v-dnenm-workflow-frontendisty",
+      "speaker": {
+        "name": "Adam Kudrna ",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/AdamKudrna",
+        "avatar": "/img/illust/kudrna.jpg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVcYKCxuTxFZdHLDS6YtefWU"
+}
