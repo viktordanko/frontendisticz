@@ -20,6 +20,12 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Date", name: "date", widget: "date", format: "YYYY-MM-DD"}
       - {label: "Venue", name: "venue", widget: "string"}
+      - label: "Sponsors"
+        name: "sponsors"
+        widget: "list"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Avatar, name: avatar, widget: image}
       - {label: "Youtube playlist", name: "youtube", widget: "string", required: false}
       - label: "Talks"
         name: "talks"
