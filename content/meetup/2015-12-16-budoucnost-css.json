@@ -1,0 +1,52 @@
+{
+  "title": "Budoucnost CSS",
+  "date": "2015-12-16",
+  "venue": "Webnode, Brno",
+  "sponsors": [
+    {
+      "title": "Webnode",
+      "url": "https://www.webnode.com/jobs/",
+      "avatar": "/img/illust/webnode.png",
+      "avatarSize": {
+        "width": 110,
+        "height": 58
+      }
+    }
+  ],
+  "talks": [
+    {
+      "title": "PostCSS – konec preprocesorů?",
+      "youtube": "https://youtu.be/SmFLwhDUSWQ",
+      "presentation": "https://docs.google.com/presentation/d/1DlviNaAvfk7lPl77gjQPBXWRunSSD5JRAH40WonQoq8/edit?usp=drive_web",
+      "speaker": {
+        "name": "Pavel Ševčík",
+        "bio": "Etnetera",
+        "url": "https://twitter.com/pajasevi",
+        "avatar": "/img/illust/sevcik.jpeg"
+      }
+    },
+    {
+      "title": "CSS Modules – evoluce BEM a příbuzných",
+      "youtube": "https://youtu.be/uOKA-tptKUc",
+      "presentation": "https://docs.google.com/presentation/d/1SzOrKjNIOcmTNBdZima3YOlm8WJv4Z4tSrP0P5E1qwc/edit?usp=sharing",
+      "speaker": {
+        "name": "Tomáš Růžička",
+        "bio": "Productboard",
+        "url": "https://twitter.com/LeZuse",
+        "avatar": "/img/illust/ruzicka.jpeg"
+      }
+    },
+    {
+      "title": "Budoucnost uživatelských rozhraní",
+      "youtube": "https://youtu.be/196lIR4GEWA",
+      "presentation": "https://www.kacurak.com/frontendisti/budoucnost-uzivatelskych-rozhrani.pdf",
+      "speaker": {
+        "name": "Milan Kačurák",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/milankacurak",
+        "avatar": "/img/illust/kacurak.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVcWuL02deAAfjEO3AHB15MU"
+}
