@@ -24,7 +24,7 @@ collections: # A list of collections the CMS should be able to edit
         name: "sponsors"
         widget: "list"
         fields:
-          - {label: Title, name: title, widget: string}
+          - {label: Title, name: title, widget: string, required: false}
           - {label: Url, name: url, widget: string, required: false}
           - {label: Avatar, name: avatar, widget: image, required: false}
           - label: "Avatar size"
