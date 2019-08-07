@@ -34,7 +34,8 @@
 
 		{% set scripts = [
 			'https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find',
-			assets.scripts + 'app.js'
+			assets.scripts + 'app.js',
+			assets.scripts + 'ga.js'
 		] %}
 
 		{% for script in scripts %}
