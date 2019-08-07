@@ -1,0 +1,82 @@
+{
+  "title": "Frontend v brněnských firmách + „lightning talks“",
+  "date": "2017-04-06",
+  "venue": "Kiwi.com, Brno",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Web v přechodu",
+      "youtube": "https://youtu.be/wBsa_Chlj_Q",
+      "speaker": {
+        "name": "Martin Kolář",
+        "bio": " igloonet",
+        "url": "https://twitter.com/martinkolar",
+        "avatar": "/img/illust/kolar.jpg"
+      }
+    },
+    {
+      "title": "CSS in JS",
+      "youtube": "https://youtu.be/dKAQWrkedag",
+      "speaker": {
+        "name": "Igor Hlina",
+        "url": "https://twitter.com/srigi"
+      }
+    },
+    {
+      "title": "Consistency in breakpoint declarations between CSS and JavaScript [EN]",
+      "youtube": "https://youtu.be/gZ5EwOswfjM",
+      "speaker": {
+        "name": "Vasil Dimitrov",
+        "url": "https://twitter.com/vydimitrov",
+        "avatar": "/img/illust/dimitrov.png"
+      }
+    },
+    {
+      "title": "Jak si ulehčujeme code review v Kiwi.com",
+      "youtube": "https://youtu.be/UqvHty9ZSeo",
+      "speaker": {
+        "name": "Pavel Doleček ",
+        "bio": "Kiwi.com",
+        "url": "https://twitter.com/Straaajk",
+        "avatar": "/img/illust/dolecek.jpg"
+      }
+    },
+    {
+      "title": "Do you need a styleguide?",
+      "youtube": "https://youtu.be/RERtiIHQPhg",
+      "speaker": {
+        "name": "Denis Kabaňa ",
+        "bio": "ROI Hunter"
+      }
+    },
+    {
+      "title": "Tvorba ziskových časových odhadů šablon",
+      "youtube": "https://youtu.be/zSvcqK0aggc",
+      "speaker": {
+        "name": "Petr Goca ",
+        "bio": "INSPIRE CZ s.r.o",
+        "avatar": "/img/illust/goca.jpg"
+      }
+    },
+    {
+      "title": "Google maps API - pokročilejší plánování tras",
+      "youtube": "https://youtu.be/JPLrsCnTlgY",
+      "speaker": {
+        "name": "Petr Grochál",
+        "bio": "Superkodéři",
+        "url": "https://twitter.com/pitrdzi",
+        "avatar": "/img/illust/grochal.jpeg"
+      }
+    },
+    {
+      "title": "Nevyřešené problémy mezi designem a front-endem",
+      "youtube": "https://youtu.be/izHwyusktx0",
+      "speaker": {
+        "name": "Jirka Tvrdek",
+        "url": "https://twitter.com/tvrdek",
+        "avatar": "/img/illust/tvrdek.png"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVd54oggd_5zcBGzJwKcaJQq"
+}
