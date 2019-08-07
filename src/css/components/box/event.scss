@@ -1,8 +1,5 @@
 .b-event {
 	position: relative;
-	&__img > * {
-		border-radius: 50%;
-	}
 	&__info {
 		margin: 0;
 	}
@@ -60,6 +57,10 @@
 			top: 50%;
 			transform: translateY(-50%) translateY(-2px);
 		}
+	}
+	&__img img,
+	&__placeholder {
+		border-radius: 50%;
 	}
 	&__btn {
 		margin-top: 50px;
