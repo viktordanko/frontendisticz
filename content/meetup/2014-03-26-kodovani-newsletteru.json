@@ -22,7 +22,8 @@
       "speaker": {
         "name": "Jan Štráfelda",
         "bio": "Adaptic, s.r.o.",
-        "url": "https://twitter.com/Strafelda"
+        "url": "https://twitter.com/Strafelda",
+        "avatar": "/img/illust/strafelda.jpg"
       }
     },
     {
@@ -32,7 +33,8 @@
       "speaker": {
         "name": "Tomáš Hejč ",
         "bio": "SuperKoderi.cz",
-        "url": "https://twitter.com/TaCcz"
+        "url": "https://twitter.com/TaCcz",
+        "avatar": "/img/illust/hejc-old.jpg"
       }
     }
   ],
