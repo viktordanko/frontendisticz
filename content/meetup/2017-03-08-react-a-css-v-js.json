@@ -1,0 +1,39 @@
+{
+  "title": "React a CSS v JS",
+  "date": "2017-03-08",
+  "venue": "Ataccama, Praha",
+  "sponsors": [
+    {
+      "title": "Ataccama",
+      "url": "https://ataccama.com",
+      "avatar": "/img/illust/ataccama.svg",
+      "avatarSize": {
+        "width": 120,
+        "height": 22
+      }
+    }
+  ],
+  "talks": [
+    {
+      "title": "React bez závislosti na Reactu",
+      "youtube": "https://youtu.be/NZdyFDsBdB8",
+      "speaker": {
+        "name": "Iakov Markov",
+        "bio": "Ataccama",
+        "url": "https://twitter.com/IakovMarkov",
+        "avatar": "/img/illust/markov.jpeg"
+      }
+    },
+    {
+      "title": "CSS in JS",
+      "youtube": "https://youtu.be/pQe_Kp-yFJk",
+      "speaker": {
+        "name": "Daniel Steigerwald",
+        "bio": "Freelance",
+        "url": "https://twitter.com/steida",
+        "avatar": "/img/illust/steigerwald-.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVe7CaC6Me3cV8nXtX9Q6PL9"
+}
