@@ -11,7 +11,8 @@
       "speaker": {
         "name": "Patrik Illy ",
         "bio": "Freelancer",
-        "url": "https://twitter.com/illycz"
+        "url": "https://twitter.com/illycz",
+        "avatar": "/img/illust/illy.jpg"
       }
     },
     {
@@ -21,7 +22,8 @@
       "speaker": {
         "name": "Tomáš Musiol",
         "bio": "Freelancer",
-        "url": "https://twitter.com/kozleek"
+        "url": "https://twitter.com/kozleek",
+        "avatar": "/img/illust/musiol.jpg"
       }
     },
     {
@@ -31,7 +33,8 @@
       "speaker": {
         "name": "Robin Pokorný",
         "bio": "LMC, s. r. o.",
-        "url": "https://twitter.com/robinpokorny"
+        "url": "https://twitter.com/robinpokorny",
+        "avatar": "/img/illust/pokorny-old.jpg"
       }
     }
   ],
