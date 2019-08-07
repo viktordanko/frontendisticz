@@ -1,0 +1,37 @@
+{
+  "title": "WebExpo, Photopea a Microsoft Edge",
+  "date": "2017-10-11",
+  "venue": "LMC s.r.o., Praha",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Web WebExpo",
+      "youtube": "https://youtu.be/qE2QWIxWUv8",
+      "speaker": {
+        "name": "Honza Mikulášek ",
+        "bio": "2FRESH",
+        "url": "https://twitter.com/JxMik",
+        "avatar": "/img/illust/mikulasek.jpeg"
+      }
+    },
+    {
+      "title": "Photopea: vývoj grafického editoru",
+      "youtube": "https://youtu.be/i55_rk0cmqo",
+      "speaker": {
+        "name": "Ivan Kuckir",
+        "avatar": "/img/illust/kuckir.jpeg"
+      }
+    },
+    {
+      "title": "Microsoft Edge – minulost a budoucnost",
+      "youtube": "https://youtu.be/xvTP6cS1uS0",
+      "speaker": {
+        "name": "Václav Dajbych ",
+        "bio": "Microsoft",
+        "url": "https://twitter.com/Dajbych",
+        "avatar": "/img/illust/dajbych.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=qE2QWIxWUv8&list=PLnXfazh66kVddq-0dEYgvD7JD-EIklEAF"
+}
