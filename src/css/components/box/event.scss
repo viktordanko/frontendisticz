@@ -56,6 +56,9 @@
 		line-height: 1;
 		&::before {
 			content: '{F}';
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%) translateY(-2px);
 		}
 	}
 	&__btn {
