@@ -1,0 +1,37 @@
+{
+  "title": "Frontendisti v Plzni",
+  "date": "2016-11-23",
+  "venue": "Depo 2015, Plzeň",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Vývoj SPA v React + Redux",
+      "youtube": "https://youtu.be/TBI6YXuAHeI",
+      "speaker": {
+        "name": "Jirka Vyhnálek",
+        "bio": "Socialbakers",
+        "avatar": "/img/illust/vyhnalek.jpeg"
+      }
+    },
+    {
+      "title": "Bootstrap – naše cesta tam a zase zpátky",
+      "youtube": "https://youtu.be/wGeBa-rRHcI",
+      "speaker": {
+        "name": "Martin Hložek",
+        "bio": "Beneš & Michl",
+        "url": "https://twitter.com/hloza",
+        "avatar": "/img/illust/hlozek.jpeg"
+      }
+    },
+    {
+      "title": "ShoptetLeaks",
+      "presentation": "https://youtu.be/ZXA0dhM34sU",
+      "speaker": {
+        "name": "Vašek Vracovský ",
+        "bio": "Shoptet",
+        "avatar": "/img/illust/vracovsky.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVec4J1zt00usWbXJnGDalDO"
+}
