@@ -11,7 +11,7 @@
         "name": "Honza Mikulášek ",
         "bio": "2FRESH",
         "url": "https://twitter.com/JxMik",
-        "avatar": "/img/illust/mikulasek.jpeg"
+        "avatar": "/img/illust/mikulasek.jpg"
       }
     },
     {
@@ -19,7 +19,7 @@
       "youtube": "https://youtu.be/i55_rk0cmqo",
       "speaker": {
         "name": "Ivan Kuckir",
-        "avatar": "/img/illust/kuckir.jpeg"
+        "avatar": "/img/illust/kuckir.jpg"
       }
     },
     {
@@ -29,7 +29,7 @@
         "name": "Václav Dajbych ",
         "bio": "Microsoft",
         "url": "https://twitter.com/Dajbych",
-        "avatar": "/img/illust/dajbych.jpeg"
+        "avatar": "/img/illust/dajbych.jpg"
       }
     }
   ],
