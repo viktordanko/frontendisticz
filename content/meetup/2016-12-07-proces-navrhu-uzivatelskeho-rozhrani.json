@@ -1,0 +1,37 @@
+{
+  "title": "Proces návrhu uživatelského rozhraní",
+  "date": "2016-12-07",
+  "venue": "LMC, Praha",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Tvorba produktu je týmový sport",
+      "youtube": "https://youtu.be/e7BKN5TUhqc",
+      "speaker": {
+        "name": "Michal Maňák ",
+        "bio": "AW-dev",
+        "avatar": "/img/illust/manak.jpeg"
+      }
+    },
+    {
+      "title": "Úloha kreativního kodéra v rámci přípravy microsite",
+      "youtube": "https://youtu.be/3es884UouiE",
+      "speaker": {
+        "name": "František Procházka",
+        "bio": "Bistro",
+        "avatar": "/img/illust/prochazka.jpeg"
+      }
+    },
+    {
+      "title": "Slasti i pasti HTML prototypování",
+      "youtube": "https://youtu.be/hVI4mp8xZLk",
+      "speaker": {
+        "name": "Martin Michálek",
+        "bio": "Freelance",
+        "url": "https://twitter.com/machal",
+        "avatar": "/img/illust/michalek.jpg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLnXfazh66kVeyU1wsp5fWh6GvD1m8vxmr"
+}
