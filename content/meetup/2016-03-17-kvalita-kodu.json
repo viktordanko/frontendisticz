@@ -30,7 +30,7 @@
       "speaker": {
         "name": "Ján Opavský ",
         "bio": "Shockworks",
-        "avatar": "/img/illust/opavsky.jpeg"
+        "avatar": "/img/illust/opavsky.jpg"
       }
     },
     {
@@ -40,7 +40,7 @@
       "speaker": {
         "name": "Ondřej Kašpar",
         "bio": "LMC",
-        "avatar": "/img/illust/kaspar.jpeg"
+        "avatar": "/img/illust/kaspar.jpg"
       }
     },
     {
@@ -50,7 +50,7 @@
       "speaker": {
         "name": "Jan Bartůněk + Jan Mikula ",
         "bio": "Salsita Software",
-        "avatar": "/img/illust/bartunek-mikula.jpeg"
+        "avatar": "/img/illust/bartunek-mikula.jpg"
       }
     }
   ],
