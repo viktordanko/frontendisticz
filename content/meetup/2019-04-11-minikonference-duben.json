@@ -1,0 +1,39 @@
+{
+  "title": "Minikonference duben",
+  "date": "2019-04-11",
+  "venue": "Edunesto, Brno",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Užitečná browser APIs",
+      "youtube": "https://youtu.be/0IVyn8LNUzg",
+      "speaker": {
+        "name": "Pavol Hejný",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/pavolhejny",
+        "avatar": "/img/illust/hejny.jpg"
+      }
+    },
+    {
+      "title": "AMPHTML e-mail",
+      "youtube": "https://youtu.be/un9625xfRYg",
+      "speaker": {
+        "name": "Tomáš Krejčí",
+        "bio": "SUPERKODERS",
+        "url": "https://twitter.com/tomkrej",
+        "avatar": "/img/illust/krejci.jpg"
+      }
+    },
+    {
+      "title": "Nativní lazyloading",
+      "youtube": "https://youtu.be/caxfm0jO7uY",
+      "speaker": {
+        "name": "Martin Kolář",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/martinkolar",
+        "avatar": "/img/illust/kolar.jpg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=0IVyn8LNUzg&list=PLnXfazh66kVc63e8d7S7Y8IVe3AfSq8iA"
+}
