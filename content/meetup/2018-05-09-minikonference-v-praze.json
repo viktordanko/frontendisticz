@@ -1,0 +1,47 @@
+{
+  "title": "Minikonference v Praze",
+  "date": "2018-05-09",
+  "venue": "LMC s.r.o., Praha",
+  "sponsors": [
+    {
+      "title": "LMC",
+      "url": "https://lmc.eu",
+      "avatar": "/img/illust/lmc.svg",
+      "avatarSize": {
+        "width": 47,
+        "height": 36
+      }
+    }
+  ],
+  "talks": [
+    {
+      "title": "Použití Next.js a Reactí UI knihovny v aplikaci",
+      "youtube": "https://youtu.be/-lyxi-cHbY8",
+      "speaker": {
+        "name": "Martin Krištof",
+        "bio": "LMC - Seduo.cz",
+        "url": "https://twitter.com/Krejcek",
+        "avatar": "/img/illust/kristof.jpg"
+      }
+    },
+    {
+      "title": "Monitoring výkonu backendu a frontendu",
+      "youtube": "https://youtu.be/FaIY89lEeqI",
+      "speaker": {
+        "name": "Michal Fanta",
+        "bio": "Etnetera"
+      }
+    },
+    {
+      "title": "Kvalita kódu",
+      "youtube": "https://youtu.be/DcJVDuKohkM",
+      "speaker": {
+        "name": "Adam Kudrna",
+        "bio": "Frontend designer, VisionApps",
+        "url": "https://twitter.com/AdamKudrna",
+        "avatar": "/img/illust/kudrna.jpg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=-lyxi-cHbY8&list=PLnXfazh66kVfy-7VM1oWEV6qXJEtnRi2T"
+}
