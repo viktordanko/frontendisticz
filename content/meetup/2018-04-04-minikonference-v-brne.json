@@ -1,0 +1,58 @@
+{
+  "title": "Minikonference v Brně",
+  "date": "2018-04-04",
+  "venue": "Kentico, Brno",
+  "sponsors": [
+    {
+      "title": "Kentico",
+      "url": "https://www.kentico.com/",
+      "avatar": "/img/illust/kentico.png",
+      "avatarSize": {
+        "width": 110,
+        "height": 50
+      }
+    }
+  ],
+  "talks": [
+    {
+      "title": "Rychlé a modulární progresivní webové aplikace (PWA)",
+      "youtube": "https://youtu.be/sly6IF_lEQ8",
+      "speaker": {
+        "name": "Josef Ježek",
+        "bio": "Behavio Labs",
+        "avatar": "/img/illust/jezek.jpeg"
+      }
+    },
+    {
+      "title": "CASE STUDY - iROZHLAS.CZ - Jak vznikaly online volební grafy pro prezidentské volby",
+      "youtube": "https://youtu.be/tIVi8od8QEk",
+      "speaker": {
+        "name": "Karel Fučík",
+        "bio": "SUPERKODERS",
+        "url": "https://twitter.com/karfcz",
+        "avatar": "/img/illust/fucik.jpg"
+      }
+    },
+    {
+      "title": "Jak jednoduše stylovat responzivní HTML e-maily",
+      "youtube": "https://youtu.be/ZeIGSxtlchY",
+      "speaker": {
+        "name": "Tomáš Krejčí",
+        "bio": "SUPERKODERS",
+        "url": "https://twitter.com/tomkrej",
+        "avatar": "/img/illust/krejci.jpg"
+      }
+    },
+    {
+      "title": "Jak vychytat obrázky na e-shopu",
+      "youtube": "https://youtu.be/5jTAOEQdOZQ",
+      "speaker": {
+        "name": "Martin Kolář",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/martinkolar",
+        "avatar": "/img/illust/kolar.jpg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=sly6IF_lEQ8&list=PLnXfazh66kVeF5ak6_OvM5Hp1JEDOyJu5"
+}
