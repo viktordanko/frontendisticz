@@ -1,0 +1,35 @@
+{
+  "title": "Minikonference v LMC",
+  "date": "2019-05-15",
+  "venue": "LMC s.r.o., Praha",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Responzivní grafika",
+      "youtube": "https://youtu.be/xAurvHRSIaY",
+      "speaker": {
+        "name": "Ondra Kašpar ",
+        "bio": "Teamio"
+      }
+    },
+    {
+      "title": "CSS pro design systémy",
+      "youtube": "https://youtu.be/ow3H4Fe8dqM",
+      "speaker": {
+        "name": "Adam Kudrna",
+        "bio": "Visionapps",
+        "avatar": "/img/illust/kudrna.jpg"
+      }
+    },
+    {
+      "title": "Visuální testy",
+      "youtube": "https://youtu.be/M16jx38sZZE",
+      "speaker": {
+        "name": "Ladislav Suchánek",
+        "bio": "Slevomat",
+        "url": "https://twitter.com/lsuchanek"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=xAurvHRSIaY&list=PLnXfazh66kVeM1s_wx2A2xn8SwO590Rao"
+}
