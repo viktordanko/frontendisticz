@@ -62,6 +62,16 @@
         "url": "https://twitter.com/martinkolar",
         "avatar": "/img/illust/kolar.jpg"
       }
+    },
+    {
+      "title": "SVG workflow a SSOT",
+      "youtube": "https://youtu.be/4bUTVMxCvOA",
+      "speaker": {
+        "name": "Michal Matuška",
+        "bio": "SUPERKODERS",
+        "url": "https://twitter.com/fireball_",
+        "avatar": "/img/illust/matuska-new.jpg"
+      }
     }
   ],
   "youtubePlaylist": "https://www.youtube.com/watch?v=-XY-L9-GROM&list=PLnXfazh66kVfmaj8WRCVEPyF9Z--8GDJX"
