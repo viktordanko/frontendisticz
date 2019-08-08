@@ -1,0 +1,39 @@
+{
+  "title": "Hospodský sraz",
+  "date": "2018-11-13",
+  "venue": "The Pub, Plzeň",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "AMP pro designéry a vývojáře",
+      "youtube": "https://youtu.be/uf6hh2skUO8",
+      "speaker": {
+        "name": "Martin Michálek",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/machal",
+        "avatar": "/img/illust/michalek.jpg"
+      }
+    },
+    {
+      "title": "SEO a frontend. Jak nám vývojáři hážou klacky pod nohy",
+      "youtube": "https://youtu.be/_qRJEK3YZ2c",
+      "speaker": {
+        "name": "Martin Žatkovič",
+        "bio": "Taste Medio",
+        "url": "https://twitter.com/zatkoma",
+        "avatar": "/img/illust/zatkovic.jpg"
+      }
+    },
+    {
+      "title": "CSS Custom Properties v praxi s přesahem do teorie",
+      "youtube": "https://youtu.be/uKb_hTCJ0w0",
+      "speaker": {
+        "name": "Tomáš Kout",
+        "bio": "Freelancer",
+        "url": "https://twitter.com/TomKout",
+        "avatar": "/img/illust/kout.jpg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=uKb_hTCJ0w0&list=PLnXfazh66kVdtVu83WcnO8eAGRNOGGpU6"
+}
