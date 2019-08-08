@@ -24,28 +24,28 @@ collections: # A list of collections the CMS should be able to edit
         name: "sponsors"
         widget: "list"
         fields:
-          - {label: Title, name: title, widget: string, required: false}
-          - {label: Url, name: url, widget: string, required: false}
-          - {label: Avatar, name: avatar, widget: image, required: false}
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Url", name: "url", widget: "string", required: false}
+          - {label: "Avatar", name: "avatar", widget: "image", required: false}
           - label: "Avatar size"
             name: "avatarSize"
-            widget: object
+            widget: "object"
             fields:
-              - {label: Width, name: width, widget: number, default: 110}
-              - {label: Height, name: height, widget: number, defautl: 40}
+              - {label: "Width", name: "width", widget: "number", default: 110}
+              - {label: "Height", name: "height", widget: "number", default: 40}
       - label: "Talks"
         name: "talks"
         widget: "list"
         fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Youtube, name: youtube, widget: string, required: false}
-          - {label: Presentation, name: presentation, widget: string, required: false}
-          - label: Speaker
-            name: speaker
-            widget: object
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Youtube", name: "youtube", widget: "string", required: false}
+          - {label: "Presentation", name: "presentation", widget: "string", required: false}
+          - label: "Speaker"
+            name: "speaker"
+            widget: "object"
             fields:
-              - {label: Name, name: name, widget: string}
-              - {label: Bio, name: bio, widget: string, required: false}
-              - {label: Url, name: url, widget: string, required: false}
-              - {label: Avatar, name: avatar, widget: image, required: false}
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Bio", name: "bio", widget: "string", required: false}
+              - {label: "Url", name: "url", widget: "string", required: false}
+              - {label: "Avatar", name: "avatar", widget: "image", required: false}
       - {label: "Youtube playlist", name: "youtubePlaylist", widget: "string", required: false}
