@@ -1,0 +1,39 @@
+{
+  "title": "Speciál o rychlosti webu v Rohlik.cz",
+  "date": "2019-04-10",
+  "venue": "Rohlik.cz, Praha",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Přechod na React v Rohlik.cz",
+      "youtube": "https://youtu.be/2IRfrBEuudg",
+      "speaker": {
+        "name": "Jakub Valenta",
+        "bio": "Rohlik.cz",
+        "url": "https://twitter.com/JakubValenta_",
+        "avatar": "/img/illust/valenta.jpg"
+      }
+    },
+    {
+      "title": "Testování JS výkonu webů",
+      "youtube": "https://youtu.be/3MWbIFvqfpI",
+      "speaker": {
+        "name": "Michal Matuška",
+        "bio": "SUPERKODERS",
+        "url": "https://twitter.com/fireball_",
+        "avatar": "/img/illust/matuska-new.jpg"
+      }
+    },
+    {
+      "title": "SpeedCurve: Průběžné sledování rychlosti webu",
+      "youtube": "https://youtu.be/xZvWR9obQ_0",
+      "speaker": {
+        "name": "Martin Michálek",
+        "bio": "Vzhůru dolů",
+        "url": "https://twitter.com/machal",
+        "avatar": "/img/illust/michalek.jpg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=2IRfrBEuudg&list=PLnXfazh66kVfFSLYigyA_mMu_oL8eAC8k"
+}
