@@ -1,6 +1,5 @@
 .m-main {
 	font-size: 18px;
-	font-weight: bold;
 	&__list {
 		@extend %reset-ul;
 	}
@@ -12,6 +11,10 @@
 		padding: 4px 10px 5px;
 		color: #fff;
 		text-decoration: none;
+		letter-spacing: 0.02em;
+	}
+	&__link:not(.m-main__link--cta) {
+		font-weight: normal;
 	}
 
 	// MODIFICATIONs
