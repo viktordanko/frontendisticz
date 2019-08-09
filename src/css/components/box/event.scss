@@ -31,7 +31,13 @@
 		.icon-svg {
 			display: block;
 			margin: 0 auto;
+		}
+		.icon-svg--youtube {
 			width: 30px;
+		}
+		.icon-svg--slideshare {
+			width: 25px;
+			height: 30px;
 		}
 	}
 	&__item + &__item {
@@ -50,23 +56,14 @@
 		color: $colorWhite;
 		font-size: 42px;
 		line-height: 1;
-		&::before {
-			content: '{F}';
-			position: absolute;
-			top: 50%;
-			width: 100%;
-			height: 100%;
-			transform: translateY(-50%) translateY(-3px);
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
 	}
 	&__img img,
 	&__placeholder {
 		border-radius: 50%;
 	}
 	&__img img {
+		max-width: 100%;
+		height: auto;
 		font-size: 12px;
 	}
 	&__btn {
