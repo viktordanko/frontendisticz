@@ -1,0 +1,42 @@
+{
+  "title": "Prázdninová grilovačka u SUPERKODERS",
+  "date": "2019-08-07",
+  "venue": "SUPERKODERS, Brno",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Naše cesta k JAMstacku",
+      "speaker": {
+        "name": "Tomáš Hejč",
+        "bio": "SUPERKODERS",
+        "url": "https://twitter.com/taccz",
+        "avatar": "/img/illust/hejc.jpg"
+      }
+    },
+    {
+      "title": "HOW I FELL IN MADLOVE?",
+      "speaker": {
+        "name": "Zuzana Šumlanská",
+        "bio": "SUPERKODERS",
+        "url": "https://twitter.com/Zuza_Sumlanska",
+        "avatar": "/img/illust/sumlanska.jpg"
+      }
+    },
+    {
+      "title": "Co nám React dal a vzal",
+      "speaker": {
+        "name": "Jan Křepský",
+        "bio": "Invia.cz"
+      }
+    },
+    {
+      "title": "UX a přístupnost",
+      "speaker": {
+        "name": "Jiří Thiemel",
+        "bio": "SUPERKODERS",
+        "url": "https://twitter.com/ThiemelJiri",
+        "avatar": "/img/illust/thiemel.jpg"
+      }
+    }
+  ]
+}
