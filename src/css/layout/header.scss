@@ -25,14 +25,13 @@
 			display: block;
 			padding-top: percentage(34/263);
 		}
-		img {
+		svg {
 			position: absolute;
 			top: 0;
 			left: 0;
 			bottom: 0;
 			height: 100%;
 			width: auto;
-			max-width: none;
 		}
 	}
 	&__menu {

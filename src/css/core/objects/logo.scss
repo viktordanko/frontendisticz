@@ -1,0 +1,15 @@
+#logo-short {
+	display: block;
+}
+
+@media all and (min-width: 749.98px) {
+	#logo-short {
+		display: none;
+	}
+}
+
+@media all and (max-width: 749.98px) {
+	#logo-long {
+		display: none;
+	}
+}
