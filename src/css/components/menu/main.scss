@@ -8,7 +8,7 @@
 	}
 	&__link {
 		display: block;
-		padding: 4px 10px 5px;
+		padding: 10px;
 		color: #fff;
 		text-decoration: none;
 		letter-spacing: 0.02em;
@@ -80,6 +80,7 @@
 			margin-left: 15px;
 		}
 		&__link {
+			padding: 4px 10px 5px;
 			border-radius: 4px;
 		}
 	}
