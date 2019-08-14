@@ -29,11 +29,11 @@ const build = function build(done) {
 			iconFont,
 			spriteRetina,
 			sprite,
+			processData,
 		),
 		parallel(
 			sass,
 			webpack,
-			processData,
 			nunjucks,
 			copyImages,
 			copyJs,
