@@ -19,7 +19,8 @@
       "youtube": "https://youtu.be/dKAQWrkedag",
       "speaker": {
         "name": "Igor Hlina",
-        "url": "https://twitter.com/srigi"
+        "url": "https://twitter.com/srigi",
+        "avatar": "/img/illust/igor-hlina-avatar.jpg"
       }
     },
     {
@@ -46,7 +47,8 @@
       "youtube": "https://youtu.be/RERtiIHQPhg",
       "speaker": {
         "name": "Denis Kabaňa ",
-        "bio": "ROI Hunter"
+        "bio": "ROI Hunter",
+        "avatar": "/img/illust/denis-kabana-avatar.jpg"
       }
     },
     {
