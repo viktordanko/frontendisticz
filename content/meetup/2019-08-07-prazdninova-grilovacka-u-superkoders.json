@@ -6,6 +6,7 @@
   "talks": [
     {
       "title": "Naše cesta k JAMstacku",
+      "youtube": "https://youtu.be/ICs5Li1JFGY",
       "speaker": {
         "name": "Tomáš Hejč",
         "bio": "SUPERKODERS",
@@ -15,6 +16,7 @@
     },
     {
       "title": "HOW I FELL IN MADLOVE?",
+      "youtube": "https://youtu.be/TQHPXEB8E6o",
       "speaker": {
         "name": "Zuzana Šumlanská",
         "bio": "SUPERKODERS",
@@ -24,6 +26,7 @@
     },
     {
       "title": "Co nám React dal a vzal",
+      "youtube": "https://youtu.be/IWR6cYzjyRA",
       "speaker": {
         "name": "Jan Křepský",
         "bio": "Invia.cz",
@@ -32,6 +35,7 @@
     },
     {
       "title": "UX a přístupnost",
+      "youtube": "https://youtu.be/PsqGhks0VIY",
       "speaker": {
         "name": "Jiří Thiemel",
         "bio": "SUPERKODERS",
@@ -39,5 +43,6 @@
         "avatar": "/img/illust/thiemel.jpg"
       }
     }
-  ]
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=jGD9H3wYnAA&list=PLnXfazh66kVfNLq7dLXdWhFiEjHMA31ah"
 }
