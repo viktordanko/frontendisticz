@@ -46,22 +46,20 @@
 	&__link {
 		display: block;
 	}
-	&__placeholder {
-		position: relative;
-		display: block;
+	&__img {
 		width: 100px;
 		height: 100px;
-		margin: 0 auto;
-		background: $colorText;
-		color: $colorWhite;
-		font-size: 42px;
-		line-height: 1;
-	}
-	&__img img,
-	&__placeholder {
-		opacity: 0;
 		border-radius: 50%;
-		transition: opacity $t;
+		background: #d1d1d1;
+	}
+	&__img img {
+		border-radius: 50%;
+		opacity: 0;
+		transition: opacity 0.5s;
+	}
+	&__img picture {
+		display: block;
+		height: 100%;
 	}
 	&__img img {
 		max-width: 100%;
@@ -98,6 +96,9 @@
 				content: normal;
 			}
 		}
+		&__img {
+			margin: 0 auto;
+		}
 		&__img,
 		&__info {
 			margin-bottom: 1em;
@@ -105,10 +106,6 @@
 	}
 	@media ($mdUp) {
 		padding-left: 86px;
-		&__placeholder {
-			font-size: 32px;
-		}
-		&__placeholder,
 		&__img {
 			width: 50px;
 			height: 50px;
