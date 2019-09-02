@@ -2,6 +2,7 @@ export const init = () => {
 
 	const btn = document.querySelector('.js-toggleMobileMenu');
 	const header = document.querySelector('.header');
+	const menuLinks = document.querySelectorAll('.m-main__link');
 
 	const toggleMenu = (open) => {
 		btn.setAttribute('aria-expanded', open);
@@ -20,7 +21,7 @@ export const init = () => {
 	});
 
 	// Close the mobile menu when click on link anchor
-	document.querySelectorAll('.m-main__link').forEach(link => {
+	[...menuLinks].forEach(link => {
 		link.addEventListener('click', function() {
 			toggleMenu(false);
 		});

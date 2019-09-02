@@ -59,7 +59,9 @@
 	}
 	&__img img,
 	&__placeholder {
+		opacity: 0;
 		border-radius: 50%;
+		transition: opacity $t;
 	}
 	&__img img {
 		max-width: 100%;
@@ -77,6 +79,9 @@
 	}
 
 	// STATEs
+	&__img img.inview {
+		opacity: 1;
+	}
 	.no-touchevents &__name[href^="https"]:hover {
 		color: $colorSecondary;
 	}

@@ -1,10 +1,9 @@
 import './tools/svg4everybody';
 import './tools/whatInput';
-// import { media } from './tools/MQ';
 
 // Components
-// import * as fontFaceObserver from './components/fontFaceObserver';
 import * as toggleMobileMenu from './components/toggleMobileMenu';
+import * as lazyload from './components/lazyload';
 
 
 // content load components
@@ -14,6 +13,7 @@ const componentsload = [
 // once delegated components
 const components = [
 	toggleMobileMenu,
+	lazyload,
 
 	// fontFaceObserver,
 ].concat(componentsload);
@@ -22,11 +22,11 @@ window.App = {
 	run() {
 
 		let target = document;
-		components.forEach((component) => component.init(target));
+		components.forEach(component => component.init(target));
 
-		document.addEventListener('contentload', function(event) {
+		document.addEventListener('contentload', event => {
 			let target = event.target;
-			componentsload.forEach((component) => component.init(target));
+			componentsload.forEach(component => component.init(target));
 		});
 	},
 
