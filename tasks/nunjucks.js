@@ -55,7 +55,7 @@ module.exports = function nunjucks(done) {
 		.pipe(through2.obj(function(file, encoding, cb) {
 			let data = file.contents.toString('utf-8');
 			const $ = cheerio.load(data);
-			const $elements = $('script[src], link[rel=stylesheet][href], link[rel=import][href], link[rel=preload][href]');
+			const $elements = $('script[src], link[rel=stylesheet][href], link[rel=import][href], link[rel=preload][href]:not([as="font"])');
 			const protocolRegEx = /^(http(s)?)|\/\//;
 
 			$elements
