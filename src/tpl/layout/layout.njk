@@ -26,8 +26,8 @@
 			<title>{{ pageTitle }} | Frontendisti.cz</title>
 		{% endif %}
 
-		<link rel="preload" href="{{ assets.fonts }}playfairdisplay-regular-webfont.woff2" as="font">
-		<link rel="preload" href="{{ assets.fonts }}playfairdisplay-bold-webfont.woff2" as="font">
+		<link rel="preload" as="font" href="{{ assets.fonts }}playfairdisplay-regular-webfont.woff2" type="font/woff2" crossorigin="anonymous">
+		<link rel="preload" as="font" href="{{ assets.fonts }}playfairdisplay-bold-webfont.woff2" type="font/woff2" crossorigin="anonymous">
 
 		<link rel="stylesheet" href="{{ assets.styles }}style.css" media="screen,handheld">
 		<link rel="stylesheet" href="{{ assets.styles }}print.css" media="print">
@@ -35,7 +35,8 @@
 		{% set scripts = [
 			'https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find',
 			assets.scripts + 'app.js',
-			assets.scripts + 'ga.js'
+			assets.scripts + 'ga.js',
+			assets.scripts + 'modernizr.min.js'
 		] %}
 
 		{% for script in scripts %}
@@ -50,15 +51,10 @@
 		<meta name="msapplication-TileColor" content="#2b2b2b">
 		<meta name="theme-color" content="#2b2b2b">
 
-		<script src="{{ assets.scripts }}modernizr.min.js"></script>
 		<script>
 			(function () {
 				var className = document.documentElement.className;
 				className = className.replace('no-js', 'js');
-
-				if (window.name.indexOf('fontsLoaded=true') > -1) {
-					className += ' fonts-loaded';
-				}
 
 				document.documentElement.className = className;
 			}());

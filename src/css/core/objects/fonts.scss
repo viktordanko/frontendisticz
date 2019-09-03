@@ -1,0 +1,13 @@
+@font-face {
+	font-family: 'Playfair Display';
+	src: url($fontsPath + 'playfairdisplay-regular-webfont.woff2') format('woff2');
+	font-weight: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: url($fontsPath + 'playfairdisplay-bold-webfont.woff2') format('woff2');
+	font-weight: bold;
+	font-display: swap;
+}
