@@ -6,7 +6,26 @@
 		margin-bottom: 20px;
 	}
 	&__img {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+		background: #d1d1d1;
 		margin-bottom: 15px;
+		border-radius: 50%;
+		width: 150px;
+		height: 150px;
+		> * {
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+		}
+	}
+	&__img img {
+		opacity: 0;
+		transition: opacity 0.5s;
 	}
 	&__list {
 		@extend %reset-ul;
@@ -16,14 +35,6 @@
 	}
 	&__item + &__item {
 		margin-top: 0.6em;
-	}
-	&__img {
-		position: relative;
-		display: inline-block;
-		vertical-align: top;
-		> * {
-			border-radius: 50%;
-		}
 	}
 	&__badge {
 		position: absolute;
@@ -69,9 +80,10 @@
 		left: 0;
 		top: 50%;
 		transform: translateY(-50%);
+		width: 65px;
+		height: 65px;
 		margin-bottom: 0;
 	}
-
 	&__item--main {
 		margin-bottom: $gridGutter;
 	}
@@ -85,7 +97,10 @@
 		color: $colorPrimary;
 	}
 
-	// HOVERs
+	// STATEs
+	&__img img.inview {
+		opacity: 1;
+	}
 	.no-touchevents &__name[href^="https"]:hover {
 		color: $colorSecondary;
 	}
