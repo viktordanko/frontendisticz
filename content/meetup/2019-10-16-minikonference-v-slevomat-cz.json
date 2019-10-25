@@ -1,0 +1,36 @@
+{
+  "title": "Minikonference v Slevomat.cz",
+  "date": "2019-10-16",
+  "venue": "Slevomat.cz",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Jak na udržitelné komponenty v Reactu",
+      "youtube": "https://youtu.be/KULvTuA9x_A",
+      "speaker": {
+        "name": "Vojtěch Petrus",
+        "bio": "https://twitter.com/PetrusVojtech",
+        "url": "Slevomat.cz"
+      }
+    },
+    {
+      "title": "AMP e-maily",
+      "youtube": "https://youtu.be/uJJ6nyUwQYo",
+      "speaker": {
+        "name": "Vladimír Macháček",
+        "bio": "Slevomat.cz",
+        "url": "https://youtu.be/uJJ6nyUwQYo"
+      }
+    },
+    {
+      "title": "Duševné zdravie vo Vue.js",
+      "youtube": "https://youtu.be/kzJxAYDUB1A",
+      "speaker": {
+        "name": "Riki Fridrich",
+        "bio": "Mall.cz",
+        "url": "https://twitter.com/fczbkk"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/watch?v=KULvTuA9x_A&list=PLnXfazh66kVe69NC45d3vHaxKhCqPWSfO"
+}
