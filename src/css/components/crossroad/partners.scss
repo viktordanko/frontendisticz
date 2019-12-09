@@ -1,7 +1,22 @@
 .c-partners {
 	text-align: center;
+	&__list {
+		margin-bottom: -($gridGutter * 2);
+	}
+	&__item {
+		border-bottom-width: ($gridGutter * 2)
+	}
+
 
 	// MEDIA QUERIEs
+	@media ($smUp) {
+		&__list {
+			margin-bottom: -($gridGutter * 3);
+		}
+		&__item {
+			border-bottom-width: ($gridGutter * 3)
+		}
+	}
 	@media ($lgUp) {
 		&__list {
 			margin-left: -($gridGutter * 3);
