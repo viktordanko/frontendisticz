@@ -7,13 +7,13 @@
 						{{ meetup.title }}
 					</h3>
 					<div class="c-events__info">
-						<p>
+						<p class="c-events__date">
 							{{ meetup.date | date('D. M. YYYY') }}, {{ meetup.venue }}
 						</p>
 						{% if meetup.sponsors.length %}
-							<ul class="c-events__partners">
+							<ul class="c-events__partners grid grid--center grid--middle">
 								{% for sponsor in meetup.sponsors %}
-									<li class="c-events__partner">
+									<li class="c-events__partner grid__cell size--auto">
 										<a class="c-events__link" href="{{ sponsor.url }}" target="_blank" rel="noreferrer noopener">
 											<img src="{{ sponsor.avatar }}" width="{{ sponsor.avatarSize.width }}" height="auto" alt="Logo společnosti {{ sponsor.title }}">
 										</a>
