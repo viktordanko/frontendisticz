@@ -1,0 +1,59 @@
+{
+  "title": "TechMeetup #10 - Frontend",
+  "date": "2019-09-25",
+  "venue": "Impact Hub Ostrava",
+  "sponsors": [],
+  "talks": [
+    {
+      "title": "Progressive Web Apps",
+      "youtube": "https://youtu.be/3JdFKdwZ9mo",
+      "speaker": {
+        "name": "Marek Bystrianský",
+        "bio": "Stora Enso",
+        "url": "https://www.linkedin.com/in/bystrianskymarek/",
+        "avatar": "/img/illust/bystriansky.jpg"
+      }
+    },
+    {
+      "title": "AMP, PWA nebo obojí?",
+      "youtube": "https://youtu.be/WuYA0z3eK0o",
+      "speaker": {
+        "name": "Martin Michálek",
+        "bio": "vzhurudolu.cz",
+        "url": "https://www.linkedin.com/in/martinmichalek/",
+        "avatar": "/img/illust/michalek.jpg"
+      }
+    },
+    {
+      "title": "Monorepo",
+      "youtube": "https://youtu.be/5Ofm9hFIPwY",
+      "speaker": {
+        "name": "Ondřej Sýkora",
+        "bio": "ProRocketeers",
+        "url": "https://www.linkedin.com/in/ondra-sykora/",
+        "avatar": "/img/illust/sykora.jpeg"
+      }
+    },
+    {
+      "title": "Bootstrap",
+      "youtube": "https://youtu.be/L8upUiu4YVo",
+      "speaker": {
+        "name": "Vitalij Petráš",
+        "bio": "HTMLFACTORY",
+        "url": "https://www.linkedin.com/in/vitalijpetras/",
+        "avatar": "/img/illust/petras.jpeg"
+      }
+    },
+    {
+      "title": "Be even more productive with WebStorm",
+      "youtube": "https://youtu.be/12rF9AaBLoA",
+      "speaker": {
+        "name": "Piotr Tomiak",
+        "bio": "JetBrains",
+        "url": "https://www.linkedin.com/in/piotr-tomiak-6aa287b1/",
+        "avatar": "/img/illust/tomiak.jpeg"
+      }
+    }
+  ],
+  "youtubePlaylist": "https://www.youtube.com/playlist?list=PLS_AaNE0nOs8zf4_w6ctKreE64Fg8J4MD"
+}
