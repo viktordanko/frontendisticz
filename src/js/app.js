@@ -1,5 +1,5 @@
 import './tools/svg4everybody';
-import './tools/whatInput';
+import 'what-input';
 
 // Components
 import * as toggleMobileMenu from './components/toggleMobileMenu';
