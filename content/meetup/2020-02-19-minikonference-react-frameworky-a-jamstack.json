@@ -1,24 +1,5 @@
 {
-  "sponsors": [
-    {
-      "avatarSize": {
-        "width": 110,
-        "height": 110
-      },
-      "title": "MOROSYSTEMS",
-      "url": "https://www.morosystems.cz/",
-      "avatar": ""
-    },
-    {
-      "avatarSize": {
-        "width": 110,
-        "height": 10
-      },
-      "title": "SUPERKODERS",
-      "url": "https://superkoders.com/",
-      "avatar": ""
-    }
-  ],
+  "sponsors": [],
   "date": "2020-02-19",
   "title": "Minikonference - React frameworky a JAMstack",
   "venue": "Czechitas, Brno",
