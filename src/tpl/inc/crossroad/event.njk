@@ -32,14 +32,14 @@
 									<div class="b-event__img">
 										{% if talk.speaker.avatar %}
 											<picture>
-												<source type="image/webp" media="(min-width: 750px)" data-srcset="https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=50&h=50&format=webp, https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=50&h=50&format=webp&d=2 2x" />
-												<source type="image/jpeg" media="(min-width: 750px)" data-srcset="https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=50&h=50, https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=50&h=50&d=2 2x" />
-												<source type="image/webp" data-srcset="https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=100&h=100&format=webp, https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=100&h=100&format=webp&d=2 2x" />
-												<source type="image/jpeg" data-srcset="https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=100&h=100, https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=100&h=100&d=2 2x" />
-												<img data-src="https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=100&h=100" alt="{{ talk.speaker.name }}" />
+												<source type="image/webp" media="(min-width: 750px)" data-srcset="https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=50&h=50&format=webp, https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=50&h=50&format=webp&d=2 2x" />
+												<source type="image/jpeg" media="(min-width: 750px)" data-srcset="https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=50&h=50, https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=50&h=50&d=2 2x" />
+												<source type="image/webp" data-srcset="https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=100&h=100&format=webp, https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=100&h=100&format=webp&d=2 2x" />
+												<source type="image/jpeg" data-srcset="https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=100&h=100, https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=100&h=100&d=2 2x" />
+												<img data-src="https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=100&h=100" alt="{{ talk.speaker.name }}" />
 											</picture>
 											<noscript>
-												<img src="https://skyproxy.superkoders.rocks/frontendisti{{ talk.speaker.avatar }}?w=100&h=100" alt="{{ talk.speaker.name }}" />
+												<img src="https://skyproxy.superkoders.rocks/frontendisti/{{ talk.speaker.avatar }}?w=100&h=100" alt="{{ talk.speaker.name }}" />
 											</noscript>
 										{% else %}
 											<picture>
