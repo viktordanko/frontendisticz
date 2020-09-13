@@ -2,6 +2,10 @@
 	position: relative;
 	display: block;
 
+	&--row {
+		display: flex;
+	}
+
 	// STATEs
 	.has-error & {
 		color: $colorRed;

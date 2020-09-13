@@ -1,0 +1,24 @@
+{% extends 'layout/layout.njk' %}
+{% set pageTitle = 'Přihlášení k odběru novinek' %}
+{% set isNewsletter = true %}
+
+{% block content %}
+	<main role="main" id="main">
+		<div class="b-intro b-intro--sm">
+			<div class="b-intro__inner"></div>
+		</div>
+
+		<div class="row-main row-main--sm">
+			<div class="u-pull-up">
+				<div class="u-max-width--6-12 u-mx-auto">
+					<div class="row-main">
+						<h1 class="u-vhide">
+							Přihlašte se k odběru novinek!
+						</h1>
+						{% include './inc/form/newsletter.njk' %}
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+{% endblock %}

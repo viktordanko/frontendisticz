@@ -1,0 +1,32 @@
+.f-newsletter-footer {
+	&__inp {
+		flex: 1 1 auto;
+		border-top-right-radius: 0;
+		border-bottom-right-radius: 0;
+	}
+	&__btn {
+		flex: 0 1 auto;
+		.btn__text {
+			padding: 13px 10px;
+			white-space: nowrap;
+			font-size: 16px;
+			border-top-left-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+
+	// MQs
+	@media ($smDown) {
+		&__inp {
+			width: 150px;
+		}
+	}
+	@media ($smUp) {
+		&__btn {
+			flex-basis: 150px;
+			.btn {
+				padding: 13px 20px;
+			}
+		}
+	}
+}

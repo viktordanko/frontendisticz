@@ -30,11 +30,15 @@
 	}
 	&:disabled,
 	&.is-disabled {
-		opacity: .5;
+		opacity: 0.5;
 		pointer-events: none;
 	}
 
 	// HOVERs
+	[data-whatintent="keyboard"] &:focus &__text {
+		outline: 2px solid $colorSecondary;
+		outline-offset: 2px;
+	}
 	.no-touchevents &:hover &__text {
 		background-color: darken($colorLink, 5%);
 		color: #fff;

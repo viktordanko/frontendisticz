@@ -7,7 +7,7 @@
 	font-size: 1rem;
 	line-height: 20px;
 	width: 100%;
-	border-radius: 0;
+	border-radius: 4px;
 	appearance: none;
 	transition: background-color $t, border-color $t;
 
@@ -16,7 +16,12 @@
 		background-color: $colorBg;
 	}
 	&:focus {
-		border-color: $colorText;
+		box-shadow: inset 0 0 2px 0 rgba($colorSecondary, 1);
+		outline: none;
+	}
+	[data-whatintent="keyboard"] &:focus {
+		outline: 2px solid $colorSecondary;
+		outline-offset: 2px;
 	}
 	.has-error & {
 		border-color: $colorRed;

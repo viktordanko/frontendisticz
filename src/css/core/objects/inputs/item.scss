@@ -1,0 +1,82 @@
+.inp-item {
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 35px;
+	text-align: left;
+	cursor: pointer;
+	&__inp {
+		position: absolute;
+		left: -5000px;
+	}
+	&__text {
+		display: block;
+		font-size: 15px;
+		line-height: 1.4;
+		&::before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 0;
+			display: block;
+			width: 20px;
+			height: 20px;
+			background-color: $colorWhite;
+			border: 2px solid $colorSecondary;
+			border-radius: 4px;
+			transition: border-color $t;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 5px;
+			left: 5px;
+			width: 10px;
+			height: 10px;
+			opacity: 0;
+			transition: opacity $t;
+		}
+	}
+
+	// MODIFICATIONs
+	&--checkbox &__text {
+		&::after {
+			top: 15px;
+			left: 2px;
+			width: 16px;
+			height: 8px;
+			background: transparent;
+			margin-top: -10px;
+			border: 4px solid $colorPrimary;
+			border-top: none;
+			border-right: none;
+			border-radius: 0;
+			transform: rotate(-45deg);
+		}
+	}
+
+	// STATEs
+	.has-error &__text {
+		&::before {
+			border-color: $colorRed;
+		}
+	}
+	[data-whatintent="keyboard"] &__inp:focus + &__text {
+		&::before {
+			outline: 2px solid $colorSecondary;
+			outline-offset: 2px;
+		}
+	}
+	&__inp:disabled + &__text {
+		cursor: default;
+		color: rgba($colorText, 0.5);
+		&::before {
+			background: $colorBg;
+		}
+	}
+	&__inp:checked + &__text {
+		&::after {
+			opacity: 1;
+		}
+	}
+}

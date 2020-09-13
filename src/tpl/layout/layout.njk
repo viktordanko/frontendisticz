@@ -278,6 +278,13 @@
 		<footer role="contentinfo" class="footer u-pt-xl">
 			<div class="row-main">
 				<div class="u-mb-xl">
+
+					{% if not isNewsletter %}
+						<div class="u-max-width--6-12 u-mx-auto">
+							{% include '../inc/form/newsletter-footer.njk' %}
+						</div>
+					{% endif %}
+
 					<p class="footer__copyright">
 						&copy; 2014&ndash;{{ creation_date | date("YYYY") }} Spolek Frontendisti.cz
 
