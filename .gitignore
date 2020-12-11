@@ -11,3 +11,5 @@
 /wordpress/wp-content/uploads/
 /wordpress/wp-config.php
 /config.local.js
+
+.env
