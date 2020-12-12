@@ -1,5 +1,5 @@
 {
-	"name": "Frontendisti.cz",
+	"name": "frontendisti.cz",
 	"version": "1.0.0",
 	"sideEffects": [
 		"**/svg4everybody.js"
@@ -67,5 +67,8 @@
 		"fontfaceobserver": "^2.1.0",
 		"svg4everybody": "^2.1.9",
 		"what-input": "5.2.3"
+	},
+	"volta": {
+		"node": "14.15.1"
 	}
 }
