@@ -1,10 +1,15 @@
 export const init = () => {
 	const form = document.querySelector('[data-handle-submit]');
+	const submitBtn = document.querySelector('[data-submit-button]');
 
 	if (!form) return;
 
 	const handleSubmit = (event) => {
 		event.preventDefault();
+
+		if (submitBtn) {
+			submitBtn.classList.add('is-loading');
+		}
 
 		const data = new FormData(event.target);
 

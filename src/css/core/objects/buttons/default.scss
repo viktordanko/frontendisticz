@@ -22,7 +22,33 @@
 		transition: background-color $t, border-color $t, color $t;
 	}
 
+	// VARIANTS
+	&--loader &__text::before {
+		content: "";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 26px;
+		height: 26px;
+		margin: -13px 0 0 -13px;
+		border: 4px solid #fff;
+		border-radius: 50%;
+		border-top-color: transparent;
+		opacity: 0;
+		transition: opacity 0.3s;
+	}
+
 	// STATEs
+	&--loader.is-loading {
+		pointer-events: none;
+	}
+	&--loader.is-loading &__text {
+		text-indent: -5000px;
+	}
+	&--loader.is-loading &__text::before {
+		animation: rotate 0.8s infinite linear;
+		opacity: 1;
+	}
 	.u-bg-inverse & {
 		&__text {
 			color: #fff;
