@@ -2,7 +2,7 @@ const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
 	const formId = process.env.MK_API_KEY;
-	const url = `https://api.mail-komplet.cz/api/${formId}/contacts`;
+	const url = `https://api.mail-komplet.cz/api/${formId}/subscribeContacts`;
 	const { email } = JSON.parse(event.body);
 
 
@@ -17,7 +17,7 @@ exports.handler = async (event) => {
 			},
 			body: JSON.stringify({
 				email,
-				// dispatcherId: 1612, // TODO Find out real dispatcherId
+				dispatcherId: 1612, // TODO Find out real dispatcherId
 			}),
 		})
 			.then((response) => response.text())
