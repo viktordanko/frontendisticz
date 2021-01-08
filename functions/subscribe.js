@@ -1,10 +1,12 @@
 const fetch = require('node-fetch');
 
 exports.handler = async (event) => {
-	const formId = process.env.MK_API_KEY;
-	const url = `https://api.mail-komplet.cz/api/${formId}/subscribeContacts`;
-	const { email } = JSON.parse(event.body);
+	const formId = process.env.MK_BASE_CRYPT;
+	const apiKey = process.env.MK_API_KEY;
+	const mailingListId = process.env.MK_LIST_ID;
 
+	const url = `https://api.mail-komplet.cz/api/${formId}/contacts`;
+	const { email } = JSON.parse(event.body);
 
 	try {
 		await fetch(url, {
@@ -12,12 +14,12 @@ exports.handler = async (event) => {
 			headers: {
 				'Accept': 'application/json;charset:utf-8',
 				'X-Requested-With': 'XMLHttpRequest',
-				'Authorization': `Basic ${process.env.MK_API_KEY}`,
+				'Authorization': `Basic ${apiKey}`,
 				'Content-type': 'application/json',
 			},
 			body: JSON.stringify({
 				email,
-				dispatcherId: 1612, // TODO Find out real dispatcherId
+				mailingListIds: [mailingListId],
 			}),
 		})
 			.then((response) => response.text())
