@@ -4,6 +4,7 @@ import 'what-input';
 // Components
 import * as toggleMobileMenu from './components/toggleMobileMenu';
 import * as lazyload from './components/lazyload';
+import * as form from './components/form';
 
 
 // content load components
@@ -14,6 +15,7 @@ const componentsload = [
 const components = [
 	toggleMobileMenu,
 	lazyload,
+	form,
 
 	// fontFaceObserver,
 ].concat(componentsload);
