@@ -10,8 +10,6 @@ const copyRoot = require('./tasks/copyRoot');
 
 const iconSvg = require('./tasks/iconSvg');
 const iconFont = require('./tasks/iconFont');
-const spriteRetina = require('./tasks/spriteRetina');
-const sprite = require('./tasks/sprite');
 
 const processData = require('./tasks/processData');
 const nunjucks = require('./tasks/nunjucks');
@@ -27,8 +25,6 @@ const build = function build(done) {
 		parallel(
 			iconSvg,
 			iconFont,
-			spriteRetina,
-			sprite,
 			processData,
 		),
 		parallel(
@@ -83,8 +79,6 @@ module.exports = {
 	processData,
 	nunjucks,
 	sass,
-	spriteRetina,
-	sprite,
 	validate,
 	watch,
 	webpack,

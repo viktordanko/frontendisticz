@@ -3,7 +3,7 @@ const isProduction = require('./helpers/isProduction');
 const gulp = require('gulp');
 const notifier = require('node-notifier');
 const browserSync = require('browser-sync');
-const {series, watch: watchGulp} = gulp;
+const { series, watch: watchGulp } = gulp;
 
 module.exports = function watch(done) {
 	return series(
@@ -16,8 +16,6 @@ module.exports = function watch(done) {
 			watchGulp(config.src.styles + '**/*.scss', require('./sass'));
 			watchGulp('content/**/*.json', require('./processData'));
 			watchGulp([config.src.templates + '**/*.njk', config.basePath.src + 'content/*.json'], require('./nunjucks'));
-			watchGulp(config.src.images + 'bg/sprites/*.png', require('./sprite'));
-			watchGulp(config.src.images + 'bg/sprites-retina/*.png', require('./spriteRetina'));
 			watchGulp(config.src.icons + '*.svg', require('./iconFont'));
 			watchGulp(config.src.iconsSVG + '*.svg', require('./iconSvg'));
 			watchGulp(config.src.scripts + 'static/*.js', require('./copyJs'));
