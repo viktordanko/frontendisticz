@@ -10,3 +10,9 @@
 
 [context.deploy-preview]
   command = "npm run build"
+
+[[redirects]]
+  from = "/dotaznik"
+  to = "https://forms.gle/YpCbDNyC3vHutJd37"
+  status = 200
+  force = true
