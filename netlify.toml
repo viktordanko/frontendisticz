@@ -10,3 +10,8 @@
 
 [context.deploy-preview]
   command = "npm run build"
+
+[[redirects]]
+  from = "frontendisti.cz/dotaznik"
+  to = "https://forms.gle/YpCbDNyC3vHutJd37"
+  status = 301
