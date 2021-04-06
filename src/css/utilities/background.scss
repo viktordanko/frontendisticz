@@ -1,7 +1,9 @@
 $background: (
 	background-color: (
+		default: $colorBg,
 		primary: $colorPrimary,
-		peach: $colorPurpleBg,
+		secondary: $colorPurpleBg,
+		tertiary: $colorBlueBg,
 	),
 );
 .u-bg {

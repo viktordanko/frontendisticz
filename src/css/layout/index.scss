@@ -19,12 +19,9 @@ body {
 main {
 	flex-grow: 1;
 }
-section {
-	text-align: center;
-}
 :first-child {
 	margin-top: 0;
 }
 
-@import 'header';
-@import 'footer';
+@import "header";
+@import "footer";

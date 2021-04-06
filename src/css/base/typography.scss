@@ -62,6 +62,7 @@ h6,
 // Paragraph
 p {
 	margin: 0 0 $typoSpaceVertical;
+	letter-spacing: -0.05em;
 	.u-bg-inverse & {
 		color: #fff;
 	}

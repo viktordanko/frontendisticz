@@ -4,58 +4,80 @@
 
 {% block content %}
 	<main id="main" class="main">
-		<div class="u-bg-peach">
+		<div class="u-bg-secondary">
 			<div class="row-main">
 				{% include '@components/box/conference.twig' %}
 			</div>
 		</div>
 
-		{% set socials = {
-			items: [
-				{
-					icon: 'fb-community',
-					title: 'Komunita',
-					href: 'https://www.facebook.com/frontendisti/',
-					perex: 'Staň se členem
-					naši početné komunity.'
-				},
-				{
-					icon: 'fb-discussion',
-					title: 'Diskuze',
-					href: 'https://www.facebook.com/groups/frontendisti/',
-					perex: 'Diskutuj s ostatními
-					témata, co tě zajímají.'
-				},
-				{
-					icon: 'fb-jobs',
-					title: 'Práce',
-					href: 'https://www.facebook.com/groups/frontendistiprace/',
-					perex: 'Hledáš práci
-					nebo skvělé lidi?'
-				},
-				{
-					icon: 'youtube',
-					title: 'Videa',
-					href: 'https://www.youtube.com/user/frontendisti',
-					perex: 'Nestihl jsi přijít osobně?
-					Mrkni na videa na&nbsp;YouTube'
-				},
-				{
-					icon: 'twitter',
-					title: 'Zprávy',
-					href: 'https://twitter.com/Frontendisti',
-					perex: 'Rychlý přehled
-					o všem důležitém.'
-				},
-				{
-					icon: 'instagram',
-					title: 'Fotky',
-					href: 'https://www.instagram.com/frontendisti/',
-					perex: 'Komunita na fotkách'
-				}
-			]
-		} %}
-		{% include '@components/crossroad/socials.twig' %}
+		<div class="u-bg-tertiary u-pt-xxl">
+			<div class="row-main">
+				<nav id="menu-main" class="m-main" aria-label="Hlavní menu">
+					<ul class="m-main__list">
+						{% set items = [
+							{ title: 'Úvod', href: '/' },
+							{ title: 'Partneři', href: '#partners' },
+							{ title: 'Tým a kontakty', href: '#team' }
+						] %}
+						{% for item in items %}
+							<li class="m-main__item">
+								<a href="{{ item.href }}" class="m-main__link">
+									{{ item.title|raw }}
+								</a>
+							</li>
+						{% endfor %}
+					</ul>
+				</nav>
+				<div class="u-max-width--9-12 u-ml-auto">
+					<section class="b-social">
+						<h2 class="b-social__title">
+							Budujeme a vzděláváme <br>
+							komunitu frontendových <br>
+							vývojářů a designérů
+						</h2>
+						<div class="b-social__inner">
+							<div class="b-social__content">
+								<div class="grid">
+									<div class="grid__cell size--8-12@xl">
+										<p>
+											Připoj se k naší rostoucí <br>
+											komunitě profesionálů.
+										</p>
+									</div>
+									<div class="grid__cell size--auto@xl">
+										<div class="grid">
+											<div class="grid__cell size--auto">
+												<a class="b-social__link" href="https://www.facebook.com/groups/frontendisti" target="_blank" rel="noopener noreferrer">
+													{% include "@images/bg/facebook.svg" %}
+													<span class="u-vhide">
+														Frontendisti na facebooku
+													</span>
+												</a>
+											</div>
+											<div class="grid__cell size--auto">
+												<a class="b-social__link" href="https://twitter.com/Frontendisti">
+													{% include "@images/bg/twitter.svg" %}
+													<span class="u-vhide">
+														Frontendisti na twitteri
+													</span>
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="b-social__gallery">
+								{% for img in range(0, 17) %}
+									<div class="b-social__img">
+										<img src="{{ assets.images }}illust/gallery-{{ loop.index }}.jpg" alt="" width="110" height="110" loading="lazy">
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
 
 
 		{% set partners = {
