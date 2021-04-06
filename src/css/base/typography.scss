@@ -24,38 +24,31 @@ h6,
 	font-family: $fontSecondary;
 	font-weight: normal;
 	line-height: 1.2;
-	margin: 1.5em 0 .5em;
+	margin: 1.5em 0 0.5em;
 }
 h1,
-.h1 {
-	font-size: 30px;
-	line-height: (37/30);
-	@media ($mdUp) {
-		font-size: 45px;
-	}
-}
+.h1,
 h2,
 .h2 {
-	font-size: 22px;
-	line-height: (31/22);
-	margin-bottom: (35/30) + em;
-	.u-bg-inverse & {
-		color: #fff;
-	}
+	font-size: 24px;
+	line-height: (36/24);
 	@media ($mdUp) {
-		font-size: 30px;
+		font-size: 32px;
 	}
 }
 h3,
 .h3 {
 	font-size: 18px;
 	@media ($mdUp) {
-		font-size: 23px;
+		font-size: 24px;
 	}
 }
 h4,
 .h4 {
-	font-size: 18px;
+	font-size: 16px;
+	@media ($mdUp) {
+		font-size: 18px;
+	}
 }
 h5,
 .h5 {
@@ -100,21 +93,22 @@ a {
 	.no-touchevents &:hover {
 		color: $colorHover;
 	}
-	.u-bg-inverse & {
-		color: #fff;
-	}
 }
 a[href^="mailto"] {
 	position: relative;
 	color: $colorPrimary;
 	font-weight: normal;
 	text-decoration: none;
-	background-image: linear-gradient(to right, $colorPrimary 50%, transparent 50%);
+	background-image: linear-gradient(
+		to right,
+		$colorPrimary 50%,
+		transparent 50%
+	);
 	background-position: 0 100%;
 	background-repeat: repeat-x;
 	background-size: 4px 1px;
 	transition: color $t;
-	.no-touchevents &:hover  {
+	.no-touchevents &:hover {
 		color: $colorSecondary;
 	}
 }
@@ -127,7 +121,11 @@ a[href^="mailto"] {
 	color: $colorPrimary;
 	font-weight: normal;
 	text-decoration: none;
-	background-image: linear-gradient(to right, $colorPrimary 50%, transparent 50%);
+	background-image: linear-gradient(
+		to right,
+		$colorPrimary 50%,
+		transparent 50%
+	);
 	background-position: 0 100%;
 	background-repeat: repeat-x;
 	background-size: 4px 1px;
@@ -162,7 +160,7 @@ ol {
 	li {
 		position: relative;
 		&::before {
-			content: counter(item)'.';
+			content: counter(item) ".";
 			counter-increment: item;
 			position: absolute;
 			top: 0;
@@ -172,7 +170,7 @@ ol {
 	ol {
 		li {
 			&::before {
-				content: counter(item, lower-alpha)'.';
+				content: counter(item, lower-alpha) ".";
 			}
 		}
 	}
@@ -221,7 +219,7 @@ figure {
 	margin-bottom: $typoSpaceVertical;
 }
 figcaption {
-	margin-top: .5em;
+	margin-top: 0.5em;
 }
 
 img {

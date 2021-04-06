@@ -1,18 +1,24 @@
 // Colors
-$colorPrimary: #2b2b2b;
-$colorSecondary: #ff9900;
+$colorPrimary: #ffb100;
+$colorSecondary: #22010d;
 
-$colorBlack:$colorPrimary;
+$colorBlack: $colorPrimary;
 $colorWhite: #fff;
-$colorRed: #f00;
-$colorGreen: #080;
-$colorOrange: #fa0;
+$colorRed: #ff4646;
+$colorBlue: #00baff;
+$colorGreen: #1ede3b;
+$colorGreenHover: #19d635;
+$colorOrange: #ffaa00;
 
-$colorText: $colorBlack;
+$colorText: #1c1300;
 $colorBd: #ddd;
-$colorBg: #eee;
-$colorLink: $colorSecondary;
-$colorHover: $colorPrimary;
+$colorBg: #fffef4;
+$colorBlueBg: #f5fffd;
+$colorPurpleBg: #f4f7ff;
+$colorLink: $colorText;
+$colorBlueHover: #2c9cdb;
+$colorRedHover: #ed2c2c;
+$colorHover: #f5aa00;
 
 $colorFacebook: #3b5998;
 $colorTwitter: #1da1f2;
@@ -22,34 +28,28 @@ $colorLinkedIn: #0077b5;
 $colorInstagram: #c13584;
 $colorPinterest: #bd081c;
 
-
 // Font
-$fontSystem: 'Playfair Display', serif;
+$fontSystem: "Spartan", sans-serif;
 $fontPrimary: $fontSystem;
-$fontSecondary: $fontPrimary;
-$fontSize: 20px;
-$lineHeight: (30/20);
-
+$fontSecondary: "Playfair Display";
+$fontSize: 18px;
+$lineHeight: (28/18);
 
 // Typography
 $typoSpaceVertical: 1.25em;
 
-
 // Grid
 $gridColumns: 12;
-$gridGutter: 25px;
-$rowMainWidth: 1142px + (2 * $gridGutter);
+$gridGutter: 16px;
+$rowMainWidth: 1640px + (2 * $gridGutter);
 $rowMainGutter: $gridGutter;
 
-
 // Paths
-$imgPath: map-get($paths, 'images');
-$fontsPath: map-get($paths, 'fonts');
-
+$imgPath: map-get($paths, "images");
+$fontsPath: map-get($paths, "fonts");
 
 // Transitions
-$t: .3s;
-
+$t: 0.3s;
 
 // SVGs
 $svgBullet: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath d='M0 0h4v4H0z'/%3E%3C/svg%3E%0A";
