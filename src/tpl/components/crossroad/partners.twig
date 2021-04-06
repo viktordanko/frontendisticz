@@ -1,15 +1,8 @@
-<section role="region" id="partners" class="c-partners u-pt-xl u-mb-xl">
+<section id="partners" class="c-partners">
 	<div class="row-main">
-		<div class="u-max-width--8-12 u-mx-auto u-mb-md">
-			<h2>
-				Partneři
-			</h2>
-			{#
-			<p>
-				Několik slov k&nbsp;možnostem partnerství, odkaz na&nbsp;PDF, případně co si Martin napíše. Jsme úplně boží, takže se moc moc chcete stát partnerem &#8209; fakt!
-			</p>
-			#}
-		</div>
+		<h2 class="c-partners__title">
+			Partneři
+		</h2>
 		<ul class="c-partners__list grid grid--middle grid--center">
 			{% for item in partners.items %}
 				<li class="c-partners__item grid__cell size--6-12 size--auto@xl">
@@ -19,9 +12,18 @@
 				</li>
 			{% endfor %}
 		</ul>
-		<p class="u-mt-lg u-mb-0">
-			Aktuálně je možné sponzorovat větší akce v Praze a Brně. Jednorázově i dlouhodobě.<br>
-			Pokud vás zajímá možnost sponzorství Frontendisti.cz, pište Martinu Michálkovi na <a href="mailto:martin@vzhurudolu.cz">martin@vzhurudolu.cz</a>.
-		</p>
+		<div class="c-partners__cta">
+			<p>
+				O naše partnery se umíme postarat.<br>
+				Máte zájem stát se jedním z nich?
+			</p>
+			<p>
+				<a class="btn btn--success" href="mailto:martin@vzhurudolu.cz?subject=Nabídka%20partnerství%20pro%20Frontendisti.cz">
+					<span class="btn__inner">
+						Samozřejmě
+					</span>
+				</a>
+			</p>
+		</div>
 	</div>
 </section>

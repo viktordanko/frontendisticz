@@ -201,40 +201,98 @@
 			</div>
 		</div>
 
+		<div class="u-bg-default u-pt-xxl">
+			<div class="row-main">
+				<section class="b-fb">
+					<h2 class="b-fb__title">
+						Učte se od profesionálů.
+					</h2>
+					<div class="b-fb__inner">
+						<div class="b-fb__img">
+							<img src="{{ assets.images }}illust/fb-group.jpg" alt="Ukázka příspěvku z facebookové skupiny Frontendisti.cz">
+						</div>
+						<div class="b-fb__content">
+							<p>
+								Ptej se a sdílej svoje zkušenosti <br>
+								v uzavřené FB skupině.
+							</p>
+							<p>
+								<a class="btn" href="https://www.facebook.com/groups/frontendisti" target="_blank" rel="noopener noreferrer">
+									<span class="btn__inner">
+										Diskuze
+									</span>
+								</a>
+							</p>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="u-bg-tertiary u-pt-xxl">
+			<div class="row-main">
+				<section class="b-job">
+					<h2 class="b-job__title">
+						Kto hledá, najde.
+					</h2>
+					<div class="b-job__inner">
+						<div class="b-job__content">
+							<p>
+								Hledáte práci nebo skvělé lidi <br>
+								do&nbsp;týmu?
+							</p>
+							<p>
+								<a class="btn btn--blue" href="https://www.facebook.com/groups/frontendistiprace" target="_blank" rel="noopener noreferrer">
+									<span class="btn__inner">
+										Práce
+									</span>
+								</a>
+							</p>
+						</div>
+						<div class="b-job__img">
+							<img src="{{ assets.images }}illust/job.jpg" alt="Fotka Ježíše Krista se vzpaženýma rucema s tmavěmodrou oblohou v pozadí">
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
 
-		{% set partners = {
-			items: [
-				{
-					name: 'rohlik',
-					href: 'https://rohlik.cz/',
-					alt: 'rohlik.cz',
-					width: '170',
-					height: '86'
-				},
-				{
-					name: 'LMC',
-					href: 'https://www.lmc.eu/',
-					alt: 'LMC s.r.o.',
-					width: '112',
-					height: '85'
-				},
-				{
-					name: 'SUPERKODERS',
-					href: 'https://superkoders.cz/',
-					alt: 'SUPERKODERS',
-					width: '230',
-					height: '30'
-				},
-				{
-					name: 'SLEVOMAT',
-					href: 'https://www.slevomat.cz/',
-					alt: 'Slevomat',
-					width: '154',
-					height: '36'
-				}
-			]
-		} %}
-		{% include '@components/crossroad/partners.twig' %}
+		<div class="u-bg-mint u-pt-xxl">
+			<div class="row-main">
+				{% set partners = {
+					items: [
+						{
+							name: 'rohlik',
+							href: 'https://rohlik.cz/',
+							alt: 'rohlik.cz',
+							width: '170',
+							height: '86'
+						},
+						{
+							name: 'LMC',
+							href: 'https://www.lmc.eu/',
+							alt: 'LMC s.r.o.',
+							width: '112',
+							height: '85'
+						},
+						{
+							name: 'SUPERKODERS',
+							href: 'https://superkoders.cz/',
+							alt: 'SUPERKODERS',
+							width: '230',
+							height: '30'
+						},
+						{
+							name: 'SLEVOMAT',
+							href: 'https://www.slevomat.cz/',
+							alt: 'Slevomat',
+							width: '154',
+							height: '36'
+						}
+					]
+				} %}
+				{% include '@components/crossroad/partners.twig' %}
+			</div>
+		</div>
 
 		{% set leaders = {
 			items: [
