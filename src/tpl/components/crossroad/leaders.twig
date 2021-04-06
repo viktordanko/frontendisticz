@@ -14,7 +14,7 @@
 					<div class="c-leaders__item grid__cell grid__cell--eq size--6-12@sm size--3-12@lg">
 						<article role="article" class="b-card">
 							<h3 class="b-card__title h2">
-								{{ item.city | safe }}
+								{{ item.city|raw }}
 							</h3>
 							<ul class="b-card__list">
 								<li class="b-card__item b-card__item--main">
@@ -22,7 +22,7 @@
 										<img data-src="{{ assets.images }}illust/{{ item.img }}.jpg" alt="Profilová fotografie - {{ item.name }}" width="150" height="150">
 										{% if loop.first %}
 											<span class="b-card__badge">
-												{{ iconSVG('crown') }}
+												{# {{ iconSVG('crown') }} #}
 											</span>
 										{% endif %}
 										<noscript>
@@ -30,15 +30,15 @@
 										</noscript>
 									</span>
 									<span class="b-card__name">
-										{{ item.name | safe }}
+										{{ item.name|raw }}
 									</span>
 									<a href="mailto:{{ item.mail }}" class="b-card__info">
-										{{ item.mail | safe }}
+										{{ item.mail|raw }}
 									</a>
 								</li>
 								{% for sidekick in item.others %}
 									<li class="b-card__item">
-										{{ sidekick.name | safe }}
+										{{ sidekick.name|raw }}
 									</li>
 								{% endfor %}
 							</ul>

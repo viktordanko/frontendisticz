@@ -1,5 +1,5 @@
-{% extends 'layout/layout.njk' %}
-{% set pageTitle = 'Byli jste přihlášeni k odběru novinek' %}
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Přihlášení k odběru novinek' %}
 {% set isNewsletter = true %}
 
 {% block content %}
@@ -10,16 +10,12 @@
 
 		<div class="row-main row-main--sm">
 			<div class="u-pull-up">
-				<div class="u-max-width--8-12 u-mx-auto u-text-center">
+				<div class="u-max-width--6-12 u-mx-auto">
 					<div class="row-main">
-						<h1 class="h2">
-							<strong>
-								Děkujeme,
-							</strong>
+						<h1 class="u-vhide">
+							Přihlašte se k odběru novinek!
 						</h1>
-						<p>
-							byli jste přihlášeni k odběru frontendových novinek.
-						</p>
+						{% include '@components/form/newsletter.twig' %}
 					</div>
 				</div>
 			</div>

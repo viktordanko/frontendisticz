@@ -12,7 +12,7 @@ const iconSvg = require('./tasks/iconSvg');
 const iconFont = require('./tasks/iconFont');
 
 const processData = require('./tasks/processData');
-const nunjucks = require('./tasks/nunjucks');
+const twig = require('./tasks/twig');
 const sass = require('./tasks/sass');
 const webpack = require('./tasks/webpack');
 
@@ -30,7 +30,7 @@ const build = function build(done) {
 		parallel(
 			sass,
 			webpack,
-			nunjucks,
+			twig,
 			copyImages,
 			copyJs,
 			copyRoot,
@@ -77,7 +77,7 @@ module.exports = {
 	iconFont,
 	imagemin,
 	processData,
-	nunjucks,
+	twig,
 	sass,
 	validate,
 	watch,

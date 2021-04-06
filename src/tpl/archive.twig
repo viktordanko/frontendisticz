@@ -1,4 +1,4 @@
-{% extends 'layout/layout.njk' %}
+{% extends '@layout/layout.twig' %}
 {% set pageTitle = 'Archiv akcí' %}
 {% set isArchive = true %}
 
@@ -10,9 +10,9 @@
 
 		<div class="row-main row-main--sm">
 			<div class="u-pull-up">
-				{% include './inc/box/meetup.njk' %}
+				{% include '@components/box/meetup.twig' %}
 
-				{% include './inc/crossroad/event.njk' %}
+				{% include '@components/crossroad/event.twig' %}
 			</div>
 		</div>
 	</main>

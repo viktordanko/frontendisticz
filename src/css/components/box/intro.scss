@@ -4,18 +4,20 @@
 	align-items: center;
 	justify-content: center;
 	height: 550px;
-	background: $colorPrimary url('https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=320') 50% 50% no-repeat;
+	background: $colorPrimary
+		url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=320")
+		50% 50% no-repeat;
 	background-size: cover;
 	color: #fff;
 	&::before {
-		content: '';
+		content: "";
 		position: absolute;
 		top: 0;
 		left: 0;
 		right: 0;
 		bottom: 0;
-		background: $colorPrimary;
-		opacity: 0.9;
+		background: $colorSecondary;
+		opacity: 0.58;
 	}
 	&__inner {
 		flex: 1 1 100%;
@@ -27,7 +29,7 @@
 	}
 	&__title-sub {
 		display: block;
-		font-size: (40/45)+em;
+		font-size: (40/45) + em;
 	}
 
 	// MODIFICATIONs
@@ -41,12 +43,12 @@
 
 	// MEDIA QUERIEs
 	@media (min-resolution: 2dppx) {
-		background-image: url('https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=640&d=2');
+		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=640&d=2");
 	}
 	@media (min-width: 750px) {
-		background-image: url('https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=1920');
+		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=1920");
 	}
 	@media (min-width: 750px) and (min-resolution: 2dppx) {
-		background-image: url('https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=1920&d=2');
+		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=1920&d=2");
 	}
 }

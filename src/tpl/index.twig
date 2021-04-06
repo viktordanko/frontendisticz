@@ -1,4 +1,4 @@
-{% extends 'layout/layout.njk' %}
+{% extends '@layout/layout.twig' %}
 {% set pageTitle = 'Homepage' %}
 {% set isHomepage = true %}
 
@@ -7,12 +7,7 @@
 		<section role="region" class="b-intro">
 			<div class="b-intro__inner">
 				<div class="row-main">
-					<h2 class="b-intro__title h1">
-						Budujeme a&nbsp;vzděláváme
-						<span class="b-intro__title-sub">
-							komunitu <strong>frontendových vývojářů</strong>.
-						</span>
-					</h2>
+					{% include "@images/logo-frontendisti.svg" %}
 				</div>
 			</div>
 		</section>
@@ -20,7 +15,7 @@
 		<div class="u-pt-xl">
 			<div class="u-max-width--10-12 u-mx-auto">
 				<div class="row-main">
-					{% include './inc/box/meetup.njk' %}
+					{% include '@components/box/meetup.twig' %}
 				</div>
 			</div>
 		</div>
@@ -70,7 +65,7 @@
 				}
 			]
 		} %}
-		{% include './inc/crossroad/socials.njk' %}
+		{% include '@components/crossroad/socials.twig' %}
 
 
 		{% set partners = {
@@ -105,7 +100,7 @@
 				}
 			]
 		} %}
-		{% include './inc/crossroad/partners.njk' %}
+		{% include '@components/crossroad/partners.twig' %}
 
 		{% set leaders = {
 			items: [
@@ -162,6 +157,6 @@
 				}
 			]
 		} %}
-		{% include './inc/crossroad/leaders.njk' %}
+		{% include '@components/crossroad/leaders.twig' %}
 	</main>
 {% endblock %}

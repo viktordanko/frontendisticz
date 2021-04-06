@@ -12,6 +12,8 @@ var src = {
 	scripts: basePath.src + 'js/',
 	styles: basePath.src + 'css/',
 	templates: basePath.src + 'tpl/',
+	components: basePath.src + 'tpl/components/',
+	layout: basePath.src + 'tpl/layout/',
 };
 
 var dest = {
@@ -27,6 +29,13 @@ var assets = {
 	images: basePath.assets + 'img/',
 	scripts: basePath.assets + 'js/',
 	styles: basePath.assets + 'css/',
+};
+
+var twigNamespaces = {
+	components: src.components,
+	layout: src.layout,
+	images: src.images,
+	templates: src.templates,
 };
 
 var webpack = {
@@ -54,13 +63,14 @@ var browserSync = {
 };
 
 module.exports = {
-	basePath: basePath,
-	src: src,
-	dest: dest,
-	assets: assets,
-	webpack: webpack,
-	browserSync: browserSync,
-	mediaQueries:{
+	basePath,
+	src,
+	dest,
+	assets,
+	twigNamespaces,
+	webpack,
+	browserSync,
+	mediaQueries: {
 		'breakpoints': {
 			'sm': '480px',
 			'md': '750px',
