@@ -27,7 +27,7 @@
 
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;700;900&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;700;900&display=swap" rel="stylesheet">
 
 		<link rel="stylesheet" href="{{ assets.styles }}style.css" media="screen,handheld">
 		<link rel="stylesheet" href="{{ assets.styles }}print.css" media="print">
@@ -84,32 +84,30 @@
 		{% block content %}
 		{% endblock %}
 
-		<footer role="contentinfo" class="footer u-pt-xl">
+		<footer role="contentinfo" class="footer">
 			<div class="row-main">
-				<div class="u-mb-xl">
-
-					{% if not isNewsletter %}
-						<div class="u-max-width--6-12 u-mx-auto">
-							{% include '@components/form/newsletter-footer.twig' %}
-						</div>
-					{% endif %}
-
-					<p class="footer__copyright">
-						&copy; 2014&ndash;{{ creation_date | date("YYYY") }} Spolek Frontendisti.cz
-
-					</p>
-					<p class="footer__provider">
-						Provozuje Spolek Frontendisti.cz zapsaný u Městského soudu v Praze<br>
-						Antala Staška 1565/30, Praha 4, 140 00 | IČ:&nbsp;03591263
-					</p>
-				</div>
+				<p class="footer__logo">
+					{% include "@images/logo-black.svg" %}
+				</p>
+				<p>
+					&copy; 2014&ndash;{{ "now"|date("Y") }} <br>
+					<span>
+						Spolek Frontendisti.cz
+					</span>
+				</p>
+				<address class="u-lc-0">
+					Provozuje Spolek Frontendisti.cz zapsaný u Městského soudu v Praze, <br>
+					Jurkovičova 988/26, Háje, 149&nbsp;00 Praha 4, IČ:&nbsp;03591263
+				</address>
 			</div>
 		</footer>
-			{% for script in scripts %}
-				<script src="{{ script }}"></script>
-			{% endfor %}
-			<script>
-				App.run({})
-			</script>
+
+		{% for script in scripts %}
+			<script src="{{ script }}"></script>
+		{% endfor %}
+		<script>
+			App.run({})
+		</script>
+
 	</body>
 </html>
