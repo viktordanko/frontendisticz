@@ -3,73 +3,105 @@
 	vertical-align: middle;
 	padding: 0;
 	border: 0;
-	outline: none;
 	background: none;
 	text-decoration: none;
 	cursor: pointer;
-	&__text {
+	&__inner {
 		position: relative;
 		display: block;
-		border: 1px solid transparent;
-		border-radius: 4px;
-		padding: 9px 20px 11px;
-		font-size: 1rem;
-		line-height: 20px;
-		background-color: $colorSecondary;
-		color: $colorPrimary;
-		text-decoration: none;
+		padding: 13px 28px 9px;
+		border-radius: 20px;
+		background-color: $colorPrimary;
+		color: $colorWhite;
+		font-size: 12px;
+		letter-spacing: 0.15em;
+		font-weight: 700;
 		text-align: center;
+		text-transform: uppercase;
+		text-decoration: none;
 		transition: background-color $t, border-color $t, color $t;
+		box-shadow: 0 8px 30px 0 rgba($colorPrimary, 0.4);
 	}
 
-	// VARIANTS
-	&--loader &__text::before {
-		content: "";
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		width: 26px;
-		height: 26px;
-		margin: -13px 0 0 -13px;
-		border: 4px solid #fff;
-		border-radius: 50%;
-		border-top-color: transparent;
-		opacity: 0;
-		transition: opacity 0.3s;
+	// VARIANTs
+	&--cta &__inner {
+		background-color: $colorRed;
+		color: $colorWhite;
+		font-size: 8px;
+		box-shadow: 0 10px 20px 0 rgba($colorRed, 0.4);
+	}
+	&--success &__inner {
+		background-color: $colorGreen;
+		box-shadow: 0 8px 30px 0 rgba($colorGreen, 0.4);
+	}
+	&--danger &__inner {
+		background-color: $colorRed;
+		box-shadow: 0 8px 30px 0 rgba($colorRed, 0.4);
+	}
+	&--blue &__inner {
+		background-color: $colorBlue;
+		box-shadow: 0 8px 30px 0 rgba($colorBlue, 0.4);
+	}
+	&--loader &__inner {
+		min-width: 220px;
+		overflow: hidden;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 26px;
+			height: 26px;
+			margin: -13px 0 0 -13px;
+			border: 4px solid #ffffff;
+			border-radius: 50%;
+			border-top-color: transparent;
+			opacity: 0;
+			transition: opacity $t linear 0s;
+		}
 	}
 
 	// STATEs
-	&--loader.is-loading {
-		pointer-events: none;
-	}
-	&--loader.is-loading &__text {
-		text-indent: -5000px;
-	}
-	&--loader.is-loading &__text::before {
-		animation: rotate 0.8s infinite linear;
-		opacity: 1;
-	}
-	.u-bg-inverse & {
-		&__text {
-			color: #fff;
-		}
-	}
 	&:disabled,
 	&.is-disabled {
 		opacity: 0.5;
 		pointer-events: none;
 	}
+	&--loader.is-loading {
+		pointer-events: none;
+	}
+	&--loader.is-loading &__inner {
+		text-indent: -5000px;
+	}
+	&--loader.is-loading &__inner::before {
+		opacity: 1;
+		animation: rotate 0.8s infinite linear;
+	}
 
 	// HOVERs
-	[data-whatintent="keyboard"] &:focus &__text {
+	[data-whatintent="keyboard"] &:focus &__inner {
 		outline: 2px solid $colorSecondary;
 		outline-offset: 2px;
 	}
-	.no-touchevents &:hover &__text {
-		background-color: darken($colorLink, 5%);
-		color: #fff;
+	.no-touchevents &:hover &__inner {
+		background-color: $colorHover;
+		color: $colorWhite;
 	}
-	.no-touchevents .u-bg-inverse &:hover &__text {
-		color: $colorPrimary;
+	.no-touchevents &--success:hover &__inner {
+		background-color: $colorGreenHover;
+	}
+	.no-touchevents &--blue:hover &__inner {
+		background-color: $colorBlueHover;
+	}
+	.no-touchevents &--cta:hover &__inner,
+	.no-touchevents &--danger:hover &__inner {
+		background-color: $colorRedHover;
+	}
+
+	// MQs
+	@media ($lgUp) {
+		&__inner {
+			font-size: 14px;
+		}
 	}
 }

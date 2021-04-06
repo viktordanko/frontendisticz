@@ -1,0 +1,16 @@
+.b-conference {
+	text-align: center;
+	padding: 53px 0;
+	& > :last-child {
+		margin-bottom: 0;
+	}
+	h2 {
+		color: $colorRed;
+		margin-bottom: 0;
+	}
+	h2 + p {
+		font-size: 12px;
+		font-weight: 600;
+		margin-bottom: 24px;
+	}
+}
