@@ -2,7 +2,6 @@ import './tools/svg4everybody';
 import 'what-input';
 
 // Components
-import * as toggleMobileMenu from './components/toggleMobileMenu';
 import * as lazyload from './components/lazyload';
 import * as form from './components/form';
 
@@ -13,7 +12,6 @@ const componentsload = [
 
 // once delegated components
 const components = [
-	toggleMobileMenu,
 	lazyload,
 	form,
 

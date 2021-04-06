@@ -1,64 +1,41 @@
 .header {
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	padding: 25px 0;
-	z-index: 100;
-	transition: background-color $t;
-	&__wrap {
-		position: relative;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
-		align-items: center;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 510px;
+	background: $colorPrimary
+		url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=320")
+		bottom center no-repeat;
+	background-size: cover;
+	color: #fff;
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $colorSecondary;
+		opacity: 0.58;
+	}
+	&__inner {
+		flex: 1 1 100%;
+		text-align: center;
 	}
 	&__logo {
-		position: relative;
-		flex: 0 1 263px;
-		font-size: 100%;
-		line-height: 1;
-		margin: 0;
-		overflow: hidden;
-		&::before {
-			content: '';
-			display: block;
-			padding-top: percentage(34/263);
-		}
-		svg {
-			position: absolute;
-			top: 0;
-			left: 0;
-			bottom: 0;
-			height: 100%;
-			width: auto;
-		}
-	}
-	&__menu {
-		flex: 0 1 auto;
-	}
-
-	// MODIFICATIONs
-	&--u-bg-inverse {
-		position: relative;
-		color: $colorPrimary;
+		width: 184px;
+		margin-bottom: 0;
 	}
 
 	// MEDIA QUERIEs
-	@media ($mdDown) {
-		&__logo {
-			flex-basis: 40px;
-			&::before {
-				padding-top: percentage(60/80);
-			}
-		}
-		&.is-opened {
-			outline: 5000px solid rgba(#000, 0.6);
-			background-color: $colorPrimary;
-			transition-delay: 0s;
-		}
+	@media (min-resolution: 2dppx) {
+		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=640&d=2");
 	}
-	@media ($mdUp) {
-		padding: 50px 0;
+	@media (min-width: 750px) {
+		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=1920");
+	}
+	@media (min-width: 750px) and (min-resolution: 2dppx) {
+		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=1920&d=2");
 	}
 }
