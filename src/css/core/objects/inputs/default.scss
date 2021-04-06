@@ -20,8 +20,8 @@
 		outline: none;
 	}
 	[data-whatintent="keyboard"] &:focus {
-		outline: 2px solid $colorSecondary;
-		outline-offset: 2px;
+		// outline: 2px solid $colorSecondary;
+		// outline-offset: 2px;
 	}
 	.has-error & {
 		border-color: $colorRed;

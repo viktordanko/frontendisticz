@@ -1,0 +1,40 @@
+.c-archive {
+	overflow: hidden;
+	&__title {
+		@extend .u-max-width--9-12;
+		margin-bottom: 93px;
+		margin-left: auto;
+	}
+	&__list {
+		position: relative;
+		margin-bottom: -142px;
+	}
+	&__item {
+		border-bottom-width: 62px;
+	}
+	&__overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		width: 100%;
+		padding: 70px 0 76px;
+		text-align: center;
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: linear-gradient(to bottom, #66000000, #f5fffd);
+			pointer-events: none;
+		}
+		.btn {
+			position: relative;
+			z-index: 3;
+		}
+		.btn .icon-svg {
+			top: -2px;
+		}
+	}
+}

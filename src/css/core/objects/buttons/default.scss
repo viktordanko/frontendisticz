@@ -80,8 +80,8 @@
 
 	// HOVERs
 	[data-whatintent="keyboard"] &:focus &__inner {
-		outline: 2px solid $colorSecondary;
-		outline-offset: 2px;
+		// outline: 2px solid $colorSecondary;
+		// outline-offset: 2px;
 	}
 	.no-touchevents &:hover &__inner {
 		background-color: $colorHover;

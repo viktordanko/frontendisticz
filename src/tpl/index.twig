@@ -79,6 +79,128 @@
 			</div>
 		</div>
 
+		<div class="u-bg-mint u-pt-xxl">
+			<div class="row-main">
+				<section class="c-archive">
+					<h2 class="c-archive__title">
+						Prohlédni si náš archiv, <br>
+						kde je přes 160 záznamů.
+					</h2>
+					<div class="c-archive__list grid">
+						{% set cards = [
+							{
+								imgSrc: '',
+								name: 'Břetislav
+								Proft',
+								title: 'State of JS 2020 a aktuální adopce features',
+								linkHref: 'https://www.youtube.com/watch?v=N-ktfmZbR1w',
+								index: 215,
+							},
+							{
+								imgSrc: '',
+								name: 'Radek Řepka',
+								title: 'Fetchování a cachování dat s React Query',
+								linkHref: 'https://www.youtube.com/watch?v=RyPSDWDqlzI',
+								index: 214,
+							},
+							{
+								imgSrc: '',
+								name: 'Tomáš Litera',
+								title: 'Renovate your dependencies',
+								linkHref: 'https://www.youtube.com/watch?v=WxXlsAbyZuU',
+								index: 213,
+
+							},
+							{
+								imgSrc: '',
+								name: 'Tomáš Kout',
+								title: 'Frontendové novinky',
+								linkHref: 'https://www.youtube.com/watch?v=vLl1YZqlaTc',
+								index: 212,
+							},
+							{
+								imgSrc: '',
+								name: 'Vojtěch Doběš',
+								title: 'Not all zeros are equal (TypeScript)',
+								linkHref: 'https://www.youtube.com/watch?v=Egr6hR5e9KY',
+								index: 211,
+							},
+							{
+								imgSrc: '',
+								name: 'Aleš Roubíček',
+								title: 'Špekulování (o TypeScriptu)',
+								linkHref: 'https://www.youtube.com/watch?v=yKom9HFZYxY',
+								index: 210,
+							},
+							{
+								imgSrc: '',
+								name: 'Robin Pokorný',
+								title: 'Modré z nebe - proč používám TypeScript',
+								linkHref: 'https://www.youtube.com/watch?v=oSFlFK1rEC4',
+								index: 209,
+							},
+							{
+								imgSrc: '',
+								name: 'Marek Fojtl',
+								title: 'Typescript v praxi',
+								linkHref: 'https://www.youtube.com/watch?v=pAndE_xu2aw',
+								index: 208,
+							},
+						] %}
+						{% for card in cards %}
+							<div class="c-archive__item grid__cell size--3-12">
+								<article class="b-card">
+									<div class="b-card__inner">
+										<div class="b-card__img">
+											<span class="b-card__logo">
+												{% include "@images/bg/logo-green-archive-placeholder.svg" %}
+											</span>
+											<img src="{{ assets.images }}illust/{{ card.imgSrc }}" alt="Profilová fotografie - {{ card.name }}" loading="lazy">
+										</div>
+										<div class="b-card__content">
+											<h3 class="b-card__name">
+												<a class="link-mask" href="{{ card.linkHref }}" target="_blank" rel="noopener noreferrer">
+													{{ card.name|raw|nl2br }}
+												</a>
+											</h3>
+										</div>
+									</div>
+									<div class="b-card__bottom">
+										<p class="b-card__highlight">
+											#{{ card.index }}
+										</p>
+										<h4 class="b-card__title">
+											{{ card.title|raw }}
+										</h4>
+									</div>
+								</article>
+							</div>
+						{% endfor %}
+					</div>
+					<div class="c-archive__overlay">
+						<p>
+							<a href="https://www.youtube.com/c/FrontendistiCz/videos" class="btn btn--success" target="_blank" rel="noopener noreferrer">
+								<span class="btn__inner">
+									<span class="item-icon">
+										<span class="item-icon__icon">
+											{% include '@components/core/icon-svg/icon-svg.twig' with {
+												 props: {
+													name: 'eye'
+												}
+											} %}
+										</span>
+										<span class="item-icon__text">
+											Celý archiv
+										</span>
+									</span>
+								</span>
+							</a>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
 
 		{% set partners = {
 			items: [

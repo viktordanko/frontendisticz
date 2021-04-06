@@ -61,12 +61,12 @@
 			border-color: $colorRed;
 		}
 	}
-	[data-whatintent="keyboard"] &__inp:focus + &__text {
-		&::before {
-			outline: 2px solid $colorSecondary;
-			outline-offset: 2px;
-		}
-	}
+	// [data-whatintent="keyboard"] &__inp:focus + &__text {
+	// 	&::before {
+	// 		outline: 2px solid $colorSecondary;
+	// 		outline-offset: 2px;
+	// 	}
+	// }
 	&__inp:disabled + &__text {
 		cursor: default;
 		color: rgba($colorText, 0.5);
