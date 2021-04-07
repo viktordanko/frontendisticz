@@ -2,22 +2,23 @@
 	overflow: hidden;
 	&__title {
 		@extend .u-max-width--9-12;
-		margin-bottom: 93px;
+		margin-bottom: 48px;
 		margin-left: auto;
 	}
 	&__list {
 		position: relative;
-		margin-bottom: -142px;
+		margin-bottom: -212px;
 	}
 	&__item {
-		border-bottom-width: 62px;
+		border-bottom-width: 32px;
 	}
 	&__overlay {
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		width: 100%;
-		padding: 70px 0 76px;
+		padding: 28px 0 30px;
+		// padding: 70px 0 76px;
 		text-align: center;
 		&::before {
 			content: "";
@@ -35,6 +36,24 @@
 		}
 		.btn .icon-svg {
 			top: -2px;
+		}
+	}
+
+	// MQs
+	@media ($mdUp) {
+		&__title {
+			margin-bottom: 93px;
+		}
+		&__list {
+			margin-bottom: -312px;
+		}
+	}
+	@media ($lgUp) {
+		&__list {
+			margin-bottom: -142px;
+		}
+		&__item {
+			border-bottom-width: 62px;
 		}
 	}
 }
