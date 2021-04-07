@@ -41,11 +41,10 @@ $numberOfMenuItems: 4;
 			opacity: 1;
 			transform: translateX(0);
 			transition: opacity $t linear, visibility $t ease, transform $t ease;
-			transition-delay: 0.7s;
 		}
 		@for $i from 1 through $numberOfMenuItems {
 			&__item:nth-child(#{$i}) {
-				transition-delay: #{0.2 + ($i * 0.05)}s;
+				transition-delay: #{0.23 + ($i * 0.1)}s;
 			}
 		}
 	}
@@ -73,7 +72,7 @@ $numberOfMenuItems: 4;
 			}
 			@for $i from 1 through $numberOfMenuItems {
 				&:nth-child(#{$i}) {
-					transition-delay: #{0.1 + ($i * 0.05)}s;
+					transition-delay: #{0.1 + ($i * 0.15)}s;
 				}
 			}
 		}

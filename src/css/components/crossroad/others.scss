@@ -1,7 +1,7 @@
 .c-others {
 	&__title {
 		@extend .u-max-width--9-12;
-		margin-bottom: 60px;
+		margin-bottom: 32px;
 		margin-left: auto;
 	}
 	&__list {
@@ -9,5 +9,12 @@
 	}
 	&__item {
 		border-left-width: $gridGutter * 2;
+	}
+
+	// MQs
+	@media ($mdUp) {
+		&__title {
+			margin-bottom: 60px;
+		}
 	}
 }
