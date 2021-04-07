@@ -2,26 +2,30 @@
 	position: relative;
 	z-index: 2;
 	background-color: $colorBg;
-	padding: 158px 0 124px;
+	padding: 118px 0 124px;
 	font-weight: 400;
 	text-align: center;
 	letter-spacing: -0.05em;
-	&__logo {
-		display: block;
-		width: 120px;
-		margin: 0 auto;
-		margin-bottom: 120px;
+	p {
+		font-weight: 400;
 	}
 	address {
 		line-height: 2;
 	}
+	&__logo {
+		display: block;
+		width: 82px;
+		margin: 0 auto;
+		margin-bottom: 120px;
+	}
 
 	// MQs
-	@media ($lgUp) {
+	@media ($mdUp) {
 		padding: 218px 0 72px;
 		font-size: 14px;
 		&__logo {
 			margin-bottom: 200px;
+			width: 120px;
 		}
 	}
 }
