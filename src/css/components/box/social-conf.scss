@@ -1,12 +1,7 @@
-.b-social {
-	&__title {
-		@extend .u-max-width--9-12;
-		margin-left: auto;
-		margin-bottom: 60px;
-	}
+.b-social-conf {
 	&__link {
 		display: block;
-		width: 60px;
+		width: 45px;
 		border: none;
 		border-radius: 50%;
 		transition: filter $t ease;
@@ -22,7 +17,7 @@
 	}
 	&__img {
 		position: relative;
-		height: 60px;
+		height: 110px;
 		background-color: $colorBg;
 		&::before {
 			content: "";
@@ -48,47 +43,45 @@
 	}
 
 	// MQs
-	@media ($lgDown) {
-		&__inner {
-			display: grid;
-			grid-template-columns: 240px auto;
-			margin-bottom: 90px;
-			overflow: hidden;
-		}
-		&__gallery {
-			grid-template-columns: repeat(6, 60px);
-		}
-	}
-	@media ($mdUp) {
-		&__link {
-			width: 60px;
-		}
-		&__gallery {
-			margin-left: 60px;
-			grid-template-columns: repeat(6, 110px);
-		}
-		&__title {
-			margin-bottom: 120px;
-		}
-		&__img {
-			height: 110px;
-		}
-	}
-	@media ($lgUp) {
-		&__inner {
-			display: flex;
-			align-items: center;
-		}
+	@media ($xlDown) {
 		&__content {
-			flex: 1 1 50%;
+			margin-bottom: 60px;
 			text-align: center;
 			.grid {
 				justify-content: center;
 			}
 		}
-		margin-bottom: 160px;
+	}
+	@media ($lgDown) {
+		&__gallery {
+			grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+		}
+	}
+	@media ($mdDown) {
+		&__gallery {
+			> :nth-last-child(-n + 9) {
+				display: none;
+			}
+		}
+	}
+	@media ($lgUp) {
+		display: flex;
+		align-items: center;
+		&__link {
+			width: 60px;
+		}
+		&__content {
+			flex: 1 1 50%;
+		}
+		&__gallery {
+			grid-template-columns: repeat(6, 110px);
+			margin-left: 80px;
+		}
 	}
 	@media ($xlUp) {
+		.grid {
+			justify-content: flex-end;
+		}
 		&__gallery {
 			flex: 1 1 50%;
 		}

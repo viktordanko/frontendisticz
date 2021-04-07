@@ -11,7 +11,7 @@
 		color: #757373;
 		font-size: 17px;
 		&::before {
-			content: '/';
+			content: "/";
 		}
 	}
 	&__title {
@@ -92,13 +92,12 @@
 			display: none;
 		}
 	}
-	.no-touchevents &__name[href^="https"]:hover {
+	.hoverevents &__name[href^="https"]:hover {
 		color: $colorSecondary;
 	}
-	.no-touchevents &__link--icon:hover {
+	.hoverevents &__link--icon:hover {
 		color: $colorPrimary;
 	}
-
 
 	// MEDIA QUEREIEs
 	@media ($mdDown) {

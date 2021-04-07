@@ -1,0 +1,13 @@
+.s-indent {
+	h2 {
+		margin-bottom: 60px;
+		text-indent: percentage(80/1640);
+	}
+
+	// MQs
+	@media ($lgUp) {
+		h2 {
+			margin-bottom: 80px;
+		}
+	}
+}

@@ -1,0 +1,50 @@
+.b-organizator {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	& > :last-child {
+		margin-bottom: 0;
+	}
+
+	&__img {
+		display: block;
+		img {
+			object-fit: cover;
+		}
+	}
+	&__title {
+		display: block;
+		margin-top: 20px;
+		font-weight: 700;
+		text-align: center;
+		a {
+			-webkit-background-clip: text;
+			background-image: linear-gradient(0deg, $colorText 0%, $colorText 100%);
+			-webkit-text-fill-color: transparent;
+		}
+	}
+	&__desc {
+		display: block;
+		margin-bottom: 15px;
+	}
+	&__btn {
+		margin: auto;
+		.btn__inner {
+			font-size: 12px;
+		}
+	}
+
+	// STATEs
+	.hoverevents &__title a:hover {
+		background-image: linear-gradient(135deg, #3cdbc0 0%, #3cdbc0 25%, #d673e8 75%, #d673e8 100%);
+	}
+
+	// MQs
+	@media ($lgDown) {
+		&__img {
+			max-width: 180px;
+			margin: 0 auto;
+		}
+	}
+}

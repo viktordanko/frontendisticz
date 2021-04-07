@@ -1,0 +1,10 @@
+.b-content {
+	& > :last-child {
+		margin-bottom: 0;
+	}
+	ul {
+		li {
+			background-image: url($svgBulletGreen);
+		}
+	}
+}

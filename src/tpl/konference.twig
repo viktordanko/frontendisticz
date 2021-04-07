@@ -1,0 +1,318 @@
+{% extends '@layout/layout-conference.twig' %}
+{% set pageTitle = '29. 5. | On-line konference - Frontendisti.cz' %}
+{% set isHomepage = true %}
+
+{% block content %}
+
+	<main role="main" id="main" class="main-conf">
+		<div class="u-bg-default">
+			<div class="u-pt-xxl row-main">
+				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
+					<h2>
+						Bude online, ale ne nudná. <br>
+						Odborný program doplní  moderované diskuze, networking a&nbsp;mnohá překvapení. <br>
+						Buďte u toho i vy!
+					</h2>
+				</div>
+				<div class="u-mx-auto u-max-width--10-12 u-mb-xxl">
+					<section class="c-icons u-mb-xxl">
+						{% set items = [
+							{ icon: 'presentation', title: 'přednášky' },
+							{ icon: 'discussion', title: 'moderované <br> diskuze' },
+							{ icon: 'laptop-fun', title: 'zábava' },
+							{ icon: 'networking', title: 'networking' },
+						] %}
+						{% if items is defined and items is not empty %}
+							<ul class="c-icons__list grid grid--center">
+								{% for item in items %}
+									<li class="c-icons__item grid__cell size--6-12 size--3-12@sm">
+										<span class="icon">
+											{% include '@components/core/icon-svg/icon-svg.twig' with {
+												props: {
+													name: item.icon
+												}
+											} %}
+											<span class="icon__title">
+												{{ item.title|raw }}
+											</span>
+										</span>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</section>
+				</div>
+				<section class="s-price u-mb-xxl">
+					<div class="b-price">
+						<h2 class="b-price__title">
+							290 Kč
+						</h2>
+						<p class="b-price__desc">
+							Cena vstupenky bez DPH
+						</p>
+						<p>
+							<a href="https://form.simpleshop.cz/jArV/buy/" class="btn" target="_blank" rel="noopener noreferrer">
+								<span class="btn__inner">
+									Koupit vstupenku
+								</span>
+							</a>
+						</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<div class="u-bg-tertiary">
+			<div class="row-main u-pt-xxl">
+				<div class="u-max-width--6-12 u-mx-auto">
+					<section class="s-indent u-mb-xxl">
+						<div class="b-content">
+							<h2>
+								Call for papers!
+							</h2>
+							<p>
+								Předně díky za tvůj zájem o přihlášení přednášky! Tady jsou informace, které by tě mohly zajímat.
+							</p>
+							<p>
+								<strong>
+									V jakém formátu přednášky budou?
+								</strong>
+							</p>
+							<p>
+								Máme dva formáty přednášky (plnohodnotná na 15&nbsp;&ndash;&nbsp;20 min nebo jednohubka na 3&nbsp;&ndash;&nbsp;5 minut). Přednášky se budou předtáčet, s čímž ti umíme pomoci.
+							</p>
+							<p>
+								<strong>
+									Pomůže mi s tím někdo?
+								</strong>
+							</p>
+							<p>
+								Ano. Program má na starosti Martin Michálek, který ti bude k dispozici a bude ti pomáhat. Velmi vítáme i ty, kteří zatím ostruhy na přednáškách spíše sbírají.
+							</p>
+							<p>
+								<strong>
+									Jaká témata nás zajímají?
+								</strong>
+							</p>
+							<p>
+								Červenou nití konference jsou témata, která na frontend přinášejí změnu. Pár inspirací zde dáváme, ale ve výsledku jsme otevření jakékoliv téma splňující přednášce:
+							</p>
+							<ul>
+								{% set topics = [
+									{title: 'Dilema frontend vs. backend. Od SPA k Next.js/Gatsby.js/JAMstack/headless.'},
+									{title: 'Organizace psaní CSS: Tailwind/atomické.'},
+									{title: 'Důležitá „soft“ témata: jak ve firmě prosadit čas na vyšší kvalitu kódu, triky pro práci na remote…'},
+									{title: 'Design systémy, typografie a cokoliv leží mezi frontendem a designem.'},
+									{title: 'Rychlost webů a letošní změny v Googlu založené na Web Vitals .'},
+									{title: 'Změny v nástrojařině (ESbuild, SnowPack…).'},
+									{title: 'Novinky v HTML/CSS/JS, které lze hned použít a lidé je moc neznají.'},
+									{title: 'Novinky v oblasti frameworků (React, Angular, Vue, Bootstrap…) a dalších používaných nástrojů.'}
+								] %}
+								{% for topic in topics %}
+									<li>
+										{{ topic.title }}
+									</li>
+								{% endfor %}
+							</ul>
+							<p>
+								<strong>
+									Termíny
+								</strong>
+							</p>
+							<ul>
+								{% set dates = [
+									{title: '6.4. &ndash; call for papers'},
+									{title: '20. 4. &ndash; uzavření call for papers, zveřejnění první části programu'},
+									{title: '10. 5. &ndash; termín pro odevzdání nahraných přednášek nebo prezentací'},
+									{title: '29. 5. &ndash; konference'},
+									{title: '30. 5. &ndash; profit!'},
+								] %}
+								{% for date in dates %}
+									<li>
+										{{ date.title|raw }}
+									</li>
+								{% endfor %}
+							</ul>
+							<p class="u-text-center u-pt-xl u-mb-xl">
+								<a href="https://forms.gle/qUdV4crXiAGaby3U6" class="btn btn--success" target="_blank" rel="noopener noreferrer">
+									<span class="btn__inner">
+										Přihlásit se
+									</span>
+								</a>
+							</p>
+							<p>
+								Potřebuješ více informací? <br>
+								Napiš Martinovi Michálkovi: <a class="u-text-underline" href="mailto:martin.michalek@frontendisti.cz?subject=Call for papers - Konference 2021 | Frontendisti.cz">martin.michalek@frontendisti.cz</a>
+							</p>
+						</div>
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<div class="u-bg-secondary">
+			<div class="row-main">
+				<section class="s-socials">
+					<h2 class="u-vhide">
+						Připoj se k nám skrz sociální síte
+					</h2>
+					<div class="b-social-conf">
+						<div class="b-social-conf__content">
+							<div class="grid">
+								<div class="grid__cell size--5-12@xl">
+									<p>
+										Připoj se k naší rostoucí <br>
+										komunitě profesionálů.
+									</p>
+								</div>
+								<div class="grid__cell size--auto@xl">
+									<div class="grid">
+										<div class="grid__cell size--auto">
+											<a class="b-social-conf__link" href="https://www.facebook.com/groups/frontendisti" target="_blank" rel="noopener noreferrer">
+												{% include "@images/bg/facebook.svg" %}
+												<span class="u-vhide">
+													Frontendisti na facebooku
+												</span>
+											</a>
+										</div>
+										<div class="grid__cell size--auto">
+											<a class="b-social-conf__link" href="https://twitter.com/Frontendisti">
+												{% include "@images/bg/twitter.svg" %}
+												<span class="u-vhide">
+													Frontendisti na twitteri
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-social-conf__gallery">
+							{% for img in range(0, 17) %}
+								<div class="b-social-conf__img">
+									<img src="{{ assets.images }}illust/gallery-{{ loop.index }}.jpg" alt="" width="110" height="110" loading="lazy">
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+		<section class="s-newsletter">
+			<div class="b-newsletter">
+				<div class="b-newsletter__inner">
+					<div class="row-main">
+						<div class="u-max-width--4-12 u-mx-auto">
+							<form
+								method="POST"
+								action="/api/subscribe"
+								class="f-newsletter u-mb-md"
+								data-handle-submit
+							>
+								<input type="hidden" name="guid_mailing_list" value="57cd5588-4439-40ea-9f42-061d32322a33;">
+								<h2 class="f-newsletter__title">
+									Přihlaš se do <span class="u-color-red">{F}newsletteru</span> <br>
+									a nic ti neuteče!
+								</h2>
+								<p class="inp-fix">
+									<label for="email" class="inp-label u-vhide">
+										tvůj e-mail
+									</label>
+									<input type="email" name="email" id="email" class="f-newsletter__inp inp-text" placeholder="tvůj e-mail" autocomplete="e-mail" required>
+								</p>
+								<p>
+									<button type="submit" name="subscribe" class="f-newsletter__btn btn btn--danger btn--loader" data-submit-button>
+										<span class="btn__inner">
+											<span class="btn__text">
+												Přihlásit
+											</span>
+											<span class="f-newsletter__icon checkmark">
+												<svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 100 70">
+													<polyline points="4 30 33 66 96 4" class="checkmark__line" />
+												</svg>
+											</span>
+										</span>
+									</button>
+								</p>
+								<p class="f-newsletter__hint">
+									Hotovo! Teď zkontroluj svoji mailovku 📨
+								</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="u-bg-default">
+			<div class="row-main u-pt-xxl">
+				<section class="s-organizators s-indent u-mb-lg">
+					<div class="u-mx-auto u-max-width--6-12">
+						<h2>
+							Kontakt
+						</h2>
+						<div class="u-text-center u-mb-xxl">
+							<p>
+								V případě jakýchkoliv dotazů pište na <br>
+								<a class="u-text-underline" href="mailto:konference@frontendisti.cz">konference@frontendisti.cz</a>
+							</p>
+						</div>
+					</div>
+
+					{% set dudes = [
+						{
+							imgSrc: 'hejc.jpg',
+							title: 'Tomáš Hejč <br> a tým <a href="http://www.superkoders.com/" target="_blank" rel="noopener noreferrer">SUPERKODERS</a>',
+							desc: 'hlavní organizátor',
+							contact: 'tomas.hejc@frontendisti.cz',
+						},
+						{
+							imgSrc: 'michalek.jpg',
+							title: 'Martin Michálek',
+							desc: 'programový ředitel',
+							contact: 'martin.michalek@frontendisti.cz'
+						},
+						{
+							imgSrc: 'proft.jpg',
+							title: 'Břetilav Proft',
+							desc: 'péče o partnery',
+							contact: 'bretislav.proft@frontendisti.cz'
+						},
+						{
+							imgSrc: 'kolar.jpg',
+							title: 'Martin Kolář',
+							desc: 'technický ředitel',
+							contact: 'martin.kolar@frontendisti.cz'
+						},
+					] %}
+					<div class="c-organizators u-mb-md">
+						<ul class="c-organizators__list grid">
+							{%- for dude in dudes -%}
+								<li class="c-organizators__item grid__cell grid__cell--eq size--6-12 size--3-12@md">
+									<span class="b-organizator">
+										<span class="b-organizator__img">
+											<img src="{{ assets.images }}illust/{{ dude.imgSrc }}" alt="" width="230" height="185" loading="lazy">
+										</span>
+										<span class="b-organizator__title">
+											{{ dude.title|raw }}
+										</span>
+										<span class="b-organizator__desc">
+											{{ dude.desc }}
+										</span>
+										<a class="b-organizator__btn btn" href="mailto:{{ dude.contact }}">
+											<span class="btn__inner">
+												Kontakt
+											</span>
+										</a>
+									</span>
+								</li>
+							{%- endfor -%}
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+
+{% endblock %}

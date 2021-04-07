@@ -82,18 +82,18 @@
 		// outline: 2px solid $colorSecondary;
 		// outline-offset: 2px;
 	}
-	.no-touchevents &:hover &__inner {
+	.hoverevents &:hover &__inner {
 		background-color: $colorHover;
 		color: $colorWhite;
 	}
-	.no-touchevents &--success:hover &__inner {
+	.hoverevents &--success:hover &__inner {
 		background-color: $colorGreenHover;
 	}
-	.no-touchevents &--blue:hover &__inner {
+	.hoverevents &--blue:hover &__inner {
 		background-color: $colorBlueHover;
 	}
-	.no-touchevents &--cta:hover &__inner,
-	.no-touchevents &--danger:hover &__inner {
+	.hoverevents &--cta:hover &__inner,
+	.hoverevents &--danger:hover &__inner {
 		background-color: $colorRedHover;
 	}
 

@@ -40,6 +40,9 @@
 	// MQs
 	@media ($mdDown) {
 		margin-top: 50px;
+		.other & {
+			margin-top: 0;
+		}
 	}
 	@media ($mdUp) {
 		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=750&d=2");

@@ -93,7 +93,7 @@ a {
 	transition: color $t;
 	-webkit-tap-highlight-color: transparent;
 	font-weight: bold;
-	.no-touchevents &:hover {
+	.hoverevents &:hover {
 		color: $colorHover;
 	}
 }
@@ -111,15 +111,15 @@ dl {
 	padding: 0;
 }
 li {
-	padding: 0 0 0 20px;
+	padding: 0 0 0 32px;
 	margin: 0 0 ($typoSpaceVertical / 4);
 }
 ul {
 	li {
 		background-image: url($svgBullet);
-		background-position: 5px 0.75em;
+		background-position: 5px 0.45em;
 		background-repeat: no-repeat;
-		background-size: 4px 4px;
+		background-size: 0.6em 0.6em;
 	}
 }
 ol {

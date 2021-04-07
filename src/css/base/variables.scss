@@ -45,6 +45,14 @@ $gridGutter: 16px;
 $rowMainWidth: 1640px + (2 * $gridGutter);
 $rowMainGutter: $gridGutter;
 
+// Sizing
+$sizeXs: 16px;
+$sizeSm: 32px;
+$sizeMd: 64px;
+$sizeLg: 80px;
+$sizeXl: 112px;
+$sizeXxl: 144px;
+
 // Paths
 $imgPath: map-get($paths, "images");
 $fontsPath: map-get($paths, "fonts");
@@ -54,4 +62,5 @@ $t: 0.3s;
 
 // SVGs
 $svgBullet: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3E%3Cpath d='M0 0h4v4H0z'/%3E%3C/svg%3E%0A";
+$svgBulletGreen: "data:image/svg+xml,%3Csvg viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='50' cy='50' r='50' fill='%231ede3b'/%3E%3C/svg%3E";
 $svgSelect: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 5'%3E%3Cpath d='M10 0L5 5 0 0'/%3E%3C/svg%3E%0A";

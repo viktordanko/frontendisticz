@@ -4,6 +4,8 @@ export const init = () => {
 	const offsetTop = 50;
 	let lastScroll = 0;
 
+	if (!menu) return;
+
 	window.addEventListener('scroll', () => {
 		const currentScroll = window.pageYOffset;
 

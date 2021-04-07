@@ -1,0 +1,11 @@
+.c-icons {
+	// MQs
+	@media ($lgDown) {
+		&__list {
+			margin-bottom: -32px;
+		}
+		&__item {
+			border-bottom-width: 32px;
+		}
+	}
+}

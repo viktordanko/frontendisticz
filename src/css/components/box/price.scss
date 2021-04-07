@@ -1,0 +1,17 @@
+.b-price {
+	.btn__inner {
+		color: $colorWhite;
+	}
+	&__title {
+		color: $colorPrimary;
+		font-size: 32px;
+		letter-spacing: -0.01em;
+	}
+
+	// MQs
+	@media ($lgUp) {
+		&__title {
+			font-size: 48px;
+		}
+	}
+}

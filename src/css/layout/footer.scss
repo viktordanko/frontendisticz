@@ -19,6 +19,11 @@
 		margin-bottom: 120px;
 	}
 
+	// STATEs
+	.page-anim:not(.page-anim-start) & {
+		transform: translateY(-200px);
+	}
+
 	// MQs
 	@media ($mdUp) {
 		padding: 218px 0 72px;

@@ -1,0 +1,19 @@
+{
+	"name": "29. 5 | On-line konference - Frontendisti.cz",
+	"short_name": "29. 5 | On-line konference - Frontendisti.cz",
+	"icons": [
+		{
+			"src": "/android-chrome-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/android-chrome-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		}
+	],
+	"theme_color": "#1c1300",
+	"background_color": "#1c1300",
+	"display": "standalone"
+}

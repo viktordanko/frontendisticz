@@ -26,7 +26,7 @@ $numberOfMenuItems: 4;
 
 	// STATEs
 	&__link.is-active,
-	.no-touchevents &__link:hover {
+	.hoverevents &__link:hover {
 		color: $colorBlue;
 	}
 	&__item.is-highlighted &__link {
