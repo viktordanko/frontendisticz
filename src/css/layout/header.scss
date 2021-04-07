@@ -9,6 +9,7 @@
 		bottom center no-repeat;
 	background-size: cover;
 	color: #fff;
+	transition: transform 0.23s ease-in-out;
 	&::before {
 		content: "";
 		position: absolute;
@@ -28,7 +29,18 @@
 		margin-bottom: 0;
 	}
 
-	// MEDIA QUERIEs
+	// STATEs
+	[data-state="menu-opened"] & {
+		&__logo path {
+			transition-delay: 0.2s;
+			fill: $colorText;
+		}
+	}
+
+	// MQs
+	@media ($mdDown) {
+		margin-top: 50px;
+	}
 	@media ($mdUp) {
 		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=750&d=2");
 	}

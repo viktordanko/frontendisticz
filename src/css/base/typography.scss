@@ -1,6 +1,6 @@
 html {
 	font-family: $fontPrimary;
-	font-size: 16px;
+	font-size: 14px;
 	line-height: $lineHeight;
 	color: $colorText;
 	@media ($mdUp) {
@@ -63,6 +63,7 @@ h6,
 p {
 	margin: 0 0 $typoSpaceVertical;
 	letter-spacing: -0.05em;
+	font-weight: 500;
 	.u-bg-inverse & {
 		color: #fff;
 	}

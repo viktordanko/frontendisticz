@@ -15,6 +15,9 @@ body {
 	min-width: 320px;
 	min-height: 100%;
 	overflow-x: hidden;
+	&[data-state="menu-opened"] {
+		overflow: hidden;
+	}
 }
 main {
 	flex-grow: 1;
@@ -24,4 +27,5 @@ main {
 }
 
 @import "header";
+@import "menu";
 @import "footer";

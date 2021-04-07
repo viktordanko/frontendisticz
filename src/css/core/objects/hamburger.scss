@@ -1,0 +1,29 @@
+.hamburger {
+	transition: transform $t;
+	-webkit-tap-highlight-color: transparent;
+	user-select: none;
+	.line {
+		transition: stroke-dasharray 0.5s, stroke-dashoffset 0.5s, stroke 0.5s 0.4s;
+		fill: none;
+		stroke: $colorWhite;
+		stroke-width: 2;
+		stroke-linecap: round;
+		&--top {
+			stroke-dasharray: 40 139;
+		}
+		&--bottom {
+			stroke-dasharray: 40 180;
+		}
+	}
+
+	// STATEs
+	[data-state="menu-opened"] & {
+		transform: rotate(45deg);
+		.line--top {
+			stroke-dashoffset: -98px;
+		}
+		.line--bottom {
+			stroke-dashoffset: -138px;
+		}
+	}
+}

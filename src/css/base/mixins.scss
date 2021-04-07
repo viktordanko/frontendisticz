@@ -1,5 +1,10 @@
 // Grid
-@mixin generateGridSize($breakpoints: $breakpoints, $columns: $gridColumns, $auto: true, $autoGrow: true) {
+@mixin generateGridSize(
+	$breakpoints: $breakpoints,
+	$columns: $gridColumns,
+	$auto: true,
+	$autoGrow: true
+) {
 	@if ($auto) {
 		&--auto {
 			flex: 0 0 auto;
@@ -74,7 +79,7 @@
 @mixin generateGridPull($breakpoints: $breakpoints, $columns: $gridColumns) {
 	@for $column from 1 to ($columns + 1) {
 		@at-root #{&}--#{$column}-#{$columns} {
-			left: percentage(- $column / $columns);
+			left: percentage(-$column / $columns);
 		}
 	}
 	@each $breakpoint, $value in $breakpoints {
@@ -82,11 +87,19 @@
 			@for $column from 1 to ($columns + 1) {
 				@at-root #{&}--#{$column}-#{$columns} {
 					@include suffix($breakpoint) {
-						left: percentage(- $column / $columns);
+						left: percentage(-$column / $columns);
 					}
 				}
 			}
 		}
+	}
+}
+
+@mixin hide-scrollbar() {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+	&::-webkit-scrollbar {
+		display: none;
 	}
 }
 
@@ -109,7 +122,7 @@
 	}
 }
 
-@mixin mq-checker($breakpoint, $type: 'Up') {
+@mixin mq-checker($breakpoint, $type: "Up") {
 	@if (map-has-key($breakpointsVars, $breakpoint + $type)) {
 		@media (map-get($breakpointsVars, $breakpoint + $type)) {
 			@content;
@@ -120,15 +133,11 @@
 }
 
 // Make utility classes
-@mixin make-utils($attribute, $map, $separator: '-') {
-
-	@each $modifier,
-	$value in $map {
-		@if (type-of($value)=='map') {
+@mixin make-utils($attribute, $map, $separator: "-") {
+	@each $modifier, $value in $map {
+		@if (type-of($value) == "map") {
 			@include make-utils($modifier, $value, $separator);
-		}
-
-		@else {
+		} @else {
 			&#{$separator}#{$modifier} {
 				#{$attribute}: $value;
 			}
@@ -137,7 +146,7 @@
 }
 
 // Suffix
-@mixin suffix($suffix, $delimiter: '\\@') {
+@mixin suffix($suffix, $delimiter: "\\@") {
 	&#{$delimiter}#{$suffix} {
 		@content;
 	}
@@ -172,7 +181,7 @@
 @mixin clearfix() {
 	&::before,
 	&::after {
-		content: '';
+		content: "";
 		display: table;
 	}
 	&::after {
@@ -190,7 +199,7 @@
 		height: 0;
 		line-height: 0;
 		font-size: xx-large;
-		content: ' x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ';
+		content: " x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x ";
 	}
 }
 
@@ -207,32 +216,37 @@
 }
 
 // Triangle
-@mixin triangle($direction: 'down', $width: 10px, $height: 10px, $color: currentColor) {
+@mixin triangle(
+	$direction: "down",
+	$width: 10px,
+	$height: 10px,
+	$color: currentColor
+) {
 	width: 0;
 	height: 0;
 	border-style: solid;
-	@if ($direction == 'up') {
+	@if ($direction == "up") {
 		border-width: 0 ($width / 2) $height ($width / 2);
 		border-color: transparent transparent $color transparent;
-	} @else if ($direction == 'down') {
+	} @else if ($direction == "down") {
 		border-width: $height ($width / 2) 0 ($width / 2);
 		border-color: $color transparent transparent transparent;
-	} @else if ($direction == 'left') {
+	} @else if ($direction == "left") {
 		border-width: ($height / 2) $width ($height / 2) 0;
 		border-color: transparent $color transparent transparent;
-	} @else if ($direction == 'right') {
-		border-width: ($height / 2) 0 ($height /2 ) $width;
+	} @else if ($direction == "right") {
+		border-width: ($height / 2) 0 ($height / 2) $width;
 		border-color: transparent transparent transparent $color;
-	} @else if ($direction == 'up-left') {
+	} @else if ($direction == "up-left") {
 		border-width: $height $width 0 0;
 		border-color: $color transparent transparent transparent;
-	} @else if ($direction == 'down-left') {
+	} @else if ($direction == "down-left") {
 		border-width: $width 0 0 $height;
 		border-color: transparent transparent transparent $color;
-	} @else if ($direction == 'up-right') {
+	} @else if ($direction == "up-right") {
 		border-width: 0 $width $height 0;
 		border-color: transparent $color transparent transparent;
-	} @else if ($direction == 'down-right') {
+	} @else if ($direction == "down-right") {
 		border-width: 0 0 $height $width;
 		border-color: transparent transparent $color transparent;
 	}
