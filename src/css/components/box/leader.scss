@@ -15,12 +15,13 @@
 		display: block;
 		font-weight: 700;
 		margin-bottom: 10px;
+		white-space: nowrap;
 	}
 	&__btn {
 		margin-bottom: 20px;
 		text-decoration: none;
 		.btn__inner {
-			font-size: 12px;
+			font-size: 8px;
 		}
 	}
 	&__badge {
@@ -32,9 +33,22 @@
 	}
 	&__list {
 		@extend %reset-ul;
-		// font-size: 14px;
 	}
 	&__item {
 		@extend %reset-ul-li;
+	}
+
+	// VARIANTs
+	&--other &__name {
+		margin-bottom: 0;
+	}
+
+	// MQs
+	@media ($mdUp) {
+		&__btn {
+			.btn__inner {
+				font-size: 12px;
+			}
+		}
 	}
 }

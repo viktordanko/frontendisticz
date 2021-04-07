@@ -1,9 +1,9 @@
 .c-partners {
-	margin-bottom: 140px;
+	margin-bottom: 96px;
 	&__title {
 		@extend .u-max-width--8-12;
 		margin-left: auto;
-		margin-bottom: 120px;
+		margin-bottom: 80px;
 	}
 	&__list {
 		margin-left: -($gridGutter * 4);
@@ -25,8 +25,8 @@
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			width: 370px;
-			height: 370px;
+			width: 300px;
+			height: 300px;
 			border-radius: 50%;
 			background-image: radial-gradient(
 				circle at center,
@@ -40,6 +40,11 @@
 	}
 
 	// MEDIA QUERIEs
+	@media ($smDown) {
+		&__item {
+			text-align: center;
+		}
+	}
 	@media ($smUp) {
 		&__list {
 			margin-bottom: -($gridGutter * 8);
@@ -48,6 +53,16 @@
 		&__item {
 			border-bottom-width: ($gridGutter * 8);
 			border-left-width: ($gridGutter * 8);
+		}
+	}
+	@media ($mdUp) {
+		margin-bottom: 140px;
+		&__title {
+			margin-bottom: 96px;
+		}
+		&__cta::before {
+			width: 370px;
+			height: 370px;
 		}
 	}
 }

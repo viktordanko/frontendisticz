@@ -1,4 +1,4 @@
-<section role="region" id="team" class="c-leaders u-pt-xl">
+<section role="region" id="team" class="c-leaders">
 	<div class="row-main">
 		<h2 class="c-leaders__title">
 			Organizační štáb <br>
@@ -8,7 +8,7 @@
 			<div class="c-leaders__wrap">
 				<div class="c-leaders__list grid grid--center grid--x-md grid--y-xl" id="contact">
 					{% for item in leaders.items %}
-						<div class="c-leaders__item grid__cell size--6-12@sm size--3-12@lg">
+						<div class="c-leaders__item grid__cell size--6-12 size--3-12@md">
 							<article class="b-leader">
 								<h3 class="b-leader__title">
 									{{ item.city|raw }}

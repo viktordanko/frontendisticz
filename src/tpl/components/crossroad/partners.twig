@@ -5,7 +5,7 @@
 		</h2>
 		<ul class="c-partners__list grid grid--middle grid--center">
 			{% for item in partners.items %}
-				<li class="c-partners__item grid__cell size--6-12 size--auto@xl">
+				<li class="c-partners__item grid__cell size--6-12@sm size--auto@md">
 					<a href="{{ item.href }}" class="b-partner" target="_blank" rel="noreferrer noopener">
 						<img src="{{ assets.images }}illust/{{ item.name }}.svg" alt="{{ item.alt }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
 					</a>

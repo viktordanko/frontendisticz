@@ -1,24 +1,37 @@
 .b-job {
-	margin-bottom: 214px;
+	margin-bottom: 96px;
 	&__title {
 		@extend .u-max-width--8-12;
 		margin-left: auto;
-		margin-bottom: 100px;
-	}
-	&__inner {
-		display: flex;
-		align-items: center;
-		justify-content: center;
+		margin-bottom: 48px;
 	}
 	&__img {
-		flex: 0 1 50%;
-		margin-left: 150px;
 		img {
 			box-shadow: 0 10px 30px 0 rgba(#f5aa00, 0.1);
 		}
 	}
 	&__content {
-		flex: 0 0 260px;
-		margin-left: auto;
+		margin-bottom: 80px;
+	}
+
+	// MQs
+	@media ($mdUp) {
+		margin-bottom: 214px;
+		&__title {
+			margin-bottom: 96px;
+		}
+		&__inner {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		&__img {
+			flex: 0 1 50%;
+			margin-left: 150px;
+		}
+		&__content {
+			flex: 0 0 260px;
+			margin-left: auto;
+		}
 	}
 }

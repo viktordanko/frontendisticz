@@ -2,9 +2,19 @@
 	&__title {
 		@extend .u-max-width--8-12;
 		margin-left: auto;
-		margin-bottom: 100px;
+		margin-bottom: 48px;
 	}
 	&__wrap {
-		margin-bottom: 120px;
+		margin-bottom: 68px;
+	}
+
+	// MQs
+	@media ($mdUp) {
+		&__title {
+			margin-bottom: 100px;
+		}
+		&__wrap {
+			margin-bottom: 120px;
+		}
 	}
 }

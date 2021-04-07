@@ -10,7 +10,7 @@
 		position: relative;
 		display: block;
 		padding: 13px 28px 9px;
-		border-radius: 20px;
+		border-radius: 17px;
 		background-color: $colorPrimary;
 		color: $colorWhite;
 		font-size: 10px;
@@ -101,6 +101,7 @@
 	@media ($lgUp) {
 		&__inner {
 			font-size: 14px;
+			border-radius: 20px;
 		}
 	}
 }
