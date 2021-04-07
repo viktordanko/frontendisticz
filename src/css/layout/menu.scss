@@ -60,9 +60,6 @@
 			&::after {
 				transition-delay: 0.1s;
 			}
-			&__btn {
-				z-index: 100;
-			}
 		}
 		.no-touchevents &__btn:hover .btn__inner {
 			background-color: $colorText;

@@ -1,4 +1,6 @@
 .hamburger {
+	position: relative;
+	z-index: 100;
 	transition: transform $t;
 	-webkit-tap-highlight-color: transparent;
 	user-select: none;
