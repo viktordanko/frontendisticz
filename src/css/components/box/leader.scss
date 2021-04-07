@@ -1,0 +1,40 @@
+.b-leader {
+	display: block;
+	max-width: 174px;
+	margin: 0 auto;
+	&__title {
+		font-style: italic;
+		margin-bottom: 20px;
+	}
+	&__img {
+		display: block;
+		margin-bottom: 20px;
+	}
+	&__name {
+		position: relative;
+		display: block;
+		font-weight: 700;
+		margin-bottom: 10px;
+	}
+	&__btn {
+		margin-bottom: 20px;
+		text-decoration: none;
+		.btn__inner {
+			font-size: 12px;
+		}
+	}
+	&__badge {
+		position: absolute;
+		color: $colorPrimary;
+		right: calc(100% + 7px);
+		top: 50%;
+		transform: translateY(-50%) translateY(-4px);
+	}
+	&__list {
+		@extend %reset-ul;
+		// font-size: 14px;
+	}
+	&__item {
+		@extend %reset-ul-li;
+	}
+}

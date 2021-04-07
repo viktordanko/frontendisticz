@@ -6,3 +6,8 @@
 		transform: rotate(359deg);
 	}
 }
+@keyframes checkmark-stroke {
+	100% {
+		stroke-dashoffset: 0;
+	}
+}

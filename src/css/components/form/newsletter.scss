@@ -1,11 +1,45 @@
 .f-newsletter {
-	.inp-label {
-		font-size: 16px;
+	$f: &;
+	.btn__text {
+		transition: opacity 0.23s linear, visibility 0.01s;
 	}
-	&__btn {
-		min-width: 160px;
-		.btn__text {
-			font-size: 18px;
+	&__title {
+		margin-bottom: 30px;
+		color: $colorWhite;
+		span {
+			color: $colorRed;
+		}
+	}
+	&__hint {
+		transition: all 0.23s cubic-bezier(0.39, 0.575, 0.565, 1) $t;
+		transition-property: transform, opacity;
+	}
+
+	// STATEs
+	.is-sent & {
+		&__btn {
+			pointer-events: none;
+			.btn__text {
+				visibility: hidden;
+				opacity: 0;
+			}
+		}
+	}
+	&:not(.is-sent) & {
+		&__hint {
+			opacity: 0;
+			transform: translateY(-40px);
+		}
+	}
+	.inp-text:focus {
+		box-shadow: inset 0 0 0 2px rgba($colorRed, 0.5);
+	}
+
+	// MQs
+	@media ($lgDown) {
+		.inp-text {
+			max-width: 400px;
+			margin: 0 auto;
 		}
 	}
 }

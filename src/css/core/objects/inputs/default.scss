@@ -1,29 +1,33 @@
 %inp {
 	display: block;
-	border: 1px solid $colorBd;
-	padding: 8px 15px;
+	width: 100%;
+	padding: 15px 20px;
+	border: none;
+	border-radius: 0;
 	background-color: $colorWhite;
 	color: $colorText;
-	font-size: 1rem;
+	font-size: 12px;
 	line-height: 20px;
-	width: 100%;
-	border-radius: 4px;
+	text-align: center;
+	transition: box-shadow $t, border-color $t;
 	appearance: none;
-	transition: background-color $t, border-color $t;
 
 	// STATEs
 	&:disabled {
 		background-color: $colorBg;
 	}
 	&:focus {
-		box-shadow: inset 0 0 2px 0 rgba($colorSecondary, 1);
+		border-color: $colorText;
 		outline: none;
-	}
-	[data-whatintent="keyboard"] &:focus {
-		// outline: 2px solid $colorSecondary;
-		// outline-offset: 2px;
 	}
 	.has-error & {
 		border-color: $colorRed;
+	}
+
+	// MQs
+	@media ($lgUp) {
+		padding: 20px 30px;
+		font-size: 16px;
+		line-height: 40px;
 	}
 }

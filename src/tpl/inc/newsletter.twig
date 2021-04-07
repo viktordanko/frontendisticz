@@ -1,0 +1,45 @@
+<section class="s-newsletter">
+	<div class="b-newsletter">
+		<div class="b-newsletter__inner">
+			<div class="row-main">
+				<div class="u-max-width--4-12 u-mx-auto">
+					<form
+						method="POST"
+						action="/api/subscribe"
+						class="f-newsletter u-mb-md"
+						data-handle-submit
+					>
+						<input type="hidden" name="guid_mailing_list" value="57cd5588-4439-40ea-9f42-061d32322a33;">
+						<h2 class="f-newsletter__title">
+							Přihlaš se do <span class="u-color-red">{F}newsletteru</span> <br>
+							a nic ti neuteče!
+						</h2>
+						<p class="inp-fix">
+							<label for="email" class="inp-label u-vhide">
+								tvůj e-mail
+							</label>
+							<input type="email" name="email" id="email" class="f-newsletter__inp inp-text" placeholder="tvůj e-mail" autocomplete="e-mail" required>
+						</p>
+						<p>
+							<button type="submit" name="subscribe" class="f-newsletter__btn btn btn--danger btn--loader" data-submit-button>
+								<span class="btn__inner">
+									<span class="btn__text">
+										Přihlásit
+									</span>
+									<span class="f-newsletter__icon checkmark">
+										<svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 100 70">
+											<polyline points="4 30 33 66 96 4" class="checkmark__line" />
+										</svg>
+									</span>
+								</span>
+							</button>
+						</p>
+						<p class="f-newsletter__hint">
+							Hotovo! Teď zkontroluj svoji mailovku 📨
+						</p>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

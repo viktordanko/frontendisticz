@@ -95,45 +95,9 @@ a {
 		color: $colorHover;
 	}
 }
-a[href^="mailto"] {
-	position: relative;
-	color: $colorPrimary;
-	font-weight: normal;
-	text-decoration: none;
-	background-image: linear-gradient(
-		to right,
-		$colorPrimary 50%,
-		transparent 50%
-	);
-	background-position: 0 100%;
-	background-repeat: repeat-x;
-	background-size: 4px 1px;
-	transition: color $t;
-	.no-touchevents &:hover {
-		color: $colorSecondary;
-	}
-}
 
 strong {
-	color: $colorSecondary;
-}
-a[href^="mailto"] {
-	position: relative;
-	color: $colorPrimary;
-	font-weight: normal;
-	text-decoration: none;
-	background-image: linear-gradient(
-		to right,
-		$colorPrimary 50%,
-		transparent 50%
-	);
-	background-position: 0 100%;
-	background-repeat: repeat-x;
-	background-size: 4px 1px;
-}
-
-strong {
-	color: $colorSecondary;
+	font-weight: 700;
 }
 
 // Lists

@@ -1,92 +1,53 @@
-<section role="region" id="team" class="c-leaders u-pt-xl u-bt-gray">
+<section role="region" id="team" class="c-leaders u-pt-xl">
 	<div class="row-main">
-		<div class="u-max-width--8-12 u-mx-auto u-mb-md">
-			<h2>
-				Organizační štáb
-			</h2>
-			<p>
-				Kontaktujte ogranizátory u&nbsp;příslušných měst, pro globální partnerství pište na&nbsp;<a href="mailto:martin@vzhurudolu.cz">martin@vzhurudolu.cz</a>
-			</p>
-		</div>
-		<div class="c-leaders__wrap u-mb-md">
-			<div class="c-leaders__list grid grid--x-md grid--y-xl" id="contact">
-				{% for item in leaders.items %}
-					<div class="c-leaders__item grid__cell grid__cell--eq size--6-12@sm size--3-12@lg">
-						<article role="article" class="b-card">
-							<h3 class="b-card__title h2">
-								{{ item.city|raw }}
-							</h3>
-							<ul class="b-card__list">
-								<li class="b-card__item b-card__item--main">
-									<span class="b-card__img">
-										<img data-src="{{ assets.images }}illust/{{ item.img }}.jpg" alt="Profilová fotografie - {{ item.name }}" width="150" height="150">
-										{% if loop.first %}
-											<span class="b-card__badge">
-												{# {{ iconSVG('crown') }} #}
+		<h2 class="c-leaders__title">
+			Organizační štáb <br>
+			a&nbsp;kontakty
+		</h2>
+		<div class="u-max-width--10-12 u-mx-auto">
+			<div class="c-leaders__wrap">
+				<div class="c-leaders__list grid grid--center grid--x-md grid--y-xl" id="contact">
+					{% for item in leaders.items %}
+						<div class="c-leaders__item grid__cell size--6-12@sm size--3-12@lg">
+							<article class="b-leader">
+								<h3 class="b-leader__title">
+									{{ item.city|raw }}
+								</h3>
+								<ul class="b-leader__list">
+									<li class="b-leader__item">
+										<span class="b-leader__img">
+											<img src="{{ assets.images }}illust/{{ item.img }}.jpg" alt="Profilová fotografie - {{ item.name }}" width="174" height="174" loading="lazy">
+										</span>
+										<span class="b-leader__name">
+											{% if loop.first %}
+												<span class="b-leader__badge">
+													{% include '@components/core/icon-svg/icon-svg.twig' with {
+														props: {
+															name: 'crown'
+														}
+													} %}
+												</span>
+											{% endif %}
+											{{ item.name|raw }}
+										</span>
+										<a href="mailto:{{ item.mail }}" class="btn b-leader__btn">
+											<span class="btn__inner">
+												Kontakt
 											</span>
-										{% endif %}
-										<noscript>
-											<img src="{{ assets.images }}illust/{{ item.img }}.jpg" alt="Profilová fotografie - {{ item.name }}" width="150" height="150">
-										</noscript>
-									</span>
-									<span class="b-card__name">
-										{{ item.name|raw }}
-									</span>
-									<a href="mailto:{{ item.mail }}" class="b-card__info">
-										{{ item.mail|raw }}
-									</a>
-								</li>
-								{% for sidekick in item.others %}
-									<li class="b-card__item">
-										{{ sidekick.name|raw }}
+										</a>
 									</li>
-								{% endfor %}
-							</ul>
-						</article>
-					</div>
-				{% endfor %}
+									{% for sidekick in item.others %}
+										<li class="b-leader__item">
+											{{ sidekick.name|raw }}
+										</li>
+									{% endfor %}
+								</ul>
+							</article>
+						</div>
+					{% endfor %}
+				</div>
 			</div>
-		</div>
-		<div class="c-others u-mb-xl">
-			<div class="u-mb-md u-mt-lg">
-				<h3 class="c-others__title h2">
-					Další spolupracovníci
-				</h3>
-			</div>
-			<ul class="c-others__list grid grid--center">
-				<li class="c-others__item grid__cell size--auto size--4-12@md">
-					<span class="b-card b-card--horizontal">
-						<span class="b-card__img">
-							<img data-src="{{ assets.images }}illust/forejt.jpg" alt="Profilová fotografie - Jan Forejt" width="65" height="65">
-							<noscript>
-								<img src="{{ assets.images }}illust/forejt.jpg" alt="Profilová fotografie - Jan Forejt" width="65" height="65">
-							</noscript>
-						</span>
-						<span class="b-card__name">
-							Jan Forejt
-						</span>
-						<span class="b-card__info">
-							videa z akcí
-						</span>
-					</span>
-				</li>
-				<li class="c-others__item grid__cell size--auto size--4-12@md">
-					<span class="b-card b-card--horizontal">
-						<span class="b-card__img">
-							<img data-src="{{ assets.images }}illust/pokorny.jpg" alt="Profilová fotografie - Robin Pokorný" width="65" height="65">
-							<noscript>
-								<img src="{{ assets.images }}illust/pokorny.jpg" alt="Profilová fotografie - Robin Pokorný" width="65" height="65">
-							</noscript>
-						</span>
-						<span class="b-card__name">
-							Robin Pokorný
-						</span>
-						<span class="b-card__info">
-							spoluzakladatel
-						</span>
-					</span>
-				</li>
-			</ul>
+			{% include "@templates/inc/others.twig" %}
 		</div>
 	</div>
 </section>

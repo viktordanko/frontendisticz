@@ -1,0 +1,26 @@
+.checkmark {
+	$c: &;
+	position: absolute;
+	top: 10px;
+	left: 50%;
+	transform: translateX(-50%);
+	transition: opacity 0.23s linear;
+	&__line {
+		stroke: #ffffff;
+		fill: none;
+		stroke-width: 8;
+		stroke-linejoin: round;
+		stroke-linecap: round;
+		stroke-dashoffset: 150;
+		stroke-dasharray: 150;
+	}
+
+	// STATEs
+	.is-sent & {
+		opacity: 1;
+		#{$c}__line {
+			animation: checkmark-stroke 0.9s cubic-bezier(0.35, 0, 0.25, 1) forwards;
+			animation-delay: $t;
+		}
+	}
+}

@@ -7,9 +7,10 @@
 	text-align: center;
 	letter-spacing: -0.05em;
 	&__logo {
-		width: 83px;
+		display: block;
+		width: 120px;
 		margin: 0 auto;
-		margin-bottom: 368px;
+		margin-bottom: 120px;
 	}
 	address {
 		line-height: 2;

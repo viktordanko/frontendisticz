@@ -1,5 +1,13 @@
 .c-others {
 	&__title {
-		margin-bottom: (75/30) + em;
+		@extend .u-max-width--9-12;
+		margin-bottom: 60px;
+		margin-left: auto;
+	}
+	&__list {
+		margin-left: -($gridGutter * 2);
+	}
+	&__item {
+		border-left-width: $gridGutter * 2;
 	}
 }

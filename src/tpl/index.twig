@@ -294,61 +294,68 @@
 			</div>
 		</div>
 
-		{% set leaders = {
-			items: [
-				{
-					city: 'Praha',
-					name: 'Martin Michálek',
-					mail: 'martin@vzhurudolu.cz',
-					img: 'michalek',
-					others: [
+		<div class="u-bg-default">
+			<div class="row-main">
+				{% set leaders = {
+					items: [
 						{
-							name: 'Adam Kudrna'
+							city: 'Praha',
+							name: 'Martin Michálek',
+							mail: 'martin@vzhurudolu.cz',
+							img: 'michalek',
+							others: [
+								{
+									name: 'Adam Kudrna'
+								},
+								{
+									name: 'Břetislav Proft'
+								},
+								{
+									name: 'Michal Voják'
+								}
+							]
 						},
 						{
-							name: 'Břetislav Proft'
+							city: 'Brno',
+							name: 'Tomáš Hejč',
+							mail: 'tomas.hejc@superkoders.com',
+							img: 'hejc',
+							others: [
+								{
+									name: 'Martin Kolář'
+								},
+								{
+									name: 'Martin Pešout'
+								},
+								{
+								name: 'David Czernín'
+								}
+							]
 						},
 						{
-							name: 'Michal Voják'
+							city: 'Ostrava',
+							name: 'Daniel Střelec',
+							mail: 'jsem@danielstrelec.cz',
+							img: 'strelec',
+							others: [
+								{
+									name: 'Tomáš Musiol'
+								}
+							]
+						},
+						{
+							city: 'Plzeň',
+							name: 'Eduard Štůla',
+							mail: 'info@eduardstula.cz',
+							img: 'stula'
 						}
 					]
-				},
-				{
-					city: 'Brno',
-					name: 'Tomáš Hejč',
-					mail: 'tomas.hejc@superkoders.com',
-					img: 'hejc',
-					others: [
-						{
-							name: 'Martin Kolář'
-						},
-						{
-							name: 'Martin Pešout'
-						},
-						{
-						name: 'David Czernín'
-						}
-					]
-				},
-				{
-					city: 'Ostrava',
-					name: 'Daniel Střelec',
-					mail: 'jsem@danielstrelec.cz',
-					img: 'strelec',
-					others: [
-						{
-							name: 'Tomáš Musiol'
-						}
-					]
-				},
-				{
-					city: 'Plzeň',
-					name: 'Eduard Štůla',
-					mail: 'info@eduardstula.cz',
-					img: 'stula'
-				}
-			]
-		} %}
-		{% include '@components/crossroad/leaders.twig' %}
+				} %}
+				{% include '@components/crossroad/leaders.twig' %}
+			</div>
+
+			{% include '@templates/inc/newsletter.twig' %}
+
+		</div>
 	</main>
 {% endblock %}

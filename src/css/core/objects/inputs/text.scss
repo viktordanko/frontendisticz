@@ -1,17 +1,21 @@
 .inp-text {
 	@extend %inp;
-	@at-root textarea#{&} {
-		height: auto;
-	}
 	&::placeholder {
+		color: rgba($colorText, 0.3);
 		opacity: 1;
-		color: rgba($colorText, .5);
+		transition: opacity $t linear;
 	}
 
 	// STATEs
 	&:focus {
+		outline: none;
+		box-shadow: inset 0 0 0 2px $colorPrimary;
 		&::placeholder {
-			color: rgba($colorBlack, .25);
+			color: rgba($colorText, 0.3);
+			opacity: 0.5;
 		}
+	}
+	@at-root textarea#{&} {
+		height: auto;
 	}
 }
