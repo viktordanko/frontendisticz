@@ -19,9 +19,6 @@
 	&__btn {
 		margin-bottom: 20px;
 		text-decoration: none;
-		.btn__inner {
-			font-size: 8px;
-		}
 	}
 	&__badge {
 		position: absolute;
@@ -40,14 +37,5 @@
 	// VARIANTs
 	&--other &__name {
 		margin-bottom: 0;
-	}
-
-	// MQs
-	@media ($mdUp) {
-		&__btn {
-			.btn__inner {
-				font-size: 12px;
-			}
-		}
 	}
 }

@@ -76,6 +76,9 @@
 		opacity: 1;
 		animation: rotate 0.8s infinite linear;
 	}
+	&--sm &__inner {
+		font-size: 8px;
+	}
 
 	// HOVERs
 	[data-whatintent="keyboard"] &:focus &__inner {
@@ -100,8 +103,11 @@
 	// MQs
 	@media ($lgUp) {
 		&__inner {
-			font-size: 14px;
+			font-size: 12px;
 			border-radius: 20px;
+		}
+		&--sm &__inner {
+			font-size: 10px;
 		}
 	}
 }
