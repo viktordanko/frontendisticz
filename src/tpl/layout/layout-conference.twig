@@ -8,13 +8,13 @@
 
 		<meta name="twitter:card" content="summary">
 		<meta name="twitter:title" content="{{ pageTitle }} | Frontendisti.cz">
-		<meta name="twitter:description" content="Historicky první česko-slovenská konferencia Frontendisti.cz">
+		<meta name="twitter:description" content="Historicky první česko-slovenská konference Frontendisti.cz">
 		<meta name="twitter:image" content="{{ assets.images }}social/og-twitter.jpg">
 
 		<meta property="og:title" content="{{ pageTitle }} | Frontendisti.cz">
-		<meta property="og:description" content="Historicky první česko-slovenská konferencia Frontendisti.cz">
+		<meta property="og:description" content="Historicky první česko-slovenská konference Frontendisti.cz">
 		<meta property="og:image" content="{{ assets.images }}social/og-facebook.jpg">
-		<meta property="og:site_name" content="Historicky první česko-slovenská konferencia Frontendisti.cz">
+		<meta property="og:site_name" content="Historicky první česko-slovenská konference Frontendisti.cz">
 		<meta property="og:url" content="http://www.frontendisti.cz/konference">
 
 		<title>{{ pageTitle }} | Frontendisti.cz</title>
@@ -26,13 +26,20 @@
 		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500;600;700;900&display=swap" rel="stylesheet">
 
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-51816675-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 		{% set scripts = [
 			'https://cdn.polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find,AbortController,fetch',
-			assets.scripts ~ 'app.js'
+			assets.scripts ~ 'app.js',
 		] %}
 
 		{% for script in scripts %}
-		<link rel="preload" as="script" href="{{script}}">
+			<link rel="preload" as="script" href="{{ script }}">
 		{% endfor %}
 
 		{% include "@layout/favicons.twig" %}
@@ -82,8 +89,8 @@
 						<div class="header-conf__left">
 							<h1 class="header-conf__title">
 								Historicky první<br>
-								česko-slovenská konferencia Frontendisti.cz <br>
-								na rozloze zhruba<sup>(*</sup> 127.901 km<sup>2</sup>
+								česko-slovenská konference Frontendisti.cz <br>
+								konaná na ploše zhruba<sup>(*</sup> 127&nbsp;901&nbsp;km<sup>2</sup>
 							</h1>
 						</div>
 						<span class="divider">
@@ -104,7 +111,7 @@
 				</div>
 			</div>
 			<p class="header-conf__vsuvka">
-				*) Frontendisti si vyhrazují právo tuto rozlohu svévolně zvýšit.<br class="u-hide@lg"> Maximální limit pro rozlohu konference je 510.100.000 km2
+				*) Frontendisti si vyhrazují právo tuto rozlohu svévolně zvýšit.<br class="u-hide@lg"> Maximální limit pro rozlohu konference je 510&nbsp;100&nbsp;000 km<sup>2</sup>
 			</p>
 			<p class="header-conf__logo">
 				{% include "@images/illust/konference-opt.svg" %}

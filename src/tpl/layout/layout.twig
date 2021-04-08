@@ -32,13 +32,17 @@
 		<link rel="stylesheet" href="{{ assets.styles }}style.css" media="screen,handheld">
 		<link rel="stylesheet" href="{{ assets.styles }}print.css" media="print">
 
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-51816675-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+
 		{% set scripts = [
 			'https://cdn.polyfill.io/v2/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find',
 			assets.scripts + 'app.js',
-			assets.scripts + 'ga.js',
-			assets.scripts + 'modernizr.min.js'
 		] %}
-
 		{% for script in scripts %}
 			<link rel="preload" as="script" href="{{ script }}">
 		{% endfor %}
