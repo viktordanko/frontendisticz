@@ -1,0 +1,29 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Byli jste přihlášeni k odběru novinek' %}
+{% set isNewsletter = true %}
+
+{% block content %}
+	<main role="main" id="main">
+		<section class="b-success">
+			<div class="row-main">
+				<div class="b-success__inner">
+					<h1>
+						<strong>
+							Děkujeme,
+						</strong>
+					</h1>
+					<p>
+						byli jste přihlášeni k odběru frontendových novinek.
+					</p>
+					<p>
+						<a href="/" class="btn">
+							<span class="btn__inner">
+								Zpět
+							</span>
+						</a>
+					</p>
+				</div>
+			</div>
+		</section>
+	</main>
+{% endblock %}

@@ -1,12 +1,11 @@
 .b-success {
 	padding-top: 120px;
 	padding-bottom: 120px;
-	background-color: #000022;
+	background-color: $colorSecondary;
 	color: $colorWhite;
 	text-align: center;
-	h1,
 	strong {
-		color: $colorGreen;
+		color: $colorPrimary;
 	}
 	&__inner {
 		@extend .u-max-width--4-12;

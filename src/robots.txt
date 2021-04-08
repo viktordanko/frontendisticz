@@ -1,4 +1,4 @@
 User-Agent: *
-Disallow: /newsletter-success/
+Disallow: /newsletter-potvrzeni/
 
 Sitemap: https://www.frontendisti.cz/sitemap.xml

@@ -32,7 +32,7 @@ exports.handler = async (event) => {
 		return {
 			statusCode: 301,
 			headers: {
-				Location: '/newsletter-success/',
+				Location: '/newsletter-potvrzeni/',
 			},
 			// body is unused in 3xx codes, but required in all function responses
 			body: 'redirecting...',
