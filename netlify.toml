@@ -18,6 +18,12 @@
   force = true
 
 [[redirects]]
+  from = "/discord"
+  to = "https://www.discord.com/invite/A9sKuZzzya"
+  status = 200
+  force = true
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
