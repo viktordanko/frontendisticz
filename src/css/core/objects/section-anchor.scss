@@ -1,0 +1,23 @@
+.section-anchor {
+	position: relative;
+	&__link {
+		position: absolute;
+		left: 0;
+		background-image: url($svgAnchorShare);
+		background-position: center 50%;
+		background-repeat: no-repeat;
+		color: transparent;
+		background-size: 20px 18px;
+		opacity: 0;
+		transition: opacity $t;
+	}
+
+	// STATEs
+	.hoverevents &:hover &__link {
+		opacity: 1;
+		color: transparent;
+	}
+	.hoverevents &__link:hover {
+		color: transparent;
+	}
+}
