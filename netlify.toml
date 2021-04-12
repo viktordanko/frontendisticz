@@ -16,12 +16,14 @@
   to = "https://forms.gle/YpCbDNyC3vHutJd37"
   status = 200
   force = true
+  headers = {X-From = "Netlify"}
 
 [[redirects]]
   from = "/discord"
   to = "https://www.discord.com/invite/A9sKuZzzya"
   status = 200
   force = true
+  headers = {X-From = "Netlify"}
 
 [[redirects]]
   from = "/*"
