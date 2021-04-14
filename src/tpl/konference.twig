@@ -98,23 +98,49 @@
 								</strong>
 							</p>
 							<p>
-								Červenou nití konference jsou témata, která na frontend přinášejí změnu. Pár inspirací zde dáváme, ale ve výsledku jsme otevření jakékoliv téma splňující přednášce:
+								Červenou nití konference jsou témata, která na frontend přinášejí změnu. Pár inspirací zde dáváme, ale ve výsledku jsme otevření každé zajímavé přednášce:
 							</p>
 							<ul>
 								{% set topics = [
-									{title: 'Změny v nástrojařině (ESbuild, SnowPack…).'},
-									{title: 'Novinky v HTML/CSS/JS, které lze hned použít a lidé je moc neznají.'},
-									{title: 'Novinky v oblasti frameworků (React, Angular, Vue, Bootstrap…) a dalších používaných nástrojů.'},
-									{title: 'Důležitá „soft“ témata: jak ve firmě prosadit čas na vyšší kvalitu kódu, triky pro práci na remote…'},
-									{title: 'Design systémy, typografie a cokoliv leží mezi frontendem a designem.'},
-									{title: 'Rychlost webů a letošní změny v Googlu založené na Web Vitals .'},
+									{title: 'Nové nebo méně známé vlastnosti v CSS a JS, které se dají použít v praxi'},
+									{title: 'Novinky v nástrojařině: Parcel, Rollup, ESbuild, Snowpack, Yarn 2&hellip;'},
+									{title: 'JAMstack: Srovnání CMSek nebo tutoriály jak začít'},
+									{title: 'Web Components v praxi'},
+									{title: 'Novinky (Apollo Client, Svelte…) co to je, proč je to zajímavé'},
+									{title: 'Rychlost webu - případovky z pohledu vývojáře'},
+									{title: 'Novinky v oblasti frameworků a nástrojů (React, Angular, Vue, Express, Next&hellip; ale i Bootstrap a Sass)'},
+									{title: 'VS Code: Tipy na práci pro pokročilejší'},
+									{title: 'Další: Typescript, Docker, Kubernetes, WebGL, CSS Grid, Material UI, Serverless, Cypress, PWA…'},
 								] %}
 								{% for topic in topics %}
 									<li>
-										{{ topic.title }}
+										{{ topic.title|raw }}
 									</li>
 								{% endfor %}
 							</ul>
+
+							<p>
+								Dále chceme lovit i mezi „soft“ tématy:
+							</p>
+							<ul>
+								{% set topics = [
+									{title: 'Prosazování potřeby zvýšení času/rozpočtu na kvalitní vývoj ve firmě'},
+									{title: 'Řešení lpění na zastaralých technologiích, postupech'},
+									{title: 'Jak zlepšit organizaci práce'},
+									{title: 'Duševní stav sebe nebo svého týmu'},
+									{title: 'Design systémy'},
+									{title: 'Typografie'},
+									{title: 'Figma, Sketch, Avocode&hellip; srovnání z pohledu frontendisty'},
+									{title: 'IE11, jak se ho zbavit u našich uživatelů'},
+									{title: 'Další: Přístupnost'},
+								] %}
+								{% for topic in topics %}
+									<li>
+										{{ topic.title|raw }}
+									</li>
+								{% endfor %}
+							</ul>
+
 							<p>
 								<strong>
 									Termíny
