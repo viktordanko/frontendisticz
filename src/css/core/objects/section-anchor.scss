@@ -8,9 +8,14 @@
 		background-position: center 50%;
 		background-repeat: no-repeat;
 		color: transparent;
-		background-size: 1em 0.6em;
+		background-size: 1em 0.5em;
 		opacity: 0;
 		transition: opacity $t;
+	}
+
+	// VARIANTs
+	&__link--program {
+		background-image: url($svgAnchorShareBlue);
 	}
 
 	// STATEs
