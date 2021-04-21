@@ -64,11 +64,13 @@
 
 		<div class="u-bg-tertiary u-color-dark-blue u-pt-xxl">
 			<div class="row-main">
-				<section class="c-gallery u-mb-xxl" id="program">
-					<h2 class="c-gallery__title section-anchor">
-						Na koho se můžete těšit?
-						<a href="#program" class="section-anchor__link section-anchor__link--program"> # </a>
-					</h2>
+				<section class="c-gallery c-gallery--program u-mb-xxl" id="program">
+					<div class="u-mx-auto u-max-width--6-12">
+						<h2 class="c-gallery__title section-anchor">
+							Na koho se můžete těšit?
+							<a href="#program" class="section-anchor__link section-anchor__link--program"> # </a>
+						</h2>
+					</div>
 					<div class="c-gallery__list grid">
 						{% set cards = [
 							{
@@ -98,8 +100,8 @@
 							},
 						] %}
 						{% for card in cards %}
-							<div class="c-gallery__item grid__cell size--6-12@sm size--3-12@xl">
-								<article class="b-card">
+							<div class="c-gallery__item grid__cell grid__cell--eq size--6-12@md size--3-12@xl">
+								<article class="b-card b-card--program">
 									<div class="b-card__inner">
 										<div class="b-card__img">
 											{% if card.imgSrc is defined and card.imgSrc is not empty %}
@@ -110,7 +112,7 @@
 											<h3 class="b-card__name">
 												{{ card.name|raw|nl2br }}
 											</h3>
-											<h4 class="b-card__title b-card__title--program">
+											<h4 class="b-card__title">
 												{{ card.title|raw }}
 											</h4>
 										</div>

@@ -1,11 +1,11 @@
 .section-anchor {
 	position: relative;
-	text-indent: percentage(40/1640);
+	padding-left: 20px;
 	&__link {
 		position: absolute;
 		left: 0;
 		background-image: url($svgAnchorShare);
-		background-position: center 50%;
+		background-position: center 60%;
 		background-repeat: no-repeat;
 		color: transparent;
 		background-size: 1em 0.5em;
@@ -16,6 +16,11 @@
 	// VARIANTs
 	&__link--program {
 		background-image: url($svgAnchorShareBlue);
+	}
+
+	// MQs
+	@media ($mdUp) {
+		padding-left: 30px;
 	}
 
 	// STATEs

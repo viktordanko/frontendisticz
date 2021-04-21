@@ -1,4 +1,5 @@
 .b-card {
+	$b: &;
 	&__inner {
 		position: relative;
 		display: flex;
@@ -18,10 +19,10 @@
 		&::before {
 			content: "";
 			position: absolute;
+			z-index: 1;
 			top: 0;
 			left: 0;
 			height: 100%;
-			z-index: 1;
 			width: 100%;
 			background-image: linear-gradient(
 				to top,
@@ -85,10 +86,25 @@
 	}
 
 	// VARIANTs
-	&__title--program {
-		color: #2c9cdb;
-		font-weight: 700;
-		font-size: 12px;
+	&--program {
+		#{$b}__inner {
+			height: 100%;
+		}
+		#{$b}__content {
+			padding: 16px;
+		}
+		#{$b}__img {
+			flex: 0 0 120px;
+			height: 160px;
+		}
+		#{$b}__name {
+			font-size: 20px;
+		}
+		#{$b}__title {
+			font-size: 14px;
+			color: #2c9cdb;
+			font-weight: 700;
+		}
 	}
 
 	// STATEs
@@ -97,6 +113,15 @@
 	}
 
 	// MQs
+	@media ($smDown) {
+		&--program {
+			#{$b}__name {
+				br {
+					display: none;
+				}
+			}
+		}
+	}
 	@media ($smUp) {
 		&__img {
 			height: 120px;
