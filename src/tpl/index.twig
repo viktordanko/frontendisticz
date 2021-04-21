@@ -92,12 +92,12 @@
 
 		<div class="u-bg-mint u-pt-xxl">
 			<div class="row-main">
-				<section class="c-archive">
-					<h2 class="c-archive__title">
+				<section class="c-gallery c-gallery--overlay">
+					<h2 class="c-gallery__title">
 						Prohlédni si náš archiv, <br>
 						kde je přes 200 záznamů.
 					</h2>
-					<div class="c-archive__list grid">
+					<div class="c-gallery__list grid">
 						{% set cards = [
 							{
 								imgSrc: 'proft.jpg',
@@ -166,7 +166,7 @@
 							},
 						] %}
 						{% for card in cards %}
-							<div class="c-archive__item grid__cell size--6-12 size--3-12@lg">
+							<div class="c-gallery__item grid__cell size--6-12 size--3-12@lg">
 								<article class="b-card">
 									<div class="b-card__inner">
 										<div class="b-card__img">
@@ -195,7 +195,7 @@
 							</div>
 						{% endfor %}
 					</div>
-					<div class="c-archive__overlay">
+					<div class="c-gallery__overlay">
 						<p>
 							<a href="https://www.youtube.com/c/FrontendistiCz/videos" class="btn btn--success" target="_blank" rel="noopener noreferrer">
 								<span class="btn__inner">

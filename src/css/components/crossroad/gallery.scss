@@ -1,13 +1,16 @@
-.c-archive {
+.c-gallery {
+	$c: &;
+	padding: 0 20px;
+	margin: 0 -20px;
 	overflow: hidden;
 	&__title {
 		@extend .u-max-width--9-12;
 		margin-bottom: 48px;
 		margin-left: auto;
+		position: relative;
 	}
 	&__list {
 		position: relative;
-		margin-bottom: -212px;
 	}
 	&__item {
 		border-bottom-width: 32px;
@@ -42,24 +45,35 @@
 		}
 	}
 
+	// VARIANTs
+	&--overlay {
+		#{$c}__list {
+			margin-bottom: -212px;
+		}
+	}
+
 	// MQs
 	@media ($mdUp) {
 		&__title {
 			margin-bottom: 93px;
 		}
-		&__list {
-			margin-bottom: -312px;
-		}
-		&__overlay {
-			padding: 70px 0 76px;
+		&--overlay {
+			#{$c}__list {
+				margin-bottom: -312px;
+			}
+			#{$c}__overlay {
+				padding: 70px 0 76px;
+			}
 		}
 	}
 	@media ($lgUp) {
-		&__list {
-			margin-bottom: -152px;
-		}
 		&__item {
 			border-bottom-width: 62px;
+		}
+		&--overlay {
+			#{$c}__list {
+				margin-bottom: -152px;
+			}
 		}
 	}
 }

@@ -1,5 +1,6 @@
 .section-anchor {
 	position: relative;
+	text-indent: percentage(40/1640);
 	&__link {
 		position: absolute;
 		left: 0;
@@ -7,7 +8,7 @@
 		background-position: center 50%;
 		background-repeat: no-repeat;
 		color: transparent;
-		background-size: 20px 18px;
+		background-size: 1em 0.6em;
 		opacity: 0;
 		transition: opacity $t;
 	}

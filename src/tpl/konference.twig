@@ -62,118 +62,73 @@
 			</div>
 		</div>
 
-		<div class="u-bg-tertiary">
-			<div class="row-main u-pt-xxl">
-				<div class="u-max-width--6-12 u-mx-auto">
-					<section id="call-for-papers" class="s-indent u-mb-xxl">
-						<div class="b-content">
-							<h2 class="section-anchor">
-								Call for papers!
-								<a href="#call-for-papers" class="section-anchor__link">
-									#
-								</a>
-							</h2>
-							<p>
-								Přihlaš nám svou přednášku. S přípravou ti pomůžeme, a&nbsp;vítáme i&nbsp;nováčky. Tady jsou informace, které by tě mohly zajímat:
-							</p>
-							<p>
-								<strong>
-									V jakém formátu přednášky budou?
-								</strong>
-							</p>
-							<p>
-								Máme dva formáty přednášky (plnohodnotná na 15&nbsp;&ndash;&nbsp;20 min nebo jednohubka na 3&nbsp;&ndash;&nbsp;5 minut). Přednášky se budou předtáčet, s čímž ti umíme pomoci.
-							</p>
-							<p>
-								<strong>
-									Pomůže mi s tím někdo?
-								</strong>
-							</p>
-							<p>
-								Ano. Program má na starosti Martin Michálek, který ti bude k dispozici a bude ti pomáhat. Velmi vítáme i ty, kteří zatím ostruhy na přednáškách spíše sbírají.
-							</p>
-							<p>
-								<strong>
-									Jaká témata nás zajímají?
-								</strong>
-							</p>
-							<p>
-								Červenou nití konference jsou témata, která na frontend přinášejí změnu. Pár inspirací zde dáváme, ale ve výsledku jsme otevření každé zajímavé přednášce:
-							</p>
-							<ul>
-								{% set topics = [
-									{title: 'Nové nebo méně známé vlastnosti v CSS a JS, které se dají použít v praxi'},
-									{title: 'Novinky v nástrojařině: Parcel, Rollup, ESbuild, Snowpack, Yarn 2&hellip;'},
-									{title: 'JAMstack: Srovnání CMSek nebo tutoriály jak začít'},
-									{title: 'Web Components v praxi'},
-									{title: 'Novinky (Apollo Client, Svelte…) co to je, proč je to zajímavé'},
-									{title: 'Rychlost webu - případovky z pohledu vývojáře'},
-									{title: 'Novinky v oblasti frameworků a nástrojů (React, Angular, Vue, Express, Next&hellip; ale i Bootstrap a Sass)'},
-									{title: 'VS Code: Tipy na práci pro pokročilejší'},
-									{title: 'Další: Typescript, Docker, Kubernetes, WebGL, CSS Grid, Material UI, Serverless, Cypress, PWA…'},
-								] %}
-								{% for topic in topics %}
-									<li>
-										{{ topic.title|raw }}
-									</li>
-								{% endfor %}
-							</ul>
+		<div class="u-bg-mint u-pt-xxl">
+			<div class="row-main">
+				<section class="c-gallery" id="program">
+					<h2 class="c-gallery__title section-anchor">
+						Na koho se můžete těšit?
+						<a href="#program" class="section-anchor__link"> # </a>
+					</h2>
+					<div class="c-gallery__list grid">
+						{% set cards = [
+							{
+								imgSrc: '',
+								name: 'Borek
+								Bernard',
+								title: 'Vychytávky v Next.js',
+							},
+							{
+								imgSrc: 'matuska.jpg',
+								name: 'Michal
+								Matuška',
+								title: 'Performance',
+							},
+							{
+								imgSrc: 'fridrich.jpg',
+								name: 'Riki
+								Fridrich',
+								title: 'Novinky v nástrojařině',
 
-							<p>
-								Dále chceme lovit i mezi „soft“ tématy:
-							</p>
-							<ul>
-								{% set topics = [
-									{title: 'Prosazování potřeby zvýšení času/rozpočtu na kvalitní vývoj ve firmě'},
-									{title: 'Řešení lpění na zastaralých technologiích, postupech'},
-									{title: 'Jak zlepšit organizaci práce'},
-									{title: 'Duševní stav sebe nebo svého týmu'},
-									{title: 'Design systémy'},
-									{title: 'Typografie'},
-									{title: 'Figma, Sketch, Avocode&hellip; srovnání z pohledu frontendisty'},
-									{title: 'IE11, jak se ho zbavit u našich uživatelů'},
-									{title: 'Další: Přístupnost'},
-								] %}
-								{% for topic in topics %}
-									<li>
-										{{ topic.title|raw }}
-									</li>
-								{% endfor %}
-							</ul>
-
-							<p>
-								<strong>
-									Termíny
-								</strong>
-							</p>
-							<ul>
-								{% set dates = [
-									{title: '6.4. &ndash; call for papers'},
-									{title: '20. 4. &ndash; uzavření call for papers, zveřejnění první části programu'},
-									{title: '10. 5. &ndash; termín pro odevzdání nahraných přednášek nebo prezentací'},
-									{title: '29. 5. &ndash; konference'},
-									{title: '30. 5. &ndash; profit!'},
-								] %}
-								{% for date in dates %}
-									<li>
-										{{ date.title|raw }}
-									</li>
-								{% endfor %}
-							</ul>
-							<p class="u-text-center u-pt-xl u-mb-xl">
-								<a href="https://forms.gle/qUdV4crXiAGaby3U6" class="btn btn--success" target="_blank" rel="noopener noreferrer">
-									<span class="btn__inner">
-										Přihlásit se
-									</span>
-								</a>
-							</p>
-							<p>
-								Potřebuješ více informací? <br>
-								Napiš Martinovi Michálkovi: <a class="u-text-underline" href="mailto:martin.michalek@frontendisti.cz?subject=Call for papers - Konference 2021 | Frontendisti.cz">martin.michalek@frontendisti.cz</a>
-							</p>
-						</div>
-					</section>
-				</div>
+							},
+							{
+								imgSrc: 'zara.jpg',
+								name: 'Ondřej
+								Žára',
+								title: 'Novinky v CSS',
+							},
+							{
+								imgSrc: 'bien.jpg',
+								name: 'Jan
+								Bien',
+								title: 'Tailwind',
+							},
+						] %}
+						{% for card in cards %}
+							<div class="c-gallery__item grid__cell size--6-12 size--3-12@lg">
+								<article class="b-card">
+									<div class="b-card__inner">
+										<div class="b-card__img">
+											<span class="b-card__logo">
+												{% include "@images/bg/logo-green-archive-placeholder.svg" %}
+											</span>
+											<img src="{{ assets.images }}illust/{{ card.imgSrc }}" alt="Profilová fotografie - {{ card.name }}" width="174" height="174" loading="lazy">
+										</div>
+										<div class="b-card__content">
+											<h3 class="b-card__name">
+												{{ card.name|raw|nl2br }}
+											</h3>
+										</div>
+									</div>
+									<div class="b-card__bottom">
+										<h4 class="b-card__title">
+											{{ card.title|raw }}
+										</h4>
+									</div>
+								</article>
+							</div>
+						{% endfor %}
+					</div>
+				</section>
 			</div>
 		</div>
 
