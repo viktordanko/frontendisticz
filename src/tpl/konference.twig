@@ -64,7 +64,7 @@
 
 		<div class="u-bg-mint u-pt-xxl">
 			<div class="row-main">
-				<section class="c-gallery" id="program">
+				<section class="c-gallery u-mb-xxl" id="program">
 					<h2 class="c-gallery__title section-anchor">
 						Na koho se můžete těšit?
 						<a href="#program" class="section-anchor__link"> # </a>
@@ -72,7 +72,7 @@
 					<div class="c-gallery__list grid">
 						{% set cards = [
 							{
-								imgSrc: '',
+								imgSrc: 'bernard.jpg',
 								name: 'Borek
 								Bernard',
 								title: 'Vychytávky v Next.js',
@@ -94,13 +94,7 @@
 								imgSrc: 'zara.jpg',
 								name: 'Ondřej
 								Žára',
-								title: 'Novinky v CSS',
-							},
-							{
-								imgSrc: 'bien.jpg',
-								name: 'Jan
-								Bien',
-								title: 'Tailwind',
+								title: 'Nové CSS vlastnosti a selektory',
 							},
 						] %}
 						{% for card in cards %}
@@ -108,25 +102,28 @@
 								<article class="b-card">
 									<div class="b-card__inner">
 										<div class="b-card__img">
-											<span class="b-card__logo">
-												{% include "@images/bg/logo-green-archive-placeholder.svg" %}
-											</span>
-											<img src="{{ assets.images }}illust/{{ card.imgSrc }}" alt="Profilová fotografie - {{ card.name }}" width="174" height="174" loading="lazy">
+											{% if card.imgSrc is defined and card.imgSrc is not empty %}
+												<img src="{{ assets.images }}illust/{{ card.imgSrc }}" alt="Profilová fotografie - {{ card.name }}" width="174" height="174" loading="lazy">
+											{% endif %}
 										</div>
 										<div class="b-card__content">
 											<h3 class="b-card__name">
 												{{ card.name|raw|nl2br }}
 											</h3>
+											<h4 class="b-card__title b-card__title--program">
+												{{ card.title|raw }}
+											</h4>
 										</div>
-									</div>
-									<div class="b-card__bottom">
-										<h4 class="b-card__title">
-											{{ card.title|raw }}
-										</h4>
 									</div>
 								</article>
 							</div>
 						{% endfor %}
+					</div>
+
+					<div class="u-pt-md u-max-width--6-12 u-mx-auto">
+						<p class="u-text-center">
+							Na přípravě dalšího programu nyní pracujeme. <br> Na první české frontendové konferenci uvidíte téměř 20 přednášek v šesti hodinách času.
+						</p>
 					</div>
 				</section>
 			</div>
