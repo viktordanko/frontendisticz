@@ -28,6 +28,7 @@ var assets = {
 	fonts: basePath.assets + 'fonts/',
 	images: basePath.assets + 'img/',
 	scripts: basePath.assets + 'js/',
+	files: basePath.assets + 'files/',
 	styles: basePath.assets + 'css/',
 };
 
