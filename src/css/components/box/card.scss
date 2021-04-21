@@ -87,8 +87,8 @@
 	// VARIANTs
 	&__title--program {
 		color: #2c9cdb;
-		font-size: 18px;
 		font-weight: 700;
+		font-size: 12px;
 	}
 
 	// STATEs
@@ -100,12 +100,12 @@
 	@media ($smUp) {
 		&__img {
 			height: 120px;
-			flex: 0 1 100px;
+			flex: 0 0 100px;
 		}
 	}
 	@media ($mdUp) {
 		&__img {
-			flex: 0 1 140px;
+			flex: 0 0 140px;
 			width: 140px;
 			height: 140px;
 			padding: 22px;
@@ -137,10 +137,13 @@
 		}
 		&__content,
 		&__img {
-			padding: 32px;
+			padding: 1.32vw;
 		}
 		&__bottom {
 			padding-top: 32px;
+		}
+		&__title--program {
+			// font-size: 14px;
 		}
 	}
 }

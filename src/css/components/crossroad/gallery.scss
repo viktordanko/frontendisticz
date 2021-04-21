@@ -12,9 +12,6 @@
 	&__list {
 		position: relative;
 	}
-	&__item {
-		border-bottom-width: 32px;
-	}
 	&__overlay {
 		position: absolute;
 		bottom: 0;
@@ -50,6 +47,9 @@
 		#{$c}__list {
 			margin-bottom: -212px;
 		}
+		#{$c}__item {
+			border-bottom-width: 32px;
+		}
 	}
 
 	// MQs
@@ -67,12 +67,12 @@
 		}
 	}
 	@media ($lgUp) {
-		&__item {
-			border-bottom-width: 62px;
-		}
 		&--overlay {
 			#{$c}__list {
 				margin-bottom: -152px;
+			}
+			&__item {
+				border-bottom-width: 62px;
 			}
 		}
 	}
