@@ -1,10 +1,20 @@
 .c-organizators {
-	@media ($mdDown) {
+	&__list {
+		margin-bottom: -32px;
+	}
+	&__item {
+		border-bottom-width: 32px;
+	}
+	@media ($smUp) {
 		&__list {
-			margin-bottom: -32px;
+			margin-bottom: -64px;
 		}
 		&__item {
-			border-bottom-width: 32px;
+			border-bottom-width: 64px;
 		}
+	}
+	@media ($xlDown) and ($lgUp) {
+		max-width: 820px;
+		margin: 0 auto;
 	}
 }

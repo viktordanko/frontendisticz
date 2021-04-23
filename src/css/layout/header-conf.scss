@@ -59,7 +59,7 @@ $easeOutQuad: cubic-bezier(0.645, 0.045, 0.355, 1);
 	}
 	&__logo {
 		position: absolute;
-		right: -($gridGutter / 2);
+		right: 0;
 		bottom: 0;
 		z-index: 2;
 		width: 100%;

@@ -1,7 +1,7 @@
 .c-gallery {
 	$c: &;
-	padding: 0 20px;
-	margin: 0 -20px;
+	padding: 0 16px;
+	margin: 0 -16px;
 	overflow: hidden;
 	&__title {
 		@extend .u-max-width--9-12;

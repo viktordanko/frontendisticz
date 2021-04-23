@@ -272,7 +272,7 @@
 					<div class="c-organizators u-mb-md">
 						<ul class="c-organizators__list grid">
 							{%- for dude in dudes -%}
-								<li class="c-organizators__item grid__cell grid__cell--eq size--6-12 size--3-12@md">
+								<li class="c-organizators__item grid__cell grid__cell--eq size--6-12@sm size--3-12@xl">
 									<span class="b-organizator">
 										<span class="b-organizator__img">
 											<img src="{{ assets.images }}illust/{{ dude.imgSrc }}" alt="" width="230" height="185" loading="lazy">
@@ -283,10 +283,8 @@
 										<span class="b-organizator__desc">
 											{{ dude.desc }}
 										</span>
-										<a class="b-organizator__btn btn btn--sm" href="mailto:{{ dude.contact }}">
-											<span class="btn__inner">
-												Kontakt
-											</span>
+										<a class="b-organizator__btn" href="mailto:{{ dude.contact }}">
+											{{ dude.contact }}
 										</a>
 									</span>
 								</li>
