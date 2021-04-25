@@ -20,6 +20,10 @@
 		background: $colorSecondary;
 		opacity: 0.58;
 	}
+	> .row-main {
+		margin: 0;
+		width: 100%;
+	}
 	&__inner {
 		flex: 1 1 100%;
 		text-align: center;
