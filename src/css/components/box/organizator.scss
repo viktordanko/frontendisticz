@@ -18,11 +18,6 @@
 		margin-top: 20px;
 		font-weight: 700;
 		text-align: center;
-		a {
-			-webkit-background-clip: text;
-			background-image: linear-gradient(0deg, $colorText 0%, $colorText 100%);
-			-webkit-text-fill-color: transparent;
-		}
 	}
 	&__desc {
 		display: block;
@@ -30,17 +25,6 @@
 	}
 	&__btn {
 		margin: auto;
-	}
-
-	// STATEs
-	.hoverevents &__title a:hover {
-		background-image: linear-gradient(
-			135deg,
-			#3cdbc0 0%,
-			#3cdbc0 25%,
-			#d673e8 75%,
-			#d673e8 100%
-		);
 	}
 
 	// MQs
@@ -53,6 +37,27 @@
 	@media ($mdUp) {
 		&__btn {
 			font-size: 16px;
+		}
+	}
+
+	// PE
+	@supports (-webkit-text-fill-color: transparent) {
+		&__title {
+			a {
+				-webkit-background-clip: text;
+				background-image: linear-gradient(0deg, $colorText 0%, $colorText 100%);
+				-webkit-text-fill-color: transparent;
+			}
+		}
+		// STATEs
+		.hoverevents &__title a:hover {
+			background-image: linear-gradient(
+				135deg,
+				#3cdbc0 0%,
+				#3cdbc0 25%,
+				#d673e8 75%,
+				#d673e8 100%
+			);
 		}
 	}
 }
