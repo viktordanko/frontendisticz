@@ -1,7 +1,7 @@
 var config = require('./helpers/getConfig.js');
 var isProduction = require('./helpers/isProduction.js');
 
-var {src, dest} = require('gulp');
+var { src, dest } = require('gulp');
 var gulpSass = require('gulp-sass');
 var autoprefixer = require('autoprefixer');
 var postcss = require('gulp-postcss');
@@ -11,9 +11,9 @@ var sassVars = require('gulp-sass-vars');
 var globImporter = require('node-sass-glob-importer');
 
 module.exports = function sass(done) {
-	const {breakpoints = {}, rules = {}, breakpointsVars = {}} = config.mediaQueries;
+	const { breakpoints = {}, rules = {}, breakpointsVars = {} } = config.mediaQueries;
 
-	var onError = function(error) {
+	var onError = function (error) {
 		notify.onError({
 			title: 'Sass error!',
 			message: '<%= error.message %>',
@@ -50,7 +50,9 @@ module.exports = function sass(done) {
 		}, { verbose: false }))
 		.pipe(gulpSass(settings))
 		.pipe(postcss([
-			autoprefixer(),
+			autoprefixer({
+				grid: 'autoplace',
+			}),
 		]))
 		.pipe(dest(config.dest.styles, {
 			sourcemaps: './',
