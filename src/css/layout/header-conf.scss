@@ -32,8 +32,6 @@ $easeOutQuad: cubic-bezier(0.645, 0.045, 0.355, 1);
 	&__inner {
 		position: relative;
 		z-index: 2;
-
-		// min-height: 500px;
 		padding: 45px 0 120px 40px;
 		color: $colorWhite;
 		& > :last-child {
@@ -97,6 +95,11 @@ $easeOutQuad: cubic-bezier(0.645, 0.045, 0.355, 1);
 	}
 
 	// MQs
+	@media ($smDown) {
+		&__inner {
+			padding-left: 20px;
+		}
+	}
 	@media ($lgDown) {
 		&__left {
 			padding-bottom: 40px;
