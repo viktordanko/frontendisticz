@@ -27,7 +27,7 @@
 			width: 100%;
 			z-index: 2;
 			height: 100%;
-			background: linear-gradient(to top, #f5fffd, #66000000);
+			background: linear-gradient(to top, #f5fffd, rgba(#f5fffd, 0.5));
 			pointer-events: none;
 		}
 		p {
