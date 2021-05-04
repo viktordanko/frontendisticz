@@ -13,12 +13,22 @@
 		text-align: center;
 		border-left-width: ($gridGutter * 2);
 		border-bottom-width: ($gridGutter * 2);
-		a {
-			display: block;
+		&:first-of-type {
+			border-bottom-width: ($gridGutter * 6);
 		}
+	}
+	&__link {
+		display: inline-block;
 	}
 
 	// MEDIA QUERIEs
+	@media ($mdDown) {
+		&__item {
+			&:first-of-type :first-child {
+				max-width: 200px;
+			}
+		}
+	}
 	@media ($smDown) {
 		&__item {
 			text-align: center;

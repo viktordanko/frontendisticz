@@ -25,6 +25,13 @@
 								<span>framework, který zvládne každý grafický návrh?</span>',
 							},
 							{
+								imgSrc: 'sumlanska.jpg',
+								name: 'Zuzana Šumlanská',
+								title: 'Rychlost webu:
+								nejčastější chyby, které&nbsp;kazí Web Vitals',
+								company: 'SUPERKODERS'
+							},
+							{
 								imgSrc: 'bernard.jpg',
 								name: 'Borek Bernard',
 								title: 'Pokročilá práce s&nbsp;Next.js:
@@ -33,10 +40,10 @@
 							},
 							{
 								imgSrc: 'fridrich.jpg',
-								name: 'Riki Fridrich',
+								name: 'Riki
+								Fridrich',
 								title: 'ESLint je dobrý sluha,
 								ale ešte lepší pán',
-								company: 'Mall group'
 							},
 							{
 								imgSrc: 'zara-kopie.jpg',
@@ -73,7 +80,7 @@
 								type: 'diskuze',
 								imgSrc: 'hejc.jpg',
 								name: 'Tomáš Hejč',
-								title: 'JAMstack, Headless&nbsp;CMS',
+								title: 'JAMStack, Headless&nbsp;CMS',
 								company: 'SUPERKODERS'
 							},
 							{
@@ -107,13 +114,6 @@
 								name: 'Marek Velas',
 								title: 'Jak řešit duševní stav sebe nebo&nbsp;svého týmu&nbsp;&#8209;&nbsp;základy mindfullnes.',
 								company: 'Edupunk'
-							},
-							{
-								imgSrc: 'sumlanska.jpg',
-								name: 'Zuzana Šumlanská',
-								title: 'Rychlost webu:
-								nejčastější chyby, které&nbsp;kazí Web Vitals',
-								company: 'SUPERKODERS'
 							},
 							{
 								imgSrc: 'pavlicek.jpg',
@@ -229,39 +229,41 @@
 					<section class="c-sponzors u-mb-xl">
 						{% set items = [
 							{
-								imgSrc: 'logo-contentking.svg',
-								title: 'ContentKing',
-								width: '200',
-								height: '50',
-								href: 'https://www.contentkingapp.com/'
-							},
-							{
 								imgSrc: 'kentico-2.png',
 								title: 'Kentico',
-								width: '200',
-								height: '65',
-								href: 'https://www.kentico.com/'
+								width: '220',
+								height: '70',
+								href: 'https://www.kentico.com/',
+								isFullWidth: true
+							},
+							{
+								imgSrc: 'logo-contentking.svg',
+								title: 'ContentKing',
+								width: '150',
+								height: '39',
+								href: 'https://www.contentkingapp.com/',
 							},
 							{
 								imgSrc: 'lmc.svg',
 								title: 'LMC',
-								width: '120',
-								height: '90',
+								width: '90',
+								height: '60',
 								href: 'https://www.lmc.eu/'
 							},
 							{
 								imgSrc: 'pipedrive.png',
 								title: 'Pipedrive',
-								width: '200',
-								height: '70',
+								width: '150',
+								height: '55',
 								href: 'https://www.pipedrive.com/'
 							},
 						] %}
 						{% if items is defined and items is not empty %}
 							<ul class="c-sponzors__list grid grid--center grid--middle">
 								{% for item in items %}
-									<li class="c-sponzors__item grid__cell size--6-12 size--3-12@sm">
-										<a href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
+									<li class="c-sponzors__item grid__cell {% if not item.isFullWidth %}size--4-12@sm{% endif %}
+									">
+										<a class="c-sponzors__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
 											<img src="{{ assets.images }}illust/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
 										</a>
 									</li>
