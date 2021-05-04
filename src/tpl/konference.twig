@@ -6,7 +6,7 @@
 
 	<main role="main" id="main" class="main-conf">
 
-		<div class="u-bg-tertiary u-color-dark-blue u-pt-xxl">
+		<div class="u-bg-secondary u-pt-xxl">
 			<div class="row-main">
 				<section class="c-gallery c-gallery--program u-mb-xxl" id="program">
 					<div class="u-mx-auto u-max-width--6-12">
@@ -15,36 +15,115 @@
 							<a href="#program" class="section-anchor__link section-anchor__link--program"> # </a>
 						</h2>
 					</div>
-					<div class="c-gallery__list grid">
+					<div class="c-gallery__list">
 						{% set cards = [
 							{
-								imgSrc: 'bernard.jpg',
-								name: 'Borek
-								Bernard',
-								title: 'Vychytávky v Next.js',
+								imgSrc: 'bien.jpg',
+								name: 'Jan
+								Bien',
+								title: 'Tailwind CSS:
+								<span>framework, který zvládne každý grafický návrh?</span>',
 							},
 							{
-								imgSrc: 'matuska.jpg',
-								name: 'Michal
-								Matuška',
-								title: 'Performance',
+								imgSrc: 'bernard.jpg',
+								name: 'Borek Bernard',
+								title: 'Pokročilá práce s&nbsp;Next.js:
+								<span>hybridní weby a moderní deployment</span>',
+								company: 'Shoptet'
 							},
 							{
 								imgSrc: 'fridrich.jpg',
-								name: 'Riki
-								Fridrich',
-								title: 'Novinky v nástrojařině',
-
+								name: 'Riki Fridrich',
+								title: 'ESLint je dobrý sluha,
+								ale ešte lepší pán',
+								company: 'Mall group'
 							},
 							{
 								imgSrc: 'zara.jpg',
-								name: 'Ondřej
-								Žára',
-								title: 'Nové CSS vlastnosti a selektory',
+								name: 'Ondřej Žára',
+								title: '10 novinek v CSS',
+								company: 'Seznam'
+							},
+							{
+								imgSrc: 'polesny.jpg',
+								name: 'Ondřej Polesný',
+								title: 'Co to je Vite a proč už nechceme CommonJS?',
+								company: 'Kentico'
+							},
+							{
+								imgSrc: 'danisko.jpg',
+								name: 'Filip Daniško',
+								title: 'Design system pod taktovkou platformy',
+								company: 'Productboard'
+							},
+							{
+								imgSrc: 'dobes.jpg',
+								name: 'Vojtěch Dobeš',
+								title: 'Apollo + výhody s&nbsp;Typescriptem',
+								company: 'ContentKing'
+							},
+							{
+								imgSrc: 'kristof.jpg',
+								name: 'Martin Krištof',
+								title: 'React:
+								Premature Performance Optimalization',
+								company: 'Heureka Group'
+							},
+							{
+								type: 'diskuze',
+								imgSrc: 'hejc.jpg',
+								name: 'Tomáš Hejč',
+								title: 'JAMstack, Headless&nbsp;CMS',
+								company: 'SUPERKODERS'
+							},
+							{
+								imgSrc: 'fucik.jpg',
+								name: 'Karel Fučík',
+								title: 'Runtime validace pro&nbsp;Typescript pomocí io&#8209;ts',
+								company: 'SUPERKODERS'
+							},
+							{
+								imgSrc: 'janosik.jpg',
+								name: 'Ondřej Jánošík',
+								title: 'Vue.js 3:
+								stav ekosystému a&nbsp;výhled do&nbsp;budoucna',
+								company: 'Notum'
+							},
+							{
+								imgSrc: 'vyskocilova.jpg',
+								name: 'Karolína
+								Vyskočilová',
+								title: 'WordPress:
+								Komponenty v&nbsp;Gutenbergu',
+							},
+							{
+								imgSrc: 'vankova.jpg',
+								name: 'Tereza
+								Vaňková',
+								title: 'Den juniorní frontendistky',
+							},
+							{
+								imgSrc: 'velas.jpg',
+								name: 'Marek Velas',
+								title: 'Jak řešit duševní stav sebe nebo&nbsp;svého týmu&nbsp;&#8209;&nbsp;základy mindfullnes.',
+								company: 'Edupunk'
+							},
+							{
+								imgSrc: 'sumlanska.jpg',
+								name: 'Zuzana Šumlanská',
+								title: 'Rychlost webu:
+								nejčastější chyby, které&nbsp;kazí Web Vitals',
+								company: 'SUPERKODERS'
+							},
+							{
+								imgSrc: 'pavlicek.jpg',
+								name: 'Radek
+								Pavlíček',
+								title: '7 (snadných) věcí, které může frontendista udělat pro&nbsp;lepší přístupnost',
 							},
 						] %}
 						{% for card in cards %}
-							<div class="c-gallery__item grid__cell grid__cell--eq size--6-12@md size--3-12@xl">
+							<div class="c-gallery__item">
 								<article class="b-card b-card--program">
 									<div class="b-card__inner">
 										<div class="b-card__img">
@@ -53,12 +132,20 @@
 											{% endif %}
 										</div>
 										<div class="b-card__content">
-											<h3 class="b-card__name">
-												{{ card.name|raw|nl2br }}
+											<p class="b-card__type">
+												{{card.type|default('přednáška')}}
+											</p>
+											<h3 class="b-card__title">
+												{{ card.title|raw|nl2br }}
 											</h3>
-											<h4 class="b-card__title">
-												{{ card.title|raw }}
-											</h4>
+											<p class="b-card__name">
+												{{ card.name|raw|nl2br }}
+											</p>
+											{% if card.company %}
+												<span class="b-card__company">
+													{{ card.company }}
+												</span>
+											{% endif %}
 										</div>
 									</div>
 								</article>
@@ -68,7 +155,7 @@
 
 					<div class="u-pt-md u-max-width--6-12 u-mx-auto">
 						<p class="u-text-center">
-							Na přípravě dalšího programu nyní&nbsp;pracujeme. <br> Na první české frontendové konferenci uvidíte téměř 20&nbsp;přednášek v&nbsp;šesti hodinách času.
+							Na přípravě dalšího programu stále&nbsp;pracujeme. <br> Na první české frontendové konferenci uvidíte téměř 20&nbsp;přednášek v&nbsp;šesti hodinách času.
 						</p>
 					</div>
 				</section>
@@ -117,17 +204,72 @@
 							290 Kč
 						</h2>
 						<p class="b-price__desc">
-							Cena vstupenky bez DPH
+							V ceně vstupenky je záznam konference.
 						</p>
 						<p>
 							<a href="https://form.simpleshop.cz/jArV/buy/" class="btn" target="_blank" rel="noopener noreferrer">
 								<span class="btn__inner">
-									Koupit vstupenku
+									Koupit
 								</span>
 							</a>
 						</p>
 					</div>
 				</section>
+			</div>
+		</div>
+
+		<div class="u-bg-mint u-color-dark-blue">
+			<div class="u-pt-xxl row-main">
+				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
+					<h2>
+						Partneři konference
+					</h2>
+				</div>
+				<div class="u-mx-auto u-max-width--10-12">
+					<section class="c-sponzors u-mb-xl">
+						{% set items = [
+							{
+								imgSrc: 'logo-contentking.svg',
+								title: 'ContentKing',
+								width: '200',
+								height: '50',
+								href: 'https://www.contentkingapp.com/'
+							},
+							{
+								imgSrc: 'kentico-2.png',
+								title: 'Kentico',
+								width: '200',
+								height: '65',
+								href: 'https://www.kentico.com/'
+							},
+							{
+								imgSrc: 'lmc.svg',
+								title: 'LMC',
+								width: '120',
+								height: '90',
+								href: 'https://www.lmc.eu/'
+							},
+							{
+								imgSrc: 'pipedrive.png',
+								title: 'Pipedrive',
+								width: '200',
+								height: '70',
+								href: 'https://www.pipedrive.com/'
+							},
+						] %}
+						{% if items is defined and items is not empty %}
+							<ul class="c-sponzors__list grid grid--center grid--middle">
+								{% for item in items %}
+									<li class="c-sponzors__item grid__cell size--6-12 size--3-12@sm">
+										<a href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
+											<img src="{{ assets.images }}illust/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</section>
+				</div>
 			</div>
 		</div>
 

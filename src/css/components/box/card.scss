@@ -87,23 +87,46 @@
 
 	// VARIANTs
 	&--program {
+		box-shadow: 0 10px 20px 0 rgba(#22010d, 0.1);
+		#{$b}__type {
+			color: $colorRed;
+			font-weight: 500;
+			font-size: 14px;
+			margin-bottom: 5px;
+			letter-spacing: -0.03em;
+		}
 		#{$b}__inner {
+			min-height: 180px;
 			height: 100%;
+			box-shadow: none;
 		}
 		#{$b}__content {
-			padding: 16px;
+			display: flex;
+			flex-direction: column;
+			// background-color: $colorPurpleBg;
+			padding: 25px;
 		}
 		#{$b}__img {
-			flex: 0 0 120px;
-			height: 160px;
-		}
-		#{$b}__name {
-			font-size: 20px;
+			flex: 0 0 150px;
+			height: initial;
+			padding: 0;
 		}
 		#{$b}__title {
-			font-size: 14px;
-			color: #2c9cdb;
+			font-size: 20px;
 			font-weight: 700;
+			font-family: $fontSecondary;
+			& > span {
+				font-size: 18px;
+			}
+		}
+		#{$b}__name {
+			margin-top: auto;
+			font-size: 16px;
+			margin-bottom: 0;
+			line-height: (52/44);
+		}
+		#{$b}__company {
+			font-size: 12px;
 		}
 	}
 
@@ -152,6 +175,11 @@
 		&__content,
 		&__name {
 			font-size: 18px;
+		}
+		&--program {
+			#{$b}__inner {
+				min-height: 250px;
+			}
 		}
 	}
 	@media ($xlUp) {

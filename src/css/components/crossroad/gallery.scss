@@ -51,6 +51,18 @@
 			border-bottom-width: 32px;
 		}
 	}
+	&--program {
+		#{$c}__list {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(380px, 550px));
+			grid-gap: $gridGutter;
+			justify-content: center;
+			max-width: none;
+		}
+		#{$c}__item {
+			border-bottom-width: 32px;
+		}
+	}
 
 	// MQs
 	@media ($mdUp) {
@@ -65,6 +77,11 @@
 				padding: 70px 0 76px;
 			}
 		}
+		&--program {
+			#{$c}__list {
+				grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+			}
+		}
 	}
 	@media ($lgUp) {
 		&--overlay {
@@ -77,11 +94,11 @@
 		}
 	}
 	@media ($mdDown) and ($smUp) {
-		&--program {
-			#{$c}__list {
-				max-width: 80%;
-				margin: 0 auto;
-			}
-		}
+		// &--program {
+		// 	#{$c}__list {
+		// 		max-width: 80%;
+		// 		margin: 0 auto;
+		// 	}
+		// }
 	}
 }

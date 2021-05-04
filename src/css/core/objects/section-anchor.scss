@@ -15,7 +15,7 @@
 
 	// VARIANTs
 	&__link--program {
-		background-image: url($svgAnchorShareBlue);
+		background-image: url($svgAnchorShareRed);
 	}
 
 	// MQs
@@ -24,11 +24,12 @@
 	}
 
 	// STATEs
-	.hoverevents &:hover &__link {
+	.no-hoverevents &__link,
+	&:hover &__link {
 		opacity: 1;
 		color: transparent;
 	}
-	.hoverevents &__link:hover {
+	&__link:hover {
 		color: transparent;
 	}
 }
