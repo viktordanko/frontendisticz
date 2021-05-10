@@ -33,7 +33,7 @@ export const historyPlugin = {
 
 		modal.emmiter.on('modalClose', () => {
 			// clear out any parameters TODO
-			history.pushState({}, document.title, '/konference.html');
+			history.pushState({}, document.title, '/konference');
 		});
 
 		// When user hits back/forward button TODO
