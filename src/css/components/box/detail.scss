@@ -37,6 +37,10 @@
 	&__annot {
 		margin-top: 15px;
 		font-size: 14px;
+		margin-bottom: 0;
+		& > :last-child {
+			margin-bottom: 0;
+		}
 	}
 	&__socials {
 		// text-align: center;
