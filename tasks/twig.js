@@ -23,8 +23,8 @@ module.exports = function twig(done) {
 
 	const time = new Date().getTime();
 	return (
-		src(['*.twig'], {
-			cwd: config.src.templates,
+		src([`${config.src.templates}*.twig`, `${config.src.ajaxTpl}*.twig`], {
+			base: './src/tpl/',
 		})
 			.pipe(
 				plumber({

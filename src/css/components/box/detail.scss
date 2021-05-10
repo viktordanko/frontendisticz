@@ -1,0 +1,77 @@
+.b-detail {
+	position: relative;
+	background-color: $colorPurpleBg;
+	pointer-events: auto;
+	padding: 40px 20px;
+	max-width: 900px;
+	margin: 0 auto;
+	&__wrap {
+		display: flex;
+	}
+	&__img {
+		flex: 0 0 150px;
+		img {
+			object-fit: cover;
+		}
+	}
+	&__socials {
+		margin-top: 20px;
+	}
+	&__content {
+		flex: 1 1 auto;
+	}
+	&__name {
+		font-size: 18px;
+		font-family: $fontPrimary;
+		color: $colorRed;
+		margin-bottom: 5px;
+	}
+	&__company {
+		font-size: 14px;
+		margin-bottom: 20px;
+	}
+	&__title {
+		margin-top: 0;
+		font-weight: 700;
+	}
+	&__annot {
+		margin-top: 15px;
+		font-size: 14px;
+	}
+	&__socials {
+		// text-align: center;
+	}
+	&__social {
+		display: inline-block;
+		.icon-svg {
+			width: 24px;
+		}
+		.icon-svg--link {
+			width: 20px;
+		}
+		& + & {
+			margin-left: 10px;
+		}
+	}
+
+	// STATEs
+	.hoverevents &__social:hover {
+		color: $colorRed;
+	}
+
+	// MQs
+	@media ($mdDown) {
+		&__wrap {
+			flex-wrap: wrap;
+		}
+		&__img {
+			margin: 0 auto;
+			text-align: center;
+		}
+	}
+	@media ($mdUp) {
+		&__content {
+			margin-left: 30px;
+		}
+	}
+}

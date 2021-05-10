@@ -21,22 +21,25 @@
 								imgSrc: 'bien.jpg',
 								name: 'Jan
 								Bien',
+								endpoint: '../ajax/jan-bien.html',
 								title: 'Tailwind CSS:
 								<span>framework, který zvládne každý grafický návrh?</span>',
 							},
 							{
 								imgSrc: 'sumlanska.jpg',
 								name: 'Zuzana Šumlanská',
+								endpoint: '../ajax/zuzana-sumlanska.html',
 								title: 'Rychlost webu:
 								nejčastější chyby, které&nbsp;kazí Web Vitals',
 								company: 'PageSpeed.cz'
 							},
 							{
 								imgSrc: 'bernard.jpg',
-								name: 'Borek Bernard',
+								name: 'Borek
+								Bernard',
 								title: 'Pokročilá práce s&nbsp;Next.js:
 								<span>hybridní weby a moderní deployment</span>',
-								company: 'Shoptet'
+								endpoint: '../ajax/borek-bernard.html',
 							},
 							{
 								imgSrc: 'fridrich.jpg',
@@ -44,24 +47,28 @@
 								Fridrich',
 								title: 'ESLint je dobrý sluha,
 								ale ešte lepší pán',
+								endpoint: '../ajax/riki-fridrich.html',
 							},
 							{
 								imgSrc: 'zara-kopie.jpg',
 								name: 'Ondřej Žára',
 								title: '10 novinek v CSS',
-								company: 'Seznam'
+								company: 'Seznam',
+								endpoint: '../ajax/ondrej-zara.html',
 							},
 							{
-								imgSrc: 'polesny.jpg',
+								imgSrc: 'polesny2.jpg',
 								name: 'Ondřej Polesný',
 								title: 'Co to je Vite a proč už nechceme CommonJS?',
-								company: 'Kentico'
+								company: 'Kentico',
+								endpoint: '../ajax/ondrej-polesny.html',
 							},
 							{
 								imgSrc: 'danisko.jpg',
 								name: 'Filip Daniško',
 								title: 'Design system pod taktovkou platformy',
-								company: 'Productboard'
+								company: 'Productboard',
+								endpoint: '../ajax/filip-danisko.html',
 							},
 							{
 								imgSrc: 'dobes.jpg',
@@ -74,7 +81,8 @@
 								name: 'Martin Krištof',
 								title: 'React:
 								Premature Performance Optimization',
-								company: 'Heureka Group'
+								company: 'Heureka Group',
+								endpoint: '../ajax/martin-kristof.html',
 							},
 							{
 								type: 'diskuze',
@@ -87,7 +95,8 @@
 								imgSrc: 'fucik.jpg',
 								name: 'Karel Fučík',
 								title: 'Runtime validace pro&nbsp;Typescript pomocí io&#8209;ts',
-								company: 'SUPERKODERS'
+								company: 'SUPERKODERS',
+								endpoint: '../ajax/karel-fucik.html',
 							},
 							{
 								imgSrc: 'janosik.jpg',
@@ -113,13 +122,15 @@
 								imgSrc: 'velas.jpg',
 								name: 'Marek Velas',
 								title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
-								company: 'Edupunk'
+								company: 'Edupunk',
+								endpoint: '../ajax/marek-velas.html',
 							},
 							{
 								imgSrc: 'pavlicek.jpg',
 								name: 'Radek
 								Pavlíček',
 								title: '7 (snadných) věcí, které může frontendista udělat pro&nbsp;lepší přístupnost',
+								endpoint: '../ajax/radek-pavlicek.html',
 							},
 						] %}
 						{% for card in cards %}
@@ -138,14 +149,29 @@
 											<h3 class="b-card__title">
 												{{ card.title|raw|nl2br }}
 											</h3>
-											<p class="b-card__name">
-												{{ card.name|raw|nl2br }}
-											</p>
-											{% if card.company %}
-												<span class="b-card__company">
-													{{ card.company }}
-												</span>
-											{% endif %}
+											<div class="b-card__row">
+												<div class="b-card__info">
+													<p class="b-card__name">
+														{{ card.name|raw|nl2br }}
+													</p>
+													{% if card.company %}
+														<span class="b-card__company">
+															{{ card.company }}
+														</span>
+													{% endif %}
+												</div>
+												{% if card.endpoint %}
+													<a href="{{ card.endpoint }}" class="b-card__link link-mask" data-modal='{"medium": "fetch"}'>
+														{% include '@components/core/icon-svg/icon-svg.twig' with {
+															props: {
+																name: 'chevron-right',
+																alt: 'Přejít na detail'
+															}
+														} %}
+													</a>
+												{% endif %}
+
+											</div>
 										</div>
 									</div>
 								</article>
@@ -205,9 +231,6 @@
 						</h2>
 						<p class="b-price__desc">
 							Sobota 29. května 10:00 - 16:30.
-							<span>
-								V ceně vstupenky je záznam konference.
-							</span>
 						</p>
 						<p>
 							<a href="https://form.simpleshop.cz/jArV/buy/" class="btn" target="_blank" rel="noopener noreferrer">
@@ -215,6 +238,10 @@
 									Koupit
 								</span>
 							</a>
+						</p>
+						<p class="u-font-xs">
+							V ceně vstupenky je záznam konference. <br>
+							Výhodné balíčky vstupenek pro firmy a speciální cena pro podporovatele komunity.
 						</p>
 					</div>
 				</section>

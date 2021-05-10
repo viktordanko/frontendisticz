@@ -71,6 +71,13 @@
 			margin-bottom: 0;
 		}
 	}
+	&__row {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		margin-top: auto;
+	}
 	&__highlight {
 		font-weight: 700;
 		color: $colorRed;
@@ -119,7 +126,6 @@
 			}
 		}
 		#{$b}__name {
-			margin-top: auto;
 			font-size: 14px;
 			margin-bottom: 0;
 			line-height: (52/44);
@@ -127,11 +133,32 @@
 		#{$b}__company {
 			font-size: 12px;
 		}
+		#{$b}__link {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex: 0 0 30px;
+			width: 30px;
+			height: 30px;
+			background-color: $colorRed;
+			border-radius: 50%;
+			color: $colorWhite;
+			box-shadow: 0 10px 20px rgba($colorRed, 0.2);
+			transition: box-shadow $t;
+			.icon-svg {
+				width: 8px;
+				left: 1px;
+			}
+		}
 	}
 
 	// STATEs
 	.hoverevents &__name [href]:hover {
 		color: $colorGreenHover;
+	}
+	.hoverevents &__link:hover {
+		color: $colorWhite;
+		box-shadow: 0 10px 20px rgba($colorRed, 0.5);
 	}
 
 	// MQs

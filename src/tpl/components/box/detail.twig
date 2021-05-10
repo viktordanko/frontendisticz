@@ -1,0 +1,80 @@
+{% set props = {
+	imgSrc: props.imgSrc|default(),
+	name: props.name|default(),
+	title: props.title|default(),
+	annot: props.annot|default(),
+	url: props.url|default(),
+	company: props.company|default(),
+	twitter: props.twitter|default(),
+	github: props.github|default(),
+	classes: props.classes|default([]),
+} %}
+{% set blocks = {
+	annot: block('annot') is defined ? block('annot'),
+} %}
+
+{% set classes = [
+	'b-detail',
+]|merge(props.classes)|filter(i => i)|join(' ') %}
+
+<article class="{{ classes }}">
+	<div class="b-detail__wrap">
+		<div class="b-detail__img">
+			<img src="{{ assets.images }}illust/{{ props.imgSrc }}" alt="Profilová fotografie - {{ props.name }}" width="174" height="174" loading="lazy">
+			{% if props.url  or props.twitter or props.github %}
+				<p class="b-detail__socials">
+					{% if props.url %}
+						<a href="{{ props.url }}" class="b-detail__social" target="_blank" rel="noopener noreferrer">
+							{% include '@components/core/icon-svg/icon-svg.twig' with {
+								props: {
+									name: 'link'
+								}
+							} %}
+						</a>
+					{% endif %}
+					{% if props.twitter %}
+						<a class="b-detail__social" href="{{ props.twitter }}" target="_blank" rel="noopener noreferrer">
+							{% include '@components/core/icon-svg/icon-svg.twig' with {
+								props: {
+									name: 'twitter'
+								}
+							} %}
+						</a>
+					{% endif %}
+					{% if props.github %}
+						<a class="b-detail__social" href="{{ props.github }}" target="_blank" rel="noopener noreferrer">
+							{% include '@components/core/icon-svg/icon-svg.twig' with {
+								props: {
+									name: 'github'
+								}
+							} %}
+						</a>
+					{% endif %}
+				</p>
+			{% endif %}
+		</div>
+		<div class="b-detail__content">
+			<h2 class="b-detail__name">
+				{{ props.name }}
+			</h2>
+			{% if props.company %}
+				<p class="b-detail__company">
+					{{ props.company }}
+				</p>
+			{% endif %}
+			<h3 class="b-detail__title">
+				{{ props.title|raw|nl2br }}
+			</h3>
+			{% if blocks.annot %}
+				<div class="b-detail__annot">
+
+					{{ blocks.annot|raw }}
+				</div>
+			{% else %}
+				<p class="b-detail__annot">
+					{{ props.annot|raw }}
+				</p>
+			{% endif %}
+		</div>
+	</div>
+</div>

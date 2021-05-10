@@ -1,0 +1,24 @@
+{% embed "@components/box/detail.twig" with {
+	props: {
+		imgSrc: 'pavlicek.jpg',
+		name: 'Radek
+		Pavlíček',
+		title: '7 (snadných) věcí, které může frontendista udělat pro&nbsp;lepší přístupnost',
+		url: 'https://poslepu.cz/',
+		twitter: 'https://twitter.com/radlicek/',
+	}
+}%}
+
+	{% block annot %}
+		<p>
+			Co si pomyslíte o prodejci, který vám sice umožní dát do košíku zboží za tisíce korun, ale nakonec si je nekoupíte, protože souhlas s obchodními podmínkami nelze potvrdit z klávesnice? Nebo o provozovateli služby pro předávání velkého objemu dat, kterou ale nemůžete použít, protože na to nejdůležitější tlačítko - Vybrat soubor - se nemůžete dostat? Asi nic pěkného, nemám pravdu? :-)
+		</p>
+		<p>
+			Nedostupné a z klávesnice neovladatelné tlačítko, chybějící alternativní textový popisek či absence definice hlavní oblasti stránky v kódu. To jsou jen některé z typických drobností, které mohou uživatelům zkomplikovat práci s jinak dobře vytvořenou webovou stránkou a znemožnit jim na ní udělat to, proč na ni přišli (získat informace, koupit zboží či si objednat nějakou službu).
+		</p>
+		<p>
+			Na přístupnost lze nahlížet z mnoha úhlů pohledu - a já bych Vám v tomto stručném příspěvku rád představil ten, kdy drobnou úpravou kódu můžete bariéru v přístupu k informacím snadno odstranit.
+		</p>
+	{% endblock %}
+
+{% endembed %}

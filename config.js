@@ -12,6 +12,7 @@ var src = {
 	scripts: basePath.src + 'js/',
 	styles: basePath.src + 'css/',
 	templates: basePath.src + 'tpl/',
+	ajaxTpl: basePath.src + 'tpl/ajax/',
 	components: basePath.src + 'tpl/components/',
 	layout: basePath.src + 'tpl/layout/',
 };
