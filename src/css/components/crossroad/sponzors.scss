@@ -40,13 +40,18 @@
 		}
 	}
 	@media ($mdUp) {
-		// padding-bottom: 120px;
+		padding-bottom: 144px;
 		&__title {
 			margin-bottom: 96px;
 		}
 		&__cta::before {
 			width: 400px;
 			height: 400px;
+		}
+
+		// VARIANTs
+		&--main {
+			padding-bottom: 72px;
 		}
 	}
 }
