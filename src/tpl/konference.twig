@@ -256,35 +256,35 @@
 					</h2>
 				</div>
 				<div class="u-mx-auto u-max-width--10-12">
-					<section class="c-sponzors u-mb-xl">
+					<section class="c-sponzors c-sponzors--main u-mb-xxl">
 						{% set items = [
 							{
 								imgSrc: 'kentico-2.png',
 								title: 'Kentico',
-								width: '220',
-								height: '70',
+								width: '250',
+								height: '78',
 								href: 'https://www.kentico.com/',
 								isFullWidth: true
 							},
 							{
 								imgSrc: 'logo-contentking.svg',
 								title: 'ContentKing',
-								width: '150',
-								height: '39',
+								width: '200',
+								height: '52',
 								href: 'https://www.contentkingapp.com/',
 							},
 							{
 								imgSrc: 'lmc.svg',
 								title: 'LMC',
-								width: '90',
-								height: '60',
+								width: '100',
+								height: '76',
 								href: 'https://www.lmc.eu/'
 							},
 							{
 								imgSrc: 'pipedrive.png',
 								title: 'Pipedrive',
-								width: '150',
-								height: '55',
+								width: '200',
+								height: '74',
 								href: 'https://www.pipedrive.com/en/jobs'
 							},
 						] %}
@@ -293,6 +293,49 @@
 								{% for item in items %}
 									<li class="c-sponzors__item grid__cell {% if not item.isFullWidth %}size--4-12@sm{% endif %}
 									">
+										<a class="c-sponzors__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
+											<img src="{{ assets.images }}illust/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</section>
+				</div>
+				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
+					<h2>
+						Mediální partneři
+					</h2>
+				</div>
+				<div class="u-mx-auto u-max-width--10-12">
+					<section class="c-sponzors">
+						{% set items = [
+							{
+								imgSrc: 'logo-vzhuru-dolu.png',
+								title: 'vzhurudolu.cz',
+								width: '100',
+								height: '87',
+								href: 'https://www.vzhurudolu.cz/',
+							},
+							{
+								imgSrc: 'logo-startupjobs.png',
+								title: 'StartupJob',
+								width: '208',
+								height: '30',
+								href: 'https://www.startupjobs.cz/',
+							},
+							{
+								imgSrc: 'logo-zdrojak.png',
+								title: 'Zdroják.cz',
+								width: '160',
+								height: '45',
+								href: 'https://zdrojak.cz/',
+							},
+						] %}
+						{% if items is defined and items is not empty %}
+							<ul class="c-sponzors__list grid grid--center grid--middle">
+								{% for item in items %}
+									<li class="c-sponzors__item grid__cell size--4-12@sm size--3-12@md">
 										<a class="c-sponzors__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
 											<img src="{{ assets.images }}illust/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
 										</a>
