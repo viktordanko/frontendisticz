@@ -7,6 +7,7 @@
 	company: props.company|default(),
 	twitter: props.twitter|default(),
 	github: props.github|default(),
+	linkedin: props.linkedin|default(),
 	classes: props.classes|default([]),
 } %}
 {% set blocks = {
@@ -46,6 +47,15 @@
 							{% include '@components/core/icon-svg/icon-svg.twig' with {
 								props: {
 									name: 'github'
+								}
+							} %}
+						</a>
+					{% endif %}
+					{% if props.linkedin %}
+						<a class="b-detail__social" href="{{ props.linkedin }}" target="_blank" rel="noopener noreferrer">
+							{% include '@components/core/icon-svg/icon-svg.twig' with {
+								props: {
+									name: 'linkedin'
 								}
 							} %}
 						</a>
