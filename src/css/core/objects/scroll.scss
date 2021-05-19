@@ -1,0 +1,15 @@
+.scroll {
+	overflow: hidden;
+	&__track {
+		@include hide-scrollbar();
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+	&__inner {
+		display: table;
+		margin: 0 auto;
+		& > [class*="list"] {
+			overflow-x: auto;
+		}
+	}
+}

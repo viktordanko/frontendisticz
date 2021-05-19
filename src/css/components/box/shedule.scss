@@ -1,64 +1,111 @@
 .b-shedule {
-	padding: 20px;
+	padding: 20px 15px;
 	background-color: $colorWhite;
 	z-index: 2;
 	position: relative;
+	overflow: hidden;
+	&__row {
+		display: flex;
+		&:first-child > .b-shedule__stage {
+			border-bottom: 2px solid $colorWhite;
+		}
+		&:first-child .b-shedule__item {
+			border-width: 2px 2px 2px 0;
+		}
+	}
 	&__list {
 		@extend %reset-ul;
+		display: flex;
 	}
 	&__item {
 		@extend %reset-ul-li;
-		display: flex;
-		& + & {
-			border-top: 2px solid $colorSecondary;
-		}
+		border: 2px solid $colorSecondary;
+		border-width: 0 2px 2px 0;
+		flex: 0 0 200px;
+		width: 200px;
 	}
-	&__col {
+	&__talk {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+		position: relative;
+		text-align: center;
 		padding: 15px 20px 13px;
+	}
+	&__time {
+		display: block;
+		width: 100%;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	&__stage {
+		position: sticky;
+		left: 0;
+		z-index: 2;
+		width: 120px;
+		flex: 0 0 120px;
+		background-color: #22010d;
+		color: $colorWhite;
 		display: flex;
 		align-items: center;
-		flex-wrap: wrap;
-		&:first-child {
-			width: 12%;
-			font-weight: 600;
-			color: $colorRedHover;
-			justify-content: center;
-		}
-		&:nth-child(2) {
-			width: 20%;
-		}
-		&:nth-child(3) {
-			width: 60%;
-		}
-		& > :last-child {
+		justify-content: center;
+		padding: 20px 15px;
+		& > * {
 			margin-bottom: 0;
 		}
 	}
-	&__title {
+	&__time {
+		display: block;
+		font-size: 14px;
+		color: $colorRed;
+		font-weight: normal;
+		font-weight: 500;
+		letter-spacing: -0.03em;
+	}
+	&__inner {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
 		flex: 1 1 100%;
+		text-align: center;
+	}
+	&__link {
+		font-size: 16px;
 		font-weight: 600;
 		margin-bottom: 0;
 	}
-	&__text {
-		font-size: 16px;
-		line-height: 1.8;
-		flex: 1 1 100%;
-		margin-top: 10px;
-	}
 	&__name {
-		flex: 1 1 100%;
-		margin-bottom: 10px;
-	}
-	&__company {
 		font-size: 14px;
-		flex: 1 1 100%;
+		margin-top: 10px;
+		text-align: center;
+		display: block;
 	}
 
 	// STATEs
 	&__item.is-highlighted {
-		background-color: rgba($colorRed, 0.1);
+		background-color: $colorPurpleBg;
 	}
-	.hoverevents &__title[href]:hover {
+	[data-whatintent="keyboard"] &__link:focus {
+		box-shadow: 0 0 3px $colorRedHover;
+	}
+	.hoverevents &__link:hover {
 		color: $colorRedHover;
+	}
+
+	// MQs
+	@media ($mdDown) {
+		margin: 0 -15px;
+	}
+	@media ($mdUp) {
+		padding: 20px;
+		&__item {
+			flex: 0 0 250px;
+			width: 250px;
+		}
+		&__stage {
+			width: 240px;
+			flex: 0 0 240px;
+		}
 	}
 }
