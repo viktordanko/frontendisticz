@@ -399,53 +399,191 @@
 			</div>
 		</div>
 
-		{#
-			<section class="s-newsletter">
-				<div class="b-newsletter">
-					<div class="b-newsletter__inner">
-						<div class="row-main">
-							<div class="u-max-width--4-12 u-mx-auto">
-								<form
-									method="POST"
-									action="/api/subscribe-from-conf"
-									class="f-newsletter u-mb-md"
-									data-handle-conf-submit
-								>
-									<input type="hidden" name="guid_mailing_list" value="57cd5588-4439-40ea-9f42-061d32322a33;">
-									<h2 class="f-newsletter__title">
-										Přihlaš se do <span class="u-color-red">{F}newsletteru</span> <br>
-										a nic ti neuteče!
-									</h2>
-									<p class="inp-fix">
-										<label for="email" class="inp-label u-vhide">
-											tvůj e-mail
-										</label>
-										<input type="email" name="email" id="email" class="f-newsletter__inp inp-text" placeholder="tvůj e-mail" autocomplete="e-mail" required>
+
+		<section class="s-shedule s-indent" id="shedule">
+			<div class="row-main">
+				<div class="u-mx-auto u-max-width--6-12">
+					<h2 class="s-shedule__title section-anchor">
+						Harmonogram
+						<a href="#shedule" class="section-anchor__link section-anchor__link--shedule"> # </a>
+					</h2>
+				</div>
+				<div class="u-max-width--10-12 u-mx-auto">
+					<h3 class="u-color-white">
+						Hlavní stage
+					</h3>
+					<div class="b-shedule">
+						<div class="b-shedule__list">
+							{% set items = [
+								{
+									time: '10:00',
+									name: 'Martin Michálek',
+									title: 'Keynote',
+								},
+								{
+									time: '10:15',
+									name: 'Ondřej Polesný',
+									company: 'Kentico',
+									title: 'Co to je Vite a proč už nechceme CommonJS?',
+									text: 'CommonJS a ESM jsou formáty ve kterých píšeme JS kód nebo do kterých svůj kód transpilujeme. V této přednášce vysvětlím jejich základní rozdíly, ukážu jakou mají podporu napříč prohlížeči a představím Vite - bundler, který minimalizuje cold dev starty a umí bleskurychlé HMR.'
+								},
+								{
+									time: '10:30',
+									name: 'Riki Fridrich',
+									title: 'ESLint je dobrý sluha, ale ešte lepší pán',
+									text: 'Ako napísať vlastné ESLint pravidlo s autofixom. Môže vám diktovať, ako má byť kód nielen formátovaný, ale aj štruktúrovaný. Ukážem vám ako si vyrobiť vlastné pravidlo, ktorým vás bude ESLint bičovať a vy si to aj napriek tomu budete užívať.'
+								},
+								{
+									isHighlighted: true,
+									time: '11:55',
+									title: 'Přestávka',
+								},
+								{
+									time: '11:00',
+									name: 'Filip Daniško',
+									company: 'ProductBoard',
+									title: 'Jak škálujeme design systém v&nbsp;Productboardu',
+									text: 'Pojďme si říct, jak stavíme design system a automatizací si pomáháme při jeho adopci. Budeme&nbsp;se bavit o&nbsp;tom, jak jsme uklidili komponenty uvnitř naši codebase, jak se snažíme zabránit zvyšování technického UI dluhu nebo co měříme, abychom spočítali adopci.',
+								},
+								{
+									time: '11:20',
+									name: 'Karolína Vyskočilová',
+									title: 'WordPress: Komponenty v Gutenbergu',
+									text: 'V tomto příspěvku se podíváme jak přistupovat ke kódování designu obsahu, který bude editovatelný v rámci Gutenberg editoru. Možná editor nepoužíváte, ale přesto jsou věci, které byste jako frontendisti měli vědět, aby HTML, aby zapadlo do logiky i UX v editoru a uživatelům komponenty dobře používaly.',
+								},
+								{
+									time: '11:30',
+									name: 'Marek Velas',
+									company: 'EduPunk',
+									title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
+									text: 'Společně si připomeneme fungující pravidla, která pomáhají při udržování duševní pohody na home office. Obsahem přednášky bude sada tipů a triků pro překonání izolace a nastavení organizace vývojářské práce.',
+								},
+								{
+									time: '11:40',
+									name: 'Tereza Vaňková',
+									company: 'ReactGirls',
+									title: 'Den juniorní frontendistky',
+									text: 'Podíváme se na to, jak vypadá den juniorní frontend developerky, projdeme si tipy na&nbsp;produktivitu, sebevzdělávání a řešení nefungujícího kódu pro juniory a tipy na správný přístup k mentorování pro zkušenější programátory.',
+								},
+								{
+									time: '11:50',
+									text: '20 000 židů pod mořem',
+								},
+								{
+									isHighlighted: true,
+									time: '12:00',
+									title: 'Obědová pauza',
+								},
+								{
+									time: '12:30',
+									name: 'Zuzana Šumlanská',
+									company: 'PageSpeed.cz',
+									title: 'Rychlost webu:
+									nejčastější chyby, které&nbsp;kazí Web Vitals',
+									text: 'Audity rychlosti webů pro PageSpeed.cz nám jsou zdrojem zajímavého pohledu na vývoj webů od různých týmů. Jaké jsou nejčastější a nejzajímavější chyby, na které jsme narazili a a jak je opravit?',
+								},
+								{
+									time: '12:55',
+									name: 'Radek Pavlíček',
+									title: 'Přístupnost: mnohdy stačí málo',
+									text: 'Na přístupnost lze nahlížet z mnoha úhlů pohledu - a já bych Vám v tomto stručném příspěvku rád představil ten, kdy drobnou úpravou kódu můžete bariéru v přístupu k informacím snadno odstranit.',
+								},
+								{
+									time: '13:05',
+									name: 'Jan Bien',
+									title: 'Tailwind CSS: framework, který zvládne každý grafický návrh?',
+									text: 'CSS frameworky postavené na utility třídách – na první pohled nezajímavé a nudné. Oproti komponentovým frameworkům jsou ale daleko univerzálnější a zvládnou širší paletu grafik. Pojďme se podrobněji podívat na jeden z nich: Tailwind CSS.',
+								},
+								{
+									time: '13:30',
+									name: 'Martin Krištof',
+									title: 'React: Premature Performance Optimization',
+									company: 'Heureka Group',
+									text: 'O React Hooks je toho napsáno hodně, ale málo se dozvídáme o tom, jak ve skutečnosti správně optimalizovat a profilovat React komponenty. Spousta vývojářů se drží ESLintu a chybně používá React Hooks. Zejména se dopouští chybné předčasné optimalizace. Divákům poradím způsoby, jak tomu předejít a jak vůbec zjistit, že je někde performance problém.',
+								},
+								{
+									time: '13:55',
+									name: 'Ondřej Jánošík',
+									title: 'Vue.js 3: stav ekosystému a&nbsp;výhled do&nbsp;budoucna',
+									company: 'Notum',
+									text: 'Ondřej z komunity „Vue.js CZ/SK“ nám ukáže novinky ze světa Vue.js, podívá se na nejpoužívanější knihovny s podporou nové verze. Zajímá vás, co je v ekosystému Vue.js v plánu dále? Proberou se témata jako Vite, Script setup & Ref sugar, Style vars nebo Vuex 5.'
+								},
+								{
+									isHighlighted: true,
+									time: '14:10',
+									title: 'Přestávka',
+								},
+								{
+									time: '14:30',
+									name: 'Borek Bernard',
+									title: 'Pokročilá práce s&nbsp;Next.js: hybridní weby a moderní deployment',
+									text: 'Next.js podporuje několik módů fungování, od plně serverového (ala PHP) po statické generování (Jamstack!) přes celou řadu hybridních módů uprostřed. Ukážeme si, jak je využít ve prospěch skvělého UX webu nebo aplikace, a nakonec vše deployneme na Vercel, moderní hosting platformu.',
+								},
+								{
+									time: '14:50',
+									name: 'Tomáš Hejč',
+									title: 'Diskuze: JAMstack & headless CMS ',
+								},
+								{
+									time: '15:20',
+									name: 'Karel Fučík',
+									title: 'Runtime validace pro Typescript pomocí io-ts',
+									company: 'SUPERKODERS',
+									text: 'K čemu je dobrá runtime validace typů a jak to souvisí s Typescriptem. Vysvětlení rozdílů mezi statickou typovou kontrolou a runtime validací. Ukázka knihovny io-ts pro runtimeovou typovou kontrolu a validaci typů v typescriptovém prostředí.',
+								},
+								{
+									time: '15:35',
+									name: 'Vojtěch Dobeš',
+									title: 'Apollo + výhody s&nbsp;Typescriptem',
+									company: 'ContentKing',
+									text: 'V ContentKingu máme rozsáhlou React aplikaci, kterou převádíme na GraphQL a Typescript pro lepší stabilitu. Apollo s generovanými query hooky je extra vychytávka, díky které je převod a následný další vývoj snadný a příjemný. Podíváme se na GraphQL API formát, Apollo jako knihovnu pro komunikaci s API,  propojení s TypeScriptem jako země mléka a strdí. Hlavní přínos? Kombinace těchto technologií umožňuje vyvíjet rychle a bezpečně tak, že to kryje záda.',
+								},
+								{
+									time: '15:50',
+									name: 'Ondřej Žára',
+									title: '10 novinek v CSS',
+									company: 'Seznam',
+									text: 'Není snadné vyznat se ve všech těch nových vlastnostech, hodnotách, selektorech a modulech, které do CSS přibývají každým měsícem i rokem. Pojďme se společně podívat na desítku nových nebo opomíjených konceptů v CSS, které mohou obohatit arzenál každého webového vývojáře. Podpora čtečky obrazovky zapnuta.',
+								},
+							] %}
+							{% for item in items %}
+							<div class="b-shedule__item {% if item.isHighlighted == true %}is-highlighted{% endif %}">
+								<div class="b-shedule__col">
+									{{ item.time }}
+								</div>
+								<div class="b-shedule__col">
+									<p class="b-shedule__name">
+										{{ item.name }}
 									</p>
-									<p>
-										<button type="submit" name="subscribe" class="f-newsletter__btn btn btn--danger btn--loader" data-submit-button>
-											<span class="btn__inner">
-												<span class="btn__text">
-													Přihlásit
-												</span>
-												<span class="f-newsletter__icon checkmark">
-													<svg xmlns="http://www.w3.org/2000/svg" width="30" viewBox="0 0 100 70">
-														<polyline points="4 30 33 66 96 4" class="checkmark__line" />
-													</svg>
-												</span>
-											</span>
-										</button>
+									<p class="b-shedule__company">
+										{{ item.company }}
 									</p>
-									<p class="f-newsletter__hint">
-										Hotovo! Zkontroluj svoji mailovku 📨
-									</p>
-								</form>
+								</div>
+								<div class="b-shedule__col">
+									{% if item.title %}
+										{% if item.linkHref %}
+											<a href="{{ item.linkHref }}" class="b-shedule__title">
+												{{ item.title|raw }}
+											</a>
+											{% else %}
+												<p class="b-shedule__title">
+													{{ item.title|raw }}
+												</p>
+										{% endif %}
+									{% endif %}
+									<!-- {% if item.text %}
+										<p class="b-shedule__text">
+											{{ item.text|raw }}
+										</p>
+									{% endif %} -->
+								</div>
 							</div>
+						{% endfor %}
 						</div>
 					</div>
 				</div>
-			</section>
-		 #}
+			</div>
+		</section>
 
 		<div class="u-bg-default">
 			<div class="row-main u-pt-xxl">
