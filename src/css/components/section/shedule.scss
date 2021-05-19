@@ -2,9 +2,9 @@
 	position: relative;
 	padding: 80px 0 60px;
 	background-color: #22010d;
-	background-image: url($imgPath + "bg/newsletter-sm.jpg");
-	background-position: center center;
-	background-repeat: no-repeat;
+	// background-image: url($imgPath + "bg/newsletter-sm.jpg");
+	// background-position: center center;
+	// background-repeat: no-repeat;
 	// background-size: cover;
 	transition: transform 0.23s ease-in-out;
 	&::before {
@@ -36,10 +36,10 @@
 
 	// MQs
 	@media ($mdUp) {
-		background-image: url($imgPath + "bg/newsletter-md.jpg");
+		// background-image: url($imgPath + "bg/newsletter-md.jpg");
 	}
 	@media ($lgUp) {
-		background-image: url($imgPath + "bg/newsletter-lg.jpg");
+		// background-image: url($imgPath + "bg/newsletter-lg.jpg");
 		&__wrap {
 			display: grid;
 			grid-template-columns: 1fr 320px;
