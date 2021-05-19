@@ -125,7 +125,7 @@
 							{
 								imgSrc: 'velas.jpg',
 								name: 'Marek Velas',
-								title: 'Kódím doma a začíná mi hrabat (základy&nbsp;mindfulness)',
+								title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
 								company: 'Edupunk',
 								endpoint: '../ajax/marek-velas.html',
 							},
@@ -402,34 +402,36 @@
 		</div>
 
 
-		<section class="s-shedule" id="shedule">
+		<section class="s-shedule s-indent" id="shedule">
 			<div class="row-main">
 				<div class="u-mx-auto u-max-width--6-12">
 					<h2 class="s-shedule__title section-anchor">
 						Harmonogram
-						<a href="#shedule" class="section-anchor__link section-anchor__link--program"> # </a>
+						<a href="#shedule" class="section-anchor__link section-anchor__link--shedule"> # </a>
 					</h2>
 				</div>
 				<div class="u-max-width--10-12 u-mx-auto">
+					<h3 class="u-color-white">
+						Hlavní stage
+					</h3>
 					<div class="b-shedule">
 						<div class="b-shedule__list">
 							{% set items = [
 								{
 									time: '10:00',
+									name: 'Martin Michálek',
 									title: 'Keynote',
 								},
 								{
 									time: '10:15',
 									name: 'Ondřej Polesný',
 									company: 'Kentico',
-									endpoint: '../ajax/ondrej-polesny.html',
 									title: 'Co to je Vite a proč už nechceme CommonJS?',
 									text: 'CommonJS a ESM jsou formáty ve kterých píšeme JS kód nebo do kterých svůj kód transpilujeme. V této přednášce vysvětlím jejich základní rozdíly, ukážu jakou mají podporu napříč prohlížeči a představím Vite - bundler, který minimalizuje cold dev starty a umí bleskurychlé HMR.'
 								},
 								{
 									time: '10:30',
 									name: 'Riki Fridrich',
-									endpoint: '../ajax/riki-fridrich.html',
 									title: 'ESLint je dobrý sluha, ale ešte lepší pán',
 									text: 'Ako napísať vlastné ESLint pravidlo s autofixom. Môže vám diktovať, ako má byť kód nielen formátovaný, ale aj štruktúrovaný. Ukážem vám ako si vyrobiť vlastné pravidlo, ktorým vás bude ESLint bičovať a vy si to aj napriek tomu budete užívať.'
 								},
@@ -441,22 +443,19 @@
 								{
 									time: '11:00',
 									name: 'Filip Daniško',
-									endpoint: '../ajax/filip-danisko.html',
 									company: 'ProductBoard',
-									title: 'Jak škálujeme design&nbsp;systém v&nbsp;Productboardu',
+									title: 'Jak škálujeme design systém v&nbsp;Productboardu',
 									text: 'Pojďme si říct, jak stavíme design system a automatizací si pomáháme při jeho adopci. Budeme&nbsp;se bavit o&nbsp;tom, jak jsme uklidili komponenty uvnitř naši codebase, jak se snažíme zabránit zvyšování technického UI dluhu nebo co měříme, abychom spočítali adopci.',
 								},
 								{
 									time: '11:20',
 									name: 'Karolína Vyskočilová',
-									endpoint: '../ajax/karolina-vyskocilova.html',
-									title: 'WordPress: Komponenty v&nbsp;Gutenbergu',
+									title: 'WordPress: Komponenty v Gutenbergu',
 									text: 'V tomto příspěvku se podíváme jak přistupovat ke kódování designu obsahu, který bude editovatelný v rámci Gutenberg editoru. Možná editor nepoužíváte, ale přesto jsou věci, které byste jako frontendisti měli vědět, aby HTML, aby zapadlo do logiky i UX v editoru a uživatelům komponenty dobře používaly.',
 								},
 								{
 									time: '11:30',
 									name: 'Marek Velas',
-									endpoint: '../ajax/marek-velas.html',
 									company: 'EduPunk',
 									title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
 									text: 'Společně si připomeneme fungující pravidla, která pomáhají při udržování duševní pohody na home office. Obsahem přednášky bude sada tipů a triků pro překonání izolace a nastavení organizace vývojářské práce.',
@@ -464,7 +463,6 @@
 								{
 									time: '11:40',
 									name: 'Tereza Vaňková',
-									endpoint: '../ajax/tereza-vankova.html',
 									company: 'ReactGirls',
 									title: 'Den juniorní frontendistky',
 									text: 'Podíváme se na to, jak vypadá den juniorní frontend developerky, projdeme si tipy na&nbsp;produktivitu, sebevzdělávání a řešení nefungujícího kódu pro juniory a tipy na správný přístup k mentorování pro zkušenější programátory.',
@@ -481,7 +479,6 @@
 								{
 									time: '12:30',
 									name: 'Zuzana Šumlanská',
-									endpoint: '../ajax/zuzana-sumlanska.html',
 									company: 'PageSpeed.cz',
 									title: 'Rychlost webu:
 									nejčastější chyby, které&nbsp;kazí Web Vitals',
@@ -490,21 +487,18 @@
 								{
 									time: '12:55',
 									name: 'Radek Pavlíček',
-									endpoint: '../ajax/radek-pavlicek.html',
 									title: 'Přístupnost: mnohdy stačí málo',
 									text: 'Na přístupnost lze nahlížet z mnoha úhlů pohledu - a já bych Vám v tomto stručném příspěvku rád představil ten, kdy drobnou úpravou kódu můžete bariéru v přístupu k informacím snadno odstranit.',
 								},
 								{
 									time: '13:05',
 									name: 'Jan Bien',
-									endpoint: '../ajax/jan-bien.html',
-									title: 'Tailwind CSS: framework, který zvládne každý grafický&nbsp;návrh?',
+									title: 'Tailwind CSS: framework, který zvládne každý grafický návrh?',
 									text: 'CSS frameworky postavené na utility třídách – na první pohled nezajímavé a nudné. Oproti komponentovým frameworkům jsou ale daleko univerzálnější a zvládnou širší paletu grafik. Pojďme se podrobněji podívat na jeden z nich: Tailwind CSS.',
 								},
 								{
 									time: '13:30',
 									name: 'Martin Krištof',
-									endpoint: '../ajax/martin-kristof.html',
 									title: 'React: Premature Performance Optimization',
 									company: 'Heureka Group',
 									text: 'O React Hooks je toho napsáno hodně, ale málo se dozvídáme o tom, jak ve skutečnosti správně optimalizovat a profilovat React komponenty. Spousta vývojářů se drží ESLintu a chybně používá React Hooks. Zejména se dopouští chybné předčasné optimalizace. Divákům poradím způsoby, jak tomu předejít a jak vůbec zjistit, že je někde performance problém.',
@@ -512,8 +506,7 @@
 								{
 									time: '13:55',
 									name: 'Ondřej Jánošík',
-									endpoint: '../ajax/ondrej-janosik.html',
-									title: 'Vue.js 3: stav&nbsp;ekosystému a&nbsp;výhled do&nbsp;budoucna',
+									title: 'Vue.js 3: stav ekosystému a&nbsp;výhled do&nbsp;budoucna',
 									company: 'Notum',
 									text: 'Ondřej z komunity „Vue.js CZ/SK“ nám ukáže novinky ze světa Vue.js, podívá se na nejpoužívanější knihovny s podporou nové verze. Zajímá vás, co je v ekosystému Vue.js v plánu dále? Proberou se témata jako Vite, Script setup & Ref sugar, Style vars nebo Vuex 5.'
 								},
@@ -525,7 +518,6 @@
 								{
 									time: '14:30',
 									name: 'Borek Bernard',
-									endpoint: '../ajax/borek-bernard.html',
 									title: 'Pokročilá práce s&nbsp;Next.js: hybridní weby a moderní deployment',
 									text: 'Next.js podporuje několik módů fungování, od plně serverového (ala PHP) po statické generování (Jamstack!) přes celou řadu hybridních módů uprostřed. Ukážeme si, jak je využít ve prospěch skvělého UX webu nebo aplikace, a nakonec vše deployneme na Vercel, moderní hosting platformu.',
 								},
@@ -537,15 +529,13 @@
 								{
 									time: '15:20',
 									name: 'Karel Fučík',
-									endpoint: '../ajax/karel-fucik.html',
-									title: 'Runtime validace pro&nbsp;Typescript pomocí io-ts',
+									title: 'Runtime validace pro Typescript pomocí io-ts',
 									company: 'SUPERKODERS',
 									text: 'K čemu je dobrá runtime validace typů a jak to souvisí s Typescriptem. Vysvětlení rozdílů mezi statickou typovou kontrolou a runtime validací. Ukázka knihovny io-ts pro runtimeovou typovou kontrolu a validaci typů v typescriptovém prostředí.',
 								},
 								{
 									time: '15:35',
 									name: 'Vojtěch Dobeš',
-									endpoint: '../ajax/vojtech-dobes.html',
 									title: 'Apollo + výhody s&nbsp;Typescriptem',
 									company: 'ContentKing',
 									text: 'V ContentKingu máme rozsáhlou React aplikaci, kterou převádíme na GraphQL a Typescript pro lepší stabilitu. Apollo s generovanými query hooky je extra vychytávka, díky které je převod a následný další vývoj snadný a příjemný. Podíváme se na GraphQL API formát, Apollo jako knihovnu pro komunikaci s API,  propojení s TypeScriptem jako země mléka a strdí. Hlavní přínos? Kombinace těchto technologií umožňuje vyvíjet rychle a bezpečně tak, že to kryje záda.',
@@ -553,77 +543,44 @@
 								{
 									time: '15:50',
 									name: 'Ondřej Žára',
-									endpoint: '../ajax/ondrej-zara.html',
 									title: '10 novinek v CSS',
 									company: 'Seznam',
 									text: 'Není snadné vyznat se ve všech těch nových vlastnostech, hodnotách, selektorech a modulech, které do CSS přibývají každým měsícem i rokem. Pojďme se společně podívat na desítku nových nebo opomíjených konceptů v CSS, které mohou obohatit arzenál každého webového vývojáře. Podpora čtečky obrazovky zapnuta.',
 								},
 							] %}
-							<div class="scroll">
-								<div class="scroll__track">
-									<div class="scroll__inner">
-										<div class="b-shedule__row">
-											<div class="b-shedule__stage">
-												<h3>
-													Hlavní stage
-												</h3>
-											</div>
-											<div class="b-shedule__list">
-												{% for item in items %}
-													<div class="b-shedule__item{% if item.isHighlighted == true %} is-highlighted{% endif %}">
-														<div class="b-shedule__talk">
-															<span class="b-shedule__time">
-																{{ item.time }}
-															</span>
-															<div class="b-shedule__inner">
-																{% if item.endpoint %}
-																	<a href="{{ item.endpoint }}" class="b-shedule__link link-mask" data-modal='{"medium": "fetch"}'>
-																		{{ item.title|raw }}
-																	</a>
-																	{% else %}
-																		{{ item.title|raw }}
-																{% endif %}
-																<span class="b-shedule__name">
-																	{{ item.name|raw }}
-																</span>
-															</div>
-														</div>
-													</div>
-												{% endfor %}
-											</div>
-										</div>
-										<div class="b-shedule__row">
-											<div class="b-shedule__stage">
-												<h3>
-													Off stage
-												</h3>
-											</div>
-											<div class="b-shedule__list">
-												{% set subitems = [
-													{},{},{},{isHighlighted: true},
-													{},{},{},{},{},{isHighlighted: true,},
-													{},{},{},
-													{
-														title: 'Tailwind podcast'
-													},
-													{},{isHighlighted: true,},{},{},{},
-													{},{},
-												] %}
-												{% for item in subitems %}
-													<div class="b-shedule__item{% if item.isHighlighted == true %} is-highlighted{% endif %}">
-														<div class="b-shedule__talk">
-															<span class="b-shedule__time">
-																{{ item.time }}
-															</span>
-															{{ item.title|raw }}
-														</div>
-													</div>
-												{% endfor %}
-											</div>
-										</div>
-									</div>
+							{% for item in items %}
+							<div class="b-shedule__item {% if item.isHighlighted == true %}is-highlighted{% endif %}">
+								<div class="b-shedule__col">
+									{{ item.time }}
+								</div>
+								<div class="b-shedule__col">
+									<p class="b-shedule__name">
+										{{ item.name }}
+									</p>
+									<p class="b-shedule__company">
+										{{ item.company }}
+									</p>
+								</div>
+								<div class="b-shedule__col">
+									{% if item.title %}
+										{% if item.linkHref %}
+											<a href="{{ item.linkHref }}" class="b-shedule__title">
+												{{ item.title|raw }}
+											</a>
+											{% else %}
+												<p class="b-shedule__title">
+													{{ item.title|raw }}
+												</p>
+										{% endif %}
+									{% endif %}
+									<!-- {% if item.text %}
+										<p class="b-shedule__text">
+											{{ item.text|raw }}
+										</p>
+									{% endif %} -->
 								</div>
 							</div>
+						{% endfor %}
 						</div>
 					</div>
 				</div>
