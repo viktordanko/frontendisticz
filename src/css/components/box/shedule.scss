@@ -1,5 +1,4 @@
 .b-shedule {
-	padding: 20px;
 	background-color: $colorWhite;
 	z-index: 2;
 	position: relative;
@@ -8,57 +7,56 @@
 	}
 	&__item {
 		@extend %reset-ul-li;
-		display: flex;
 		& + & {
 			border-top: 2px solid $colorSecondary;
 		}
 	}
 	&__col {
 		padding: 15px 20px 13px;
-		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
+		vertical-align: middle;
+		border: none;
+		font-size: 16px;
 		&:first-child {
-			width: 12%;
+			width: 100px;
+			flex: 0 0 100px;
 			font-weight: 600;
 			color: $colorRedHover;
 			justify-content: center;
-		}
-		&:nth-child(2) {
-			width: 20%;
-		}
-		&:nth-child(3) {
-			width: 60%;
 		}
 		& > :last-child {
 			margin-bottom: 0;
 		}
 	}
 	&__title {
-		flex: 1 1 100%;
-		font-weight: 600;
 		margin-bottom: 0;
+	}
+	&__title[href] {
+		font-weight: 600;
 	}
 	&__text {
 		font-size: 16px;
 		line-height: 1.8;
-		flex: 1 1 100%;
 		margin-top: 10px;
 	}
 	&__name {
+		margin-bottom: 0;
 		flex: 1 1 100%;
-		margin-bottom: 10px;
 	}
 	&__company {
-		font-size: 14px;
-		flex: 1 1 100%;
+		font-size: 12px;
+		margin-top: 10px;
 	}
 
 	// STATEs
 	&__item.is-highlighted {
 		background-color: rgba($colorRed, 0.1);
 	}
+	[data-whatintent="keyboard"] &__title[href]:focus {
+		box-shadow: 0 0 0 3px $colorRedHover;
+	}
 	.hoverevents &__title[href]:hover {
 		color: $colorRedHover;
 	}
+
+	// MQs
 }

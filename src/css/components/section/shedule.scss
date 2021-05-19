@@ -40,5 +40,10 @@
 	}
 	@media ($lgUp) {
 		background-image: url($imgPath + "bg/newsletter-lg.jpg");
+		&__wrap {
+			display: grid;
+			grid-template-columns: 1fr 320px;
+			gap: 0 $gridGutter * 2;
+		}
 	}
 }
