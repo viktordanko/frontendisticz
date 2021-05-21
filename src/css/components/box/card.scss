@@ -116,6 +116,9 @@
 			flex: 0 0 130px;
 			height: initial;
 			padding: 0;
+			&::before {
+				content: normal;
+			}
 		}
 		#{$b}__title {
 			font-size: 20px;
