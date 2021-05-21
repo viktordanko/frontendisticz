@@ -78,6 +78,8 @@
 			}
 		}
 		&--program {
+			padding: 0 30px 30px 30px;
+			margin: 0 -30px -30px -30px;
 			#{$c}__list {
 				grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
 			}
