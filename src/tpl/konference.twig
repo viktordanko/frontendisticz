@@ -74,7 +74,8 @@
 								imgSrc: 'dobes.jpg',
 								name: 'Vojtěch Dobeš',
 								title: 'Apollo + výhody s&nbsp;Typescriptem',
-								company: 'ContentKing'
+								company: 'ContentKing',
+								endpoint: '../ajax/vojtech-dobes.html',
 							},
 							{
 								imgSrc: 'kristof.jpg',
@@ -89,7 +90,8 @@
 								imgSrc: 'hejc.jpg',
 								name: 'Tomáš Hejč',
 								title: ' JAMStack: Nový svět headless&nbsp;CMS',
-								company: 'SUPERKODERS'
+								company: 'SUPERKODERS',
+								endpoint: '../ajax/headless.html',
 							},
 							{
 								imgSrc: 'fucik.jpg',
@@ -103,7 +105,8 @@
 								name: 'Ondřej Jánošík',
 								title: 'Vue.js 3:
 								stav ekosystému a&nbsp;výhled do&nbsp;budoucna',
-								company: 'Notum'
+								company: 'Notum',
+								endpoint: '../ajax/ondrej-janosik.html',
 							},
 							{
 								imgSrc: 'vyskocilova.jpg',
@@ -249,6 +252,375 @@
 				</section>
 			</div>
 		</div>
+
+		<section class="s-shedule" id="shedule">
+			<div class="row-main">
+				<div class="u-mx-auto u-max-width--6-12">
+					<h2 class="s-shedule__title section-anchor">
+						Harmonogram
+						<a href="#shedule" class="section-anchor__link section-anchor__link--program"> # </a>
+					</h2>
+				</div>
+				<div class="u-max-width--10-12 u-mx-auto">
+					<div class="s-shedule__wrap">
+						<div class="s-shedule__main">
+							<table class="b-shedule">
+								<thead>
+								<tr>
+									<th scope="col" colspan="2">
+										Hlavní stage
+									</th>
+									<th scope="col">
+										Off stage
+									</th>
+								</tr>
+								</thead>
+								<tbody class="b-shedule__list">
+								{% set items = [
+									{
+										time: '9:30',
+										title: 'Konference otevřena',
+									},
+									{
+										time: '10:00',
+										title: 'Keynote',
+										name: 'Martin Michálek',
+									},
+									{
+										time: '10:05',
+										name: 'Ondřej Polesný',
+										company: 'Kentico',
+										endpoint: '../ajax/ondrej-polesny.html',
+										title: 'Co to je Vite a proč už nechceme CommonJS?',
+									},
+									{
+										time: '10:25',
+										name: 'Riki Fridrich',
+										endpoint: '../ajax/riki-fridrich.html',
+										title: 'ESLint je dobrý sluha, ale ešte lepší pán',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '10:25',
+												title: 's&nbsp;Ondřejem Polesným'
+											}
+										]
+									},
+									},
+									{
+										time: '10:50',
+										name: 'Karolína Vyskočilová',
+										endpoint: '../ajax/karolina-vyskocilova.html',
+										title: 'WordPress: Komponenty v&nbsp;Gutenbergu',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '10:50',
+												title: 's&nbsp;Riki Fridrichem'
+											}
+										]
+									},
+									},
+									{
+										time: '11:00',
+										name: 'Filip Daniško',
+										endpoint: '../ajax/filip-danisko.html',
+										company: 'ProductBoard',
+										title: 'Jak škálujeme design&nbsp;systém v&nbsp;Productboardu',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '11:00',
+												title: 's&nbsp;Karolínou Vyskočilovou'
+											}
+										]
+									},
+									},
+									{
+										time: '11:25',
+										name: 'Tereza Vaňková',
+										endpoint: '../ajax/tereza-vankova.html',
+										company: 'ReactGirls',
+										title: 'Den juniorní frontendistky',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '11:25',
+												title: 's&nbsp;Filipem Daniškem'
+											}
+										]
+									},
+									},
+									{
+										time: '11:35',
+										name: 'Marek Velas',
+										endpoint: '../ajax/marek-velas.html',
+										company: 'EduPunk',
+										title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '11:35',
+												title: 's&nbsp;Terezou Vaňkovou'
+											},
+											{
+												time: '11:40',
+												title: 's&nbsp;Markem Velasem'
+											}
+										]
+									},
+									},
+									{
+										time: '11:45',
+										title: '20 000 židů pod mořem',
+									},
+									{
+										isHighlighted: true,
+										time: '12:00',
+										title: 'Přestávka<br><small>Užijte si Networking a EXPO</small>',
+									},
+									{
+										time: '12:30',
+										name: 'Zuzana Šumlanská',
+										endpoint: '../ajax/zuzana-sumlanska.html',
+										company: 'PageSpeed.cz',
+										title: 'Rychlost webu:
+											nejčastější chyby, které&nbsp;kazí Web Vitals',
+									},
+									{
+										time: '12:55',
+										name: 'Radek Pavlíček',
+										endpoint: '../ajax/radek-pavlicek.html',
+										title: 'Přístupnost: mnohdy stačí málo',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '12:55',
+												title: 'se&nbsp;Zuzanou Šumlanskou'
+											}
+										]
+									},
+									},
+									{
+										time: '13:05',
+										name: 'Jan Bien',
+										endpoint: '../ajax/jan-bien.html',
+										title: 'Tailwind CSS: framework, který zvládne každý grafický&nbsp;návrh?',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '13:00',
+												title: 's&nbsp;Radkem Pavličkem'
+											}
+										]
+									},
+									},
+									{
+										time: '13:30',
+										name: 'Martin Krištof',
+										endpoint: '../ajax/martin-kristof.html',
+										title: 'React: Premature Performance Optimization',
+										company: 'Heureka Group',
+										offstage: {
+										heading: 'natáčení podcastu ze Vzhurudolu.cz',
+										items: [
+											{
+												time: '13:30',
+												title: 'na téma Tailwind CSS s Janem Bienem'
+											},
+										]
+									}
+									},
+									{
+										time: '13:55',
+										name: 'Ondřej Jánošík',
+										endpoint: '../ajax/ondrej-janosik.html',
+										title: 'Vue.js 3: stav&nbsp;ekosystému a&nbsp;výhled do&nbsp;budoucna',
+										company: 'Notum',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '13:00',
+												title: 's&nbsp;Martinem Krištofem'
+											}
+										]
+									},
+									},
+									{
+										isHighlighted: true,
+										time: '14:10',
+										title: 'Přestávka<br><small>Užijte si Networking a EXPO</small>',
+									},
+									{
+										time: '14:30',
+										name: 'Borek Bernard',
+										endpoint: '../ajax/borek-bernard.html',
+										title: 'Pokročilá práce s&nbsp;Next.js: hybridní weby a moderní deployment',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '14:30',
+												title: 's&nbsp;Ondřejem Jánošíkem'
+											}
+										]
+									},
+									},
+									{
+										time: '14:55',
+										endpoint: '../ajax/headless.html',
+										heading: 'diskuze',
+										name: 'hosté: Jan Sládek <span class="b-shedule__company">(manGoweb)</span> a Jaroslav Vrána <span class="b-shedule__company">(Integromat)</span><br> moderuje: Tomáš Hejč',
+										title: 'JAMstack & headless CMS',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '14:55',
+												title: 's&nbsp;Borkem Bernardem'
+											}
+										]
+									},
+									},
+									{
+										time: '15:30',
+										name: 'Karel Fučík',
+										endpoint: '../ajax/karel-fucik.html',
+										title: 'Runtime validace pro&nbsp;Typescript pomocí io-ts',
+										company: 'SUPERKODERS',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '15:00',
+												title: 'Diskuze: JAMstack & headless CMS'
+											}
+										]
+									},
+									},
+									{
+										time: '15:45',
+										name: 'Vojtěch Dobeš',
+										endpoint: '../ajax/vojtech-dobes.html',
+										title: 'Apollo + výhody s&nbsp;Typescriptem',
+										company: 'ContentKing',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '15:45',
+												title: 's&nbsp;Karlem Fučíkem'
+											}
+										]
+									},
+									},
+									{
+										time: '16:10',
+										name: 'Ondřej Žára',
+										endpoint: '../ajax/ondrej-zara.html',
+										title: '10 novinek v CSS',
+										company: 'Seznam',
+										text: 'Není snadné vyznat se ve všech těch nových vlastnostech, hodnotách, selektorech a modulech, které do CSS přibývají každým měsícem i rokem. Pojďme se společně podívat na desítku nových nebo opomíjených konceptů v CSS, které mohou obohatit arzenál každého webového vývojáře. Podpora čtečky obrazovky zapnuta.',
+										offstage: {
+										heading: 'session',
+										items: [
+											{
+												time: '16:10',
+												title: 's&nbsp;Vojtou Dobešem'
+											}
+										]
+									},
+									},
+									{
+										time: '16:45',
+										name: 'Martin Michálek, Tomáš Hejč, Břetislav Proft, Martin Kolář',
+										endpoint: '',
+										title: 'Zakončení konference',
+										company: '',
+										text: '',
+										offstage: {
+											heading: 'session',
+											items: [
+												{
+													time: '16:45',
+													title: 's&nbsp;Ondřejem Žárou'
+												}
+											]
+										},
+									},
+									{
+										isHighlighted: true,
+										title: '',
+										title: 'Děkujeme za účast<br><small>Networking, diskuzní sessions a EXPO zůstávají otevřené do 18:00</small>',
+									},
+								] %}
+								{% for item in items %}
+									<tr class="b-shedule__item {% if item.isHighlighted == true %}is-highlighted{% endif %}">
+										<th scope="row" class="b-shedule__col">
+											{{ item.time }}
+										</th>
+										<td class="b-shedule__col" {% if item.isHighlighted == true %}colspan="2"{% endif %}>
+											{% if item.heading %}
+												<span class="b-shedule__heading">
+														{{ item.heading }}
+													</span>
+											{% endif %}
+											{% if item.endpoint %}
+												<a href="{{ item.endpoint }}" class="b-shedule__title link-mask" data-modal='{"medium": "fetch"}'>
+													{{ item.title|raw }}
+												</a>
+											{% else %}
+												<p class="b-shedule__title">
+													{{ item.title|raw }}
+												</p>
+											{% endif %}
+											{% if item.name %}
+												<p class="b-shedule__name">
+													{{ item.name|raw }}
+												</p>
+											{% endif %}
+											{% if item.company %}
+												<p class="b-shedule__company">
+													{{ item.company }}
+												</p>
+											{% endif %}
+										</td>
+										{% if not item.isHighlighted %}
+											<td class="b-shedule__off"{% if item.offstage %} data-label="Off stage"{% endif %}>
+												{% if item.offstage %}
+													<span class="b-shedule__heading">
+															{{ item.offstage.heading }}
+														</span>
+													{% for item in item.offstage.items %}
+														<span class="b-shedule__off-item">
+															<span scope="row" class="b-shedule__off-time">
+																{{ item.time }}
+															</span>
+															<span class="b-shedule__off-title">
+																{{ item.title|raw }}
+															</span>
+														</span>
+													{% endfor %}
+												{% endif %}
+											</td>
+										{% endif %}
+									</tr>
+								{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<div class="u-bg-mint u-color-dark-blue">
 			<div class="u-pt-xxl row-main">
@@ -400,238 +772,7 @@
 		</div>
 
 
-		<section class="s-shedule" id="shedule">
-			<div class="row-main">
-				<div class="u-mx-auto u-max-width--6-12">
-					<h2 class="s-shedule__title section-anchor">
-						Harmonogram
-						<a href="#shedule" class="section-anchor__link section-anchor__link--program"> # </a>
-					</h2>
-				</div>
-				<div class="u-max-width--10-12 u-mx-auto">
-					<div class="s-shedule__wrap">
-						<div class="s-shedule__main">
-							<table class="b-shedule">
-								<thead>
-									<tr>
-										<th scope="col" colspan="2">
-											Hlavní stage
-										</th>
-										<th scope="col">
-											Off stage
-										</th>
-									</tr>
-								</thead>
-								<tbody class="b-shedule__list">
-									{% set items = [
-										{
-											time: '10:00',
-											title: 'Keynote',
-										},
-										{
-											time: '10:05',
-											name: 'Ondřej Polesný',
-											company: 'Kentico',
-											endpoint: '../ajax/ondrej-polesny.html',
-											title: 'Co to je Vite a proč už nechceme CommonJS?',
-										},
-										{
-											time: '10:25',
-											name: 'Riki Fridrich',
-											endpoint: '../ajax/riki-fridrich.html',
-											title: 'ESLint je dobrý sluha, ale ešte lepší pán',
-											offstage: {
-												heading: 'session',
-												items: [
-													{
-														time: '10:30',
-														title: 's&nbsp;Ondřejem Polesným'
-													},
-													{
-														time: '10:40',
-														title: 's&nbsp;Rikim Fridrichem'
-													},
-												]
-											},
-										},
-										{
-											time: '10:50',
-											name: 'Karolína Vyskočilová',
-											endpoint: '../ajax/karolina-vyskocilova.html',
-											title: 'WordPress: Komponenty v&nbsp;Gutenbergu',
-										},
-										{
-											time: '11:00',
-											name: 'Filip Daniško',
-											endpoint: '../ajax/filip-danisko.html',
-											company: 'ProductBoard',
-											title: 'Jak škálujeme design&nbsp;systém v&nbsp;Productboardu',
-										},
-										{
-											time: '11:25',
-											name: 'Tereza Vaňková',
-											endpoint: '../ajax/tereza-vankova.html',
-											company: 'ReactGirls',
-											title: 'Den juniorní frontendistky',
-										},
-										{
-											time: '11:35',
-											name: 'Marek Velas',
-											endpoint: '../ajax/marek-velas.html',
-											company: 'EduPunk',
-											title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
-										},
-										{
-											time: '11:45',
-											title: '20 000 židů pod mořem',
-										},
-										{
-											isHighlighted: true,
-											time: '12:00',
-											title: 'Obědová pauza',
-										},
-										{
-											time: '12:30',
-											name: 'Zuzana Šumlanská',
-											endpoint: '../ajax/zuzana-sumlanska.html',
-											company: 'PageSpeed.cz',
-											title: 'Rychlost webu:
-											nejčastější chyby, které&nbsp;kazí Web Vitals',
-										},
-										{
-											time: '12:55',
-											name: 'Radek Pavlíček',
-											endpoint: '../ajax/radek-pavlicek.html',
-											title: 'Přístupnost: mnohdy stačí málo',
-										},
-										{
-											time: '13:05',
-											name: 'Jan Bien',
-											endpoint: '../ajax/jan-bien.html',
-											title: 'Tailwind CSS: framework, který zvládne každý grafický&nbsp;návrh?',
-										},
-										{
-											time: '13:30',
-											name: 'Martin Krištof',
-											endpoint: '../ajax/martin-kristof.html',
-											title: 'React: Premature Performance Optimization',
-											company: 'Heureka Group',
-											offstage: {
-												heading: 'podcast',
-												items: [
-													{
-														time: '13:30',
-														title: 'Talwind CSS'
-													},
-												]
-											}
-										},
-										{
-											time: '13:55',
-											name: 'Ondřej Jánošík',
-											endpoint: '../ajax/ondrej-janosik.html',
-											title: 'Vue.js 3: stav&nbsp;ekosystému a&nbsp;výhled do&nbsp;budoucna',
-											company: 'Notum',
-										},
-										{
-											isHighlighted: true,
-											time: '14:10',
-											title: 'Přestávka',
-										},
-										{
-											time: '14:30',
-											name: 'Borek Bernard',
-											endpoint: '../ajax/borek-bernard.html',
-											title: 'Pokročilá práce s&nbsp;Next.js: hybridní weby a moderní deployment',
-										},
-										{
-											time: '14:55',
-											heading: 'diskuze',
-											name: 'Tomáš Hejč',
-											title: 'Diskuze: JAMstack & headless CMS ',
-										},
-										{
-											time: '15:30',
-											name: 'Karel Fučík',
-											endpoint: '../ajax/karel-fucik.html',
-											title: 'Runtime validace pro&nbsp;Typescript pomocí io-ts',
-											company: 'SUPERKODERS',
-										},
-										{
-											time: '15:45',
-											name: 'Vojtěch Dobeš',
-											endpoint: '../ajax/vojtech-dobes.html',
-											title: 'Apollo + výhody s&nbsp;Typescriptem',
-											company: 'ContentKing',
-										},
-										{
-											time: '16:10',
-											name: 'Ondřej Žára',
-											endpoint: '../ajax/ondrej-zara.html',
-											title: '10 novinek v CSS',
-											company: 'Seznam',
-											text: 'Není snadné vyznat se ve všech těch nových vlastnostech, hodnotách, selektorech a modulech, které do CSS přibývají každým měsícem i rokem. Pojďme se společně podívat na desítku nových nebo opomíjených konceptů v CSS, které mohou obohatit arzenál každého webového vývojáře. Podpora čtečky obrazovky zapnuta.',
-										},
-									] %}
-									{% for item in items %}
-										<tr class="b-shedule__item {% if item.isHighlighted == true %}is-highlighted{% endif %}">
-											<th scope="row" class="b-shedule__col">
-												{{ item.time }}
-											</th>
-											<td class="b-shedule__col" {% if item.isHighlighted == true %}colspan="2"{% endif %}>
-												{% if item.heading %}
-													<span class="b-shedule__heading">
-														{{ item.heading }}
-													</span>
-												{% endif %}
-												{% if item.endpoint %}
-													<a href="{{ item.endpoint }}" class="b-shedule__title link-mask" data-modal='{"medium": "fetch"}'>
-														{{ item.title|raw }}
-													</a>
-													{% else %}
-														<p class="b-shedule__title">
-															{{ item.title|raw }}
-														</p>
-												{% endif %}
-												{% if item.name %}
-													<p class="b-shedule__name">
-														{{ item.name }}
-													</p>
-												{% endif %}
-												{% if item.company %}
-													<p class="b-shedule__company">
-														{{ item.company }}
-													</p>
-												{% endif %}
-											</td>
-											{% if not item.isHighlighted %}
-												<td class="b-shedule__off"{% if item.offstage %} data-label="Off stage"{% endif %}>
-													{% if item.offstage %}
-														<span class="b-shedule__heading">
-															{{ item.offstage.heading }}
-														</span>
-														{% for item in item.offstage.items %}
-														<span class="b-shedule__off-item">
-															<span scope="row" class="b-shedule__off-time">
-																{{ item.time }}
-															</span>
-															<span class="b-shedule__off-title">
-																{{ item.title|raw }}
-															</span>
-														</span>
-														{% endfor %}
-													{% endif %}
-												</td>
-											{% endif %}
-										</tr>
-									{% endfor %}
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+
 
 		<div class="u-bg-default">
 			<div class="row-main u-pt-xxl">

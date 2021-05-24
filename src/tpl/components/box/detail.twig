@@ -21,7 +21,9 @@
 <article class="{{ classes }}">
 	<div class="b-detail__wrap">
 		<div class="b-detail__img">
+			{% if props.imgSrc %}
 			<img src="{{ assets.images }}illust/{{ props.imgSrc }}" alt="Profilová fotografie - {{ props.name }}" width="174" height="174" loading="lazy">
+			{% endif %}
 			{% if props.url  or props.twitter or props.github %}
 				<p class="b-detail__socials">
 					{% if props.url %}
