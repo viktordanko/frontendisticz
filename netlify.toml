@@ -26,6 +26,13 @@
   headers = {X-From = "Netlify"}
 
 [[redirects]]
+  from = "/prihlaseni-prednasky"
+  to = "https://forms.gle/TAyjxZH9YHn8YmKV7"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
   from = "/*"
   to = "/404.html"
   status = 404
