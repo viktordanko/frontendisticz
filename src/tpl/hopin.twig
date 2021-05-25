@@ -1,0 +1,294 @@
+{% extends '@layout/layout-conference.twig' %}
+{% set pageTitle = 'Historicky první česká frontendová konference' %}
+{% set isHomepage = true %}
+
+{% block content %}
+
+	<main role="main" id="main" class="main-conf">
+
+
+
+		<div class="u-bg-default">
+			<div class="u-pt-xxl row-main">
+				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
+					<h2>
+						HOPIN<br>
+						stručný návod pro účastníky konference
+					</h2>
+
+					<h3>Registrace na konferenci</h3>
+					<p>
+						Po zakoupení vstupenky dostanete e-mailem unikátní odkaz, kterým se zaregistrujete na konferenci.
+						<br>
+						<small>Odkaz vypadá takto: https://hopin.com/events/front-konference?code=[VAS_UNIKATNI_KOD]</small>
+					</p>
+
+					<p>Prokliknutím odkazu se vám otevře stránka konference v prostředí Hopin.</p>
+					<p>
+						<img src="/img/hopin/home.jpg" alt="" width="700" height="377">
+					</p>
+
+					<p>Klikněte na tlačítko <strong>Join event</strong> a zaregistrujte se. Nebo se přihlaste v případě, že už v hopinu účet máte.</p>
+					<p>
+						<img src="/img/hopin/sign-up.jpg" alt="" width="700" height="408">
+					</p>
+
+					<p>A je to! Nyní jste se úspěšně registrovali na konferenci.</p>
+
+
+					<h3>Orientace v prostředí konference</h3>
+
+					<p>
+						<br>
+						<img src="/img/hopin/hopin.jpg" alt="" width="700" height="371">
+					</p>
+
+					<p>
+						Po úspěšném přihlášení se vám zobrazí úvodní stránka konference.
+					</p>
+					<ul>
+						<li>Hlavní program bude probíhat sekci <strong>Stage</strong>.<br></li>
+						<li>Diskuze s našimi přednášejícími v sekci <strong>Sessions</strong>.</li>
+						<li>Propojení s ostatními účastníky konference si můžete užít v sekci <strong>Networking</strong>.</li>
+						<li>Prezentace našich partnerů se nachází v sekci <strong>Expo</strong>.</li>
+					</ul>
+
+					<p>
+						Pro další interakci můžete využít chat, který je přímo součástí hopinu. <br>Otázky pro přednášející posílejte přes <a href="https://sli.do/frontkon" target="_blank">sli.do/frontkon</a>.
+					</p>
+
+					<p>
+						V případě jakýchkoliv dotazů či problémů nás kontaktujte na e-mailu: <a href="mailto:konference@frontendisti.cz">konference@frontendisti.cz</a>
+					</p>
+
+					<p>
+						Těšíme se na viděnou.
+					</p>
+				</div>
+
+			</div>
+		</div>
+
+
+
+		<div class="u-bg-mint u-color-dark-blue">
+			<div class="u-pt-xxl row-main">
+				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
+					<h2>
+						Partneři konference
+					</h2>
+				</div>
+				<div class="u-mx-auto u-max-width--10-12">
+					<section class="c-sponzors c-sponzors--main u-mb-xxl">
+						{% set items = [
+							{
+								imgSrc: 'kentico-2.png',
+								title: 'Kentico',
+								width: '250',
+								height: '78',
+								href: 'https://www.kentico.com/',
+								isFullWidth: true
+							},
+							{
+								imgSrc: 'logo-contentking.svg',
+								title: 'ContentKing',
+								width: '200',
+								height: '52',
+								href: 'https://www.contentkingapp.com/',
+							},
+							{
+								imgSrc: 'lmc.svg',
+								title: 'LMC',
+								width: '100',
+								height: '76',
+								href: 'https://www.lmc.eu/'
+							},
+							{
+								imgSrc: 'pipedrive.png',
+								title: 'Pipedrive',
+								width: '200',
+								height: '74',
+								href: 'https://www.pipedrive.com/en/jobs'
+							},
+						] %}
+						{% if items is defined and items is not empty %}
+							<ul class="c-sponzors__list grid grid--center grid--middle">
+								{% for item in items %}
+									<li class="c-sponzors__item grid__cell {% if not item.isFullWidth %}size--4-12@sm{% endif %}
+									">
+										<a class="c-sponzors__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
+											<img src="{{ assets.images }}illust/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</section>
+				</div>
+				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
+					<h2>
+						Mediální partneři
+					</h2>
+				</div>
+				<div class="u-mx-auto u-max-width--10-12">
+					<section class="c-sponzors">
+						{% set items = [
+							{
+								imgSrc: 'logo-vzhuru-dolu.png',
+								title: 'vzhurudolu.cz',
+								width: '100',
+								height: '87',
+								href: 'https://www.vzhurudolu.cz/',
+							},
+							{
+								imgSrc: 'logo-startupjobs.png',
+								title: 'StartupJob',
+								width: '208',
+								height: '30',
+								href: 'https://www.startupjobs.cz/',
+							},
+							{
+								imgSrc: 'logo-zdrojak.png',
+								title: 'Zdroják.cz',
+								width: '160',
+								height: '45',
+								href: 'https://zdrojak.cz/',
+							},
+						] %}
+						{% if items is defined and items is not empty %}
+							<ul class="c-sponzors__list grid grid--center grid--middle">
+								{% for item in items %}
+									<li class="c-sponzors__item grid__cell size--4-12@sm size--3-12@md">
+										<a class="c-sponzors__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
+											<img src="{{ assets.images }}illust/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</section>
+				</div>
+			</div>
+		</div>
+
+		<div class="u-bg-secondary">
+			<div class="row-main">
+				<section class="s-socials">
+					<h2 class="u-vhide">
+						Připoj se k nám skrz sociální síte
+					</h2>
+					<div class="b-social-conf">
+						<div class="b-social-conf__content">
+							<div class="grid">
+								<div class="grid__cell size--5-12@xl">
+									<p>
+										Sleduj, co je nového <br>
+										na sociálních sítích.
+									</p>
+								</div>
+								<div class="grid__cell size--auto@xl">
+									<div class="grid">
+										<div class="grid__cell size--auto">
+											<a class="b-social-conf__link" href="https://www.facebook.com/groups/frontendisti" target="_blank" rel="noopener noreferrer">
+												{% include "@images/bg/facebook.svg" %}
+												<span class="u-vhide">
+													Frontendisti na facebooku
+												</span>
+											</a>
+										</div>
+										<div class="grid__cell size--auto">
+											<a class="b-social-conf__link" href="https://twitter.com/Frontendisti">
+												{% include "@images/bg/twitter.svg" %}
+												<span class="u-vhide">
+													Frontendisti na twitteri
+												</span>
+											</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="b-social-conf__gallery">
+							{% for img in range(0, 17) %}
+								<div class="b-social-conf__img">
+									<img src="{{ assets.images }}illust/gallery-{{ loop.index }}.jpg" alt="" width="110" height="110" loading="lazy">
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
+
+
+
+
+		<div class="u-bg-default">
+			<div class="row-main u-pt-xxl">
+				<section class="s-organizators s-indent u-mb-lg">
+					<div class="u-mx-auto u-max-width--6-12">
+						<h2>
+							Kontakt
+						</h2>
+						<div class="u-text-center u-mb-xxl">
+							<p>
+								V případě jakýchkoliv dotazů pište na <br>
+								<a class="u-text-underline" href="mailto:konference@frontendisti.cz">konference@frontendisti.cz</a>
+							</p>
+						</div>
+					</div>
+
+					{% set dudes = [
+						{
+							imgSrc: 'hejc.jpg',
+							title: 'Tomáš Hejč <br> a tým <a href="http://www.superkoders.com/" target="_blank" rel="noopener noreferrer">SUPERKODERS</a>',
+							desc: 'hlavní organizátor',
+							contact: 'tomas.hejc@frontendisti.cz',
+						},
+						{
+							imgSrc: 'michalek.jpg',
+							title: 'Martin Michálek',
+							desc: 'koordinátor programu',
+							contact: 'martin.michalek@frontendisti.cz'
+						},
+						{
+							imgSrc: 'proft.jpg',
+							title: 'Břetislav Proft',
+							desc: 'péče o partnery',
+							contact: 'bretislav.proft@frontendisti.cz'
+						},
+						{
+							imgSrc: 'kolar.jpg',
+							title: 'Martin Kolář',
+							desc: 'technický koordinátor',
+							contact: 'martin.kolar@frontendisti.cz'
+						},
+					] %}
+					<div class="c-organizators u-mb-md">
+						<ul class="c-organizators__list grid">
+							{%- for dude in dudes -%}
+								<li class="c-organizators__item grid__cell grid__cell--eq size--6-12@sm size--3-12@xl">
+									<span class="b-organizator">
+										<span class="b-organizator__img">
+											<img src="{{ assets.images }}illust/{{ dude.imgSrc }}" alt="" width="230" height="185" loading="lazy">
+										</span>
+										<span class="b-organizator__title">
+											{{ dude.title|raw }}
+										</span>
+										<span class="b-organizator__desc">
+											{{ dude.desc }}
+										</span>
+										<a class="b-organizator__btn" href="mailto:{{ dude.contact }}">
+											{{ dude.contact }}
+										</a>
+									</span>
+								</li>
+							{%- endfor -%}
+						</ul>
+					</div>
+				</section>
+			</div>
+		</div>
+	</main>
+
+{% endblock %}
