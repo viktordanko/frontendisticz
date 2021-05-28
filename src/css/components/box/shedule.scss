@@ -33,7 +33,7 @@
 			margin-bottom: 0;
 		}
 	}
-	&__title {
+	&__title, &__titleHighlighted{
 		margin-bottom: 0;
 		font-size: 16px;
 		font-family: $fontSecondary;
@@ -132,7 +132,7 @@
 		}
 	}
 	@media ($mdUp) {
-		&__title {
+		&__title, &__titleHighlighted {
 			font-size: 18px;
 		}
 		&__col {

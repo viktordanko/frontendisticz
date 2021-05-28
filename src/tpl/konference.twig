@@ -331,14 +331,14 @@
 										company: 'ProductBoard',
 										title: 'Jak škálujeme design&nbsp;systém v&nbsp;Productboardu',
 										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '11:00',
-												title: 'diskuze s&nbsp;Karolínou Vyskočilovou'
-											}
-										]
-									},
+											heading: 'session',
+											items: [
+												{
+													time: '11:00',
+													title: 'diskuze s&nbsp;Karolínou Vyskočilovou'
+												}
+											]
+										},
 									},
 									{
 										time: '11:25',
@@ -347,14 +347,14 @@
 										company: 'ReactGirls',
 										title: 'Den juniorní frontendistky',
 										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '11:25',
-												title: 'diskuze s&nbsp;Filipem Daniškem'
-											}
-										]
-									},
+											heading: 'session',
+											items: [
+												{
+													time: '11:25',
+													title: 'diskuze s&nbsp;Filipem Daniškem'
+												}
+											]
+										},
 									},
 									{
 										time: '11:35',
@@ -363,27 +363,41 @@
 										company: 'EduPunk',
 										title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
 										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '11:35',
-												title: 'diskuze s&nbsp;Terezou Vaňkovou'
-											},
-											{
-												time: '11:40',
-												title: 'diskuze s&nbsp;Markem Velasem'
-											}
-										]
-									},
+											heading: 'session',
+											items: [
+												{
+													time: '11:35',
+													title: 'diskuze s&nbsp;Terezou Vaňkovou'
+												},
+												{
+													time: '11:40',
+													title: 'diskuze s&nbsp;Markem Velasem'
+												}
+											]
+										},
 									},
 									{
 										time: '11:45',
+										heading: 'kulturní představení',
 										title: '20 000 židů pod mořem',
 									},
 									{
 										isHighlighted: true,
 										time: '12:00',
 										title: 'Přestávka<br><small>Užijte si Networking a EXPO</small>',
+										offstage: {
+											heading: 'expo',
+											items: [
+												{
+													time: 'Kentico',
+													title: 'Téma: Potkejte se s našimi devy (neformální pokec)'
+												},
+												{
+													time: 'LMC',
+													title: 'diskuse s Adamem Křenkem a CTO LMC Ondřejem Myslivečkem'
+												}
+											]
+										},
 									},
 									{
 										time: '12:30',
@@ -458,7 +472,22 @@
 									{
 										isHighlighted: true,
 										time: '14:10',
-										title: 'Přestávka<br><small>Užijte si Networking a EXPO</small>',
+										heading: 'fpohybu',
+										titleHighlighted: 'Rychlofka na pódiu',
+										title: '<br>Přestávka<br><small>Užijte si Networking a EXPO</small>',
+										offstage: {
+											heading: 'expo',
+											items: [
+												{
+													time: 'Kentico',
+													title: 'Téma: Potkejte se s našimi devy (neformální pokec)'
+												},
+												{
+													time: 'LMC',
+													title: 'diskuse s Adamem Křenkem a CTO LMC Ondřejem Myslivečkem'
+												}
+											]
+										},
 									},
 									{
 										time: '14:30',
@@ -568,11 +597,16 @@
 										<th scope="row" class="b-shedule__col">
 											{{ item.time }}
 										</th>
-										<td class="b-shedule__col" {% if item.isHighlighted == true %}colspan="2"{% endif %}>
+										<td class="b-shedule__col" {% if item.isHighlighted == true and not item.offstage %}colspan="2"{% endif %}>
 											{% if item.heading %}
 												<span class="b-shedule__heading">
 														{{ item.heading }}
 													</span>
+											{% endif %}
+											{% if item.titleHighlighted %}
+												<p class="b-shedule__titleHighlighted">
+													{{ item.titleHighlighted|raw }}
+												</p>
 											{% endif %}
 											{% if item.endpoint %}
 												<a href="{{ item.endpoint }}" class="b-shedule__title link-mask" data-modal='{"medium": "fetch"}'>
@@ -594,7 +628,7 @@
 												</p>
 											{% endif %}
 										</td>
-										{% if not item.isHighlighted %}
+										{% if item.offstage or not item.isHighlighted %}
 											<td class="b-shedule__off"{% if item.offstage %} data-label="Off stage"{% endif %}>
 												{% if item.offstage %}
 													<span class="b-shedule__heading">
