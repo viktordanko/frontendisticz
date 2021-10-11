@@ -1,7 +1,7 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: https://frontendisti.cz/admin
+admin_path: https://frontendisti.cz/superadmin
 webhook_url:
 sections:
 upload_dir: forestry
@@ -13,6 +13,6 @@ build:
   preview_output_directory: web
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
-  mount_path: "/srv"
-  working_dir: "/srv"
+  mount_path: "/src"
+  working_dir: "/src"
   instant_preview_command: npm run dev
