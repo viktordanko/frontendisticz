@@ -1,0 +1,56 @@
+{% extends '@layout/layout.twig' %}
+{% set pageTitle = 'Blog' %}
+{% set isNewsletter = true %}
+
+{% block content %}
+	<main role="main" id="main">
+		<div class="u-bg-secondary u-pt-xxl">
+			<div class="row-main">
+				<section class="c-gallery c-gallery--program u-mb-xxl" id="program">
+					<div class="u-mx-auto u-max-width--6-12">
+						<h2 class="c-gallery__title section-anchor">
+							{{  page_data.intro.title|markdown|raw }}
+						</h2>
+					</div>
+
+					<div class="c-gallery__list">
+						{% for card in page_data.blog.blogposts %}
+							<div class="c-gallery__item">
+								<article class="b-card b-card--program">
+									<div class="b-card__inner">
+										<div class="b-card__img">
+											{% if card.imgSrc is defined and card.imgSrc is not empty %}
+												<img src="{{ assets.images }}illust/{{ card.imgSrc }}" alt="Profilová fotografie - {{ card.name }}" width="174" height="174" loading="lazy">
+											{% endif %}
+										</div>
+										<div class="b-card__content">
+											<h3 class="b-card__title">
+												{{ card.title|markdown|raw|nl2br }}
+											</h3>
+											<div class="b-card__row">
+												<div class="b-card__info">
+													<p class="b-card__name">
+														{{ card.desc|markdown|raw|nl2br }}
+													</p>
+												</div>
+												<a href="{{ card.href }}" class="b-card__link link-mask">
+													{% include '@components/core/icon-svg/icon-svg.twig' with {
+														props: {
+															name: 'chevron-right',
+															alt: 'Přejít na detail'
+														}
+													} %}
+												</a>
+											</div>
+										</div>
+									</div>
+								</article>
+							</div>
+						{% endfor %}
+					</div>
+
+				</section>
+			</div>
+		</div>
+	</main>
+{% endblock %}
