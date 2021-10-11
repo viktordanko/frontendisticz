@@ -1,0 +1,29 @@
+---
+label: translations
+hide_body: true
+fields:
+- name: translations
+  type: field_group_list
+  fields:
+  - name: key
+    type: text
+    config:
+      required: false
+    label: key
+  - name: cz
+    type: text
+    config:
+      required: false
+    label: cz
+  - name: en
+    type: text
+    config:
+      required: false
+    label: en
+  config:
+    min: 
+    max: 
+    labelField: key
+  label: Translations
+pages:
+- data/all/translations.yml

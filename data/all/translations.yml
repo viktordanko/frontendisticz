@@ -1,0 +1,15 @@
+---
+label: Translations
+translations:
+  - key: back
+    cz: Zpět
+    en: Back
+  - key: accessibility_content
+    cz: "Přejít k obsahu (Klávesová zkratka: Alt + 2)"
+    en: "Go to content (Keyboard shortcut: Alt + 2)"
+  - key: accessibility_menu
+    cz: "Přejít k hlavnímu menu"
+    en: "Go to main menu"
+  - key: close
+    cz: "Zavřít"
+    en: "Close"

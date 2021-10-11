@@ -15,6 +15,7 @@ const copyJs = require('./copyJs');
 const webpack = require('./webpack');
 const copyImages = require('./copyImages');
 const copyRoot = require('./copyRoot');
+const buildCMS = require('./buildCMS');
 
 const { series, watch: watchGulp } = gulp;
 
@@ -25,6 +26,7 @@ module.exports = function watch(done) {
 			syncDone();
 		},
 		function watching() {
+			watchGulp(['.forestry/front_matter/templates/*.yml', 'data/**/*'], series(buildCMS, twig));
 			watchGulp(`${config.src.styles}**/*.scss`, sass);
 			watchGulp(`${config.src.templates}**/*.twig`, twig);
 			watchGulp(`${config.src.images}bg/sprites/*.png`, sprite);

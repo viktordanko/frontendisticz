@@ -3,12 +3,16 @@ const { src, dest } = require('gulp');
 const notify = require('gulp-notify');
 const plumber = require('gulp-plumber');
 const rename = require('gulp-rename');
-const twing = require('gulp-twing');
-const cheerio = require('cheerio');
-const through2 = require('through2');
-const htmlbeautify = require('gulp-html-beautify');
+const gulpif = require('gulp-if');
 
+const through2 = require('through2');
+
+const twingRender = require('./helpers/twingRender.js');
 const config = require('./helpers/getConfig.js');
+const cacheBust = require('./helpers/cacheBust.js');
+const forestryStaticData = require('./helpers/forestryData.js');
+
+const path = require('path');
 
 module.exports = function twig(done) {
 	const onError = (error) => {
@@ -21,10 +25,11 @@ module.exports = function twig(done) {
 		done();
 	};
 
-	const time = new Date().getTime();
+	const forestryData = forestryStaticData.get();
+
 	return (
-		src([`${config.src.templates}*.twig`, `${config.src.ajaxTpl}*.twig`], {
-			base: './src/tpl/',
+		src(['*.twig'], {
+			cwd: config.src.templates,
 		})
 			.pipe(
 				plumber({
@@ -32,55 +37,77 @@ module.exports = function twig(done) {
 				}),
 			)
 			.pipe(
-				twing(importFresh('./helpers/twing.js'), config, {
-					templatePaths: config.src.templates,
-				}),
-			)
-			// cache bust
-			.pipe(
-				through2.obj(function generateTwig(file, encoding, cb) {
-					let data = file.contents.toString('utf-8');
-					const $ = cheerio.load(data);
-					const $elements = $('script[src], link[rel=stylesheet][href], link[rel=import][href], link[rel=preload][href]');
-					const protocolRegEx = /^(http(s)?)|\/\//;
+				through2.obj(function cloneWithData(file, encoding, cb) {
+					const { base, dir } = path.parse(file.path);
 
-					$elements
-						.map((i, node) => {
-							const name = node.name.toLowerCase();
-							// eslint-disable-next-line no-nested-ternary
-							const attrName = name === 'link' ? 'href' : name === 'script' ? 'src' : null;
-
-							if (attrName == null) return null;
-							const val = $(node).attr(attrName);
-							if (protocolRegEx.test(val)) return null;
-							return val;
-						})
-						.get()
-						.filter((url, i, arr) => url != null && arr.indexOf(url) === i)
-						.forEach((url) => {
-							const originalAttrValueWithoutCacheBusting = url.split('?')[0];
-							data = data.replace(new RegExp(url, 'g'), `${originalAttrValueWithoutCacheBusting}?t=${time}`);
-						});
-					// eslint-disable-next-line no-param-reassign
-					file.contents = Buffer.from(data);
 					this.push(file);
+					if (forestryData) {
+						const translationsData = forestryData.all.pages['data/all/translations.yml'] || {};
+						const translations = translationsData.translations || [];
+
+						Object.keys(forestryData).forEach((lang) => {
+							const part = forestryData[lang];
+							if (!part.templates || part.templates[base] == null) return;
+
+							const pages = part.templates[base];
+
+							pages.forEach((path) => {
+								const slug = part.routes[path];
+								const data = part.pages[path];
+								const clone = file.clone();
+								clone.data = {
+									page_data: data,
+									page_slug: slug,
+									data_path: path,
+									path: dir + slug,
+									site_lang: lang,
+									site_lang_url: lang === 'cz' ? '' : '/' + lang,
+									site_globals: part.global,
+									translations: translations.reduce((acc, cur) => {
+										return {
+											...acc,
+											[cur.key]: cur[lang] || cur['cz'],
+										};
+									}, {}),
+								};
+								this.push(clone);
+							});
+						});
+					}
+
 					cb();
 				}),
 			)
 			.pipe(
-				rename({
-					extname: '.html',
-				}),
+				twingRender(
+					importFresh('./helpers/twing.js'),
+					{ assets: config.assets, isLive: process.env.BUILD_TYPE === 'live' },
+					{
+						templatePaths: config.src.templates,
+					},
+				),
 			)
 			.pipe(
-				htmlbeautify({
-					indent_size: 1,
-					indent_char: '	',
-					eol: '\n',
-					indent_level: 0,
-					indent_with_tabs: false,
-					preserve_newlines: false,
+				through2.obj(function savePath(file, encoding, cb) {
+					if (file.data && file.data.path) {
+						file.path = file.data.path;
+					}
+					file.data = null;
+					this.push(file);
+					cb();
 				}),
+			)
+			// cache bust
+			.pipe(cacheBust())
+			.pipe(
+				gulpif(
+					function (file) {
+						return path.parse(file.path).name !== 'preview';
+					},
+					rename({
+						extname: '.html',
+					}),
+				),
 			)
 			.pipe(dest(config.dest.templates))
 	);
