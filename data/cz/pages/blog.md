@@ -2,7 +2,7 @@
 template: blog.twig
 title: Blog
 intro:
-  title: Forestry test CZ
+  title: Blog
 blog:
   blogposts:
   - title: První blogpost
