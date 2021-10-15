@@ -1,6 +1,6 @@
 ---
 template: blog.twig
-title: Blog
+title: Rozcestník článků
 list_of_blogposts:
 - data/cz/blog/test.md
 
