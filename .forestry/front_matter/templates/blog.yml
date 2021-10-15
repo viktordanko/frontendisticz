@@ -25,3 +25,5 @@ fields:
       type: pages
       section: blog
   label: List of blogposts
+pages:
+- data/cz/pages/blog.md
