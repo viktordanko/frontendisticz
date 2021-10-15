@@ -25,5 +25,10 @@ Blogposty:
   description: Test prvého popisečku blogpostu
   link: "#"
 test: data/cz/pages/blog.md
+test_blog_select:
+- data/cz/blog/test-article.md
+- data/cz/blog/test-2.md
+- data/cz/blog/test-article.md
+- data/cz/blog/test-2.md
 
 ---
