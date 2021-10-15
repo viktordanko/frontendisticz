@@ -1,7 +1,7 @@
 ---
 title: Titulok čálnku
 description: Stručný popis článku
-image: ''
+image: "/autor-clanku.jpg"
 author: Autor článku
 
 ---
