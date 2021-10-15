@@ -20,3 +20,8 @@ fields:
       type: pages
       section: blog
   label: List of blogposts
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
