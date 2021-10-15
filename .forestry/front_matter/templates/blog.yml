@@ -22,5 +22,15 @@ fields:
       file: 
       path: 
   label: Test
+- name: test_blog_select
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: blog
+  label: Test blog select
 pages:
 - data/cz/pages/blog.md
