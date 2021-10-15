@@ -1,8 +1,10 @@
 ---
-title: Test
-description: test desc
+title: Titulok čálnku
+description: Stručný popis článku
 image: ''
-author: Lolec
+author: Autor článku
 
 ---
 # Téééééést
+
+Lolec 
