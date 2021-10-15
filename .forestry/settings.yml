@@ -11,6 +11,8 @@ sections:
   label: Pages
   create: documents
   match: "**/*"
+  templates:
+  - blog
 - type: directory
   path: data/cz/blog
   label: Blog
@@ -28,6 +30,8 @@ sections:
   label: " EN - Pages"
   create: documents
   match: "**/*"
+  templates:
+  - blog
 - type: directory
   path: data/en/blog
   label: EN - Blog
