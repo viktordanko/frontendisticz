@@ -24,5 +24,6 @@ Blogposty:
   title: Test prvého titulečeku blogpostu
   description: Test prvého popisečku blogpostu
   link: "#"
+test: data/cz/pages/blog.md
 
 ---
