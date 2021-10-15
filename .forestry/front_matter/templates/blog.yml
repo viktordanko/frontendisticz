@@ -32,5 +32,3 @@ fields:
       type: pages
       section: blog
   label: Test blog select
-pages:
-- data/cz/pages/blog.md
