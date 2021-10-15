@@ -3,49 +3,6 @@ label: blog
 hide_body: true
 display_field: title
 fields:
-- name: seo
-  type: include
-  config: {}
-  template: _seo
-  label: SEO
-- name: title
-  type: text
-  config:
-    required: true
-  label: Název sekce blogu
-- name: intro
-  type: field_group
-  config: {}
-  fields:
-  - name: title
-    type: text
-    default: Blog
-    config:
-      required: false
-      wysiwyg: true
-      schema:
-        format: markdown
-    label: Heading 1
-  label: Section Intro
-- name: Blogposty
-  type: field_group
-  config: {}
-  fields:
-  - name: title
-    type: text
-    default: ''
-    config:
-      required: false
-      wysiwyg: true
-      schema:
-        format: markdown
-    label: Titulek blogpostu
-  - name: description
-    type: text
-    label: Popis blogpostu
-  - name: link
-    type: text
-    label: Odkaz na blogpost
 - name: template
   type: text
   config:
@@ -53,5 +10,17 @@ fields:
   label: template
   hidden: true
   default: blog.twig
+- name: test
+  type: select
+  default: []
+  config:
+    required: false
+    options: []
+    source:
+      type: pages
+      section: pages
+      file: 
+      path: 
+  label: Test
 pages:
 - data/cz/pages/blog.md

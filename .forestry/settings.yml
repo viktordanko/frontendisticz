@@ -2,36 +2,36 @@
 new_page_extension: md
 auto_deploy: false
 admin_path: https://frontendisti.cz/superadmin
-webhook_url:
+webhook_url: 
 sections:
-  - type: heading
-    label: CZ
-  - type: directory
-    path: data/cz/pages
-    label: Pages
-    create: documents
-    match: "**/*"
-  - type: document
-    path: data/cz/global.yml
-    label: Global
-  - type: heading
-    label: EN
-  - type: directory
-    path: data/en/pages
-    label: " EN - Pages"
-    create: documents
-    match: "**/*"
-  - type: document
-    path: data/en/global.yml
-    label: " EN - Global"
-  - type: heading
-    label: General
-  - type: document
-    path: data/all/translations.yml
-    label: Translations
+- type: heading
+  label: CZ
+- type: directory
+  path: data/cz/pages
+  label: Pages
+  create: documents
+  match: "**/*"
+- type: document
+  path: data/cz/global.yml
+  label: Global
+- type: heading
+  label: EN
+- type: directory
+  path: data/en/pages
+  label: " EN - Pages"
+  create: documents
+  match: "**/*"
+- type: document
+  path: data/en/global.yml
+  label: " EN - Global"
+- type: heading
+  label: General
+- type: document
+  path: data/all/translations.yml
+  label: Translations
 upload_dir: forestry
-public_path: ""
-front_matter_path: ""
+public_path: ''
+front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
