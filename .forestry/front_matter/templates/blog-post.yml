@@ -26,3 +26,5 @@ fields:
   config:
     required: false
   label: Author
+pages:
+- data/cz/blog/test.md
