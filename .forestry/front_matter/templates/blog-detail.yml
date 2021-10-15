@@ -1,0 +1,22 @@
+---
+label: blog detail
+hide_body: true
+display_field: title
+fields:
+  - name: title
+    type: text
+    config:
+      required: true
+    label: Název sekce blogu
+  - name: description
+    type: text
+    label: Popis blogpostu
+  - name: template
+    type: text
+    config:
+      required: false
+    label: template
+    hidden: true
+    default: blog-detail.twig
+pages:
+  - data/cz/blog/test-article.md

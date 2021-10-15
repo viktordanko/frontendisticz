@@ -11,6 +11,11 @@ sections:
     label: Pages
     create: documents
     match: "**/*"
+  - type: directory
+    path: data/cz/blog
+    label: Blog
+    create: documents
+    match: "**/*"
   - type: document
     path: data/cz/global.yml
     label: Global
@@ -19,6 +24,11 @@ sections:
   - type: directory
     path: data/en/pages
     label: " EN - Pages"
+    create: documents
+    match: "**/*"
+  - type: directory
+    path: data/en/blog
+    label: EN - Blog
     create: documents
     match: "**/*"
   - type: document
