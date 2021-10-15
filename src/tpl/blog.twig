@@ -1,39 +1,37 @@
-{% extends '@layout/layout.twig' %}
-{% set pageTitle = 'Blog' %}
-{% set isNewsletter = true %}
+{% extends '@layout/layout-blog.twig' %}
+{% set pageTitle = page_data.title %}
 
 {% block content %}
-	<main role="main" id="main">
-		<div class="u-bg-secondary u-pt-xxl">
+	<main role="main" id="main" class="main-conf">
+		<div class="u-pt-xxl">
+
 			<div class="row-main">
 				<section class="c-gallery c-gallery--program u-mb-xxl" id="program">
-					<div class="u-mx-auto u-max-width--6-12">
-						<h2 class="c-gallery__title section-anchor">
-							{{  page_data.intro.title|markdown|raw }}
-						</h2>
-					</div>
-
 					<div class="c-gallery__list">
-						{% for card in page_data.blog.blogposts %}
+						{% for card in page_data.list_of_blogposts %}
+
+							{% set cardData = card|data(site_lang) %}
+
 							<div class="c-gallery__item">
 								<article class="b-card b-card--program">
 									<div class="b-card__inner">
 										<div class="b-card__img">
-											{% if card.imgSrc is defined and card.imgSrc is not empty %}
-												<img src="{{ assets.images }}illust/{{ card.imgSrc }}" alt="Profilová fotografie - {{ card.name }}" width="174" height="174" loading="lazy">
-											{% endif %}
+											<img src="{{ assets.images }}illust{{ cardData.image }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
 										</div>
 										<div class="b-card__content">
 											<h3 class="b-card__title">
-												{{ card.title|markdown|raw|nl2br }}
+												{{ cardData.title|nl2br }}
 											</h3>
 											<div class="b-card__row">
 												<div class="b-card__info">
 													<p class="b-card__name">
-														{{ card.desc|markdown|raw|nl2br }}
+														{{ cardData.author }}
 													</p>
+													<span class="b-card__company">
+														{{ cardData.description|nl2br }}
+													</span>
 												</div>
-												<a href="{{ card.href }}" class="b-card__link link-mask">
+												<a href="{{ card|url(site_lang) }}" class="b-card__link link-mask">
 													{% include '@components/core/icon-svg/icon-svg.twig' with {
 														props: {
 															name: 'chevron-right',
@@ -48,7 +46,6 @@
 							</div>
 						{% endfor %}
 					</div>
-
 				</section>
 			</div>
 		</div>

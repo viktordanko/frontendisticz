@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="cs" class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+		<meta name="description" content="Historicky první česká frontendová konference Frontendisti.cz">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+		<meta name="twitter:card" content="summary_large_image">
+		{# <meta name="twitter:card" content="summary"> #}
+		<meta name="twitter:title" content="{{ pageTitle }} | Frontendisti.cz">
+		<meta name="twitter:site" content="@Frontendisti">
+		<meta name="twitter:description" content="Historicky první česká frontendová konference Frontendisti.cz">
+		<meta name="twitter:image" content="http://www.frontendisti.cz/img/social/og-conf-twitter-image-2.jpg">
+		{# <meta name="twitter:image" content="whttp://www.frontendisti.cz/img/social/og-conf-image-small.jpg"> #}
+
+		<meta property="og:title" content="{{ pageTitle }} | Frontendisti.cz">
+		<meta property="og:description" content="Historicky první česká frontendová konference Frontendisti.cz">
+		<meta property="og:image" content="http://www.frontendisti.cz/img/social/og-conf-image.jpg">
+		<meta property="og:site_name" content="Historicky první česká frontendová konference Frontendisti.cz">
+		<meta property="og:url" content="http://www.frontendisti.cz/konference/">
+		<meta property="og:type" content="website">
+
+		<title>{{ pageTitle }} | Frontendisti.cz</title>
+
+		<link rel="stylesheet" href="{{ assets.styles }}style.css" media="screen">
+		<link rel="stylesheet" href="{{ assets.styles }}print.css" media="print">
+
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+
+		<script>
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', 'UA-51816675-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+		{% set scripts = [
+			'https://cdn.polyfill.io/v3/polyfill.min.js?features=default,Array.prototype.includes,Object.values,Array.prototype.find,AbortController,fetch',
+			assets.scripts ~ 'app.js',
+		] %}
+
+		{% for script in scripts %}
+			<link rel="preload" as="script" href="{{ script }}">
+		{% endfor %}
+
+		{% include "@layout/favicons.twig" %}
+
+		<script>
+			(function () {
+				var className = document.documentElement.className;
+				className = className.replace('no-js', 'js');
+
+				(function() {
+					var mediaHover = window.matchMedia('(hover: none), (pointer: coarse), (pointer: none)');
+					mediaHover.addListener(function(media) {
+						document.documentElement.classList[media.matches ? 'add' : 'remove']('no-hoverevents');
+						document.documentElement.classList[!media.matches ? 'add' : 'remove']('hoverevents');
+					});
+					className += (mediaHover.matches ? ' no-hoverevents' : ' hoverevents');
+				})();
+
+				// var supportsCover = 'CSS' in window && typeof CSS.supports === 'function' && CSS.supports('object-fit: cover');
+				// className += (supportsCover ? ' ' : ' no-') + 'objectfit';
+
+				// fix iOS zoom issue: https://docs.google.com/document/d/1KclJmXyuuErcvit-kwCC6K2J7dClRef43oyGVCqWxFE/edit#heading=h.sgbqg5nzhvu9
+				var ua = navigator.userAgent.toLowerCase();
+				var isIOS = /ipad|iphone|ipod/.test(ua) && !window.MSStream;
+
+				if (isIOS === true) {
+					var viewportTag = document.querySelector("meta[name=viewport]");
+					viewportTag.setAttribute("content", "width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no");
+				}
+
+				document.documentElement.className = className;
+			}());
+		</script>
+
+	</head>
+	<body>
+		<p class="m-accessibility">
+			<a title="Přejít k obsahu (Klávesová zkratka: Alt + 2)" accesskey="2" href="#main">Přejít k obsahu</a>
+			<span class="hide">|</span>
+			<a href="#menu-main">Přejít k hlavnímu menu</a>
+		</p>
+
+		<header role="banner" class="header-blog">
+			<div class="header-conf__inner">
+				<div class="row-main">
+					<h1 class="header-conf__title">
+						{{ page_data.title }}
+					</h1>
+				</div>
+			</div>
+		</header>
+
+		{% block content %}{% endblock %}
+
+		<footer role="contentinfo" class="footer">
+			<div class="row-main">
+				<a href="/" class="footer__logo">
+					{% include "@images/logo-black.svg" %}
+				</a>
+				<p>
+					&copy; 2014&ndash;{{ "now"|date("Y") }} <br>
+					<span>
+						Spolek Frontendisti.cz
+					</span>
+				</p>
+				<address class="u-mb-xs">
+					Provozuje Spolek Frontendisti.cz zapsaný u Městského soudu v Praze, <br>
+					Jurkovičova 988/26, Háje, 149&nbsp;00 Praha 4, IČ:&nbsp;03591263
+				</address>
+				<p>
+					<a href="{{ assets.files }}coc.pdf" target="_blank" rel="noopener noreferrer">
+						Code of Conduct
+					</a>
+					&nbsp;|&nbsp;
+					<a href="{{ assets.files }}op.pdf" target="_blank" rel="noopener noreferrer">
+						Obchodní podmínky
+					</a>
+					&nbsp;|&nbsp;
+					<a href="{{ assets.files }}zoo.pdf" target="_blank" rel="noopener noreferrer">
+						Ochrana osobních údajů
+					</a>
+				</p>
+				<p>
+					<a href="mailto:konference@frontendisti.cz">
+						konference@frontendisti.cz
+					</a> <br>
+					<a href="tel:+420603273833">
+						+420 603 273 833
+					</a>
+				</p>
+			</div>
+		</footer>
+
+		{%- for script in scripts -%}
+			<script src="{{ script }}"></script>
+		{%- endfor -%}
+		<script>
+			App.run({})
+		</script>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+{% extends '@layout/layout-conference.twig' %}
+{% set pageTitle = page_data.title %}
+{% set isHomepage = true %}
+
+{% block content %}
+	<main role="main" id="main">
+		<div class="u-bg-secondary u-text-center u-pt-xl u-pb-xl">
+			<h1>
+				{{ page_data.title }} </br>
+				<span class="u-font-sm">
+					{{ page_data.author }}
+				</span>
+			</h1>
+		</div>
+
+		<div class="row-main row-main--sm u-pt-xl u-mb-xl">
+			<div>
+				{{ page_data.markdown_body|raw }}
+			</div>
+		</div>
+	</main>
+{% endblock %}
