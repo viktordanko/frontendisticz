@@ -19,4 +19,5 @@ fields:
   hidden: true
   default: blog-detail.twig
 pages:
+- data/cz/blog/test-2.md
 - data/cz/blog/test-article.md
