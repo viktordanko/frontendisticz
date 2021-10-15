@@ -1,5 +1,6 @@
 User-Agent: *
 Disallow: /newsletter-potvrzeni/
 Disallow: /hotovo/
+Disallow: /blog/
 
 Sitemap: https://www.frontendisti.cz/sitemap.xml
