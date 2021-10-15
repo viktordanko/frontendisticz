@@ -10,19 +10,7 @@ fields:
   label: template
   hidden: true
   default: blog.twig
-- name: test
-  type: select
-  default: []
-  config:
-    required: false
-    options: []
-    source:
-      type: pages
-      section: pages
-      file: 
-      path: 
-  label: Test
-- name: test_blog_select
+- name: list_of_blogposts
   type: list
   config:
     use_select: true
@@ -31,4 +19,4 @@ fields:
     source:
       type: pages
       section: blog
-  label: Test blog select
+  label: List of blogposts
