@@ -1,4 +1,9 @@
 ---
 label: Blog post
 hide_body: false
-fields: []
+fields:
+- name: blogpost_title
+  type: text
+  config:
+    required: false
+  label: Blogpost Title
