@@ -10,6 +10,11 @@ fields:
   label: template
   hidden: true
   default: blog.twig
+- name: title
+  type: text
+  config:
+    required: false
+  label: Title
 - name: list_of_blogposts
   type: list
   config:
@@ -20,8 +25,3 @@ fields:
       type: pages
       section: blog
   label: List of blogposts
-- name: title
-  type: text
-  config:
-    required: false
-  label: Title
