@@ -11,39 +11,50 @@
 						{% for card in page_data.list_of_blogposts %}
 
 							{% set cardData = card|data(site_lang) %}
-
-							<div class="c-gallery__item">
-								<article class="b-card b-card--program">
-									<div class="b-card__inner">
-										<div class="b-card__img">
-											<img src="{{ assets.images }}illust{{ cardData.image }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
-										</div>
-										<div class="b-card__content">
-											<h3 class="b-card__title">
-												{{ cardData.title|nl2br }}
-											</h3>
-											<div class="b-card__row">
-												<div class="b-card__info">
-													<p class="b-card__name">
-														{{ cardData.author }}
-													</p>
-													<span class="b-card__company">
-														{{ cardData.description|nl2br }}
-													</span>
+							{% if cardData %}
+								<div class="c-gallery__item">
+									<article class="b-card b-card--program">
+										<div class="b-card__inner">
+											{% if cardData.image %}
+												<div class="b-card__img">
+													<img src="{{ cardData.image }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
 												</div>
-												<a href="{{ card|url(site_lang) }}" class="b-card__link link-mask">
-													{% include '@components/core/icon-svg/icon-svg.twig' with {
-														props: {
-															name: 'chevron-right',
-															alt: 'Přejít na detail'
-														}
-													} %}
-												</a>
+											{% endif %}
+											<div class="b-card__content">
+												{% if cardData.title %}
+													<h3 class="b-card__title">
+														{{ cardData.title|nl2br }}
+													</h3>
+												{% endif %}
+												<div class="b-card__row">
+													<div class="b-card__info">
+														{% if cardData.author %}
+															<p class="b-card__name">
+																{{ cardData.author }}
+															</p>
+														{% endif %}
+														{% if cardData.description %}
+															<span class="b-card__company">
+																{{ cardData.description|nl2br }}
+															</span>
+														{% endif %}
+													</div>
+													{% if card|url(site_lang) %}
+														<a href="{{ card|url(site_lang) }}" class="b-card__link link-mask">
+															{% include '@components/core/icon-svg/icon-svg.twig' with {
+																props: {
+																	name: 'chevron-right',
+																	alt: 'Přejít na detail'
+																}
+															} %}
+														</a>
+													{% endif %}
+												</div>
 											</div>
 										</div>
-									</div>
-								</article>
-							</div>
+									</article>
+								</div>
+							{% endif %}
 						{% endfor %}
 					</div>
 				</section>
