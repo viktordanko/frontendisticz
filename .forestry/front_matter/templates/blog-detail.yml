@@ -34,5 +34,4 @@ fields:
   hidden: true
   default: blog-detail.twig
 pages:
-- data/cz/blog/hen-druhy-blogpost.md
 - data/cz/blog/jak-ve-frontendisti.cz-delame-online-meetupy-na-youtube-hardware-software-a-zkusenosti.md
