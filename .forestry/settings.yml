@@ -43,7 +43,7 @@ sections:
 - type: document
   path: data/all/translations.yml
   label: Translations
-upload_dir: img/illust
+upload_dir: "../img/illust"
 public_path: "/img/illust"
 front_matter_path: ''
 use_front_matter_path: false
