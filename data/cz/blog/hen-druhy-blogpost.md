@@ -37,8 +37,8 @@ Já mám hlavně na starost výběr vhodného tématu a sestavování řečník�
 
 ## Softwarový a hardwarový setup
 
-**David Czernín:** Celkový setup ze strany moderátora určitě prozradí Martin Kolář, ten jej totiž za tu dobu značně vymazlil. Já si tady dovolím doplnit fotku z doby, kdy jsme plánovali celý sraz zkrouhnout na setkání řečníků a jejich přednes před plátnem odvysílat poprvé živě.  
-  
+**David Czernín:** Celkový setup ze strany moderátora určitě prozradí Martin Kolář, ten jej totiž za tu dobu značně vymazlil. Já si tady dovolím doplnit fotku z doby, kdy jsme plánovali celý sraz zkrouhnout na setkání řečníků a jejich přednes před plátnem odvysílat poprvé živě.
+
 ![](https://res.cloudinary.com/vzhurudolu-cz/image/upload/w_1024,q_80/v1594705197/vzhurudolu-blog/frontendisti-streamy-recnici_je2u1a.jpg)
 
 Vypadá to následovně:
@@ -64,8 +64,8 @@ Softwarově je základ [OBS](https://obsproject.com/cs), ale i v něm se nacház
 
 * Již zmíněný [obs-websocket](https://obsproject.com/forum/resources/obs-websocket-remote-control-obs-studio-from-websockets.466/)
 * [obs-ndi](https://github.com/Palakis/obs-ndi) - připojení řečníka přes Skype a technologii NDI
-* Mimo samotný OBS pak používám [Loopback](https://loopback.io/) (odposlech mikrofonu do sluchátek), [MyStreamTimer](http://www.mystreamtimer.com/) (odpočet)  
-    
+* Mimo samotný OBS pak používám [Loopback](https://loopback.io/) (odposlech mikrofonu do sluchátek), [MyStreamTimer](http://www.mystreamtimer.com/) (odpočet)
+
   ![](https://res.cloudinary.com/vzhurudolu-cz/image/upload/w_1024,q_80/v1594705204/vzhurudolu-blog/frontendisti-streamy-martin_heu5ap.jpg)
 
 **Martin Pešout:** Možná jen doplním, že ne pokaždé jsme byli všichni tři fyzicky v jedné místnosti. Já osobně jsem se během těch dvou měsíců připojoval z různých koutů ČR. Pro stream jsem chystal úvodní část s novinkami ze světa frontendu.
