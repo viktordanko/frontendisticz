@@ -28,4 +28,4 @@ _Italic_
 2. Item
 3. Item
 
-![David Kadlec](src/img/illust/kadlec.jpg)
+![](/img/illust/autor-clanku.jpg)
