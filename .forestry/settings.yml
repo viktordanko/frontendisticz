@@ -17,7 +17,7 @@ sections:
   create: documents
   match: "**/*"
   templates:
-  - blog-post
+  - blog-detail
 - type: document
   path: data/cz/global.yml
   label: Global
@@ -34,7 +34,7 @@ sections:
   create: documents
   match: "**/*"
   templates:
-  - blog-post
+  - blog-detail
 - type: document
   path: data/en/global.yml
   label: " EN - Global"
