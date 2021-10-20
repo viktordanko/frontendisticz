@@ -1,9 +1,10 @@
 ---
 template: blog-detail.twig
-title: Hen, druhý blogpost
-description: Po pYs
+title: 'Jak ve Frontendisti.cz děláme online meetupy na YouTube: hardware, software
+  a zkušenosti '
+description: ''
 image: src/img/illust/placeholder.jpg
-author: Author
+author: Martin Michálek
 
 ---
 Všechno zlé je k něčemu dobré. Určitě jste si všimli, že se meetupy Frontendisti.cz na čas přehouply čistě do [online podoby](https://www.youtube.com/channel/UCxs7KDC0LFOezVujLG_leRw).
