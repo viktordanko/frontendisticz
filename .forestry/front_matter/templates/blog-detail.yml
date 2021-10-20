@@ -34,4 +34,5 @@ fields:
   hidden: true
   default: blog-detail.twig
 pages:
+- data/cz/blog/hen-druhy-blogpost.md
 - data/cz/blog/test.md
