@@ -1,5 +1,4 @@
 const gulp = require('gulp');
-const notifier = require('node-notifier');
 const browserSync = require('browser-sync');
 
 const isProduction = require('./helpers/isProduction');
@@ -58,12 +57,6 @@ module.exports = function watch(done) {
 				],
 				copyRoot,
 			);
-
-			notifier.notify({
-				title: 'Start Project',
-				message: 'Gulp is watching files.',
-				sound: 'Hero',
-			});
 		},
 	)(done);
 };
