@@ -3,7 +3,7 @@ template: blog-detail.twig
 title: Zakládáme fanklub Viktora Daňka
 description: ''
 image: ''
-author: ''
+author: Martina Michálková
 
 ---
 Dámy a pánové, Viktor je top!
