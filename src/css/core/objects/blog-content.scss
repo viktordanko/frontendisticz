@@ -1,0 +1,21 @@
+.blog-content {
+	font-family: Georgia;
+	font-size: 19px;
+	line-height: 1.7;
+	p {
+		letter-spacing: normal;
+	}
+	ul li {
+		background-position: 12px 0.66em;
+		background-size: 0.4em 0.4em;
+	}
+	a {
+		color: $colorPrimary;
+		text-decoration: underline;
+		font-weight: normal;
+	}
+
+	.hoverevents & a:hover {
+		color: $colorSecondary;
+	}
+}

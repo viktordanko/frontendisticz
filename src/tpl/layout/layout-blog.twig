@@ -86,15 +86,16 @@
 			<a href="#menu-main">Přejít k hlavnímu menu</a>
 		</p>
 
-		<header role="banner" class="header-blog">
-			<div class="header-conf__inner">
-				<div class="row-main">
-					<h1 class="header-conf__title">
-						{{ page_data.title }}
-					</h1>
+		<header role="banner" class="header">
+			<div class="row-main">
+				<div class="header__inner">
+					<a href="./" class="header__logo">
+						{% include "@images/logo-frontendisti.svg" %}
+					</a>
 				</div>
 			</div>
 		</header>
+
 
 		{% block content %}{% endblock %}
 
