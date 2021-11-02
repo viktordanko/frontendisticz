@@ -10,10 +10,6 @@
 			</div>
 		</div>
 
-		<pre>
-			{{ dump(page_data) }}
-		</pre>
-
 		<div class="u-bg-tertiary u-pt-xxl">
 			<div class="row-main">
 				<div class="menu">
@@ -22,6 +18,7 @@
 							{% set items = [
 								{ title: 'Úvod', href: '/' },
 								{ title: 'Partneři', href: '#partners' },
+								{ title: 'Blog', href: '#blog' },
 								{ title: 'Tým a kontakty', href: '#team' },
 								{ title: 'Konference 2021', href: '/konference.html', isHiddenOnDesktop: true }
 							] %}
@@ -94,10 +91,13 @@
 			</div>
 		</div>
 
-		<div class="row-main">
-			<section class="c-gallery c-gallery--program u-mb-xxl" id="program">
+		<div class="u-pt-xxl row-main">
+			<section class="c-gallery c-gallery--program u-mb-xxl" id="blog">
+				<h2 class="c-gallery__title">
+					Prohlédni si náš blog
+				</h2>
 				<div class="c-gallery__list">
-					{% for card in page_data.list_of_blogposts %}
+					{% for card in page_data.list_of_blogposts|slice(0,3) %}
 						{% set cardData = card|data(site_lang) %}
 						{% if cardData %}
 							<div class="c-gallery__item">
