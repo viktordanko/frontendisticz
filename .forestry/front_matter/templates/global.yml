@@ -2,22 +2,23 @@
 label: global
 hide_body: true
 fields:
-  - name: template
-    type: text
-    config:
-      required: false
-    label: templatet
-    hidden: true
-    default: index.twig
-  - name: list_of_blogposts
-    type: list
-    config:
-      use_select: true
-      min:
-      max:
-      source:
-        type: pages
-        section: pages
-      label: List of blogposts
+- name: template
+  type: text
+  config:
+    required: false
+  label: templatet
+  hidden: true
+  default: index.twig
+- name: list_of_blogposts
+  type: list
+  config:
+    use_select: true
+    min: 
+    max: 
+    source:
+      type: pages
+      section: global
+    label: List of blogposts
+  label: Homepage
 pages:
-  - data/cz/global.yml
+- data/cz/global.yml
