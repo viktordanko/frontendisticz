@@ -7,20 +7,18 @@
 		<div class="u-bg-white u-pt-xl u-pb-xl">
 			<div class="u-max-width--6-12 u-mx-auto u-text-center">
 				<h1>
-					{{ page_data.title }} </br>
-					<span class="u-font-sm">
-						{{ page_data.author }}
-					</span>
+					{{ page_data.title }}
 				</h1>
+				<p class="u-font-xs">
+					{{ page_data.author }}
+				</p>
 				<p class="u-font-xs">
 					Vydáno:&nbsp;&nbsp;{{ page_data.modifiedDate|date("d. m. Y", "Europe/Paris") }}
 				</p>
 			</div>
 
 			<div class="blog-content row-main row-main--sm u-pt-xl u-mb-xl">
-				<div>
-					{{ page_data.markdown_body|markdown|raw }}
-				</div>
+				{{ page_data.markdown_body|markdown|raw }}
 			</div>
 		</div>
 

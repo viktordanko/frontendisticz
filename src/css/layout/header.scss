@@ -54,9 +54,11 @@
 	}
 	@media ($lgUp) {
 		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=1000&d=2");
-		height: 510px;
 		&__logo {
 			width: 184px;
+		}
+		&:not(.header--blog) {
+			height: 510px;
 		}
 	}
 	@media ($xlUp) {

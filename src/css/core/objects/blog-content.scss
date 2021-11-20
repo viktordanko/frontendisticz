@@ -1,7 +1,15 @@
 .blog-content {
+	display: grid;
+	grid-template-columns:
+		1fr
+		min(80ch, 100%)
+		1fr;
 	font-family: Georgia;
 	font-size: 19px;
 	line-height: 1.7;
+	& > * {
+		grid-column: 2;
+	}
 	p {
 		letter-spacing: normal;
 	}
@@ -10,12 +18,19 @@
 		background-size: 0.4em 0.4em;
 	}
 	a {
-		color: $colorPrimary;
+		color: $colorText;
 		text-decoration: underline;
 		font-weight: normal;
+		text-decoration-color: $colorPrimary;
 	}
 
 	.hoverevents & a:hover {
-		color: $colorSecondary;
+		color: $colorPrimary;
+	}
+
+	@media ($xlUp) {
+		img {
+			width: 100%;
+		}
 	}
 }
