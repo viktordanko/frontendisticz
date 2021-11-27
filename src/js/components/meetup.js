@@ -3,23 +3,28 @@ export const init = async () => {
 
 	if (!el) return;
 
-	const response = await fetch('https://api.meetup.com/frontendisti/events?page=2', {
-		headers: {
-			'Access-Control-Allow-Origin': 'https://secure.meetup.com',
-		},
-	});
+	try {
+		const response = await fetch('https://api.meetup.com/frontendisti/', {
+			headers: {
+				'Access-Control-Allow-Origin': '*',
+			},
+		});
 
-	if (!response.ok) {
-		console.error(response);
-		return;
+		if (!response.ok) {
+			console.error(response);
+			return;
+		}
+
+		const data = await response.json();
+
+		console.log(data);
+
+		const name = document.createElement('p');
+		name.innerText = data[0].name;
+		el.appendChild(name);
+
+	} catch (error) {
+		console.error(error);
 	}
-
-	const data = await response.json();
-
-	const name = document.createElement('p');
-	name.innerText = data[0].name;
-	el.appendChild(name);
-
-
 };
 
