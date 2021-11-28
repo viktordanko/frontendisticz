@@ -3,7 +3,7 @@ import 'what-input';
 
 // Components
 import * as intro from './components/intro';
-// import * as meetup from './components/meetup';
+import * as meetup from './components/meetup';
 import * as header from './components/header';
 import * as modal from './components/modal';
 import * as menu from './components/menu';
@@ -17,7 +17,7 @@ const componentsload = [
 
 // once delegated components
 const components = [
-	// meetup,
+	meetup,
 	intro,
 	header,
 	modal,
