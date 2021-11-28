@@ -15,10 +15,10 @@
 				<div class="menu">
 					<nav id="menu-main" class="m-main" aria-label="Hlavní menu" aria-expanded="false">
 						<ul class="m-main__list">
+							{#{ title: 'Blog', href: '#blog' },#}
 							{% set items = [
 								{ title: 'Úvod', href: '/' },
 								{ title: 'Partneři', href: '#partners' },
-								{ title: 'Blog', href: '#blog' },
 								{ title: 'Tým a kontakty', href: '#team' },
 								{ title: 'Konference 2021', href: '/konference.html', isHiddenOnDesktop: true }
 							] %}
@@ -91,62 +91,64 @@
 			</div>
 		</div>
 
-		<div class="u-pt-xxl row-main">
-			<section class="c-gallery c-gallery--program u-mb-xxl" id="blog">
-				<h2 class="c-gallery__title">
-					Co je nového?
-				</h2>
-				<div class="c-gallery__list">
-					{% for card in page_data.list_of_blogposts|slice(0,3) %}
-						{% set cardData = card|data(site_lang) %}
-						{% if cardData %}
-							<div class="c-gallery__item">
-								<article class="b-card b-card--program">
-									<div class="b-card__inner">
-										{% if cardData.image %}
-											<div class="b-card__img">
-												<img src="{{ cardData.image }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
-											</div>
-										{% endif %}
-										<div class="b-card__content">
-											{% if cardData.title %}
-												<h3 class="b-card__title">
-													{{ cardData.title|nl2br }}
-												</h3>
+		{#
+			<div class="u-pt-xxl row-main">
+				<section class="c-gallery c-gallery--program u-mb-xxl" id="blog">
+					<h2 class="c-gallery__title">
+						Co je nového?
+					</h2>
+					<div class="c-gallery__list">
+						{% for card in page_data.list_of_blogposts|slice(0,3) %}
+							{% set cardData = card|data(site_lang) %}
+							{% if cardData %}
+								<div class="c-gallery__item">
+									<article class="b-card b-card--program">
+										<div class="b-card__inner">
+											{% if cardData.image %}
+												<div class="b-card__img">
+													<img src="{{ cardData.image }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
+												</div>
 											{% endif %}
-											<div class="b-card__row">
-												<div class="b-card__info">
-													{% if cardData.author %}
-														<p class="b-card__name">
-															{{ cardData.author }}
-														</p>
-													{% endif %}
-													{% if cardData.description %}
-														<span class="b-card__company">
-															{{ cardData.description|nl2br }}
-														</span>
+											<div class="b-card__content">
+												{% if cardData.title %}
+													<h3 class="b-card__title">
+														{{ cardData.title|nl2br }}
+													</h3>
+												{% endif %}
+												<div class="b-card__row">
+													<div class="b-card__info">
+														{% if cardData.author %}
+															<p class="b-card__name">
+																{{ cardData.author }}
+															</p>
+														{% endif %}
+														{% if cardData.description %}
+															<span class="b-card__company">
+																{{ cardData.description|nl2br }}
+															</span>
+														{% endif %}
+													</div>
+													{% if card|url(site_lang) %}
+														<a href="{{ card|url(site_lang) }}" class="b-card__link link-mask">
+															{% include '@components/core/icon-svg/icon-svg.twig' with {
+																props: {
+																	name: 'chevron-right',
+																	alt: 'Přejít na detail'
+																}
+															} %}
+														</a>
 													{% endif %}
 												</div>
-												{% if card|url(site_lang) %}
-													<a href="{{ card|url(site_lang) }}" class="b-card__link link-mask">
-														{% include '@components/core/icon-svg/icon-svg.twig' with {
-															props: {
-																name: 'chevron-right',
-																alt: 'Přejít na detail'
-															}
-														} %}
-													</a>
-												{% endif %}
 											</div>
 										</div>
-									</div>
-								</article>
-							</div>
-						{% endif %}
-					{% endfor %}
-				</div>
-			</section>
-		</div>
+									</article>
+								</div>
+							{% endif %}
+						{% endfor %}
+					</div>
+				</section>
+			</div>
+		#}
 
 		<div class="u-bg-mint u-pt-xxl">
 			<div class="row-main">
@@ -157,6 +159,34 @@
 					</h2>
 					<div class="c-gallery__list grid">
 						{% set cards = [
+							{
+								imgSrc: 'hevery.jpg',
+								name: 'Miško Hevery',
+								title: 'Qwik the resumable framework in the sea of replayable frameworks',
+								linkHref: 'https://www.youtube.com/watch?v=yN-bffA2YS0',
+								index: 243,
+							},
+							{
+								imgSrc: 'brychta.jpg',
+								name: 'Martin Brychta',
+								title: 'Serverless framework - v&nbsp;oblacíchbez serverů…',
+								linkHref: 'https://www.youtube.com/watch?v=Iji31Dotn3E',
+								index: 242,
+							},
+							{
+								imgSrc: 'mujeeb.jpg',
+								name: 'Saad Mujeeb',
+								title: 'Intro to Strapi and how it outstands other classical CMS',
+								linkHref: 'https://www.youtube.com/watch?v=yNx33TjRJnA',
+								index: 241,
+							},
+							{
+								imgSrc: 'igor-hlina-avatar.jpg',
+								name: 'Srigi',
+								title: 'Material UI 5 - moderný react UI kit',
+								linkHref: 'https://www.youtube.com/watch?v=6pZSzHFKAgE',
+								index: 240,
+							},
 							{
 								imgSrc: 'proft.jpg',
 								name: 'Břetislav
@@ -189,38 +219,6 @@
 								title: 'Frontendové novinky',
 								linkHref: 'https://www.youtube.com/watch?v=vLl1YZqlaTc',
 								index: 212,
-							},
-							{
-								imgSrc: 'dobes.jpg',
-								name: 'Vojtěch
-								Doběš',
-								title: 'Not all zeros are equal (TypeScript)',
-								linkHref: 'https://www.youtube.com/watch?v=Egr6hR5e9KY',
-								index: 211,
-							},
-							{
-								imgSrc: 'roubicek.jpg',
-								name: 'Aleš
-								Roubíček',
-								title: 'Špekulování (o TypeScriptu)',
-								linkHref: 'https://www.youtube.com/watch?v=yKom9HFZYxY',
-								index: 210,
-							},
-							{
-								imgSrc: 'pokorny.jpg',
-								name: 'Robin
-								Pokorný',
-								title: 'Modré z nebe - proč používám TypeScript',
-								linkHref: 'https://www.youtube.com/watch?v=oSFlFK1rEC4',
-								index: 209,
-							},
-							{
-								imgSrc: 'fojtl.jpg',
-								name: 'Marek
-								Fojtl',
-								title: 'Typescript v praxi',
-								linkHref: 'https://www.youtube.com/watch?v=pAndE_xu2aw',
-								index: 208,
 							},
 						] %}
 						{% for card in cards %}
