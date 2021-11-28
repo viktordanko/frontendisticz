@@ -6,7 +6,7 @@ export const init = async () => {
 	try {
 		const response = await fetch('https://api.meetup.com/frontendisti/events', {
 			headers: {
-				'Access-Control-Allow-Origin': '*',
+				'Access-Control-Allow-Origin': 'https://frontendisti.cz/',
 			},
 		});
 
