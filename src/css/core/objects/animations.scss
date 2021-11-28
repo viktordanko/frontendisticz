@@ -11,3 +11,11 @@
 		stroke-dashoffset: 0;
 	}
 }
+@keyframes skeleton {
+	50% {
+		opacity: 0.2;
+	}
+	100% {
+		opacity: 0.5;
+	}
+}
