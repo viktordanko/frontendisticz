@@ -4,7 +4,9 @@ export const init = async () => {
 	if (!el) return;
 
 	try {
-		const response = await fetch('https://api.meetup.com/frontendisti/events');
+		const response = await fetch('https://api.meetup.com/frontendisti/events', {
+			mode: 'cors',
+		});
 
 		if (!response.ok) {
 			console.error(response);
