@@ -7,7 +7,6 @@ export const init = async () => {
 		const response = await fetch('https://api.meetup.com/frontendisti/events', {
 			mode: 'cors',
 			headers: {
-				'Content-Type': 'application/json',
 				'Access-Control-Allow-Origin': '*',
 			},
 		});
@@ -30,16 +29,12 @@ export const init = async () => {
 		document.querySelector('[data-meetup-date]').innerText = `${meetupDate} – ${meetupTime}`;
 		document.querySelector('[data-meetup-link]').href = meetupLink;
 
-		setTimeout(() => {
-			document.querySelector('[data-meetup-name]').classList.remove('inline-skeleton');
-			document.querySelector('[data-meetup-date]').classList.remove('inline-skeleton');
-		}, 10000);
-
 	} catch (error) {
+		console.error(error);
+
 		document.querySelector('[data-meetup-name]').classList.remove('inline-skeleton');
 		document.querySelector('[data-meetup-date]').classList.remove('inline-skeleton');
 		document.querySelector('[data-meetup-name]').innerText = 'Nepodařilo se načíst data';
-		console.error(error);
 	}
 };
 
