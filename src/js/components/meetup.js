@@ -6,6 +6,10 @@ export const init = async () => {
 	try {
 		const response = await fetch('https://api.meetup.com/frontendisti/events', {
 			mode: 'cors',
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+			},
 		});
 
 		if (!response.ok) {
