@@ -4,7 +4,13 @@ export const init = async () => {
 	if (!el) return;
 
 	try {
-		const response = await fetch('https://api.meetup.com/frontendisti/events');
+		const response = await fetch('https://api.meetup.com/frontendisti/events', {
+			headers: {
+				'Content-Type': 'application/json',
+				'Access-Control-Allow-Origin': '*',
+			},
+
+		});
 
 		if (!response.ok) {
 			console.error(response);
