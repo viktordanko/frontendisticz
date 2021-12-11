@@ -35,6 +35,8 @@ Ideální program na prázdniny, co myslíte?
 
 Do programu se nám povedlo dostat také skeč natočenou na míru konferenci od tohoto známého divadelního spolku. Jak dopadnou herci hledající práci na pozici frontendisty?
 
+<div class="u-mb-sm"> <iframe class="embed-responsive-16x9" src="https://www.youtube-nocookie.com/embed/ZR3n1vD4xGo" allowfullscreen></iframe> </div>
+
 ## Subjektivní shrnutí spoluorganizátora
 
 Bylo to náročné, ale stálo to za to. Online podoba má své limity, ale soudě podle vašich ohlasů, ale také podle statistik sledování z platformy Hopin, vás to vydrželo bavit opravdu dlouho.
