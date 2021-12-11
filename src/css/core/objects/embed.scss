@@ -1,0 +1,7 @@
+.embed-responsive {
+	width: 100%;
+	height: auto;
+	&-16x9 {
+		aspect-ratio: 16/9;
+	}
+}
