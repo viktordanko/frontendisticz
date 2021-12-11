@@ -47,7 +47,7 @@ Přednášky jsme podle obsahu kvůli udržení pozornosti limitovali na maximá
 
 Lidé nás díky online formě sledovali z pohodlí domova, všemi možnými způsoby:
 
-`<blockquote class="twitter-tweet"><p lang="und" dir="ltr">A ako sledujete konferenciu <a href="`[`https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw`](https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw "https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw")`">@Frontendisti</a> vy? <a href="`[`https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw`](https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw "https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw")`">#FrontKon</a> <a href="https://t.co/KXSxYD9dbH">pic.twitter.com/KXSxYD9dbH</a></p>&mdash; Riki Fridrich (@fczbkk) <a href="`[`https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw`](https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw "https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw")`">May 29, 2021</a></blockquote> <script async src="`[`https://platform.twitter.com/widgets.js`](https://platform.twitter.com/widgets.js "https://platform.twitter.com/widgets.js")`" charset="utf-8"></script>`
+<blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><p lang="und" dir="ltr">A ako sledujete konferenciu <a href="https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw">@Frontendisti</a> vy? <a href="https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw">#FrontKon</a> <a href="https://t.co/KXSxYD9dbH">pic.twitter.com/KXSxYD9dbH</a></p>&mdash; Riki Fridrich (@fczbkk) <a href="https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw">May 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ### Scénář a moderátoři
 
@@ -58,6 +58,8 @@ Vytěžili jsme naše zkušenosti ze streamů a kolegové piplali scénář, kte
 Nejsilnější část programu vznikla jakoby mimochodem, opět z touhy zatraktivnit online podobu a přidat prvek interakce. Diskuzní session po každé přednášce měly velmi dobrou sledovanost, lidé se zapojovali a původní téma se rozšířilo o celou řadu nových úhlů pohledu. Až se mi zdá, že jsme tímto vytvořili hlavní formu konference. Až se budete dívat na přednášky, nezapomeňte si ke každé pustit diskuzi.
 
 Diskuzi o Tailwind CSS jsme pojali jako [další díl podcastu](https://www.vzhurudolu.cz/podcast/198-podcast-tailwind) ze Vzhůru dolů:
+
+<iframe class="embed-responsive embed-responsive-16x9" src="https://www.youtube-nocookie.com/embed/c-0mTG5GXmI" allowfullscreen></iframe>
 
 ### Odbočky jinam
 
@@ -80,6 +82,8 @@ Další ohlas je od [Dawe design](https://www.dawedesign.cz/blog/prvni-ceska-fro
 > Na samotný závěr bychom rádi poděkovali organizátorům akce, a to především za to, jak perfektně zvládli organizaci, sestavili celý harmonogram a také za to, že v průběhu konference nebyl jediný technický problém.
 
 Další ohlasy najdete na Twitteru pod [hashtagem #FrontKon](https://twitter.com/hashtag/frontkon).
+
+<blockquote class="twitter-tweet"><p lang="cs" dir="ltr">👏 Dnešní <a href="https://twitter.com/hashtag/frontkon?src=hash&amp;ref_src=twsrc%5Etfw">#frontkon</a> na jedničku. Skvělá organizace, dobrá atmosféra a velký balík nových znalostí. Díky <a href="https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw">@Frontendisti</a>! <a href="https://twitter.com/hashtag/react?src=hash&amp;ref_src=twsrc%5Etfw">#react</a> <a href="https://twitter.com/hashtag/frontend?src=hash&amp;ref_src=twsrc%5Etfw">#frontend</a><br>Shrnutí z naší přednášky najdete brzo na <a href="https://t.co/d2183oK6jd">https://t.co/d2183oK6jd</a>. <a href="https://t.co/xA1jYs2hDt">pic.twitter.com/xA1jYs2hDt</a></p>&mdash; HeurekaDevs (@HeurekaDevs) <a href="https://twitter.com/HeurekaDevs/status/1398665910634926086?ref_src=twsrc%5Etfw">May 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Co dál a jak nám můžete pomoci?
 
