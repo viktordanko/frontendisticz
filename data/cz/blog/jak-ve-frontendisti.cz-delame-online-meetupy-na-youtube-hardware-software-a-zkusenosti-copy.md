@@ -10,11 +10,7 @@ author: Martin Michálek
 ---
 Mnozí z vás se zúčastnili [historicky první konference Frontendisti.cz](https://frontendisti.cz/konference), která proběhla na konci května. Přináším obsah v podobě záznamů a taky přicházím s vlastním subjektivním pohledem jakožto člena organizačního štábu.
 
-<div class="twitter-holder">
-
 <blockquote class="twitter-tweet"><p lang="cs" dir="ltr">Páteční organizační schůzka <a href="https://twitter.com/hashtag/FrontKon?src=hash&ref_src=twsrc%5Etfw">#FrontKon</a>. Bude to _elké. Větší než jsem předpokládal. <a href="https://t.co/wvaKtIV5tw">pic.twitter.com/wvaKtIV5tw</a></p>— Martin Michálek (@machal) <a href="https://twitter.com/machal/status/1393641706373910528?ref_src=twsrc%5Etfw">May 15, 2021</a></block_quote>
-
-</div>
 
 Konference se myslím povedla. Přinesla 16 přednášek pro více než 600 účastníků a zdá se, že se nám vcelku i vydařil hlavní formální záměr – i přes téměř celodenní online program udržet vaši pozornost a do konference zamíchat trochu „lidštiny” a pocitu sounáležitosti komunity.
 
