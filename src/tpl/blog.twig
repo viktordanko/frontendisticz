@@ -6,63 +6,61 @@
 		<div class="u-pt-xxl">
 
 			<div class="row-main">
-				<section class="c-gallery c-gallery--program u-mb-xxl" id="program">
-					<h1 class="u-text-center">
-						🚧 „Vydrž Prťka, vydrž!“ 🚧
+				<section class="c-gallery c-gallery--program u-mb-xxl">
+					<h1 class="c-gallery__title">
+						{{ page_data.title }}
 					</h1>
-					{#
-						<div class="c-gallery__list">
-							{% for card in page_data.list_of_blogposts %}
+					<div class="c-gallery__list">
+						{% for card in page_data.list_of_blogposts %}
 
-								{% set cardData = card|data(site_lang) %}
-								{% if cardData %}
-									<div class="c-gallery__item">
-										<article class="b-card b-card--program">
-											<div class="b-card__inner">
-												{% if cardData.image %}
-													<div class="b-card__img">
-														<img src="{{ cardData.image }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
-													</div>
+							{% set cardData = card|data(site_lang) %}
+							{% if cardData %}
+								<div class="c-gallery__item">
+									<article class="b-card b-card--program">
+										<div class="b-card__inner">
+											{% if cardData.image %}
+												<div class="b-card__img">
+													<img src="{{ cardData.image }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
+												</div>
+											{% endif %}
+											<div class="b-card__content">
+												{% if cardData.title %}
+													<h3 class="b-card__title">
+														{{ cardData.title|nl2br }}
+													</h3>
 												{% endif %}
-												<div class="b-card__content">
-													{% if cardData.title %}
-														<h3 class="b-card__title">
-															{{ cardData.title|nl2br }}
-														</h3>
-													{% endif %}
-													<div class="b-card__row">
-														<div class="b-card__info">
-															{% if cardData.author %}
-																<p class="b-card__name">
-																	{{ cardData.author }}
-																</p>
-															{% endif %}
-															{% if cardData.description %}
-																<span class="b-card__company">
-																	{{ cardData.description|nl2br }}
-																</span>
-															{% endif %}
-														</div>
-														{% if card|url(site_lang) %}
-															<a href="{{ card|url(site_lang) }}" class="b-card__link link-mask">
-																{% include '@components/core/icon-svg/icon-svg.twig' with {
-																	props: {
-																		name: 'chevron-right',
-																		alt: 'Přejít na detail'
-																	}
-																} %}
-															</a>
+												<div class="b-card__row">
+													<div class="b-card__info">
+														{% if cardData.author %}
+															<p class="b-card__name">
+																{{ cardData.author }}
+															</p>
+														{% endif %}
+														{% if cardData.description %}
+															<span class="b-card__company">
+																{{ cardData.description|nl2br }}
+															</span>
 														{% endif %}
 													</div>
+													{% if card|url(site_lang) %}
+														<a href="{{ card|url(site_lang) }}" class="b-card__link link-mask">
+															{% include '@components/core/icon-svg/icon-svg.twig' with {
+																props: {
+																	name: 'chevron-right',
+																	alt: 'Přejít na detail'
+																}
+															} %}
+														</a>
+													{% endif %}
 												</div>
 											</div>
-										</article>
-									</div>
-								{% endif %}
+										</div>
+									</article>
+								</div>
+							{% endif %}
 
-							{% endfor %}
-						</div>
-					#}
+						{% endfor %}
+					</div>
 				</section>
 			</div>
 		</div>
