@@ -47,6 +47,8 @@ Přednášky jsme podle obsahu kvůli udržení pozornosti limitovali na maximá
 
 Lidé nás díky online formě sledovali z pohodlí domova, všemi možnými způsoby:
 
+`<blockquote class="twitter-tweet"><p lang="und" dir="ltr">A ako sledujete konferenciu <a href="`[`https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw`](https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw "https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw")`">@Frontendisti</a> vy? <a href="`[`https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw`](https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw "https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw")`">#FrontKon</a> <a href="https://t.co/KXSxYD9dbH">pic.twitter.com/KXSxYD9dbH</a></p>&mdash; Riki Fridrich (@fczbkk) <a href="`[`https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw`](https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw "https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw")`">May 29, 2021</a></blockquote> <script async src="`[`https://platform.twitter.com/widgets.js`](https://platform.twitter.com/widgets.js "https://platform.twitter.com/widgets.js")`" charset="utf-8"></script>`
+
 ### Scénář a moderátoři
 
 Vytěžili jsme naše zkušenosti ze streamů a kolegové piplali scénář, který v kombinaci s osvědčenými moderátorskými dvojicemi doplnil vysoké tempo přednášek o lidský prvek. Podle ohlasů se moderátoři velmi líbili i vám.
