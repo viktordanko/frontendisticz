@@ -10,8 +10,11 @@ author: Martin Michálek
 ---
 Mnozí z vás se zúčastnili [historicky první konference Frontendisti.cz](https://frontendisti.cz/konference), která proběhla na konci května. Přináším obsah v podobě záznamů a taky přicházím s vlastním subjektivním pohledem jakožto člena organizačního štábu.
 
-<blockquote class="twitter-tweet"><p lang="cs" dir="ltr">Páteční organizační schůzka <a href="https://twitter.com/hashtag/FrontKon?src=hash&ref_src=twsrc%5Etfw">#FrontKon</a>. Bude to velké. Větší než jsem předpokládal. <a href="https://t.co/wvaKtIV5tw">pic.twitter.com/wvaKtIV5tw</a></p>— Martin Michálek (@machal) <a href="https://twitter.com/machal/status/1393641706373910528?ref_src=twsrc%5Etfw">May 15, 2021</a></blockquote>
-<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<div class="twitter-holder">
+
+<blockquote class="twitter-tweet"><p lang="cs" dir="ltr">Páteční organizační schůzka <a href="https://twitter.com/hashtag/FrontKon?src=hash&ref_src=twsrc%5Etfw">#FrontKon</a>. Bude to _elké. Větší než jsem předpokládal. <a href="https://t.co/wvaKtIV5tw">pic.twitter.com/wvaKtIV5tw</a></p>— Martin Michálek (@machal) <a href="https://twitter.com/machal/status/1393641706373910528?ref_src=twsrc%5Etfw">May 15, 2021</a></block_quote>
+
+</div>
 
 Konference se myslím povedla. Přinesla 16 přednášek pro více než 600 účastníků a zdá se, že se nám vcelku i vydařil hlavní formální záměr – i přes téměř celodenní online program udržet vaši pozornost a do konference zamíchat trochu „lidštiny” a pocitu sounáležitosti komunity.
 
@@ -35,7 +38,7 @@ Ideální program na prázdniny, co myslíte?
 
 Do programu se nám povedlo dostat také skeč natočenou na míru konferenci od tohoto známého divadelního spolku. Jak dopadnou herci hledající práci na pozici frontendisty?
 
-<div class="u-mb-sm"> <iframe class="embed-responsive embed-responsive-16x9" src="https://www.youtube-nocookie.com/embed/ZR3n1vD4xGo" allowfullscreen></iframe> </div>
+<iframe class="embed-responsive embed-responsive-16x9" src="https://www.youtube-nocookie.com/embed/ZR3n1vD4xGo" allowfullscreen></iframe> </div>
 
 ## Subjektivní shrnutí spoluorganizátora
 
@@ -47,7 +50,7 @@ Přednášky jsme podle obsahu kvůli udržení pozornosti limitovali na maximá
 
 Lidé nás díky online formě sledovali z pohodlí domova, všemi možnými způsoby:
 
-<blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><p lang="und" dir="ltr">A ako sledujete konferenciu <a href="https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw">@Frontendisti</a> vy? <a href="https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw">#FrontKon</a> <a href="https://t.co/KXSxYD9dbH">pic.twitter.com/KXSxYD9dbH</a></p>&mdash; Riki Fridrich (@fczbkk) <a href="https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw">May 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet" data-dnt="true" data-theme="light"><p lang="und" dir="ltr">A ako sledujete konferenciu <a href="https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw">@Frontendisti</a> vy? <a href="https://twitter.com/hashtag/FrontKon?src=hash&amp;ref_src=twsrc%5Etfw">#FrontKon</a> <a href="https://t.co/KXSxYD9dbH">pic.twitter.com/KXSxYD9dbH</a></p>&mdash; Riki Fridrich (@fczbkk) <a href="https://twitter.com/fczbkk/status/1398593736582565891?ref_src=twsrc%5Etfw">May 29, 2021</a></blockquote>
 
 ### Scénář a moderátoři
 
@@ -83,7 +86,7 @@ Další ohlas je od [Dawe design](https://www.dawedesign.cz/blog/prvni-ceska-fro
 
 Další ohlasy najdete na Twitteru pod [hashtagem #FrontKon](https://twitter.com/hashtag/frontkon).
 
-<blockquote class="twitter-tweet"><p lang="cs" dir="ltr">👏 Dnešní <a href="https://twitter.com/hashtag/frontkon?src=hash&amp;ref_src=twsrc%5Etfw">#frontkon</a> na jedničku. Skvělá organizace, dobrá atmosféra a velký balík nových znalostí. Díky <a href="https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw">@Frontendisti</a>! <a href="https://twitter.com/hashtag/react?src=hash&amp;ref_src=twsrc%5Etfw">#react</a> <a href="https://twitter.com/hashtag/frontend?src=hash&amp;ref_src=twsrc%5Etfw">#frontend</a><br>Shrnutí z naší přednášky najdete brzo na <a href="https://t.co/d2183oK6jd">https://t.co/d2183oK6jd</a>. <a href="https://t.co/xA1jYs2hDt">pic.twitter.com/xA1jYs2hDt</a></p>&mdash; HeurekaDevs (@HeurekaDevs) <a href="https://twitter.com/HeurekaDevs/status/1398665910634926086?ref_src=twsrc%5Etfw">May 29, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<blockquote class="twitter-tweet"><p lang="cs" dir="ltr">👏 Dnešní <a href="https://twitter.com/hashtag/frontkon?src=hash&amp;ref_src=twsrc%5Etfw">#frontkon</a> na jedničku. Skvělá organizace, dobrá atmosféra a velký balík nových znalostí. Díky <a href="https://twitter.com/Frontendisti?ref_src=twsrc%5Etfw">@Frontendisti</a>! <a href="https://twitter.com/hashtag/react?src=hash&amp;ref_src=twsrc%5Etfw">#react</a> <a href="https://twitter.com/hashtag/frontend?src=hash&amp;ref_src=twsrc%5Etfw">#frontend</a><br>Shrnutí z naší přednášky najdete brzo na <a href="https://t.co/d2183oK6jd">https://t.co/d2183oK6jd</a>. <a href="https://t.co/xA1jYs2hDt">pic.twitter.com/xA1jYs2hDt</a></p>&mdash; HeurekaDevs (@HeurekaDevs) <a href="https://twitter.com/HeurekaDevs/status/1398665910634926086?ref_src=twsrc%5Etfw">May 29, 2021</a></blockquote> 
 
 ## Co dál a jak nám můžete pomoci?
 
