@@ -79,6 +79,8 @@ hr {
 
 // Blockquote
 blockquote {
+	border-left: 2px solid $colorBd;
+	padding-left: 10px;
 	margin: 0 0 $typoSpaceVertical;
 	padding: 0;
 	p {
