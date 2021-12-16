@@ -97,6 +97,6 @@ Pokud se chcete zapojit do dalších streamů (nebo meetupů, jakmile je bude mo
 
 Díky všem přednášejícím a organizátorům, partnerům či podporovatelům. Čas na závěrečné titulky!
 
-<iframe class="embed-responsive embed-responsive-16x9" src="https://www.youtube-nocookie.com/embed/S0pl3Uwm1G8" allowfullscreen></iframe>
+<iframe class="embed-responsive embed-responsive-16x9 u-mb-sm" src="https://www.youtube-nocookie.com/embed/S0pl3Uwm1G8" allowfullscreen></iframe>
 
 Na závěr jednou odkazy na záznamy: [přednášky](https://www.youtube.com/playlist?list=PLnXfazh66kVc-AY46ixdAGzlsfPtP4mx-) & [diskuzní session](https://www.youtube.com/playlist?list=PLnXfazh66kVfZBHWTRgNRfyQVNTOp0xBb).
