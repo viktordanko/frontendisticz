@@ -32,6 +32,13 @@
   headers = {X-From = "Netlify"}
 
 [[redirects]]
+  from = "/konference"
+  to = "/index.html"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+
+[[redirects]]
   from = "/discord"
   to = "https://www.discord.com/invite/A9sKuZzzya"
   status = 200

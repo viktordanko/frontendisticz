@@ -43,9 +43,23 @@
 		}
 	}
 
+	// VARIABLEs
+	&--orange &__link {
+		box-shadow: 0 10px 20px rgba($colorPrimary, 0.3);
+	}
+	&--orange &__title {
+		max-width: 820px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 40px;
+	}
+
 	// STATEs
 	.hoverevents &__link:hover {
 		box-shadow: 0 10px 20px rgba($colorBlue, 0.6);
+	}
+	.hoverevents &--orange &__link:hover {
+		box-shadow: 0 10px 20px rgba($colorPrimary, 0.6);
 	}
 
 	// MQs
@@ -58,6 +72,14 @@
 		}
 		&__gallery {
 			grid-template-columns: repeat(6, 60px);
+		}
+	}
+	@media ($smDown) {
+		&--orange &__inner {
+			grid-template-columns: auto;
+		}
+		&--orange &__content {
+			margin-bottom: 30px;
 		}
 	}
 	@media ($mdUp) {

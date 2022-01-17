@@ -17,14 +17,14 @@
 		background-position: 12px 0.66em;
 		background-size: 0.4em 0.4em;
 	}
-	a {
+	a:not(.btn) {
 		color: $colorText;
 		text-decoration: underline;
 		font-weight: normal;
 		text-decoration-color: $colorPrimary;
 	}
 
-	.hoverevents & a:hover {
+	.hoverevents & a:hover:not(.btn) {
 		color: $colorPrimary;
 	}
 

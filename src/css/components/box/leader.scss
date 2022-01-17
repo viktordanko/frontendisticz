@@ -38,4 +38,13 @@
 	&--other &__name {
 		margin-bottom: 0;
 	}
+	&--full {
+		max-width: 220px;
+		margin: 0;
+	}
+	&--full &__img {
+		img {
+			width: 174px;
+		}
+	}
 }

@@ -2,6 +2,9 @@
 	&-0 {
 		margin-bottom: 0;
 	}
+	&-xxs {
+		margin-bottom: ($sizeSm/4);
+	}
 	&-xs {
 		margin-bottom: ($sizeXs/2);
 	}
@@ -136,4 +139,7 @@
 .u-mx-auto {
 	margin-right: auto;
 	margin-left: auto;
+}
+.u-block {
+	display: block;
 }

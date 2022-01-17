@@ -48,6 +48,9 @@
 		.other & {
 			margin-top: 0;
 		}
+		&--blog {
+			margin-top: 0;
+		}
 	}
 	@media ($mdUp) {
 		background-image: url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=750&d=2");
