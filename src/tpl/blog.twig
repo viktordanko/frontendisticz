@@ -26,7 +26,7 @@
 											<div class="b-card__content">
 												{% if cardData.title %}
 													<h3 class="b-card__title">
-														{{ cardData.title|nl2br }}
+														{{ cardData.title|raw|nl2br }}
 													</h3>
 												{% endif %}
 												<div class="b-card__row">
