@@ -117,7 +117,9 @@
 			padding: 20px;
 		}
 		#{$b}__img {
+			display: none; // TODO - Tweak card UI for better aligning /w & w/o image
 			flex: 0 0 130px;
+			width: 100%;
 			height: initial;
 			padding: 0;
 			&::before {

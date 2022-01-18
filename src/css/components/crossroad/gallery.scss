@@ -54,7 +54,7 @@
 	&--program {
 		#{$c}__list {
 			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(360px, 550px));
+			grid-template-columns: repeat(auto-fill, minmax(380px, 550px));
 			grid-gap: $gridGutter;
 			justify-content: center;
 			max-width: none;
@@ -82,7 +82,7 @@
 			padding: 0 30px 30px 30px;
 			margin: 0 -30px -30px -30px;
 			#{$c}__list {
-				grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 			}
 		}
 	}
