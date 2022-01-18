@@ -1,6 +1,6 @@
 ---
 template: blog-detail.twig
-title: Slavíme osmé narozeniny, ohlížíme se za loňským rokem (a začínáme s blogem)
+title: Slavíme osmé narozeniny, ohlížíme se za loňským rokem <br> (a začínáme s blogem)
 description: Zkraje roku 2014 jsem se inspirován povídáním s Robinem Pokorným vydal
   zaregistrovat doménu a napsal jsem SuperKodérům. Zhruba takhle začal příběh komunity
   Frontendisti.cz.
