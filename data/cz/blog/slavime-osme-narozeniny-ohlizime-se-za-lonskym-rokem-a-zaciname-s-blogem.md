@@ -4,7 +4,7 @@ title: Slavíme osmé narozeniny, ohlížíme se za loňským rokem <br> (a zač
 description: Zkraje roku 2014 jsem se inspirován povídáním s Robinem Pokorným vydal
   zaregistrovat doménu a napsal jsem SuperKodérům. Zhruba takhle začal příběh komunity
   Frontendisti.cz.
-image: img/illust/fe-yt.png
+image: "../img/illust/fe-yt.png"
 author: Martin Michálek
 
 ---
