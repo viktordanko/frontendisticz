@@ -16,7 +16,7 @@ Od té doby ušla komunita a spolek dlouhou cestu a já se tady chci ohlédnout 
 
 Dále řádil covid a my jsme pokračovali v transformaci našich akcí do podoby onlinových streamů a setkání. Učili jsme se s technikou, chápat jiný formát, pracovali na vizuální prezentaci, učili jsme se zapojovat publikum. Naše zkušenosti jsme pak [sepsali do článku](https://frontendisti.cz/blog/jak-ve-frontendisti.cz-delame-online-meetupy-na-youtube-hardware-software-a-zkusenosti.html).
 
-![Frontendisti na Youtube](img/illust/fe-yt.png)
+![](../img/illust/fe-yt.png)
 
 Do budoucna plánujeme dále posilovat takzvané hybridní akce, které vždy budou mít online výstup, přičemž na místě se sejde tolik lidí, kolik dovolí covid.
 
