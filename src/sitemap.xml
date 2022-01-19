@@ -1,17 +1,133 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
 <url>
-<loc>https://frontendisti.cz/</loc>
-<lastmod>2021-04-08T07:52:39+00:00</lastmod>
-<priority>1.00</priority>
+  <loc>https://frontendisti.cz/</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>1.00</priority>
 </url>
 <url>
-<loc>https://frontendisti.cz/konference</loc>
-<lastmod>2021-04-08T07:52:39+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://frontendisti.cz/blog/slavime-osme-narozeniny-ohlizime-se-za-lonskym-rokem-a-zaciname-s-blogem.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
 <url>
-<loc>https://frontendisti.cz/konference.html</loc>
-<lastmod>2021-04-08T07:52:39+00:00</lastmod>
-<priority>0.80</priority>
+  <loc>https://frontendisti.cz/blog/ohlednuti-za-frontkon-prvnim-rocnikem-konference-frontendisti.cz.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.80</priority>
 </url>
+<url>
+  <loc>https://frontendisti.cz/blog/jak-ve-frontendisti.cz-delame-online-meetupy-na-youtube-hardware-software-a-zkusenosti.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/blog/frontkon-prvni-ceska-frontendova-konference.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/files/coc.pdf</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/files/op.pdf</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/files/zoo.pdf</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/konference</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/jan-bien.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/zuzana-sumlanska.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/borek-bernard.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/riki-fridrich.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/ondrej-zara.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/ondrej-polesny.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/filip-danisko.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/vojtech-dobes.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/martin-kristof.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/headless.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/karel-fucik.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/ondrej-janosik.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/karolina-vyskocilova.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/tereza-vankova.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/marek-velas.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://frontendisti.cz/ajax/radek-pavlicek.html</loc>
+  <lastmod>2022-01-19T08:20:01+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+
+
+</urlset>
