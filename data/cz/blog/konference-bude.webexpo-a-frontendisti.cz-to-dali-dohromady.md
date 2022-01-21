@@ -17,7 +17,9 @@ Jsem moc rád, že vám právě teď můžu oznámit, že právě proto nyní sp
 
 Frontendisti.cz budou mít vlastní stage v rámci konference, kde představíme frontendový program. (Chystáme ovšem i jiné než přednáškové formáty – to už znáte z naší konference.)
 
-_![](https://lh3.googleusercontent.com/QVmzexvdlyis8PogyybKu1-2tV9xjWkRJoXFkeIv4ySnViyIC02VdVBu0E_8kV7SjfrhwLAFCVUP9tiy6xSBfVLNSLoVH_KN2_ed5dVDiJtUu47wkFoPrk6EVwbq6303vT3UQc_Q =602x339)_Kdokoliv si pak bude moci za výhodnější cenu koupit lístek jen pro tuto část (ale také pro celou konferenci).
+![Frontendisti.cz a WebExpo](../img/illust/fe-webexpo.png)
+
+Kdokoliv si pak bude moci za výhodnější cenu koupit lístek jen pro tuto část (ale také pro celou konferenci).
 
 WebExpo letos **proběhne už pátek 10. až sobotu 11. června** a opět bude celá v angličtině. Na frontendový den se můžete těšit v sobotu.
 
