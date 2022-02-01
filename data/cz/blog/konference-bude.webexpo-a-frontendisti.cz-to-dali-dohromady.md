@@ -7,6 +7,8 @@ image: "../img/illust/fe-webexpo.png"
 author: Martin Michálek
 
 ---
+**_Update:_** _Uzávěrku_ [_call for papers_](https://docs.google.com/forms/d/1fsThucs7TN_jrd0OaduMeVOr3ukAbFWnWaucUWjcgok/viewform) _prodlužujeme do **7. února 2022.**_
+
 Milé frontendistky, milí frontendisti, po loňské úspěšné online [konferenci FrontKon](https://frontendisti.cz/blog/ohlednuti-za-frontkon-prvnim-rocnikem-konference-frontendisti.cz.html), které se zúčastnilo přes šest stovek lidí, jsme přemýšleli, jak to udělat ještě lépe v roce 2022.
 
 Naším hlavním cílem bylo mít komunitní konferenci, tedy nejen online, ale také na živo. Dále pak pomoci propojit českou (ale i slovenskou) frontendovou scénu s okolním světem.
@@ -29,7 +31,7 @@ Nyní jsme ve fázi přípravy programu a i vy nám s ním můžete pomoci – n
 
 * [**Přihlaste přednášku**](https://docs.google.com/forms/d/1fsThucs7TN_jrd0OaduMeVOr3ukAbFWnWaucUWjcgok/viewform)
 * [Více o programu a tipy na témata](https://docs.google.com/document/d/1dcKqJasjpV1AE8AmylKJPl-SwZj78KDy8CMql3DVu1o/edit#heading=h.746bamx60g7u)
-* Termín pro odevzdání přihlášek: 31. ledna.
+* Termín pro odevzdání přihlášek: **7. února 2022**.
 * Zajímá vás více? Pište na [martin.michalek@frontendisti.cz](mailto:martin.michalek@frontendisti.cz).
 
 WebExpo je skvělá příležitost ukázat ostatním, co zajímavého jste se naučili. Pokud se necítíte na velkou přednášku v angličtině, máme i menší formáty – 20 nebo 5 minut.
