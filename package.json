@@ -70,7 +70,7 @@
 		"node-notifier": "8.0.1",
 		"node-sass-glob-importer": "^5.3.1",
 		"nunjucks-date-filter": "0.1.1",
-		"simple-git": "2.46.0",
+		"simple-git": "3.3.0",
 		"slugify": "1.6.1",
 		"through2": "^3.0.1",
 		"twing": "3.1.1",
