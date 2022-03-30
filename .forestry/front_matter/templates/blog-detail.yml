@@ -35,6 +35,7 @@ fields:
   hidden: true
   default: blog-detail.twig
 pages:
+- data/cz/blog/frontendisti.cz-hledaji-rezisera-a-organizatora-prazskych-meetupu.md
 - data/cz/blog/frontkon-prvni-ceska-frontendova-konference.md
 - data/cz/blog/jak-ve-frontendisti.cz-delame-online-meetupy-na-youtube-hardware-software-a-zkusenosti.md
 - data/cz/blog/konference-bude.webexpo-a-frontendisti.cz-to-dali-dohromady.md
