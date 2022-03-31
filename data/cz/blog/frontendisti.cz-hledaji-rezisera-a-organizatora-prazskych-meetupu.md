@@ -1,14 +1,12 @@
 ---
 template: blog-detail.twig
-title: Frontendisti.cz hledají režiséra a organizátora pražských meetupů
-description: Do štábu spolku Frontendisti hledáme dva lidi, kterým srdce bije pro
-  frontend, ale mají i jiné zvláštní schopnosti.
+title: Frontendisti.cz hledají posily
+description: 'Do štábu spolku Frontendisti hledáme dva lidi, kterým srdce bije pro
+  frontend, ale mají i jiné zvláštní schopnosti: režisér(ka) a spoluorganizátor(ka).'
 image: "../img/illust/frontendisti-hero.jpeg"
 author: Martin Michálek
 
 ---
-# **Frontendisti.cz hledají režiséra a organizátora pražských meetupů**
-
 Do štábu spolku Frontendisti hledáme dva lidi, kterým srdce bije pro frontend, ale mají i jiné zvláštní schopnosti:
 
 ## **Režisér(ka) online přenosů**
