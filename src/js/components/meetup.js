@@ -1,41 +1,51 @@
+import {injectInnerText, isLessThanFiveDaysOld, isTooOld, removeSkeleton, showElement} from "../utils.js"
+
+const elementsToReveal = [
+	"[data-meetup-name]",
+	"[data-meetup-label]",
+	"[data-meetup-date]",
+];
+
 export const init = async () => {
 	const el = document.querySelector('[data-meetup]');
 
 	if (!el) return;
 
 	try {
-		const response = await fetch('https://api.meetup.com/frontendisti/events', {
-			headers: {
-				'Content-Type': 'application/json',
-				'Access-Control-Allow-Origin': '*',
-			},
+		const res = await fetch(
+			'http://localhost:8888/.netlify/functions/fetch-events',
+		);
 
-		});
+		const eventData = await res.json();
+            console.log("🚀 ~ file: meetup.js ~ line 15 ~ init ~ eventData", eventData)
+		const [latestEvent] = eventData;
 
-		if (!response.ok) {
-			console.error(response);
+		if (res.status !== 200 || !latestEvent || isTooOld(latestEvent?.time)) {
+			// TODO: HANDLE THIS CASE
 			return;
 		}
 
-		const data = await response.json();
+		const { name, time, local_date, local_time: meetupTime, link: meetupLink } = latestEvent;
+		const isNewEnough = isLessThanFiveDaysOld(time);
+		const rightAdjective = isNewEnough ? 'Poslední' : 'Nejbližší';
+		const meetupDate = new Date(local_date)
+			.toLocaleDateString("cs-CZ", {})
+			.replace(/\//g, ".");
 
-		const meetupName = data[0].name;
-		const meetupDate = new Date(data[0].local_date).toLocaleDateString('cs-CZ', {}).replace(/\//g, '.');
-		const meetupTime = data[0].local_time;
-		const meetupLink = data[0].link;
+		elementsToReveal.forEach(tag => removeSkeleton(tag));
+		showElement("[data-meetup-button]");
 
-		document.querySelector('[data-meetup-name]').classList.remove('inline-skeleton');
-		document.querySelector('[data-meetup-date]').classList.remove('inline-skeleton');
-		document.querySelector('[data-meetup-name]').innerText = meetupName;
-		document.querySelector('[data-meetup-date]').innerText = `${meetupDate} – ${meetupTime}`;
+		injectInnerText("[data-meetup-name]", name);
+		injectInnerText("[data-meetup-label]", `${rightAdjective} meetup`);
+		injectInnerText("[data-meetup-date]", `${meetupDate} – ${meetupTime}`);
 		document.querySelector('[data-meetup-link]').href = meetupLink;
 
 	} catch (error) {
 		console.error(error);
+		elementsToReveal.forEach((tag) => removeSkeleton(tag));
+		injectInnerText("[data-meetup-name]", "Nepodařilo se načíst data");
 
-		document.querySelector('[data-meetup-name]').classList.remove('inline-skeleton');
-		document.querySelector('[data-meetup-date]').classList.remove('inline-skeleton');
-		document.querySelector('[data-meetup-name]').innerText = 'Nepodařilo se načíst data';
 	}
 };
+
 
