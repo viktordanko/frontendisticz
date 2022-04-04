@@ -22,7 +22,7 @@ export const init = async () => {
 		const [latestEvent] = eventData;
 
 		if (res.status !== 200 || !latestEvent || isTooOld(latestEvent?.time)) {
-			// TODO: HANDLE THIS CASE
+			// TODO: HANDLE THIS CASE - Create link to meetups archive
 			return;
 		}
 
