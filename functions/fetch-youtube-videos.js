@@ -1,7 +1,10 @@
 const fetch = require('node-fetch');
 
+const YT_API_KEY = process.env.YT_API_KEY;
+const VIDEOS_NUMBER = 8;
+
 exports.handler = async () => {
-	const response = await fetch('https://www.googleapis.com/youtube/v3/playlists?key=AIzaSyD5dzE3b-xu_jIX_ILhMNPs9wKWPlKy44Q&channelId=UCxs7KDC0LFOezVujLG_leRw&part=snippet%2CcontentDetails&maxResults=25', {
+	const response = await fetch(`https://www.googleapis.com/youtube/v3/playlists?key=${YT_API_KEY}&channelId=UCxs7KDC0LFOezVujLG_leRw&part=snippet%2CcontentDetails&maxResults=25`, {
 		headers: {
 			'Content-Type': 'application/json',
 			'Access-Control-Allow-Origin': '*',
@@ -14,10 +17,33 @@ exports.handler = async () => {
 		};
 	}
 
-	const data = await response.json();
+	const channelPlaylists = await response.json();
+	let videosCount = 0;
+
+	const playlistsToVisit = channelPlaylists.items.reduce((acc, curr) => {
+		if (videosCount < VIDEOS_NUMBER) {
+			videosCount += curr.contentDetails.itemCount;
+			return [...acc, curr.id];
+		}
+		return acc;
+	}, []);
+
+	const videos = [];
+	const promises = playlistsToVisit.map(async playlistId => {
+		const playlistVideosRes = await fetch(`https://www.googleapis.com/youtube/v3/playlistItems?key=${YT_API_KEY}&playlistId=${playlistId}&part=snippet%2CcontentDetails&maxResults=25`);
+		if (playlistVideosRes.status === 200) {
+			const data = await playlistVideosRes.json();
+			videos.push(...data.items);
+		}
+	});
+
+	await Promise.all(promises);
 
 	return {
 		statusCode: 200,
-		body: JSON.stringify(data),
+		body: JSON.stringify(videos),
 	};
 };
+
+
+
