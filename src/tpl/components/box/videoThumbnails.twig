@@ -1,0 +1,12 @@
+<div class="c-gallery__list grid" data-ytVideos>
+	{% set k = 7 %}
+	{% for i in range(0, k) %}
+		<div class="c-gallery__item grid__cell size--6-12 size--3-12@lg">
+			<a id="videoLink{{i}}" target="_blank">
+				<article class="b-card">
+					<img id="videoImage{{i}}" loading="lazy">
+				</article>
+			</a>
+		</div>
+	{% endfor %}
+</div>

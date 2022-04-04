@@ -31,3 +31,17 @@ export const showElement = (selector) => {
 	removeClass('u-hide', selector);
 };
 
+export const extractVideoThumbnailSrc = (video) => {
+	return video.snippet.thumbnails.medium.url;
+};
+
+const extractDate = video => new Date(video.snippet.publishedAt).getTime();
+
+export const sortVideosByDate = videos => {
+	return [...videos.sort((a, b) => extractDate(b) - extractDate(a))];
+};
+
+export const createVideoWatchLink = (video) => {
+	const videoId = video.contentDetails.videoId;
+	return `https://www.youtube.com/watch?v=${videoId}`;
+};

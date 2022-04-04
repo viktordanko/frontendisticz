@@ -12,13 +12,9 @@ export const init = async () => {
 	if (!el) return;
 
 	try {
-		const res = await fetch(
-			"/api/fetch-events"
-			// 'http://localhost:8888/.netlify/functions/fetch-events',
-		);
+		const res = await fetch("/api/fetch-events");
 
 		const eventData = await res.json();
-            console.log("🚀 ~ file: meetup.js ~ line 15 ~ init ~ eventData", eventData)
 		const [latestEvent] = eventData;
 
 		if (res.status !== 200 || !latestEvent || isTooOld(latestEvent?.time)) {

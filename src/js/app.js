@@ -9,6 +9,7 @@ import * as modal from './components/modal';
 import * as menu from './components/menu';
 import * as form from './components/form';
 import * as formConf from './components/form-conf';
+import * as youtubeVideos from './components/youtubeVideos';
 
 
 // content load components
@@ -24,6 +25,7 @@ const components = [
 	menu,
 	form,
 	formConf,
+	youtubeVideos,
 ].concat(componentsload);
 
 window.App = {
