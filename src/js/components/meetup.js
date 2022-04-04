@@ -13,7 +13,8 @@ export const init = async () => {
 
 	try {
 		const res = await fetch(
-			'http://localhost:8888/.netlify/functions/fetch-events',
+			"/api/fetch-events"
+			// 'http://localhost:8888/.netlify/functions/fetch-events',
 		);
 
 		const eventData = await res.json();
