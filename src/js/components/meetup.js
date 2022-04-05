@@ -18,8 +18,7 @@ export const init = async () => {
 		const [latestEvent] = eventData;
 
 		if (res.status !== 200 || !latestEvent || isTooOld(latestEvent?.time)) {
-			// TODO: HANDLE THIS CASE - Create link to meetups archive
-			return;
+			return showFallbackMessage();
 		}
 
 		const { name, time, local_date, local_time: meetupTime, link: meetupLink } = latestEvent;
@@ -32,17 +31,20 @@ export const init = async () => {
 		elementsToReveal.forEach(tag => removeSkeleton(tag));
 		showElement("[data-meetup-button]");
 
-		injectInnerText("[data-meetup-name]", name);
 		injectInnerText("[data-meetup-label]", `${rightAdjective} meetup`);
+		injectInnerText("[data-meetup-name]", name);
 		injectInnerText("[data-meetup-date]", `${meetupDate} – ${meetupTime}`);
 		document.querySelector('[data-meetup-link]').href = meetupLink;
 
 	} catch (error) {
-		console.error(error);
-		elementsToReveal.forEach((tag) => removeSkeleton(tag));
-		injectInnerText("[data-meetup-name]", "Nepodařilo se načíst data");
-
+		return showFallbackMessage();
 	}
 };
 
 
+const showFallbackMessage = () => {
+	elementsToReveal.forEach(tag => removeSkeleton(tag));
+	injectInnerText("[data-meetup-label]", "Podívejte se na naše akce!");
+	showElement("[data-meetup-button]");
+	document.querySelector('[data-meetup-link]').href = "https://www.meetup.com/frontendisti/";
+}
