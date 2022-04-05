@@ -1,7 +1,7 @@
 const fetch = require('node-fetch');
 
 const YT_API_KEY = process.env.YT_API_KEY;
-const CHANNEL_ID = 'https://624bf823cfa629000833ec97--gracious-spence-d7722f.netlify.app/';
+const CHANNEL_ID = 'UCxs7KDC0LFOezVujLG_leRw';
 const VIDEOS_NUMBER = 8;
 
 exports.handler = async () => {
