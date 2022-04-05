@@ -33,6 +33,9 @@
 		position: relative;
 		color: $colorWhite;
 	}
+	&__error-message {
+		color: $colorWhite;
+	}
 
 	// MQs
 	@media ($mdUp) {

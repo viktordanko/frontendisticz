@@ -1,10 +1,15 @@
+import { injectInnerText } from '../utils';
+
 export const init = () => {
 	const form = document.querySelector('[data-handle-submit]');
+	const emailInput = document.querySelector('#email');
 	const submitBtn = document.querySelector('[data-submit-button]');
 
 	if (!form) return;
 
-	const handleSubmit = (event) => {
+	emailInput.addEventListener('focus', () => injectInnerText('#error-message', ''));
+
+	const handleSubmit = async (event) => {
 		event.preventDefault();
 
 		if (submitBtn) {
@@ -13,16 +18,23 @@ export const init = () => {
 
 		const data = new FormData(event.target);
 
-		fetch('/.netlify/functions/subscribe', {
+		const response = await fetch('/api/subscribe', {
 			method: 'POST',
 			body: JSON.stringify({
 				email: data.get('email'),
 			}),
-		}).then((response) => {
-			if (response.status === 200 && response.redirected === true) {
-				window.location.href = response.url;
-			}
 		});
+
+		if (response.status === 200 && response.redirected === true) {
+			return window.location.href = response.url;
+		}
+
+		if (submitBtn) {
+			submitBtn.classList.remove('is-loading');
+		}
+
+		const errorMessage ='Něco se pokazilo. Zkuste to později znovu.';
+		injectInnerText('#error-message', errorMessage);
 	};
 
 	form.addEventListener('submit', handleSubmit);
