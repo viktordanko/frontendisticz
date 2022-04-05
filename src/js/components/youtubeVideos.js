@@ -1,4 +1,3 @@
-//@ts-check
 import {createVideoWatchLink, extractVideoThumbnailSrc, sortVideosByDate} from '../utils.js';
 
 export const init = async () => {

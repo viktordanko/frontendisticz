@@ -1,10 +1,11 @@
 const fetch = require('node-fetch');
 
 const YT_API_KEY = process.env.YT_API_KEY;
+const CHANNEL_ID = 'https://624bf823cfa629000833ec97--gracious-spence-d7722f.netlify.app/';
 const VIDEOS_NUMBER = 8;
 
 exports.handler = async () => {
-	const response = await fetch(`https://www.googleapis.com/youtube/v3/playlists?key=${YT_API_KEY}&channelId=UCxs7KDC0LFOezVujLG_leRw&part=snippet%2CcontentDetails&maxResults=25`, {
+	const response = await fetch(`https://www.googleapis.com/youtube/v3/playlists?key=${YT_API_KEY}&channelId=${CHANNEL_ID}&part=snippet%2CcontentDetails&maxResults=25`, {
 		headers: {
 			'Content-Type': 'application/json',
 			'Access-Control-Allow-Origin': '*',
