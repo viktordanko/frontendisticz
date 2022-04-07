@@ -67,7 +67,7 @@
 		"gulp-zip": "5.0.1",
 		"gulp.spritesmith": "^6.11.0",
 		"marked": "3.0.7",
-		"node-fetch": "2.6.1",
+		"node-fetch": "2.6.7",
 		"node-notifier": "8.0.1",
 		"node-sass-glob-importer": "^5.3.1",
 		"nunjucks-date-filter": "0.1.1",
