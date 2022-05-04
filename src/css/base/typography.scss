@@ -98,6 +98,9 @@ a {
 	.hoverevents &:hover {
 		color: $colorHover;
 	}
+  	.hoverevents .u-bg-tertiary &:hover {
+	  color: $colorBlueHover;
+	}
 }
 
 strong {

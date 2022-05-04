@@ -4,50 +4,90 @@
 			Organizační štáb <br>
 			a&nbsp;kontakty
 		</h2>
-		<div class="u-max-width--10-12 u-mx-auto">
-			<div class="c-leaders__wrap">
-				<div class="c-leaders__list grid grid--center grid--x-md grid--y-xl" id="contact">
-					{% for item in leaders.items %}
-						<div class="c-leaders__item grid__cell size--6-12 size--3-12@md">
-							<article class="b-leader">
-								<h3 class="b-leader__title">
-									{{ item.city|raw }}
-								</h3>
-								<ul class="b-leader__list">
-									<li class="b-leader__item">
-										<span class="b-leader__img">
-											<img src="{{ assets.images }}illust/{{ item.img }}.jpg" alt="Profilová fotografie - {{ item.name }}" width="174" height="174" loading="lazy">
-										</span>
-										<span class="b-leader__name">
-											{% if loop.first %}
-												<span class="b-leader__badge">
-													{% include '@components/core/icon-svg/icon-svg.twig' with {
-														props: {
-															name: 'crown'
-														}
-													} %}
-												</span>
-											{% endif %}
-											{{ item.name|raw }}
-										</span>
-										<a href="mailto:{{ item.mail }}" class="btn btn--sm b-leader__btn">
-											<span class="btn__inner">
-												Kontakt
-											</span>
-										</a>
-									</li>
-									{% for sidekick in item.others %}
-										<li class="b-leader__item">
-											{{ sidekick.name|raw }}
-										</li>
-									{% endfor %}
-								</ul>
-							</article>
+		<div class="c-others u-mb-xl u-max-width--6-12 u-mx-auto">
+			<h3 class="c-others__title">
+				Vedení spolku
+			</h3>
+			<ul class="c-others__list grid">
+				<li class="c-others__item grid__cell size--6-12 size--4-12@md">
+					<span class="b-leader b-leader--other u-text-center">
+						<span class="b-leader__img">
+							<img src="{{ assets.images }}illust/martin-michalek.jpg" alt="Profilová fotografie - Martin Michálek" width="174" height="174" loading="lazy">
+						</span>
+						<span class="b-leader__name">
+							Martin Michálek
+						</span>
+						<span class="b-leader__info u-font-sm">
+							předseda spolku
+						</span>
+
+						<div class="u-font-xs">
+							<a href="https://www.linkedin.com/in/martinmichalek/">LinkedIn</a>,
+							<a href="mailto:martin.michalek@frontendisti.cz">e-mail</a>
 						</div>
-					{% endfor %}
-				</div>
-			</div>
-			{% include "@templates/inc/others.twig" %}
+					</span>
+				</li>
+
+				<li class="c-others__item grid__cell size--6-12 size--4-12@md">
+					<span class="b-leader b-leader--other u-text-center">
+						<span class="b-leader__img">
+							<img src="{{ assets.images }}illust/tomas-hejc.jpg" alt="Profilová fotografie - Tomáš Hejč" width="174" height="174" loading="lazy">
+						</span>
+						<span class="b-leader__name">
+							Tomáš Hejč
+						</span>
+						<span class="b-leader__info u-font-sm">
+							Brno, partneři
+						</span>
+
+						<div class="u-font-xs">
+							<a href="https://www.linkedin.com/in/tomashejc">LinkedIn</a>,
+							<a href="mailto:tomas.hejc@frontendisti.cz">e-mail</a>
+						</div>
+					</span>
+				</li>
+
+				<li class="c-others__item grid__cell size--6-12 size--4-12@md">
+					<span class="b-leader b-leader--other u-text-center">
+						<span class="b-leader__img">
+							<img src="{{ assets.images }}illust/bretislav-proft.jpg" alt="Profilová fotografie - Břetislav Proft" width="174" height="174" loading="lazy">
+						</span>
+						<span class="b-leader__name">
+							Břetislav Proft
+						</span>
+						<span class="b-leader__info u-font-sm">
+							Praha
+						</span>
+
+						<div class="u-font-xs">
+							<a href="https://cz.linkedin.com/in/bretislav-proft">LinkedIn</a>,
+							<a href="mailto:bretislav.proft@frontendisti.cz">e-mail</a>
+						</div>
+					</span>
+				</li>
+
+			</ul>
+		</div>
+
+
+		<div class="c-others u-mb-xl u-max-width--6-12 u-mx-auto">
+			<h3 class="c-others__title">
+				Další spolupracovníci
+			</h3>
+			<ul class="u-font-sm">
+				<li>Adina Foxová (Praha, moderátorka)</li>
+				<li>Daniel Střelec (Ostrava, Facebook)</li>
+				<li>Eduard Štůla (Plzeň)</li>
+				<li>Jan Forejt (videa)</li>
+				<li>Jana Nečasová (Brno)</li>
+				<li>Jiří Cerhan (Praha)</li>
+				<li>Martin Pešout (Brno)</li>
+				<li>Robin Pokorný (spoluzakladatel)</li>
+				<li>Tomáš Kout (Praha, moderátor)</li>
+				<li>Verča Urbášková (sociální sítě)</li>
+				<li>Viktor Daňko (Brno, web, moderátor)</li>
+				<li>Zuzana Šumlanská (Brno, newslettery)</li>
+			</ul>
 		</div>
 	</div>
 </section>

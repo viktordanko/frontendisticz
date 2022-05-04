@@ -235,7 +235,7 @@
 			</div>
 		</div>
 
-		<div class="u-bg-tertiary u-pt-xxl">
+		<div class="u-bg-mint u-pt-xxl">
 			<div class="row-main">
 				<section class="b-job">
 					<h2 class="b-job__title">
@@ -248,7 +248,7 @@
 								do&nbsp;týmu?
 							</p>
 							<p>
-								<a class="btn btn--blue" href="https://www.facebook.com/groups/frontendistiprace" target="_blank" rel="noopener noreferrer">
+								<a class="btn btn--success" href="https://www.facebook.com/groups/frontendistiprace" target="_blank" rel="noopener noreferrer">
 									<span class="btn__inner">
 										Práce
 									</span>
@@ -263,30 +263,60 @@
 			</div>
 		</div>
 
+		<div class="u-bg-tertiary u-pt-xxl">
+			<div class="row-main">
+
+				<section class="b-content u-mb-xxl">
+					<h2 class="b-content__title">
+						O nás
+					</h2>
+					<div class="u-max-width--6-12 u-mx-auto">
+						<p>Spolek Frontendisti.cz má za cíl budovat a vzdělávát komunitu frontendových vývojářek a&nbsp;vývojářů.</p>
+
+						<p>Organizační štáb Frontendisti.cz vznikl v roce 2014. Od té doby téměř každý měsíc pořádáme živý nebo streamovaný <a href="https://www.meetup.com/frontendisti/">meetup</a> v Praze, Brně a občas i jiných českých městech.</p>
+
+						<p>O roku 2020 prakticky každou akci streamujeme na YouTube. I díky tomu vzniklo už přes 250&nbsp;záznamů odborných přednášek, které jsou k dispozici zdarma celé komunitě na <a href="https://www.youtube.com/c/FrontendistiCz">YouTube</a>. O&nbsp;frontendu spolu můžeme diskutovat na <a href="https://www.facebook.com/groups/frontendisti/">Facebooku</a>, tamtéž pak spravujeme <a href="https://www.facebook.com/groups/frontendistiprace/">pracovní fórum</a>.</p>
+					</div>
+				</section>
+			</div>
+		</div>
+
 		<div class="u-bg-mint u-pt-xxl">
 			<div class="row-main">
 				{% set partners = {
 					items: [
 						{
-							name: 'LMC',
-							href: 'https://www.lmc.eu/',
-							alt: 'LMC s.r.o.',
-							width: '80',
-							height: '58'
+							name: 'emplifi',
+							href: 'https://emplifi.io/',
+							alt: 'Emplifi.io',
+							width: '230',
+							height: '71'
 						},
 						{
-							name: 'SUPERKODERS',
+							name: 'artin',
+							href: 'https://www.artin.cz/',
+							alt: 'ARTIN',
+							width: '230',
+							height: '151'
+						}
+					]
+				} %}
+
+				{% set partners2 = {
+					items: [
+						{
+							name: 'superkoders',
 							href: 'https://superkoders.cz/',
 							alt: 'SUPERKODERS',
-							width: '230',
-							height: '30'
+							width: '330',
+							height: '60'
 						},
 						{
-							name: 'skakala',
-							href: 'https://www.skakala.cz/',
-							alt: 'Skákala',
-							width: '78',
-							height: '25'
+							name: 'pipedrive',
+							href: 'https://www.pipedrive.com/',
+							alt: 'PIPEDRIVE',
+							width: '200',
+							height: '75'
 						}
 					]
 				} %}
@@ -299,56 +329,23 @@
 				{% set leaders = {
 					items: [
 						{
-							city: 'Praha',
+							city: 'Vedení spolku',
 							name: 'Martin Michálek',
 							mail: 'martin@vzhurudolu.cz',
 							img: 'michalek',
-							others: [
-								{
-									name: 'Adam Kudrna'
-								},
-								{
-									name: 'Břetislav Proft'
-								},
-								{
-									name: 'Michal Voják'
-								}
-							]
 						},
 						{
-							city: 'Brno',
+							city: '&nbsp;',
 							name: 'Tomáš Hejč',
 							mail: 'tomas.hejc@superkoders.com',
 							img: 'hejc',
-							others: [
-								{
-									name: 'Martin Kolář'
-								},
-								{
-									name: 'Martin Pešout'
-								},
-								{
-								name: 'David Czernín'
-								}
-							]
 						},
 						{
-							city: 'Ostrava',
+							city: '&nbsp;',
 							name: 'Daniel Střelec',
 							mail: 'jsem@danielstrelec.cz',
 							img: 'strelec',
-							others: [
-								{
-									name: 'Tomáš Musiol'
-								}
-							]
 						},
-						{
-							city: 'Plzeň',
-							name: 'Eduard Štůla',
-							mail: 'info@eduardstula.cz',
-							img: 'stula'
-						}
 					]
 				} %}
 				{% include '@components/crossroad/leaders.twig' %}
