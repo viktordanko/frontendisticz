@@ -90,7 +90,7 @@ const build = (options = {}) => {
 			const page_data = {
 				...(page.attributes || {}),
 				page_name: page.name,
-				markdown_body: marked(page.body || ''),
+				markdown_body: marked.parse(page.body || ''),
 				createdDate: page.createdDate,
 				modifiedDate: page.modifiedDate,
 			};
