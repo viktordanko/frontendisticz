@@ -23,7 +23,7 @@ Dovolím si vás upozornit na následující příspěvky:
 
 Tato naše část programu trvá jen jeden den a můžete si pro ní **koupit zvláštní vstupné,** [**nyní za 125 EUR**](https://www.webexpo.net/prague2022#tickets)**.**
 
-🤑 Využijte náš slevový kód **„frontendisticz“** a kupte si **vstupenku ještě o 500 Kč levněji**.
+**A pozor:** Využijte náš slevový kód **„frontendisticz“** a kupte si **vstupenku ještě o 500 Kč levněji**.
 
 ![](../img/illust/webexpo-of.jpeg)
 
