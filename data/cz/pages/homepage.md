@@ -2,6 +2,7 @@
 template: index.twig
 title: Homepage
 list_of_blogposts:
+- data/cz/blog/pozvanka-na-webexpo-2022-collab-with-frontendisti.cz.md
 - data/cz/blog/frontendisti.cz-hledaji-rezisera-a-organizatora-prazskych-meetupu.md
 - data/cz/blog/konference-bude.webexpo-a-frontendisti.cz-to-dali-dohromady.md
 - data/cz/blog/slavime-osme-narozeniny-ohlizime-se-za-lonskym-rokem-a-zaciname-s-blogem.md
