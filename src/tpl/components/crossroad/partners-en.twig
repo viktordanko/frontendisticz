@@ -1,0 +1,43 @@
+<section id="partners" class="c-partners">
+	<div class="row-main">
+		<h2 class="c-partners__title">
+			Our partners
+		</h2>
+		<ul class="c-partners__list grid grid--middle grid--center u-mb-md">
+			{% for item in partners.items %}
+				<li class="c-partners__item grid__cell size--6-12@sm size--auto@md">
+					<a href="{{ item.href }}" class="b-partner" target="_blank" rel="noreferrer noopener">
+						<img src="{{ assets.images }}illust/{{ item.name }}.svg" alt="{{ item.alt }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+
+		<h2 class="c-partners__title">
+			Thanks to our supporters
+		</h2>
+		<ul class="c-partners__list grid grid--middle grid--center">
+			{% for item in partners2.items %}
+				<li class="c-partners__item grid__cell size--6-12@sm size--auto@md">
+					<a href="{{ item.href }}" class="b-partner" target="_blank" rel="noreferrer noopener">
+						<img src="{{ assets.images }}illust/{{ item.name }}.svg" alt="{{ item.alt }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+					</a>
+				</li>
+			{% endfor %}
+		</ul>
+
+		<div class="c-partners__cta">
+			<p>
+				We take care of our partners<br>
+				Do you want to be one of them?
+			</p>
+			<p>
+				<a class="btn btn--success" href="mailto:tomas.hejc@frontendisti.cz?subject=Nabídka%20partnerství%20pro%20Frontendisti.cz">
+					<span class="btn__inner">
+						Of course
+					</span>
+				</a>
+			</p>
+		</div>
+	</div>
+</section>
