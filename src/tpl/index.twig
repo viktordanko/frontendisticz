@@ -60,24 +60,26 @@
 										na sociálních sítích.
 									</p>
 								</div>
-								<div class="grid__cell size--auto@xl">
-									<div class="grid">
-										<div class="grid__cell size--auto">
-											<a class="b-social__link" href="https://www.facebook.com/groups/frontendisti" target="_blank" rel="noopener noreferrer">
-												{% include "@images/bg/facebook.svg" %}
-												<span class="u-vhide">
-													Frontendisti na facebooku
-												</span>
-											</a>
-										</div>
-										<div class="grid__cell size--auto">
-											<a class="b-social__link" href="https://twitter.com/Frontendisti" target="_blank" rel="noopener noreferrer">
-												{% include "@images/bg/twitter.svg" %}
-												<span class="u-vhide">
-													Frontendisti na twitteri
-												</span>
-											</a>
-										</div>
+								<div class="grid__cell size--auto@xl u-max-width--2-12">
+									<div class="b-social__icons grid">
+										{% set items = [
+											{ name: "facebook", href: 'https://www.facebook.com/groups/frontendisti', alt: 'Frontendisti na facebooku' },
+											{ name: "twitter", href: 'https://twitter.com/Frontendisti', alt: 'Frontendisti na twitteri' },
+											{ name: "instagram", href: 'https://www.instagram.com/frontendisti', alt: 'Frontendisti na youtube' },
+											{ name: "youtube", href: 'https://www.youtube.com/c/FrontendistiCz', alt: 'Frontendisti na instagrame' },
+											{ name: "linkedin", href: 'https://www.linkedin.com/company/frontendisti/', alt: 'Frontendisti na linkedine' },
+										] %}
+
+										{% for item in items %}
+											<div class="grid__cell size--auto">
+												<a class="b-social__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
+													{% include "@images/bg/" ~ item.name  ~ ".svg" %}
+													<span class="u-vhide">
+														{{ item.alt }}
+													</span>
+												</a>
+											</div>
+										{% endfor %}
 									</div>
 								</div>
 							</div>

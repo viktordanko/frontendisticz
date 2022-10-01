@@ -6,8 +6,8 @@
 	}
 	&__link {
 		display: block;
-		width: 60px;
-		height: 60px;
+		width: 50px;
+		height: 50px;
 		border: none;
 		border-radius: 50%;
 		transition: filter $t ease;
@@ -17,6 +17,8 @@
 	&__gallery {
 		display: grid;
 		gap: 4px 4px;
+		align-self: center;
+		justify-content: end;
 		img {
 			object-fit: cover;
 		}
@@ -66,12 +68,17 @@
 	@media ($lgDown) {
 		&__inner {
 			display: grid;
-			grid-template-columns: 240px auto;
+			grid-template-columns: 230px auto;
+			gap: 10px;
 			margin-bottom: 90px;
 			overflow: hidden;
 		}
 		&__gallery {
 			grid-template-columns: repeat(6, 60px);
+		}
+		&__icons {
+			justify-content: center;
+			padding-bottom: 22px;
 		}
 	}
 	@media ($smDown) {
