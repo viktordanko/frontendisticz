@@ -11,3 +11,6 @@ $color: (
 .u-color {
 	@include make-utils(false, $color);
 }
+.u-red {
+	color: $colorRed;
+}

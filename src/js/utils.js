@@ -16,7 +16,7 @@ export const isTooOld = (timestamp) => {
 	return !isUpcoming(timestamp) && !isLessThanFiveDaysOld(timestamp);
 };
 
-const removeClass = (className, selector) =>
+export const removeClass = (className, selector) =>
 	document.querySelector(selector).classList.remove(className);
 
 export const removeSkeleton = (selector) => removeClass('inline-skeleton', selector);
