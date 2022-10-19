@@ -1,4 +1,4 @@
-import { injectInnerText, isLessThanFiveDaysOld, isTooOld, removeSkeleton, showElement, removeClass } from "../utils.js";
+import { injectInnerText, isLessThanFiveDaysOld, isTooOld, removeSkeleton, showElement, removeClass, addClass } from "../utils.js";
 
 const elementsToReveal = [
 	'[data-meetup-name]',
@@ -36,17 +36,15 @@ export const init = async () => {
 		document.querySelector('[data-meetup-link]').href = meetupLink;
 
 		if (eventOnSameDay) {
+			switchToTwoRowsGrid();
 			removeClass('u-hide', '[data-second-meetup]');
 			const { name: secondMeetingName, local_time: secondMeetupTime, link: secondMeetupLink } = eventOnSameDay;
 			showElement('[data-second-meetup-button]');
 			injectInnerText('[data-second-meetup-name]', secondMeetingName);
 			injectInnerText('[data-second-meetup-date]', `${meetupDate} – ${secondMeetupTime}`);
 			document.querySelector('[data-second-meetup-link]').href = secondMeetupLink;
-		} else {
-			switchToOneRowGrid();
 		}
 	} catch (error) {
-		switchToOneRowGrid();
 		return showFallbackMessage();
 
 	}
@@ -60,4 +58,4 @@ const showFallbackMessage = () => {
 	document.querySelector('[data-meetup-link]').href = 'https://www.meetup.com/frontendisti/';
 }
 
-const switchToOneRowGrid = () => removeClass('size--6-12@md', '[data-meetup-gridcell]');
+const switchToTwoRowsGrid = () => addClass('size--6-12@md', '[data-meetup-gridcell]')

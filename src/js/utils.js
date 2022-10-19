@@ -19,6 +19,9 @@ export const isTooOld = (timestamp) => {
 export const removeClass = (className, selector) =>
 	document.querySelector(selector).classList.remove(className);
 
+export const addClass = (className, selector) =>
+	document.querySelector(selector).classList.add(className);
+
 export const removeSkeleton = (selector) => removeClass('inline-skeleton', selector);
 
 export const injectInnerText = (selector, content) =>
