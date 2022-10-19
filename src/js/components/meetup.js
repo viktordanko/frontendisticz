@@ -7,9 +7,9 @@ const elementsToReveal = [
 ];
 
 export const init = async () => {
-	const el = document.querySelector('[data-meetup]');
+	const element = document.querySelector('[data-meetup]');
 
-	if (!el) return;
+	if (!element) return;
 
 	try {
 		const res = await fetch("/api/fetch-events");
