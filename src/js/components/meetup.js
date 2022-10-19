@@ -14,12 +14,12 @@ export const init = async () => {
 	try {
 		const res = await fetch('/api/fetch-events');
 		const eventData = await res.json();
+		const [latestEvent, ...rest] = eventData;
 
 		if (res.status !== 200 || !latestEvent || isTooOld(latestEvent?.time)) {
 			return showFallbackMessage();
 		}
 
-		const [latestEvent, ...rest] = eventData;
 		const eventOnSameDay = rest.find(ev => ev.local_date === latestEvent.local_date);
 		const { name, time, local_date, local_time: meetupTime, link: meetupLink } = latestEvent;
 		const isNewEnough = isLessThanFiveDaysOld(time);
