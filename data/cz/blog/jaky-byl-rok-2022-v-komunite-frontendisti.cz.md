@@ -11,7 +11,9 @@ Komunita Frontendisti.cz prožila velmi plodný rok 2022. Pojďme si shrnout vš
 
 ## **WebExpo 2022 (Collab with Frontendisti.cz)**
 
-![](../img/illust/fe_webexpo-fe.jpeg)  
+![](../img/illust/webexpo-fe.jpg)
+
+  
 Chtěli jsme větší konferenci pro českou frontendovou komunitu, chtěli jsme ji prezenčně, chtěli jsme ji dobře zorganizovanou. Pak nás se Šárkou Strossovou napadlo prostě [Frontendisty spojit s WebExpem](https://frontendisti.cz/blog/pozvanka-na-webexpo-2022-collab-with-frontendisti.cz.html) v rámci specializované jednodenní akce. Díky velkému množství zájemců z Call for Papers (ještě jednou díky!) je z toho velké množství [zajímavého obsahu v angličtině](https://www.youtube.com/watch?v=gdBBzgcSfzM&list=PLnXfazh66kVf_SpXE1fuE6X_7Tq2QS_zN). Už jste to všechno viděli?
 
 ## **Spolupráce s ReactGirls a se SlidesLive**
