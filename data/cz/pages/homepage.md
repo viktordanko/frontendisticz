@@ -2,6 +2,7 @@
 template: index.twig
 title: Homepage
 list_of_blogposts:
+- data/cz/blog/jaky-byl-rok-2022-v-komunite-frontendisti.cz.md
 - data/cz/blog/pozvanka-na-webexpo-2022-collab-with-frontendisti.cz.md
 - data/cz/blog/frontendisti.cz-hledaji-rezisera-a-organizatora-prazskych-meetupu.md
 - data/cz/blog/konference-bude.webexpo-a-frontendisti.cz-to-dali-dohromady.md
