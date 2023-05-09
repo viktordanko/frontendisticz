@@ -6,211 +6,15 @@
 
 	<main id="main" class="main-conf">
 
-		<section class="b-conference">
-			<h2>
-				Historicky první česká frontendová konference
-			</h2>
-			<p>
-				proběhla 29. 5. 2021
-			</p>
-			<p>
-				Záznamy z konference jsou k dispozici na
-				<a href="https://www.youtube.com/watch?v=BhqSHm2W81w&list=PLnXfazh66kVc-AY46ixdAGzlsfPtP4mx-" target="_blank" rel="noopener noreferrer">našem Youtube kanále</a>
-			</p>
-		</section>
 
-		<div class="u-bg-secondary u-pt-xxl">
-			<div class="row-main">
-				<section class="c-gallery c-gallery--program u-mb-xxl" id="program">
-					<div class="u-mx-auto u-max-width--6-12">
-						<h2 class="c-gallery__title section-anchor">
-							Na koho se můžete těšit?
-							<a href="#program" class="section-anchor__link section-anchor__link--program"> # </a>
-						</h2>
-					</div>
-					<div class="c-gallery__list">
-						{% set cards = [
-							{
-								imgSrc: 'bien.jpg',
-								name: 'Jan
-								Bien',
-								endpoint: '../ajax/jan-bien.html',
-								title: 'Tailwind CSS:
-								<span>framework, který zvládne každý grafický&nbsp;návrh?</span>',
-							},
-							{
-								imgSrc: 'sumlanska.jpg',
-								name: 'Zuzana Šumlanská',
-								endpoint: '../ajax/zuzana-sumlanska.html',
-								title: 'Rychlost webu:
-								nejčastější chyby, které&nbsp;kazí Web&nbsp;Vitals',
-								company: 'PageSpeed.cz'
-							},
-							{
-								imgSrc: 'bernard.jpg',
-								name: 'Borek
-								Bernard',
-								title: 'Pokročilá práce s&nbsp;Next.js:
-								<span>hybridní weby a moderní deployment</span>',
-								endpoint: '../ajax/borek-bernard.html',
-							},
-							{
-								imgSrc: 'fridrich.jpg',
-								name: 'Riki
-								Fridrich',
-								title: 'ESLint je dobrý sluha,
-								ale ešte lepší pán',
-								endpoint: '../ajax/riki-fridrich.html',
-							},
-							{
-								imgSrc: 'zara-kopie.jpg',
-								name: 'Ondřej Žára',
-								title: '10 novinek v&nbsp;CSS',
-								company: 'Seznam',
-								endpoint: '../ajax/ondrej-zara.html',
-							},
-							{
-								imgSrc: 'polesny2.jpg',
-								name: 'Ondřej Polesný',
-								title: 'Co to je Vite a proč už nechceme CommonJS?',
-								company: 'Kentico',
-								endpoint: '../ajax/ondrej-polesny.html',
-							},
-							{
-								imgSrc: 'danisko.jpg',
-								name: 'Filip Daniško',
-								title: 'Jak škálujeme design systém v&nbsp;Productboardu',
-								company: 'Productboard',
-								endpoint: '../ajax/filip-danisko.html',
-							},
-							{
-								imgSrc: 'dobes.jpg',
-								name: 'Vojtěch Dobeš',
-								title: 'Apollo + výhody s&nbsp;Typescriptem',
-								company: 'ContentKing',
-								endpoint: '../ajax/vojtech-dobes.html',
-							},
-							{
-								imgSrc: 'kristof.jpg',
-								name: 'Martin Krištof',
-								title: 'React:
-								Premature Performance Optimization',
-								company: 'Heureka Group',
-								endpoint: '../ajax/martin-kristof.html',
-							},
-							{
-								type: 'diskuze',
-								imgSrc: 'hejc.jpg',
-								name: 'Tomáš Hejč',
-								title: ' JAMStack: Nový svět headless&nbsp;CMS',
-								company: 'SUPERKODERS',
-								endpoint: '../ajax/headless.html',
-							},
-							{
-								imgSrc: 'fucik.jpg',
-								name: 'Karel Fučík',
-								title: 'Runtime validace pro&nbsp;Typescript pomocí io&#8209;ts',
-								company: 'SUPERKODERS',
-								endpoint: '../ajax/karel-fucik.html',
-							},
-							{
-								imgSrc: 'janosik.jpg',
-								name: 'Ondřej Janošík',
-								title: 'Vue.js 3:
-								stav ekosystému a&nbsp;výhled do&nbsp;budoucna',
-								company: 'Notum',
-								endpoint: '../ajax/ondrej-janosik.html',
-							},
-							{
-								imgSrc: 'vyskocilova.jpg',
-								name: 'Karolína
-								Vyskočilová',
-								title: 'WordPress:
-								Komponenty v&nbsp;Gutenbergu',
-								endpoint: '../ajax/karolina-vyskocilova.html'
-							},
-							{
-								imgSrc: 'vankova.jpg',
-								name: 'Tereza
-								Vaňková',
-								title: 'Den juniorní frontendistky',
-								endpoint: '../ajax/tereza-vankova.html'
-							},
-							{
-								imgSrc: 'velas.jpg',
-								name: 'Marek Velas',
-								title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
-								company: 'Edupunk',
-								endpoint: '../ajax/marek-velas.html',
-							},
-							{
-								imgSrc: 'pavlicek2.jpg',
-								name: 'Radek
-								Pavlíček',
-								title: 'Přístupnost: mnohdy stačí málo',
-								endpoint: '../ajax/radek-pavlicek.html',
-							},
-						] %}
-						{% for card in cards %}
-							<div class="c-gallery__item">
-								<article class="b-card b-card--program">
-									<div class="b-card__inner">
-										<div class="b-card__img">
-											{% if card.imgSrc is defined and card.imgSrc is not empty %}
-												<img src="{{ assets.images }}illust/{{ card.imgSrc }}" alt="Profilová fotografie - {{ card.name }}" width="174" height="174" loading="lazy">
-											{% endif %}
-										</div>
-										<div class="b-card__content">
-											<p class="b-card__type">
-												{{card.type|default('přednáška')}}
-											</p>
-											<h3 class="b-card__title">
-												{{ card.title|raw|nl2br }}
-											</h3>
-											<div class="b-card__row">
-												<div class="b-card__info">
-													<p class="b-card__name">
-														{{ card.name|raw|nl2br }}
-													</p>
-													{% if card.company %}
-														<span class="b-card__company">
-															{{ card.company }}
-														</span>
-													{% endif %}
-												</div>
-												{% if card.endpoint %}
-													<a href="{{ card.endpoint }}" class="b-card__link link-mask" data-modal='{"medium": "fetch"}'>
-														{% include '@components/core/icon-svg/icon-svg.twig' with {
-															props: {
-																name: 'chevron-right',
-																alt: 'Přejít na detail'
-															}
-														} %}
-													</a>
-												{% endif %}
 
-											</div>
-										</div>
-									</div>
-								</article>
-							</div>
-						{% endfor %}
-					</div>
 
-					{# <div class="u-pt-md u-max-width--6-12 u-mx-auto">
-						<p class="u-text-center">
-							Na přípravě dalšího programu stále&nbsp;pracujeme. <br> Na první české frontendové konferenci uvidíte téměř 20&nbsp;přednášek v&nbsp;šesti hodinách času.
-						</p>
-					</div> #}
-				</section>
-			</div>
-		</div>
 
 		<div class="u-bg-default">
 			<div class="u-pt-xxl row-main">
 				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
 					<h2>
-						Konference bude online, ale ne&nbsp;nudná.<br>
+						První celodenní živá konference komunity Frontendisti.cz.<br>
 						Přijďte se pobavit a&nbsp;dozvědět, co je v&nbsp;oboru nového.
 					</h2>
 				</div>
@@ -243,528 +47,61 @@
 					</section>
 				</div>
 
-				{#
 				<section class="s-price u-mb-xxl">
 					<div class="b-price">
 						<h2 class="b-price__title">
-							290 Kč
+							790 Kč
 						</h2>
 						<p class="b-price__desc">
-							Sobota 29. května 10:00 - 16:30.
+							cena vstupenky "Early Bird" (pouze 50 ks)
 						</p>
 						<p>
-							<a href="https://form.simpleshop.cz/Jzeq/buy/" class="btn" target="_blank" rel="noopener noreferrer">
+							<a href="https://form.simpleshop.cz/AQBX/buy/" class="btn" target="_blank" rel="noopener noreferrer">
 								<span class="btn__inner">
-									Koupit záznam
+									Koupit vstupenku
 								</span>
 							</a>
 						</p>
 					</div>
 				</section>
-				#}
 
 			</div>
 		</div>
 
-		<section class="s-shedule" id="shedule">
-			<div class="row-main">
-				<div class="u-mx-auto u-max-width--6-12">
-					<h2 class="s-shedule__title section-anchor">
-						Harmonogram
-						<a href="#shedule" class="section-anchor__link section-anchor__link--program"> # </a>
-					</h2>
-				</div>
-				<div class="u-max-width--10-12 u-mx-auto">
-					<div class="s-shedule__wrap">
-						<div class="s-shedule__main">
-							<table class="b-shedule">
-								<thead>
-								<tr>
-									<th scope="col" colspan="2">
-										Hlavní stage
-									</th>
-									<th scope="col">
-										Off stage
-									</th>
-								</tr>
-								</thead>
-								<tbody class="b-shedule__list">
-								{% set items = [
-									{
-										isHighlighted: true,
-										time: '9:30',
-										title: 'Konference otevřena',
-									},
-									{
-										time: '10:00',
-										title: 'Keynote',
-										name: 'Martin Michálek',
-									},
-									{
-										time: '10:05',
-										name: 'Ondřej Polesný',
-										company: 'Kentico',
-										endpoint: '../ajax/ondrej-polesny.html',
-										title: 'Co to je Vite a proč už nechceme CommonJS?',
-									},
-									{
-										time: '10:25',
-										name: 'Riki Fridrich',
-										endpoint: '../ajax/riki-fridrich.html',
-										title: 'ESLint je dobrý sluha, ale ešte lepší pán',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '10:25',
-												title: 'diskuze s&nbsp;Ondřejem Polesným'
-											}
-										]
-									},
-									},
-									{
-										time: '10:50',
-										name: 'Karolína Vyskočilová',
-										endpoint: '../ajax/karolina-vyskocilova.html',
-										title: 'WordPress: Komponenty v&nbsp;Gutenbergu',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '10:50',
-												title: 'diskuze s&nbsp;Riki Fridrichem'
-											}
-										]
-									},
-									},
-									{
-										time: '11:00',
-										name: 'Filip Daniško',
-										endpoint: '../ajax/filip-danisko.html',
-										company: 'ProductBoard',
-										title: 'Jak škálujeme design&nbsp;systém v&nbsp;Productboardu',
-										offstage: {
-											heading: 'session',
-											items: [
-												{
-													time: '11:00',
-													title: 'diskuze s&nbsp;Karolínou Vyskočilovou'
-												}
-											]
-										},
-									},
-									{
-										time: '11:25',
-										name: 'Tereza Vaňková',
-										endpoint: '../ajax/tereza-vankova.html',
-										company: 'ReactGirls',
-										title: 'Den juniorní frontendistky',
-										offstage: {
-											heading: 'session',
-											items: [
-												{
-													time: '11:25',
-													title: 'diskuze s&nbsp;Filipem Daniškem'
-												}
-											]
-										},
-									},
-									{
-										time: '11:35',
-										name: 'Marek Velas',
-										endpoint: '../ajax/marek-velas.html',
-										company: 'EduPunk',
-										title: 'Kódím doma a začíná mi hrabat (základy mindfulness)',
-										offstage: {
-											heading: 'session',
-											items: [
-												{
-													time: '11:35',
-													title: 'diskuze s&nbsp;Terezou Vaňkovou'
-												},
-												{
-													time: '11:40',
-													title: 'diskuze s&nbsp;Markem Velasem'
-												}
-											]
-										},
-									},
-									{
-										time: '11:45',
-										heading: 'doprovodný program',
-										title: '20 000 židů pod mořem',
-									},
-									{
-										isHighlighted: true,
-										time: '12:00',
-										title: 'Přestávka<br><small>Užijte si Networking a EXPO</small>',
-										offstage: {
-											heading: 'expo',
-											items: [
-												{
-													time: 'Kentico',
-													title: 'Téma: Potkejte se s našimi devy (neformální pokec)'
-												},
-												{
-													time: 'LMC',
-													title: 'diskuse s Adamem Křenkem a CTO LMC Ondřejem Myslivečkem'
-												}
-											]
-										},
-									},
-									{
-										time: '12:30',
-										name: 'Zuzana Šumlanská',
-										endpoint: '../ajax/zuzana-sumlanska.html',
-										company: 'PageSpeed.cz',
-										title: 'Rychlost webu:
-											nejčastější chyby, které&nbsp;kazí Web Vitals',
-									},
-									{
-										time: '12:55',
-										name: 'Radek Pavlíček',
-										endpoint: '../ajax/radek-pavlicek.html',
-										title: 'Přístupnost: mnohdy stačí málo',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '12:55',
-												title: 'diskuze se&nbsp;Zuzanou Šumlanskou'
-											}
-										]
-									},
-									},
-									{
-										time: '13:05',
-										name: 'Jan Bien',
-										endpoint: '../ajax/jan-bien.html',
-										title: 'Tailwind CSS: framework, který zvládne každý grafický&nbsp;návrh?',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '13:05',
-												title: 'diskuze s&nbsp;Radkem Pavličkem'
-											}
-										]
-									},
-									},
-									{
-										time: '13:30',
-										name: 'Martin Krištof',
-										endpoint: '../ajax/martin-kristof.html',
-										title: 'React: Premature Performance Optimization',
-										company: 'Heureka Group',
-										offstage: {
-										heading: 'natáčení podcastu ze Vzhurudolu.cz',
-										items: [
-											{
-												time: '13:30',
-												title: 'na téma Tailwind CSS s Janem Bienem'
-											},
-										]
-									}
-									},
-									{
-										time: '13:55',
-										name: 'Ondřej Janošík',
-										endpoint: '../ajax/ondrej-janosik.html',
-										title: 'Vue.js 3: stav&nbsp;ekosystému a&nbsp;výhled do&nbsp;budoucna',
-										company: 'Notum',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '13:55',
-												title: 'diskuze s&nbsp;Martinem Krištofem'
-											}
-										]
-									},
-									},
-									{
-										isHighlighted: true,
-										time: '14:15',
-										heading: 'doprovodný program',
-										titleHighlighted: 'Fpohybu: Rychlofka na pódiu',
-										title: '<br>Přestávka<br><small>Užijte si Networking a EXPO</small>',
-										offstage: {
-											heading: 'expo',
-											items: [
-												{
-													time: 'Kentico',
-													title: 'Téma: Potkejte se s našimi devy (neformální pokec)'
-												},
-												{
-													time: 'LMC',
-													title: 'diskuse s Adamem Křenkem a CTO LMC Ondřejem Myslivečkem'
-												}
-											]
-										},
-									},
-									{
-										time: '14:40',
-										name: 'Borek Bernard',
-										endpoint: '../ajax/borek-bernard.html',
-										title: 'Pokročilá práce s&nbsp;Next.js: hybridní weby a moderní deployment',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '14:40',
-												title: 'diskuze s&nbsp;Ondřejem Janošíkem'
-											}
-										]
-									},
-									},
-									{
-										time: '15:05',
-										endpoint: '../ajax/headless.html',
-										heading: 'diskuze',
-										name: 'hosté: Jan Sládek <span class="b-shedule__company">(manGoweb)</span> a Jaroslav Vrána <span class="b-shedule__company">(Integromat)</span><br> moderuje: Tomáš Hejč',
-										title: 'JAMStack: Nový svět headless CMS',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '15:05',
-												title: 'diskuze s&nbsp;Borkem Bernardem'
-											}
-										]
-									},
-									},
-									{
-										time: '15:30',
-										name: 'Karel Fučík',
-										endpoint: '../ajax/karel-fucik.html',
-										title: 'Runtime validace pro&nbsp;Typescript pomocí io-ts',
-										company: 'SUPERKODERS',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '15:30',
-												title: 'pokračování diskuze: JAMstack & headless CMS'
-											}
-										]
-									},
-									},
-									{
-										time: '15:50',
-										name: 'Vojtěch Dobeš',
-										endpoint: '../ajax/vojtech-dobes.html',
-										title: 'Apollo + výhody s&nbsp;Typescriptem',
-										company: 'ContentKing',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '15:50',
-												title: 'diskuze s&nbsp;Karlem Fučíkem'
-											}
-										]
-									},
-									},
-									{
-										time: '16:15',
-										name: 'Ondřej Žára',
-										endpoint: '../ajax/ondrej-zara.html',
-										title: '10 novinek v CSS',
-										company: 'Seznam',
-										text: 'Není snadné vyznat se ve všech těch nových vlastnostech, hodnotách, selektorech a modulech, které do CSS přibývají každým měsícem i rokem. Pojďme se společně podívat na desítku nových nebo opomíjených konceptů v CSS, které mohou obohatit arzenál každého webového vývojáře. Podpora čtečky obrazovky zapnuta.',
-										offstage: {
-										heading: 'session',
-										items: [
-											{
-												time: '16:15',
-												title: 'diskuze s&nbsp;Vojtou Dobešem'
-											}
-										]
-									},
-									},
-									{
-										time: '16:45',
-										name: 'Martin Michálek, Tomáš Hejč, Břetislav Proft, Martin Kolář',
-										endpoint: '',
-										title: 'Zakončení konference',
-										company: '',
-										text: '',
-										offstage: {
-											heading: 'session',
-											items: [
-												{
-													time: '16:45',
-													title: 'diskuze s&nbsp;Ondřejem Žárou'
-												}
-											]
-										},
-									},
-									{
-										isHighlighted: true,
-										title: '',
-										title: 'Děkujeme za účast<br><small>Networking, diskuzní sessions a EXPO zůstávají otevřené do 18:00</small>',
-									},
-								] %}
-								{% for item in items %}
-									<tr class="b-shedule__item {% if item.isHighlighted == true %}is-highlighted{% endif %}">
-										<th scope="row" class="b-shedule__col">
-											{{ item.time }}
-										</th>
-										<td class="b-shedule__col" {% if item.isHighlighted == true and not item.offstage %}colspan="2"{% endif %}>
-											{% if item.heading %}
-												<span class="b-shedule__heading">
-														{{ item.heading }}
-													</span>
-											{% endif %}
-											{% if item.titleHighlighted %}
-												<p class="b-shedule__titleHighlighted">
-													{{ item.titleHighlighted|raw }}
-												</p>
-											{% endif %}
-											{% if item.endpoint %}
-												<a href="{{ item.endpoint }}" class="b-shedule__title link-mask" data-modal='{"medium": "fetch"}'>
-													{{ item.title|raw }}
-												</a>
-											{% else %}
-												<p class="b-shedule__title">
-													{{ item.title|raw }}
-												</p>
-											{% endif %}
-											{% if item.name %}
-												<p class="b-shedule__name">
-													{{ item.name|raw }}
-												</p>
-											{% endif %}
-											{% if item.company %}
-												<p class="b-shedule__company">
-													{{ item.company }}
-												</p>
-											{% endif %}
-										</td>
-										{% if item.offstage or not item.isHighlighted %}
-											<td class="b-shedule__off"{% if item.offstage %} data-label="Off stage"{% endif %}>
-												{% if item.offstage %}
-													<span class="b-shedule__heading">
-															{{ item.offstage.heading }}
-														</span>
-													{% for item in item.offstage.items %}
-														<span class="b-shedule__off-item">
-															<span scope="row" class="b-shedule__off-time">
-																{{ item.time }}
-															</span>
-															<span class="b-shedule__off-title">
-																{{ item.title|raw }}
-															</span>
-														</span>
-													{% endfor %}
-												{% endif %}
-											</td>
-										{% endif %}
-									</tr>
-								{% endfor %}
-								</tbody>
-							</table>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+
 
 		<div class="u-bg-mint u-color-dark-blue">
-			<div class="u-pt-xxl row-main">
-				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
-					<h2>
-						Partneři konference
-					</h2>
-				</div>
-				<div class="u-mx-auto u-max-width--10-12">
-					<section class="c-sponzors c-sponzors--main u-mb-xxl">
-						{% set items = [
-							{
-								imgSrc: 'kentico-2.png',
-								title: 'Kentico',
-								width: '250',
-								height: '78',
-								href: 'https://www.kentico.com/',
-								isFullWidth: true
-							},
-							{
-								imgSrc: 'logo-contentking.svg',
-								title: 'ContentKing',
-								width: '200',
-								height: '52',
-								href: 'https://www.contentkingapp.com/',
-							},
-							{
-								imgSrc: 'lmc.svg',
-								title: 'LMC',
-								width: '100',
-								height: '76',
-								href: 'https://www.lmc.eu/'
-							},
-							{
-								imgSrc: 'pipedrive.png',
-								title: 'Pipedrive',
-								width: '200',
-								height: '74',
-								href: 'https://www.pipedrive.com/en/jobs'
-							},
-						] %}
-						{% if items is defined and items is not empty %}
-							<ul class="c-sponzors__list grid grid--center grid--middle">
-								{% for item in items %}
-									<li class="c-sponzors__item grid__cell {% if not item.isFullWidth %}size--4-12@sm{% endif %}
-									">
-										<a class="c-sponzors__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
-											<img src="{{ assets.images }}illust/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
-										</a>
-									</li>
-								{% endfor %}
+			<div class="row-main u-pt-xxl">
+				<div class="u-max-width--6-12 u-mx-auto">
+					<section class="s-indent u-mb-xxl">
+						<div class="b-content">
+							<h2>Call for papers! <br>Přihlaš nám svou přednášku.</h2>
+
+							<p>
+								<strong> Jaká témata nás zajímají? </strong>
+							</p>
+							<p>
+								Pro inspirací jsme připravili <a href="https://docs.google.com/document/d/1L-p10YbVE18yOV7EIAbO5VeIBzVV26UJ6E81ecHuuCI/edit#">obsahové okruhy</a>, ale můžete poslat i vlastní téma.
+								Chceme praktické přednášky: případovky, výhody/nevýhody z vlastní zkušenosti.
+							</p>
+							<p>
+								<strong> Důležité termíny </strong>
+							</p>
+							<ul>
+								<li> 10. 5. – call for papers </li>
+								<li> 31. 5. – uzavření call for papers, zveřejnění první části programu </li>
+								<li> 28. 9. – termín pro zaslání slajdů </li>
+								<li> 12. 10. – konference </li>
+								<li> 13. 10. – profit! </li>
 							</ul>
-						{% endif %}
-					</section>
-				</div>
-				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
-					<h2>
-						Mediální partneři
-					</h2>
-				</div>
-				<div class="u-mx-auto u-max-width--10-12">
-					<section class="c-sponzors">
-						{% set items = [
-							{
-								imgSrc: 'logo-vzhuru-dolu.png',
-								title: 'vzhurudolu.cz',
-								width: '100',
-								height: '87',
-								href: 'https://www.vzhurudolu.cz/',
-							},
-							{
-								imgSrc: 'logo-startupjobs.png',
-								title: 'StartupJob',
-								width: '208',
-								height: '30',
-								href: 'https://www.startupjobs.cz/',
-							},
-							{
-								imgSrc: 'logo-zdrojak.png',
-								title: 'Zdroják.cz',
-								width: '160',
-								height: '45',
-								href: 'https://zdrojak.cz/',
-							},
-						] %}
-						{% if items is defined and items is not empty %}
-							<ul class="c-sponzors__list grid grid--center grid--middle">
-								{% for item in items %}
-									<li class="c-sponzors__item grid__cell size--4-12@sm size--3-12@md">
-										<a class="c-sponzors__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
-											<img src="{{ assets.images }}illust/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
-										</a>
-									</li>
-								{% endfor %}
-							</ul>
-						{% endif %}
+							<p class="u-text-center u-pt-xl u-mb-xl">
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLSff0d5In44jkDbNZQLgcYDBBPZWdf03ldsaOLTdeVQ9tam4sQ/viewform" class="btn btn--success" target="_blank" rel="noopener noreferrer">
+									<span class="btn__inner"> Přihlásit přednášku </span>
+								</a>
+							</p>
+							<p> Potřebuješ více informací? <br> Napiš Martinovi Michálkovi: <a class="u-text-underline" href="mailto:martin.michalek@frontendisti.cz?subject=Call for papers - Konference 2021 | Frontendisti.cz">martin.michalek@frontendisti.cz</a>
+							</p>
+						</div>
 					</section>
 				</div>
 			</div>
@@ -837,54 +174,7 @@
 						</div>
 					</div>
 
-					{% set dudes = [
-						{
-							imgSrc: 'hejc.jpg',
-							title: 'Tomáš Hejč <br> a tým <a href="http://www.superkoders.com/" target="_blank" rel="noopener noreferrer">SUPERKODERS</a>',
-							desc: 'hlavní organizátor',
-							contact: 'tomas.hejc@frontendisti.cz',
-						},
-						{
-							imgSrc: 'michalek.jpg',
-							title: 'Martin Michálek',
-							desc: 'koordinátor programu',
-							contact: 'martin.michalek@frontendisti.cz'
-						},
-						{
-							imgSrc: 'proft.jpg',
-							title: 'Břetislav Proft',
-							desc: 'péče o partnery',
-							contact: 'bretislav.proft@frontendisti.cz'
-						},
-						{
-							imgSrc: 'kolar.jpg',
-							title: 'Martin Kolář',
-							desc: 'technický koordinátor',
-							contact: 'martin.kolar@frontendisti.cz'
-						},
-					] %}
-					<div class="c-organizators u-mb-md">
-						<ul class="c-organizators__list grid">
-							{%- for dude in dudes -%}
-								<li class="c-organizators__item grid__cell grid__cell--eq size--6-12@sm size--3-12@xl">
-									<span class="b-organizator">
-										<span class="b-organizator__img">
-											<img src="{{ assets.images }}illust/{{ dude.imgSrc }}" alt="" width="230" height="185" loading="lazy">
-										</span>
-										<span class="b-organizator__title">
-											{{ dude.title|raw }}
-										</span>
-										<span class="b-organizator__desc">
-											{{ dude.desc }}
-										</span>
-										<a class="b-organizator__btn" href="mailto:{{ dude.contact }}">
-											{{ dude.contact }}
-										</a>
-									</span>
-								</li>
-							{%- endfor -%}
-						</ul>
-					</div>
+
 				</section>
 			</div>
 		</div>
