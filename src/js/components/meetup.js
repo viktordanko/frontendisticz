@@ -58,4 +58,4 @@ const showFallbackMessage = () => {
 	document.querySelector('[data-meetup-link]').href = 'https://www.meetup.com/frontendisti/';
 }
 
-const switchToTwoRowsGrid = () => addClass('size--6-12@md', '[data-meetup-gridcell]')
+const switchToTwoRowsGrid = () => addClass('size--4-12@md', '[data-meetup-gridcell]')
