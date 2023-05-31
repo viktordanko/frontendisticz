@@ -36,7 +36,6 @@ export const init = async () => {
 		document.querySelector('[data-meetup-link]').href = meetupLink;
 
 		if (eventOnSameDay) {
-			removeClass('size--6-12@md', '[data-meetup-gridcell]');
 			switchToTwoRowsGrid();
 			removeClass('u-hide', '[data-second-meetup]');
 			const { name: secondMeetingName, local_time: secondMeetupTime, link: secondMeetupLink } = eventOnSameDay;
@@ -59,4 +58,13 @@ const showFallbackMessage = () => {
 	document.querySelector('[data-meetup-link]').href = 'https://www.meetup.com/frontendisti/';
 }
 
-const switchToTwoRowsGrid = () => addClass('size--4-12@md', '[data-meetup-gridcell]')
+const switchToTwoRowsGrid = () => {
+	removeClass('size--6-12@md', '[data-meetup-gridcell]');
+	addClass('size--4-12@md', '[data-meetup-gridcell]')
+
+	removeClass('size--6-12@md', '[data-second-meetup]');
+	addClass('size--4-12@md', '[data-second-meetup]')
+
+	removeClass('size--6-12@md', '[data-third-meetup]');
+	addClass('size--4-12@md', '[data-third-meetup]')
+}
