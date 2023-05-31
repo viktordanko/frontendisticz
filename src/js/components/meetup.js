@@ -36,6 +36,7 @@ export const init = async () => {
 		document.querySelector('[data-meetup-link]').href = meetupLink;
 
 		if (eventOnSameDay) {
+			removeClass('size--6-12@md', '[data-meetup-gridcell]');
 			switchToTwoRowsGrid();
 			removeClass('u-hide', '[data-second-meetup]');
 			const { name: secondMeetingName, local_time: secondMeetupTime, link: secondMeetupLink } = eventOnSameDay;
