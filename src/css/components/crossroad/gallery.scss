@@ -84,6 +84,9 @@
 			#{$c}__list {
 				grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
 			}
+			#{$c}__list-big {
+			  grid-template-columns: repeat(auto-fill, minmax(380px, 550px));
+			}
 		}
 	}
 	@media ($lgUp) {

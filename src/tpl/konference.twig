@@ -74,6 +74,79 @@
 			</div>
 		</div>
 
+		<div class="u-bg-secondary u-pt-xxl">
+			<div class="row-main">
+				<section class="c-gallery c-gallery--program u-mb-xxl" id="program">
+					<div class="u-mx-auto u-max-width--6-12">
+						<h2 class="c-gallery__title section-anchor">
+							Na koho se můžete těšit?
+							<a href="#program" class="section-anchor__link section-anchor__link--program"> # </a>
+						</h2>
+					</div>
+					<div class="c-gallery__list c-gallery__list-big">
+						{% set cards = [
+							{
+								type: 'přednášející',
+								imgSrc: 'david.jpg',
+								title: 'David Grudl',
+							},
+							{
+								type: 'přednášející',
+								imgSrc: 'ondrej.jpg',
+								title: 'Ondřej Žára',
+							},
+							{
+								type: 'přednášející',
+								imgSrc: 'riki.jpg',
+								title: 'Riki Fridrich',
+							},
+							{
+								type: 'přednášející',
+								imgSrc: 'terka.jpg',
+								title: 'Tereza Vaňková',
+							},
+							{
+								type: 'přednášející',
+								imgSrc: 'borek.jpg',
+								title: 'Borek Bernard',
+							},
+							{
+								type: 'přednášející',
+								imgSrc: 'honza.jpg',
+								title: 'Honza Sládek',
+							},
+
+						] %}
+						{% for card in cards %}
+							<div class="c-gallery__item">
+								<article class="b-cardBig b-cardBig--program">
+									<div class="b-cardBig__inner">
+										<div class="b-cardBig__content">
+											<p class="b-cardBig__type">
+												{{card.type|default('přednáška')}}
+											</p>
+											<h3 class="b-cardBig__title">
+												{{ card.title|raw|nl2br }}
+											</h3>
+										</div>
+										<div class="b-cardBig__img">
+											<img src="/img/frontkon/{{ card.imgSrc }}" alt="{{ card.title }}" width="150" height="180" loading="lazy">
+										</div>
+									</div>
+								</article>
+							</div>
+						{% endfor %}
+					</div>
+
+					{# <div class="u-pt-md u-max-width--6-12 u-mx-auto">
+						<p class="u-text-center">
+							Na přípravě dalšího programu stále&nbsp;pracujeme. <br> Na první české frontendové konferenci uvidíte téměř 20&nbsp;přednášek v&nbsp;šesti hodinách času.
+						</p>
+					</div> #}
+				</section>
+			</div>
+		</div>
+
 
 
 		<div class="u-bg-mint u-color-dark-blue">
