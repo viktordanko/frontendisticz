@@ -14,6 +14,7 @@ const spriteRetina = require('./tasks/spriteRetina');
 const sprite = require('./tasks/sprite');
 
 const twig = require('./tasks/twig');
+const twig2 = require('./tasks/twig2');
 const sass = require('./tasks/sass');
 const webpack = require('./tasks/webpack');
 
@@ -23,7 +24,7 @@ const watch = require('./tasks/watch');
 const buildCMS = require('./tasks/buildCMS');
 
 const build = function build(done) {
-	return series(clean, parallel(iconSvg, buildCMS), parallel(sass, webpack, twig, copyImages, copyJs, copyRoot))(done);
+	return series(clean, parallel(iconSvg, buildCMS), parallel(sass, webpack, twig, twig2, copyImages, copyJs, copyRoot))(done);
 };
 
 const dev = function dev(done) {
@@ -53,6 +54,7 @@ module.exports = {
 	iconFont,
 	imagemin,
 	twig,
+	twig2,
 	sass,
 	spriteRetina,
 	sprite,

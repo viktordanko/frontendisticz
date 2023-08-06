@@ -83,54 +83,200 @@
 							<a href="#program" class="section-anchor__link section-anchor__link--program"> # </a>
 						</h2>
 					</div>
-					<div class="c-gallery__list c-gallery__list-big">
+					<div class="c-gallery__list">
 						{% set cards = [
 							{
-								type: 'přednášející',
+								type: 'přednáška',
 								imgSrc: 'david.jpg',
-								title: 'David Grudl',
+								name: 'David Grudl',
+								title: 'AI: bublina nebo revoluce?',
+								endpoint: '../ajax/david-grudl.html',
 							},
 							{
-								type: 'přednášející',
+								type: 'přednáška',
 								imgSrc: 'ondrej.jpg',
-								title: 'Ondřej Žára',
+								name: 'Ondřej Žára',
+								title: 'Web Components v praxi',
+								endpoint: '../ajax/ondrej-zara.html',
 							},
 							{
-								type: 'přednášející',
+								type: 'přednáška',
 								imgSrc: 'riki.jpg',
-								title: 'Riki Fridrich',
+								name: 'Riki Fridrich',
+								title: 'Ako používať Typescript bez Typescriptu',
+								endpoint: '../ajax/riki-fridrich.html',
 							},
 							{
-								type: 'přednášející',
+								type: 'přednáška',
 								imgSrc: 'terka.jpg',
-								title: 'Tereza Vaňková',
+								name: 'Tereza Vaňková',
+								title: 'Novinky ve Storybooku',
+								endpoint: '../ajax/tereza-vankova.html',
 							},
 							{
-								type: 'přednášející',
+								type: 'přednáška',
 								imgSrc: 'borek.jpg',
-								title: 'Borek Bernard',
+								name: 'Borek Bernard',
+								title: 'Přechod z PHP na Next',
+								endpoint: '../ajax/borek-bernard.html',
 							},
 							{
-								type: 'přednášející',
+								type: 'přednáška',
 								imgSrc: 'honza.jpg',
-								title: 'Honza Sládek',
+								name: 'Honza Sládek',
+								title: 'OpenAI a jiné AI API',
+								endpoint: '../ajax/honza-sladek.html',
+							},
+
+							{
+								type: 'přednáška',
+								imgSrc: 'filip-mares.jpg',
+								name: 'Filip Mareš',
+								title: 'Lepší Developer Experience s pomocí Nx',
+								endpoint: '../ajax/filip-mares.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'hana-klingova.jpg',
+								name: 'Hana Klingová',
+								title: 'Copilot: zbraň pro pohodlné programátory',
+								endpoint: '../ajax/hana-klingova.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'honza-hruby.jpg',
+								name: 'Honza Hrubý',
+								title: 'Webpack… a dál?',
+								endpoint: '../ajax/honza-hruby.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'honza-javorek.jpg',
+								name: 'Honza Javorek',
+								title: 'Junior jako investice: Proč je mít v týmu a jak je zaučovat',
+								endpoint: '../ajax/honza-javorek.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'jakub-senk.jpg',
+								name: 'Jakub Šenk',
+								title: 'Jak se nezabít při práci s designérem 2.0',
+								endpoint: '../ajax/jakub-senk.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'jan-kanajlo.jpg',
+								name: 'Jan Kanajlo',
+								title: 'Cloudflare Workery jako řešení pro AB test a přepínání na mikrofrontend platformu',
+								endpoint: '../ajax/jan-kanajlo.html',
+							},
+
+							{
+								type: 'přednáška',
+								imgSrc: 'jan-sverak.jpg',
+								name: 'Jan Svěrák',
+								title: 'Přišel čas na čisté CSS?',
+								endpoint: '../ajax/jan-sverak.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'katerina-n-volakova.jpg',
+								name: 'Kateřina N. Voláková',
+								title: 'Container Queries vs. Media Queries',
+								endpoint: '../ajax/katerina-n-volakova.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'marta-kirchgessner.jpg',
+								name: 'Marta Kirchgessner',
+								title: 'Dev Fiction: Junioři a realita vývojářského týmu',
+								endpoint: '../ajax/marta-kirchgessner.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'martin-machacek.jpg',
+								name: 'Martin Macháček',
+								title: 'Estimace projektů - proč jsou vždycky špatně, a jak je zlepšit?',
+								endpoint: '../ajax/martin-machacek.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'michaela-rudolfova.jpg',
+								name: 'Michaela Rudolfová',
+								title: 'Web Accessibility - lepší uživatelský zážitek pro všechny!',
+								endpoint: '../ajax/michaela-rudolfova.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'milan-holes.jpg',
+								name: 'Milan Holeš',
+								title: 'Module Federation: Teória vs Prax',
+								endpoint: '../ajax/milan-holes.html',
+							},
+
+							{
+								type: 'přednáška',
+								imgSrc: 'ondrej-kucera.jpg',
+								name: 'Ondřej Kučera',
+								title: 'Pozorování webových mutací',
+								endpoint: '../ajax/ondrej-kucera.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'petr-buchbauer.jpg',
+								name: 'Petr Buchbauer',
+								title: 'Jak si udržet mentální zdraví v post-covid době',
+								endpoint: '../ajax/petr-buchbauer.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'vojtech-lank.jpg',
+								name: 'Vojtěch Lank',
+								title: 'SSR React s Islands architecture v praxi',
+								endpoint: '../ajax/vojtech-lank.html',
 							},
 
 						] %}
 						{% for card in cards %}
+
 							<div class="c-gallery__item">
-								<article class="b-cardBig b-cardBig--program">
-									<div class="b-cardBig__inner">
-										<div class="b-cardBig__content">
-											<p class="b-cardBig__type">
+								<article class="b-card b-card--program">
+									<div class="b-card__inner">
+										<div class="b-card__content">
+											<p class="b-card__type">
 												{{card.type|default('přednáška')}}
 											</p>
-											<h3 class="b-cardBig__title">
+											<h3 class="b-card__title">
 												{{ card.title|raw|nl2br }}
 											</h3>
+											<div class="b-card__row">
+												<div class="b-card__info">
+													<p class="b-card__name">
+														{{ card.name|raw|nl2br }}
+													</p>
+													{% if card.company %}
+														<span class="b-card__company">
+															{{ card.company }}
+														</span>
+													{% endif %}
+												</div>
+												{% if card.endpoint %}
+													<a href="{{ card.endpoint }}" class="b-card__link link-mask" data-modal='{"medium": "fetch"}'>
+														{% include '@components/core/icon-svg/icon-svg.twig' with {
+															props: {
+																name: 'chevron-right',
+																alt: 'Přejít na detail'
+															}
+														} %}
+													</a>
+												{% endif %}
+
+											</div>
 										</div>
-										<div class="b-cardBig__img">
-											<img src="/img/frontkon/{{ card.imgSrc }}" alt="{{ card.title }}" width="150" height="180" loading="lazy">
+										<div class="b-card__img">
+											{% if card.imgSrc is defined and card.imgSrc is not empty %}
+												<img src="/img/frontkon/{{ card.imgSrc }}" alt="{{ card.title }}" width="150" height="180" loading="lazy">
+											{% endif %}
 										</div>
 									</div>
 								</article>
@@ -165,7 +311,7 @@
 							<ul>
 								<li> 10. 5. – call for papers </li>
 								<li> 31. 5. – uzavření call for papers, zveřejnění první části programu </li>
-								<li> 30. 6. – dokončení programu, informace přednášejícím </li>
+								<li> 30. 6. – dokončení programu, informace přednáškam </li>
 								<li> 28. 9. – termín pro zaslání slajdů </li>
 								<li> 12. 10. – konference </li>
 								<li> 13. 10. – profit! </li>

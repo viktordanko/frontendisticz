@@ -378,7 +378,7 @@ const createModal = (
 
 			// Close btn is inside the content
 			header.innerHTML = options.headerTpl(options);
-			contentElement.lastChild.insertAdjacentElement("beforeend", header);
+			//contentElement.lastChild.insertAdjacentElement("beforeend", header);
 
 			return contentElement;
 		}

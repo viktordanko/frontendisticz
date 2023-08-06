@@ -22,9 +22,9 @@
 	<div class="b-detail__wrap">
 		<div class="b-detail__img">
 			{% if props.imgSrc %}
-			<img src="{{ assets.images }}illust/{{ props.imgSrc }}" alt="Profilová fotografie - {{ props.name }}" width="174" height="174" loading="lazy">
+			<img src="/img/frontkon/{{ props.imgSrc }}" alt="Profilová fotografie - {{ props.name }}" width="174" height="174" loading="lazy">
 			{% endif %}
-			{% if props.url  or props.twitter or props.github %}
+			{% if props.url  or props.twitter or props.github or props.linkedin %}
 				<p class="b-detail__socials">
 					{% if props.url %}
 						<a href="{{ props.url }}" class="b-detail__social" target="_blank" rel="noopener noreferrer">

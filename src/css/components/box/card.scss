@@ -109,7 +109,7 @@
 			height: 100%;
 			overflow: hidden;
 			box-shadow: none;
-			flex-direction: column;
+			flex-direction: row;
 		}
 		#{$b}__content {
 			display: flex;
@@ -117,7 +117,7 @@
 			padding: 20px;
 		}
 		#{$b}__img {
-			display: none; // TODO - Tweak card UI for better aligning /w & w/o image
+			// display: none; // TODO - Tweak card UI for better aligning /w & w/o image
 			flex: 0 0 130px;
 			width: 100%;
 			height: initial;
