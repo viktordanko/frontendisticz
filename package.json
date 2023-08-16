@@ -87,6 +87,7 @@
 		"focus-trap": "6.3.0",
 		"fontfaceobserver": "^2.1.0",
 		"query-string": "7.0.0",
+		"scroll-lock": "2.1.5",
 		"svg4everybody": "^2.1.9",
 		"what-input": "5.2.3"
 	},

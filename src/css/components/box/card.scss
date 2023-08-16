@@ -140,7 +140,7 @@
 		#{$b}__name {
 			font-size: 12px;
 			margin-bottom: 0;
-			line-height: (52/44);
+			line-height: 2;
 		}
 		#{$b}__info {
 			@include text-truncate();
@@ -246,7 +246,7 @@
 			#{$b}__name {
 				font-size: 14px;
 				margin-bottom: 0;
-				line-height: (52/44);
+				line-height: 2;
 			}
 			#{$b}__link {
 				.icon-svg {
