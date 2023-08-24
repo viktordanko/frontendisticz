@@ -337,26 +337,82 @@
 						<div class="b-content">
 							<h2 class="u-mb-lg">Program? <br>Aktuálně na něm pracujeme.</h2>
 
-							<p>
-								<strong> Děkujeme všem, kteří přihlásili své přednášky do call for papers. </strong>
-							</p>
-							<p>
-								<strong> Důležité termíny </strong>
-							</p>
-							<ul>
-								<li> 10. 5. – call for papers </li>
-								<li> 31. 5. – uzavření call for papers, zveřejnění první části programu </li>
-								<li> 30. 6. – dokončení programu, informace přednáškam </li>
-								<li> 28. 9. – termín pro zaslání slajdů </li>
-								<li> 12. 10. – konference </li>
-								<li> 13. 10. – profit! </li>
-							</ul>
-							<p class="u-pt-lg">
-								Potřebuješ více informací? <br> Napiš Martinovi Michálkovi: <a class="u-text-underline" href="mailto:martin.michalek@frontendisti.cz?subject=Call for papers - Konference 2021 | Frontendisti.cz">martin.michalek@frontendisti.cz</a>
-							</p>
+
 						</div>
 					</section>
 				</div>
+			</div>
+		</div>
+
+		<div class="u-bg-default">
+			<div class="u-pt-xxl row-main">
+				<div class="u-mx-auto u-max-width--6-12 u-mb-xxl">
+					<h2>
+						Partneři konference
+					</h2>
+				</div>
+				<div class="u-mx-auto u-max-width--10-12">
+					<section class="c-sponzors c-sponzors--main u-mb-xxl">
+						{% set items = [
+							{
+								imgSrc: 'mews.png',
+								title: 'MEWS',
+								width: '460',
+								height: '59',
+								href: 'https://www.mews.com/',
+								isFullWidth: true
+							},
+							{
+								imgSrc: 'ataccama.svg',
+								title: 'Ataccama',
+								width: '200',
+								height: '50',
+								href: 'https://www.ataccama.com/',
+							},
+							{
+								imgSrc: 'cdn77.svg',
+								title: 'CDN77',
+								width: '200',
+								height: '50',
+								href: 'https://www.cdn77.com/',
+							},
+							{
+								imgSrc: 'hg.png',
+								title: 'Heureka Group',
+								width: '200',
+								height: '143',
+								href: 'https://heureka.group/',
+							},
+							{
+								imgSrc: 'outreach.svg',
+								title: 'Outreach',
+								width: '200',
+								height: '50',
+								href: 'https://www.outreach.io/'
+							},
+							{
+								imgSrc: 'pux.svg',
+								title: 'puxdesign',
+								width: '200',
+								height: '50',
+								href: 'https://www.puxdesign.cz/'
+							},
+						] %}
+						{% if items is defined and items is not empty %}
+							<ul class="c-sponzors__list grid grid--center grid--middle">
+								{% for item in items %}
+									<li class="c-sponzors__item grid__cell {% if not item.isFullWidth %}size--4-12@sm{% endif %}
+									">
+										<a class="c-sponzors__link" href="{{ item.href }}" target="_blank" rel="noopener noreferrer">
+											<img src="{{ assets.images }}frontkon/partners/{{ item.imgSrc }}" alt="Logo společnosti {{ item.title }}" width="{{ item.width }}" height="{{ item.height }}" loading="lazy">
+										</a>
+									</li>
+								{% endfor %}
+							</ul>
+						{% endif %}
+					</section>
+				</div>
+
 			</div>
 		</div>
 
