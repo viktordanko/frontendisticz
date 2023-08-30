@@ -13,6 +13,11 @@
 		text-align: center;
 		border-left-width: ($gridGutter * 2);
 		border-bottom-width: ($gridGutter * 2);
+
+	  	img {
+		  	min-height: 120px;
+			object-fit: contain;
+		}
 	}
 	&__link {
 		display: inline-block;
