@@ -7,7 +7,7 @@
 	<main id="main" class="main-conf">
 
 
-
+		<h1 class="u-vhide">FrontKon 2023</h1>
 
 
 		<div class="u-bg-default">
@@ -19,9 +19,9 @@
 					</h2>
 
 					<p>
-						1 den, 2 přednáškové sály, kolem 20 přednášek, 400 účastníků.<br>
+						1 den, 2 přednáškové sály, kolem 30 přednášek, 400 účastníků.<br>
 						12. října 2023, <a href="https://www.qualityhotelbrnoexhibitioncentre.com/cs/konference/" target="_blank">Quality Hotel Brno</a>.<br>
-						Předběžný čas: 10:00 - 19:00. Po akci bude (doufejme) afterparty v okolí hotelu.
+						Čas: 10:00 - 18:00
 					</p>
 				</div>
 				<div class="u-mx-auto u-max-width--10-12 u-mb-xxl">
@@ -124,7 +124,7 @@
 								type: 'přednáška',
 								imgSrc: 'honza.jpg',
 								name: 'Honza Sládek',
-								title: 'OpenAI a jiné AI API',
+								title: 'AI jako API v reálné praxi',
 								endpoint: '../ajax/honza-sladek.html',
 							},
 
@@ -270,6 +270,13 @@
 								title: 'Pohled pod pokličku nové metriky INP',
 								endpoint: '../ajax/zuzana-sumlanska.html',
 							},
+							{
+								type: 'přednáška',
+								imgSrc: '',
+								name: 'Marek Velas a Petra Kubita Nulíčková',
+								title: 'Růst ve frontendu: osobní a technický rozvoj ruku v ruce',
+								endpoint: '../ajax/velas-nulickova.html',
+							},
 
 						] %}
 						{% for card in cards %}
@@ -308,11 +315,11 @@
 
 											</div>
 										</div>
+										{% if card.imgSrc is defined and card.imgSrc is not empty %}
 										<div class="b-card__img">
-											{% if card.imgSrc is defined and card.imgSrc is not empty %}
-												<img src="/img/frontkon/{{ card.imgSrc }}" alt="{{ card.title }}" width="150" height="180" loading="lazy">
-											{% endif %}
+											<img src="/img/frontkon/{{ card.imgSrc }}" alt="{{ card.title }}" width="150" height="180" loading="lazy">
 										</div>
+										{% endif %}
 									</div>
 								</article>
 							</div>
@@ -333,6 +340,7 @@
 		<div class="u-bg-mint u-color-dark-blue">
 			<div class="row-main u-pt-xxl">
 				<div class="u-max-width--6-12 u-mx-auto">
+
 					<section class="u-mb-xxl">
 						<div class="b-content">
 							<h2 class="u-mb-lg">Program? <br>Aktuálně na něm pracujeme.</h2>
@@ -343,6 +351,496 @@
 				</div>
 			</div>
 		</div>
+
+		<section class="s-shedule" id="shedule">
+			<div class="row-main">
+				<div class="u-mx-auto u-max-width--6-12">
+					<h2 class="s-shedule__title section-anchor">
+						Program
+						<a href="#shedule" class="section-anchor__link section-anchor__link--program"> # </a>
+					</h2>
+				</div>
+				<div class="u-max-width--10-12 u-mx-auto">
+					<div class="s-shedule__wrap">
+						<div class="s-shedule__main">
+							<table class="b-shedule">
+								<thead>
+								<tr>
+									<th scope="col">
+
+									</th>
+									<th scope="col" style="width: 45%">
+										Stage F
+									</th>
+									<th scope="col" style="width: 45%">
+										Stage E
+									</th>
+									{#
+									<th scope="col">
+										Partnerská stage
+									</th>
+									#}
+								</tr>
+								</thead>
+								<tbody class="b-shedule__list">
+								{% set items = [
+									{
+										isHighlighted: true,
+										time: '9:00',
+										title: 'Konference otevřena',
+									},
+									{
+										time: '10:00',
+										fstage: {
+											items: [
+												{
+													time: '10:00',
+													name: 'Martin Michálek',
+													title: 'Keynote',
+												},
+												{
+													time: '10:10',
+													name: 'Ondřej Žára',
+													title: 'Web Components v praxi',
+													endpoint: '../ajax/ondrej-zara.html',
+												}
+											]
+										},
+										estage: {
+											items: [
+												{
+													time: '10:00',
+													name: 'Martin Michálek',
+													title: 'Keynote',
+												},
+												{
+													time: '10:10',
+													name: 'Michal Matuška',
+													title: 'DevTools: Švýcarský nožík vývojáře',
+													endpoint: '../ajax/michal-matuska.html',
+												},
+												{
+													time: '10:35',
+													name: 'Honza Hrubý',
+													title: 'Webpack...a dál?',
+													endpoint: '../ajax/honza-hruby.html',
+												}
+											]
+										},
+									},
+									{
+										time: '11:00',
+										fstage: {
+											items: [
+												{
+													time: '11:00',
+													name: 'Martin Brychta',
+													title: 'Vercel: All-in-One platforma pro váš příští projekt',
+													endpoint: '../ajax/martin-brychta.html',
+												},
+												{
+													time: '11:20',
+													name: 'Borek Bernard',
+													heading: 'případovka',
+													title: 'Přechod z PHP na Next',
+													endpoint: '../ajax/borek-bernard.html',
+												}
+											]
+										},
+										estage: {
+											items: [
+												{
+													time: '11:00',
+													name: 'Michaela Rudolfová',
+													title: 'Web Accessibility - lepší uživatelský zážitek pro všechny!',
+													endpoint: '../ajax/michaela-rudolfova.html',
+												},
+												{
+													time: '11:25',
+													name: 'Marek Velas a Petra Kubita Nulíčková',
+													title: 'Růst ve frontendu: osobní a technický rozvoj ruku v ruce',
+													endpoint: '../ajax/velas-nulickova.html',
+												}
+											]
+										},
+										partners: {
+											items: [
+												{
+													time: '11:00',
+													name: '',
+													title: '',
+													endpoint: '../ajax/todo.html',
+												},
+											]
+										},
+									},
+									{
+										time: '12:00',
+										fstage: {
+											items: [
+												{
+													time: '12:00',
+													name: '...',
+													title: '<em>překvapení</em>',
+												},
+												{
+													time: '12:25',
+													name: 'Filip Mareš',
+													title: 'Lepší Developer Experience s pomocí Nx',
+													endpoint: '../ajax/filip-mares.html',
+												}
+											]
+										},
+										estage: {
+											items: [
+												{
+													time: '12:00',
+													name: 'Petr Buchbauer',
+													title: 'Jak si udržet mentální zdraví v post-covid době',
+													endpoint: '../ajax/petr-buchbauer.html',
+												},
+												{
+													time: '12:25',
+													name: 'Yablko (Roman Hraška)',
+													title: 'Ako získať prvý job v IT?',
+													endpoint: '../ajax/roman-yablko-hraska.html',
+												}
+											]
+										},
+										partners: {
+											items: [
+												{
+													time: '11:00',
+													name: '',
+													title: '',
+													endpoint: '../ajax/todo.html',
+												},
+											]
+										},
+									},
+									{
+										time: '13:00',
+										fstage: {
+											items: [
+												{
+													time: '13:00',
+													name: 'Jan Kanajlo',
+													title: 'Cloudflare Workery jako řešení pro AB test a přepínání na mikrofrontend platformu',
+													endpoint: '../ajax/jan-kanajlo.html',
+												},
+												{
+													time: '13:25',
+													name: 'Vojtěch Lank',
+													title: 'SSR React s Islands architecture v praxi',
+													endpoint: '../ajax/vojtech-lank.html',
+												}
+											]
+										},
+										estage: {
+											items: [
+												{
+													time: '13:00',
+													name: 'Honza Javorek',
+													title: 'Junior jako investice: Proč je mít v týmu a jak je zaučovat',
+													endpoint: '../ajax/petr-buchbauer.html',
+												},
+												{
+													time: '13:10',
+													name: 'Marta Kirchgessner',
+													title: 'Dev Fiction: Junioři a realita vývojářského týmu',
+													endpoint: '../ajax/roman-yablko-hraska.html',
+												},
+												{
+													time: '13:15',
+													heading: 'diskuze',
+													title: 'Junioři ve světě frontendu',
+												}
+											]
+										},
+										partners: {
+											items: [
+												{
+													time: '11:00',
+													name: '',
+													title: '',
+													endpoint: '../ajax/todo.html',
+												},
+											]
+										},
+									},
+
+									{
+										time: '14:00',
+										fstage: {
+											items: [
+												{
+													time: '14:00',
+													name: 'Hana Klingová',
+													title: 'Copilot: zbraň pro pohodlné programátory',
+													endpoint: '../ajax/hana-klingova.html',
+												},
+												{
+													time: '14:15',
+													name: 'David Grudl',
+													title: 'AI: bublina nebo revoluce?',
+													endpoint: '../ajax/david-grudl.html',
+												}
+											]
+										},
+										estage: {
+											items: [
+												{
+													time: '14:00',
+													name: 'Jakub Šenk',
+													title: 'Jak se nezabít při práci s designérem 2.0',
+													endpoint: '../ajax/jakub-senk.html',
+												},
+												{
+													time: '14:25',
+													name: 'Martin Kopta',
+													title: 'Modely místo high-fidelity návrhů UI',
+													endpoint: '../ajax/martin-kopta.html',
+												},
+											]
+										},
+										partners: {
+											items: [
+												{
+													time: '11:00',
+													name: '',
+													title: '',
+													endpoint: '../ajax/todo.html',
+												},
+											]
+										},
+									},
+
+									{
+										time: '15:00',
+										fstage: {
+											items: [
+												{
+													time: '15:00',
+													name: 'Honza Sládek',
+													title: 'AI jako API v reálné praxi',
+													endpoint: '../ajax/honza-sladek.html',
+												},
+												{
+													time: '15:35',
+													name: 'Martin Macháček',
+													title: 'Estimace projektů - proč jsou vždycky špatně, a jak je zlepšit?',
+													endpoint: '../ajax/martin-machacek.html',
+												}
+											]
+										},
+										estage: {
+											items: [
+												{
+													time: '15:00',
+													name: 'Zuzana Šumlanská',
+													title: 'Pohled pod pokličku nové metriky INP',
+													endpoint: '../ajax/zuzana-sumlanska.html',
+												},
+												{
+													time: '14:25',
+													name: 'Milan Holeš',
+													title: 'Module Federation',
+													endpoint: '../ajax/milan-holes.html',
+												},
+											]
+										},
+										partners: {
+											items: [
+												{
+													time: '11:00',
+													name: '',
+													title: '',
+													endpoint: '../ajax/todo.html',
+												},
+											]
+										},
+									},
+
+									{
+										time: '16:00',
+										fstage: {
+											items: [
+												{
+													time: '16:00',
+													name: 'Riki Fridrich',
+													title: 'Typescript bez Typescriptu',
+													endpoint: '../ajax/riki-fridrich.html',
+												},
+												{
+													time: '15:35',
+													name: 'Ondřej Kučera',
+													title: 'Pozorování webových mutací',
+													endpoint: '../ajax/ondrej-kucera.html',
+												}
+											]
+										},
+										estage: {
+											items: [
+												{
+													time: '16:00',
+													name: 'Kateřina N. Voláková',
+													title: 'Container Queries vs. Media Queries',
+													endpoint: '../ajax/katerina-n-volakova.html',
+												},
+												{
+													time: '16:25',
+													name: 'Jan Svěrák',
+													title: 'Přišel čas na čisté CSS?',
+													endpoint: '../ajax/jan-sverak.html',
+												},
+											]
+										},
+										partners: {
+											items: [
+												{
+													time: '11:00',
+													name: '',
+													title: '',
+													endpoint: '../ajax/todo.html',
+												},
+											]
+										},
+									},
+
+									{
+										time: '17:00',
+										fstage: {
+											items: [
+												{
+													time: '17:00',
+													name: 'Libor Vaněk',
+													title: '<em>JS frameworky (bude upřesněno)</em>',
+												},
+												{
+													time: '17:15',
+													heading: 'diskuze',
+													title: 'Stav a budoucnost JS frameworků',
+												}
+											]
+										},
+										estage: {
+											items: [
+												{
+													time: '17:00',
+													name: 'Tereza Vaňková',
+													title: 'Novinky ve Storybooku',
+													endpoint: '../ajax/tereza-vankova.html',
+												},
+												{
+													time: '17:25',
+													name: 'Adam Kudrna',
+													title: '<em>Design systémy (v přípravě)</em>',
+												},
+											]
+										},
+										partners: {
+											items: [
+												{
+													time: '11:00',
+													name: '',
+													title: '',
+													endpoint: '../ajax/todo.html',
+												},
+											]
+										},
+									},
+
+									{
+										isHighlighted: true,
+										title: '',
+										title: 'Děkujeme za účast',
+									},
+								] %}
+								{% for item in items %}
+									<tr class="b-shedule__item {% if item.isHighlighted == true %}is-highlighted{% endif %}">
+											<th scope="row" class="b-shedule__col">
+												{{ item.time }}
+											</th>
+
+										{% if item.isHighlighted == true %}
+											<td class="b-shedule__col" colspan="3">
+												<p class="b-shedule__title">
+													{{ item.title|raw }}
+												</p>
+												{% if item.name %}
+													<p class="b-shedule__name">
+														{{ item.name|raw }}
+													</p>
+												{% endif %}
+											</td>
+
+										{% else %}
+
+											<td class="b-shedule__col b-shedule__off" data-label="F stage">
+												{% for item in item.fstage.items %}
+													<span class="b-shedule__off-item">
+														<span scope="row" class="b-shedule__off-time">
+															{{ item.time }}
+														</span>
+														<span class="b-shedule__off-title">
+															{% if item.heading %}<span class="u-red">{{ item.heading }}<br></span>{% endif %}
+
+															{% if item.endpoint %}
+																<a href="{{ item.endpoint }}" class="b-shedule__title" data-modal='{"medium": "fetch"}'>{{ item.title|raw }}</a><br>
+															{% else %}
+																<span class="b-shedule__title">{{ item.title|raw }}</span><br>
+															{% endif %}
+															{{ item.name|raw }}
+														</span>
+													</span>
+												{% endfor %}
+											</td>
+											{% if item.estage or not item.isHighlighted %}
+												<td class="b-shedule__col b-shedule__off"{% if item.estage %} data-label="E stage"{% endif %}>
+													{% for item in item.estage.items %}
+														<span class="b-shedule__off-item">
+														<span scope="row" class="b-shedule__off-time">
+															{{ item.time }}
+														</span>
+														<span class="b-shedule__off-title">
+															{% if item.heading %}<span class="u-red">{{ item.heading }}<br></span>{% endif %}
+															<a href="{{ item.endpoint }}" class="b-shedule__title" data-modal='{"medium": "fetch"}'>{{ item.title|raw }}</a><br>
+															{{ item.name|raw }}
+														</span>
+													</span>
+													{% endfor %}
+												</td>
+											{% endif %}
+											{#
+											{% if item.partners or not item.isHighlighted %}
+												<td class="b-shedule__col b-shedule__off"{% if item.partners %} data-label="Partnerská stage"{% endif %}>
+													{% for item in item.partners.items %}
+														<span class="b-shedule__off-item">
+														<span scope="row" class="b-shedule__off-time">
+															{{ item.time }}
+														</span>
+														<span class="b-shedule__off-title">
+															{% if item.heading %}<span class="u-red">{{ item.heading }}</span>{% endif %}
+															<a href="{{ item.endpoint }}" class="b-shedule__title" data-modal='{"medium": "fetch"}'>{{ item.title|raw }}</a><br>
+															{{ item.name|raw }}
+														</span>
+													</span>
+													{% endfor %}
+												</td>
+											{% endif %}
+											#}
+										{% endif %}
+									</tr>
+								{% endfor %}
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
 
 		<div class="u-bg-default">
 			<div class="u-pt-xxl row-main">
@@ -414,6 +912,102 @@
 					</section>
 				</div>
 
+			</div>
+		</div>
+
+		<div class="u-bg-mint">
+			<div class="row-main u-pt-xxl">
+				<section class="s-organizators s-indent u-mb-lg">
+					<div class="u-mx-auto u-max-width--6-12">
+						<h2>
+							FAQ
+						</h2>
+
+						<h3>Kdy a kde konference proběhne?</h3>
+						<p>Konference se uskuteční ve čtvrtek 12. října v <a href="https://goo.gl/maps/AwubyD7JZJQ68vsZ7">Quality hotelu v Brně</a>.<br>
+						Program začíná v 10:00, ale prostory budou otevřeny už od 9:00. Pro vstup si připravte svoji vstupenku s kódem, kterou jste obdrželi e-mailem.</p>
+
+
+
+						<h3>Jak se dostanu na místo?</h3>
+						<p><a href="https://goo.gl/maps/AwubyD7JZJQ68vsZ7">Quality hotel</a> se nachází v blízkosti brněnského výstaviště.</p>
+						<ul>
+							<li>
+								<p>
+									<strong>Šalinou:</strong>
+									Jednoduše se na místo dostanete šalinou č. 1 (směr Ečerova) z hlavního nádraží. Ze zastávky Výstaviště-hlavní vstup je to k hotelu asi 10 minut chůze.<br>
+									Další možnost je vyrazit opět šalinou č.1 (směr Ečerova) z hlavního nádraží, a na Mendlově náměstí přesednout na bus č. 84 (směr Stará osada). Vystoupíte na zastávce Velodrom a k hotelu už to máte cca 300m.
+								</p>
+							</li>
+							<li>
+								<p>
+									<strong>Autem:</strong>
+									Parkování je možné u výstaviště či v <a href="https://goo.gl/maps/78NAQ1wYwkaRkFJ67">parkovacím domě vedle hotelu</a>. Kolem celého výstaviště je modrá parkovací zóna C, kde je parkování ZDARMA celý víkend a ve všední dny od 6 do 17 hodin. Po 17. hodině lze zaplatit parkování online pomocí mobilní aplikace ParkSimply a první hodina je zdarma. Volná parkovací místa však nemůžeme zaručit, a proto doporučujeme přijet spíš městskou hromadnou dopravou nebo přijít pěsky. Aspoň si pak můžete dát třeba pivo.
+								</p>
+							</li>
+						</ul>
+
+
+						<h3>Když se rozhodnu jet autem, budu mít kde zaparkovat?</h3>
+						<p>
+						Parkování je možné u výstaviště či v parkovacím domě vedle hotelu. Kolem celého výstaviště je modrá parkovací zóna C, kde je parkování ZDARMA celý víkend a ve všední dny od 6 do 17 hodin. Po 17. hodině lze zaplatit parkování online pomocí mobilní aplikace ParkSimply a první hodina je zdarma. Volná parkovací místa však nemůžeme zaručit, a proto doporučujeme přijet spíš městskou hromadnou dopravou nebo přijít pěsky. Aspoň si pak můžete dát třeba pivo.
+						</p>
+
+
+						<h3>Jak je to s ubytováním?</h3>
+						<p>Pokud hledáte ubytování, v Brně je řada hotelů k dispozici. Doporučujeme rezervovat pokoj co nejdříve, protože ve stejném termínu probíhají ve městě i další akce.<br>
+						Čas začátku a konce konference jsme však naplánovali tak, aby vám cestování v den akce nezpůsobovalo problémy a obešli jste se i bez přespání.
+						</p>
+
+
+						<h3>Jaká je cena vstupenky a co zahrnuje?</h3>
+						<p>Cena základní vstupenky je 1 190 Kč. V ceně je celodenní vstup na konferenci a bezedná káva a voda.<br>
+						Je možnost také zakoupit vstupenky pro “Podporovatele komunity”. Tato vstupenka stojí 2 490 Kč a kromě celodenního vstupu na konferenci obdrží vlastník jako poděkování tričko komunity (nezapomeňte napsat velikost do poznámky ;))
+						</p>
+
+
+						<h3>Jaká jsou témata a program konference?</h3>
+						<p>
+						Podrobný program konference je k dispozici výše na našem webu.
+						Mezi přednáškami najdete témata jak pro ostřílené seniory, tak pro nováčky v IT.
+						</p>
+
+						<p>
+						Na co se můžete těšit:
+						</p>
+						<ul>
+							<li>1 akční den</li>
+							<li>2 přednáškové sály</li>
+							<li>kolem 20 přednášek (frontend & soft skills)</li>
+							<li>400 účastníků</li>
+							<li>témata pro juniory i seniory</li>
+							<li>Workshopy a přednášky od partnerů komunity</li>
+							<li>Špičky z oboru na jednom místě</li>
+							<li>Příležitost pro networking</li>
+							<li>Čas strávený se stejně smýšlející partou lidí</li>
+						</ul>
+
+
+						<h3>Co když budu mít během dne hlad?</h3>
+						<p>Na místě bude stánek s rychlým občerstvením. Zároveň bude možnost se najíst v restauraci hotelu. V okolí jsou další restaurace a hotely, kam je možné si skočit. Dále také můžeme doporučit Wolt, Dáme Jídlo či BoltFood. I to už se k nám na jih dostalo :).</p>
+
+
+						<h3>Jaký je odhadovaný počet účastníků konference a kdo je primární cílovou skupinou?</h3>
+						<p>Očekáváme účast kolem 400 osob. Program obsahuje širokou škálu přednášek. Na své si přijdou junioři, kteří chtějí načerpat nové informace, stejně jako zkušení senioři, kteří mají zájem o pokročilejš témata.</p>
+
+
+						<h3>Jak mohu získat více informací nebo kontaktovat organizátory?</h3>
+						<p>Pokud máte nějaké další otázky ohledně konference, spojit se s námi můžete na e-mailu <a href="mailto:konference@frontendisti.cz">konference@frontendisti.cz</a>.</p>
+
+
+						<h3>Máte nějaké sociální sítě nebo komunitní platformy, kde mohu najít další informace a komunikovat s ostatními účastníky?</h3>
+						<p>Informace o konferenci pravidelně sdílíme přes naše sociální sítě a newsletter.</p>
+						<p>Na Facebooku máme vytvořenou událost, která je otevřená diskuzím: <a href="https://fb.me/e/4Di9FaMlL">https://fb.me/e/4Di9FaMlL</a></p>
+
+					</div>
+
+
+				</section>
 			</div>
 		</div>
 
