@@ -1,8 +1,7 @@
 ---
 template: blog-detail.twig
 title: Pozvánka na WebExpo 2022 (Collab with Frontendisti.cz)
-description: WebExpo už se nám blíží, bude se konat v pátek 10. a v sobotu 11. Června.
-  V tomto příspěvku vám chceme posvítit na program, který jsme mezitím dali dohromady.
+description:
 image: "../img/illust/webexpo-fe.jpg"
 author: Martin Michálek
 

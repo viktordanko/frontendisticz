@@ -1,8 +1,7 @@
 ---
 template: blog-detail.twig
 title: Jaký byl rok 2022 v komunitě Frontendisti.cz?
-description: Komunita Frontendisti.cz prožila velmi plodný rok 2022. Pojďme si shrnout
-  všechno, co se povedlo.
+description:
 image: "../img/illust/fe_komunita_img_4192-jpg.jpg"
 author: Martin Michálek
 
@@ -13,7 +12,7 @@ Komunita Frontendisti.cz prožila velmi plodný rok 2022. Pojďme si shrnout vš
 
 ![](../img/illust/webexpo-fe.jpg)
 
-  
+
 Chtěli jsme větší konferenci pro českou frontendovou komunitu, chtěli jsme ji prezenčně, chtěli jsme ji dobře zorganizovanou. Pak nás se Šárkou Strossovou napadlo prostě [Frontendisty spojit s WebExpem](https://frontendisti.cz/blog/pozvanka-na-webexpo-2022-collab-with-frontendisti.cz.html) v rámci specializované jednodenní akce. Díky velkému množství zájemců z Call for Papers (ještě jednou díky!) je z toho velké množství [zajímavého obsahu v angličtině](https://www.youtube.com/watch?v=gdBBzgcSfzM&list=PLnXfazh66kVf_SpXE1fuE6X_7Tq2QS_zN). Už jste to všechno viděli?
 
 ## **Spolupráce s ReactGirls a se SlidesLive**

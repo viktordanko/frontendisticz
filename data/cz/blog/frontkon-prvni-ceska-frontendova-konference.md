@@ -1,8 +1,7 @@
 ---
 template: blog-detail.twig
 title: "#FrontKon: První česká frontendová konference"
-description: Ve štábu spolku Frontendisti.cz organizujeme první českou frontendovou
-  konferenci a zhmotňujeme tak něco, o čem už dlouhá léta mluvíme.
+description:
 image: ''
 author: Martin Michálek
 

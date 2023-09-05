@@ -1,8 +1,7 @@
 ---
 template: blog-detail.twig
 title: Konference bude. WebExpo a Frontendisti.cz to dali dohromady
-description: Jsem moc rád, že vám právě teď můžu oznámit, že právě proto nyní spojujeme
-  síly se značkou WebExpo.
+description:
 image: "../img/illust/fe-webexpo.png"
 author: Martin Michálek
 
