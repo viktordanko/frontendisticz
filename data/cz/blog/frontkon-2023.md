@@ -31,7 +31,7 @@ Připravujeme pro vás dvě přednáškové místnosti, jednu partnerskou „sta
 
 ![](../img/illust/blog-frontkon-partners.png)
 
-Partnery konference jsou [Mews](https://www.mews.com/), [Attaccama](https://www.ataccama.com/), [CDN77](https://www.cdn77.com/), [Heureka Group](https://heureka.group/), [Outreach](https://www.outreach.io/), [PUXdesign](https://www.puxdesign.cz/) a [SUPERKODERS](https://superkoders.com/).
+Partnery konference jsou [Mews](https://www.mews.com/), [Attaccama](https://www.ataccama.com/), [CDN77](https://www.cdn77.com/), [Heureka Group](https://heureka.group/), [LMC](https://www.lmc.eu/), [Outreach](https://www.outreach.io/), [PUXdesign](https://www.puxdesign.cz/) a [SUPERKODERS](https://superkoders.com/).
 
 Těšíme se na vás!
 
