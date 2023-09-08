@@ -117,7 +117,7 @@
 								type: 'přednáška',
 								imgSrc: 'borek.jpg',
 								name: 'Borek Bernard',
-								title: 'Přechod z PHP na Next',
+								title: 'Z PHP šablon na Next.js: příběhy ze zákopů',
 								endpoint: '../ajax/borek-bernard.html',
 							},
 							{
@@ -184,6 +184,13 @@
 								name: 'Kateřina N. Voláková',
 								title: 'Container Queries vs. Media Queries',
 								endpoint: '../ajax/katerina-n-volakova.html',
+							},
+							{
+								type: 'přednáška',
+								imgSrc: 'libor-vanek.jpg',
+								name: 'Libor Vaněk',
+								title: 'Současný stav frontendu, aneb „Možná že nepotřebujete React”',
+								endpoint: '../ajax/libor-vanek.html',
 							},
 							{
 								type: 'přednáška',
@@ -278,6 +285,48 @@
 								endpoint: '../ajax/velas-nulickova.html',
 							},
 
+
+							{
+								type: 'partnerská stage',
+								imgSrc: 'tomas-belada.jpg',
+								name: 'Tomáš Belada',
+								title: 'Od malého k velkému: Jak škálovat a vést komunitu vývojářů.',
+								endpoint: '../ajax/tomas-belada.html',
+							},
+							{
+								type: 'partnerská stage',
+								imgSrc: 'martin-kristof.jpg',
+								name: 'Martin Krištof',
+								title: 'Jak využít sílu společné práce? Heureka! Mobbing, pairing, hackathons',
+								endpoint: '../ajax/martin-kristof.html',
+							},
+							{
+								type: 'partnerská stage',
+								imgSrc: 'jakub-miskech.jpg',
+								name: 'Jakub Miškech',
+								title: 'React performance Tips&Tricks',
+								endpoint: '../ajax/jakub-miskech.html',
+							},
+							{
+								type: 'partnerská stage',
+								name: 'Jakub Šalmík a Jakub Tkadleček',
+								title: 'Han(g)dover - Pařba ve Figmě',
+								endpoint: '../ajax/salmik-tkadlecek.html',
+							},
+							{
+								type: 'partnerská stage',
+								name: 'Jenda Horák a Libor Vaněk',
+								title: 'Praktický úvod do cachování',
+								endpoint: '../ajax/horak-vanek.html',
+							},
+							{
+								type: 'partnerská stage',
+								imgSrc: 'krystof-klaban.jpg',
+								name: 'Kryštof Klaban',
+								title: 'Vite, jako moderní náhrada Gulp pro webový vývoj',
+								endpoint: '../ajax/krystof-klaban.html',
+							},
+
 						] %}
 						{% for card in cards %}
 
@@ -353,17 +402,15 @@
 									<th scope="col">
 
 									</th>
-									<th scope="col" style="width: 45%">
+									<th scope="col" style="width: 30%">
 										Stage F
 									</th>
-									<th scope="col" style="width: 45%">
+									<th scope="col" style="width: 30%">
 										Stage E
 									</th>
-									{#
-									<th scope="col">
+									<th scope="col" style="width: 30%">
 										Partnerská stage
 									</th>
-									#}
 								</tr>
 								</thead>
 								<tbody class="b-shedule__list">
@@ -425,8 +472,7 @@
 												{
 													time: '11:20',
 													name: 'Borek Bernard',
-													heading: 'případovka',
-													title: 'Přechod z PHP na Next',
+													title: 'Z PHP šablon na Next.js: příběhy ze zákopů',
 													endpoint: '../ajax/borek-bernard.html',
 												}
 											]
@@ -451,9 +497,10 @@
 											items: [
 												{
 													time: '11:00',
-													name: '',
-													title: '',
-													endpoint: '../ajax/todo.html',
+													name: 'Tomáš Belada',
+													company: 'Ataccama',
+													title: 'Od malého k velkému: Jak škálovat a&nbsp;vést komunitu vývojářů.',
+													endpoint: '../ajax/tomas-belada.html',
 												},
 											]
 										},
@@ -494,10 +541,11 @@
 										partners: {
 											items: [
 												{
-													time: '11:00',
-													name: '',
-													title: '',
-													endpoint: '../ajax/todo.html',
+													time: '12:00',
+													name: 'Kryštof Klaban',
+													company: 'PUXdesign',
+													title: 'Vite, jako moderní náhrada Gulp pro webový vývoj',
+													endpoint: '../ajax/krystof-klaban.html',
 												},
 											]
 										},
@@ -544,10 +592,11 @@
 										partners: {
 											items: [
 												{
-													time: '11:00',
-													name: '',
-													title: '',
-													endpoint: '../ajax/todo.html',
+													time: '13:00',
+													name: 'Jenda Horák a Libor Vaněk',
+													company: 'CDN77',
+													title: 'Praktický úvod do cachování',
+													endpoint: '../ajax/horak-vanek.html',
 												},
 											]
 										},
@@ -590,10 +639,11 @@
 										partners: {
 											items: [
 												{
-													time: '11:00',
-													name: '',
-													title: '',
-													endpoint: '../ajax/todo.html',
+													time: '14:00',
+													name: 'Jakub Miškech',
+													company: 'Outreach',
+													title: 'React performance Tips&Tricks',
+													endpoint: '../ajax/jakub-miskech.html',
 												},
 											]
 										},
@@ -636,10 +686,11 @@
 										partners: {
 											items: [
 												{
-													time: '11:00',
-													name: '',
-													title: '',
-													endpoint: '../ajax/todo.html',
+													time: '15:00',
+													name: 'Jakub Šalmík a Jakub Tkadleček',
+													company: 'MEWS',
+													title: 'Han(g)dover - Pařba ve Figmě',
+													endpoint: '../ajax/salmik-tkadlecek.html',
 												},
 											]
 										},
@@ -682,10 +733,11 @@
 										partners: {
 											items: [
 												{
-													time: '11:00',
-													name: '',
-													title: '',
-													endpoint: '../ajax/todo.html',
+													time: '16:00',
+													name: 'Martin Krištof',
+													company: 'Heureka Group',
+													title: 'Jak využít sílu společné práce? Heureka! Mobbing, pairing, hackathons',
+													endpoint: '../ajax/martin-kristof.html',
 												},
 											]
 										},
@@ -698,7 +750,7 @@
 												{
 													time: '17:00',
 													name: 'Libor Vaněk',
-													title: '<em>JS frameworky (bude upřesněno)</em>',
+													title: 'Současný stav frontendu, aneb „Možná že nepotřebujete React”',
 												},
 												{
 													time: '17:15',
@@ -719,16 +771,6 @@
 													time: '17:25',
 													name: 'Adam Kudrna',
 													title: '<em>Design systémy (v přípravě)</em>',
-												},
-											]
-										},
-										partners: {
-											items: [
-												{
-													time: '11:00',
-													name: '',
-													title: '',
-													endpoint: '../ajax/todo.html',
 												},
 											]
 										},
@@ -795,7 +837,7 @@
 													{% endfor %}
 												</td>
 											{% endif %}
-											{#
+
 											{% if item.partners or not item.isHighlighted %}
 												<td class="b-shedule__col b-shedule__off"{% if item.partners %} data-label="Partnerská stage"{% endif %}>
 													{% for item in item.partners.items %}
@@ -806,13 +848,13 @@
 														<span class="b-shedule__off-title">
 															{% if item.heading %}<span class="u-red">{{ item.heading }}</span>{% endif %}
 															<a href="{{ item.endpoint }}" class="b-shedule__title" data-modal='{"medium": "fetch"}'>{{ item.title|raw }}</a><br>
-															{{ item.name|raw }}
+															{{ item.name|raw }} / {{ item.company }}
 														</span>
 													</span>
 													{% endfor %}
 												</td>
 											{% endif %}
-											#}
+
 										{% endif %}
 									</tr>
 								{% endfor %}
