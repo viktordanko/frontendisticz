@@ -97,6 +97,20 @@ $easeOutQuad: cubic-bezier(0.645, 0.045, 0.355, 1);
 		}
 	}
 
+  	&__background {
+	  	background-image: url($imgPath + "bg/hero-bg-sm.jpg");
+		&::after {
+		  content: "";
+		  position: absolute;
+		  top: 0;
+		  left: 0;
+		  z-index: 1;
+		  width: 100%;
+		  height: 100%;
+		  background-color: rgba(#1c1300, 0.37);
+		}
+	}
+
 	// MQs
 	@media ($smDown) {
 		&__inner {
@@ -106,6 +120,7 @@ $easeOutQuad: cubic-bezier(0.645, 0.045, 0.355, 1);
 	@media ($lgDown) {
 		&__left {
 			padding-bottom: 40px;
+		  	margin-left: -20px;
 		}
 		&__right {
 			padding-top: 40px;
@@ -133,7 +148,9 @@ $easeOutQuad: cubic-bezier(0.645, 0.045, 0.355, 1);
 		}
 	}
 	@media ($mdUp) {
-		background-image: url($imgPath + "bg/hero-bg-md.jpg");
+		&__background {
+		  background-image: url($imgPath + "bg/hero-bg-md.jpg");
+		}
 	}
 	@media ($lgUp) {
 		&__content {
@@ -168,6 +185,8 @@ $easeOutQuad: cubic-bezier(0.645, 0.045, 0.355, 1);
 		}
 	}
 	@media ($xlUp) {
-		background-image: url($imgPath + "bg/hero-bg-lg.jpg");
+		&__background {
+		  	background-image: url($imgPath + "bg/hero-bg-lg.jpg");
+		}
 	}
 }

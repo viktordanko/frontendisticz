@@ -3,7 +3,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 325px;
+	height: 400px;
 	background: $colorSecondary
 		url("https://skyproxy.superkoders.rocks/frontendisti/img/bg/frontendisti-hero.jpg?w=640&d=2")
 		bottom center no-repeat;
@@ -44,7 +44,7 @@
 
 	// MQs
 	@media ($mdDown) {
-		margin-top: 50px;
+		padding-top: 70px;
 		.other & {
 			margin-top: 0;
 		}
