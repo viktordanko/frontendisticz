@@ -5,6 +5,8 @@
 	position: relative;
 	td {
 		border-color: $colorSecondary;
+		border-left: 0.1px solid rgba($colorRed, 0.1);
+		border-right: 0.1px solid rgba($colorRed, 0.1);
 	}
 	thead th {
 		background-color: $colorSecondary;
@@ -25,6 +27,8 @@
 		font-size: 14px;
 		vertical-align: middle;
 		border: none;
+	  	border-left: 1px solid rgba($colorRed, 0.1);
+	  	border-right: 1px solid rgba($colorRed, 0.1);
 		&:first-child {
 			font-weight: 600;
 			color: $colorRedHover;
@@ -55,7 +59,7 @@
 	}
 	&__off {
 		padding: 10px;
-		vertical-align: middle;
+		vertical-align: top;
 	}
 	&__heading {
 		display: block;
@@ -97,6 +101,12 @@
 			font-weight: 400;
 			text-align: center;
 		}
+	}
+	&__item.is-twostages + tr {
+	  	border-top: none;
+	}
+  	&__item.is-twostages-top {
+		border-top: none;
 	}
 	[data-whatintent="keyboard"] &__title[href]:focus {
 		box-shadow: 0 0 0 3px $colorRedHover;

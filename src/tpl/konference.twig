@@ -449,13 +449,21 @@
 									},
 									{
 										time: '10:00',
+										twostages: true,
 										fstage: {
 											items: [
 												{
 													time: '10:00',
 													name: 'Martin Michálek',
 													title: 'Keynote',
-												},
+												}
+											]
+										},
+									},
+									{
+										time: '',
+										fstage: {
+											items: [
 												{
 													time: '10:10',
 													name: 'Ondřej Žára',
@@ -466,11 +474,6 @@
 										},
 										estage: {
 											items: [
-												{
-													time: '10:00',
-													name: 'Martin Michálek',
-													title: 'Keynote',
-												},
 												{
 													time: '10:10',
 													name: 'Michal Matuška',
@@ -783,7 +786,7 @@
 													time: '17:15',
 													heading: 'diskuze',
 													title: 'Stav a budoucnost JS frameworků',
-												}
+												},
 											]
 										},
 										estage: {
@@ -797,9 +800,24 @@
 												{
 													time: '17:25',
 													name: 'Adam Kudrna',
-													title: 'Design systém 1.0ter',
+													title: 'Design systém 1.0',
 													endpoint: '../ajax/adam-kudrna.html',
 												},
+											]
+										},
+									},
+
+									{
+										time: '',
+										twostages: true,
+										top: true,
+										fstage: {
+											items: [
+												{
+													time: '17:45',
+													name: 'Jana Nečasová, Tomáš Hejč, Břetislav Proft',
+													title: 'Zakončení konference',
+												}
 											]
 										},
 									},
@@ -811,7 +829,7 @@
 									},
 								] %}
 								{% for item in items %}
-									<tr class="b-shedule__item {% if item.isHighlighted == true %}is-highlighted{% endif %}">
+									<tr class="b-shedule__item {% if item.isHighlighted == true %}is-highlighted{% endif %} {% if item.twostages == true %}is-twostages{% if item.top == true %}-top{% endif %}{% endif %}">
 											<th scope="row" class="b-shedule__col">
 												{{ item.time }}
 											</th>
@@ -826,6 +844,27 @@
 														{{ item.name|raw }}
 													</p>
 												{% endif %}
+											</td>
+
+										{% elseif item.twostages == true %}
+											<td class="b-shedule__col b-shedule__off" data-label="F+E stage" colspan="2">
+												{% for item in item.fstage.items %}
+													<span class="b-shedule__off-item">
+														<span scope="row" class="b-shedule__off-time">
+															{{ item.time }}
+														</span>
+														<span class="b-shedule__off-title" style="margin: 0 auto">
+															{% if item.heading %}<span class="u-red">{{ item.heading }}<br></span>{% endif %}
+
+															{% if item.endpoint %}
+																<a href="{{ item.endpoint }}" class="b-shedule__title" data-modal='{"medium": "fetch"}'>{{ item.title|raw }}</a><br>
+															{% else %}
+																<span class="b-shedule__title">{{ item.title|raw }}</span><br>
+															{% endif %}
+															{{ item.name|raw }}
+														</span>
+													</span>
+												{% endfor %}
 											</td>
 
 										{% else %}
