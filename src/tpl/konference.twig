@@ -910,7 +910,12 @@
 														</span>
 														<span class="b-shedule__off-title">
 															{% if item.heading %}<span class="u-red">{{ item.heading }}<br></span>{% endif %}
-															<a href="{{ item.endpoint }}" class="b-shedule__title" data-modal='{"medium": "fetch"}'>{{ item.title|raw }}</a><br>
+															{% if item.endpoint %}
+																<a href="{{ item.endpoint }}" class="b-shedule__title" data-modal='{"medium": "fetch"}'>{{ item.title|raw }}</a><br>
+															{% else %}
+																<span class="b-shedule__title">{{ item.title|raw }}</span><br>
+															{% endif %}
+
 															{{ item.name|raw }}
 														</span>
 													</span>
