@@ -20,10 +20,9 @@
 
 <article class="{{ classes }}">
 	<div class="b-detail__wrap">
+		{% if props.imgSrc %}
 		<div class="b-detail__img">
-			{% if props.imgSrc %}
 			<img src="/img/frontkon/{{ props.imgSrc }}" alt="Profilová fotografie - {{ props.name }}" width="174" height="174" loading="lazy">
-			{% endif %}
 			{% if props.url  or props.twitter or props.github or props.linkedin %}
 				<p class="b-detail__socials">
 					{% if props.url %}
@@ -65,9 +64,10 @@
 				</p>
 			{% endif %}
 		</div>
+		{% endif %}
 		<div class="b-detail__content">
 			<h2 class="b-detail__name">
-				{{ props.name }}
+				{{ props.name|raw }}
 			</h2>
 			{% if props.company %}
 				<p class="b-detail__company">
