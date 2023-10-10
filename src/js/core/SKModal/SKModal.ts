@@ -583,7 +583,7 @@ const createModal = (
 		modal.classList.add("is-opened");
 		goTo(index);
 		modalFocusTrap.activate();
-		enableScrollLock();
+		//enableScrollLock();
 		emmiter.trigger("modalOpen");
 	};
 
@@ -607,7 +607,7 @@ const createModal = (
 			}
 		});
 		modalFocusTrap.deactivate();
-		disableScrollLock();
+		//disableScrollLock();
 		emmiter.trigger("modalClose");
 	};
 
