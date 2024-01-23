@@ -118,13 +118,21 @@
 							<div class="c-gallery__item">
 								<article class="b-card b-card--program">
 									<div class="b-card__inner">
-										{% if cardData.image %}
+										{% if cardData.imageCrossroad %}
+											<div class="b-card__img">
+												<img src="{{ cardData.imageCrossroad }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
+											</div>
+										{% elseif cardData.image %}
 											<div class="b-card__img">
 												<img src="{{ cardData.image }}" alt="" width="174" height="174" {% if loop.index > 12 %} loading="lazy"{% endif %}>
 											</div>
 										{% endif %}
 										<div class="b-card__content">
-											{% if cardData.title %}
+											{% if cardData.titleShort %}
+												<h3 class="b-card__title">
+													{{ cardData.titleShort|raw|nl2br }}
+												</h3>
+											{% elseif cardData.title %}
 												<h3 class="b-card__title">
 													{{ cardData.title|raw|nl2br }}
 												</h3>

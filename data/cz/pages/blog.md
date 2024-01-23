@@ -2,6 +2,7 @@
 template: blog.twig
 title: Blog
 list_of_blogposts:
+- data/cz/blog/frontendisti-koordinator.md
 - data/cz/blog/frontkon-2023-recap.md
 - data/cz/blog/frontkon-2023.md
 - data/cz/blog/jaky-byl-rok-2022-v-komunite-frontendisti.cz.md

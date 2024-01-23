@@ -16,7 +16,7 @@
 
 		<meta property="og:title" content="{{ pageTitle }} | Frontendisti.cz">
 		<meta property="og:description" content="{{ description }}">
-		<meta property="og:image" content="http://www.frontendisti.cz/img/social/og-image.jpg">
+		<meta property="og:image" content="{% if page_data.image %}{{ page_data.image }}{% else %} http://www.frontendisti.cz/img/social/og-image.jpg{% endif %}">
 		<meta property="og:site_name" content="{{ description }}">
 		<meta property="og:url" content="http://www.frontendisti.cz/blog/">
 		<meta property="og:type" content="website">
