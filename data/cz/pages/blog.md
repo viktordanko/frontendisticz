@@ -2,6 +2,7 @@
 template: blog.twig
 title: Blog
 list_of_blogposts:
+- data/cz/blog/nova-identita.md
 - data/cz/blog/frontendisti-koordinator.md
 - data/cz/blog/frontkon-2023-recap.md
 - data/cz/blog/frontkon-2023.md
