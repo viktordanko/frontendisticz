@@ -9,8 +9,6 @@ author: Martin Michálek
 
 ---
 
-# Komunita Frontendisti.cz představuje novou vizuální identitu
-
 Po více než deseti letech existence komunity Frontendisti.cz dnes měníme logotypy a vizuální identitu.
 
 [![](/img/illust/blog-identita-cover.png)](/files/media-kit.pdf)
