@@ -37,7 +37,7 @@
 
 [[redirects]]
   from = "/konference"
-  to = "/index.html"
+  to = "https://www.frontkon.cz"
   status = 200
   force = true
   headers = {X-From = "Netlify"}
